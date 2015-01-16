@@ -1,0 +1,137 @@
+﻿USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_KHO_Delete]    Script Date: 04/04/2014 15:53:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[pr_DM_KHO_Delete]
+	@ID_KHO numeric(18, 0)
+AS
+DELETE FROM [dbo].[DM_KHO]
+WHERE
+	[ID_KHO] = @ID_KHO
+
+
+USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_KHO_Insert]    Script Date: 04/04/2014 15:54:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[pr_DM_KHO_Insert]
+	@MA_KHO nvarchar(15),
+	@TEN_KHO nvarchar(250),
+	@DIA_CHI nvarchar(250),
+	@DIEN_THOAI varchar(15),
+	@ID_NHAN_VIEN numeric(18, 0),
+	@GHI_CHU nvarchar(250),
+	@ID_KHO numeric(18, 0) OUTPUT
+AS
+INSERT [dbo].[DM_KHO]
+(
+	[MA_KHO],
+	[TEN_KHO],
+	[DIA_CHI],
+	[DIEN_THOAI],
+	[ID_NHAN_VIEN],
+	[GHI_CHU]
+)
+VALUES
+(
+	@MA_KHO,
+	@TEN_KHO,
+	@DIA_CHI,
+	@DIEN_THOAI,
+	@ID_NHAN_VIEN,
+	@GHI_CHU
+)
+SELECT @ID_KHO=SCOPE_IDENTITY()
+
+USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_KHO_Update]    Script Date: 04/04/2014 15:54:39 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[pr_DM_KHO_Update]
+	@ID_KHO numeric(18, 0),
+	@MA_KHO nvarchar(15),
+	@TEN_KHO nvarchar(250),
+	@DIA_CHI nvarchar(250),
+	@DIEN_THOAI varchar(15),
+	@ID_NHAN_VIEN numeric(18, 0),
+	@GHI_CHU nvarchar(250)
+AS
+UPDATE [dbo].[DM_KHO]
+SET 
+	[MA_KHO] = @MA_KHO,
+	[TEN_KHO] = @TEN_KHO,
+	[DIA_CHI] = @DIA_CHI,
+	[DIEN_THOAI] = @DIEN_THOAI,
+	[ID_NHAN_VIEN] = @ID_NHAN_VIEN,
+	[GHI_CHU] = @GHI_CHU
+WHERE
+	[ID_KHO] = @ID_KHO
+
+
+USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_LOAI_CHUNG_TU_Delete]    Script Date: 04/04/2014 15:54:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[pr_DM_LOAI_CHUNG_TU_Delete]
+	@ID numeric(18, 0)
+AS
+DELETE FROM [dbo].[DM_LOAI_CHUNG_TU]
+WHERE
+	[ID] = @ID
+
+
+USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_LOAI_CHUNG_TU_Insert]    Script Date: 04/04/2014 15:55:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[pr_DM_LOAI_CHUNG_TU_Insert]
+	@GHI_CHU nvarchar(250),
+	@MA_LOAI_CT nvarchar(15),
+	@ID numeric(18, 0) OUTPUT
+AS
+INSERT [dbo].[DM_LOAI_CHUNG_TU]
+(
+	[GHI_CHU],
+	[MA_LOAI_CT]
+)
+VALUES
+(
+	@GHI_CHU,
+	@MA_LOAI_CT
+)
+SELECT @ID=SCOPE_IDENTITY()
+
+USE [bki-quan-ly-kho]
+GO
+/****** Object:  StoredProcedure [dbo].[pr_DM_LOAI_CHUNG_TU_Update]    Script Date: 04/04/2014 15:55:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[pr_DM_LOAI_CHUNG_TU_Update]
+	@ID numeric(18, 0),
+	@GHI_CHU nvarchar(250),
+	@MA_LOAI_CT nvarchar(15)
+AS
+UPDATE [dbo].[DM_LOAI_CHUNG_TU]
+SET 
+	[GHI_CHU] = @GHI_CHU,
+	[MA_LOAI_CT] = @MA_LOAI_CT
+WHERE
+	[ID] = @ID
