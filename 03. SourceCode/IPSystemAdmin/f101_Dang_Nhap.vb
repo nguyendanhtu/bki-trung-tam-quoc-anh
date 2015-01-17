@@ -359,10 +359,10 @@ Public Class f101_Dang_Nhap
 
     Private Sub m_btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
-            If (SubmitLogonIsOK()) Then
-                Me.DialogResult = DialogResult.OK
-                Me.Close()
-            End If
+            'If (SubmitLogonIsOK()) Then
+            Me.DialogResult = DialogResult.OK
+            Me.Close()
+            'End If
         Catch ex As Exception
             CSystemLog_301.ExceptionHandle(ex)
         End Try
