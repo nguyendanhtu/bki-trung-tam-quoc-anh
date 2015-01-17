@@ -219,7 +219,10 @@ namespace BKI_QLTTQuocAnh
 
 		#region Data Structure
 		private enum e_col_Number{
-			MA_LOP_MON = 1,MO_TA = 2,DON_GIA_BUOI_HOC = 3
+			MA_LOP_MON = 1
+,MO_TA = 2
+,DON_GIA_BUOI_HOC = 3
+
 		}			
 		#endregion
 
@@ -244,7 +247,10 @@ namespace BKI_QLTTQuocAnh
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(DM_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);			v_htb.Add(DM_LOP_MON.MO_TA, e_col_Number.MO_TA);			v_htb.Add(DM_LOP_MON.DON_GIA_BUOI_HOC, e_col_Number.DON_GIA_BUOI_HOC);									
+			v_htb.Add(DM_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);
+			v_htb.Add(DM_LOP_MON.MO_TA, e_col_Number.MO_TA);
+			v_htb.Add(DM_LOP_MON.DON_GIA_BUOI_HOC, e_col_Number.DON_GIA_BUOI_HOC);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.DM_LOP_MON.NewRow());
 			return v_obj_trans;			
 		}
