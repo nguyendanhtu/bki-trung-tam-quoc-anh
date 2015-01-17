@@ -20,9 +20,9 @@ namespace BKI_QLTTQuocAnh.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("LOG_GD_PHIEU_THU")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_LOG_GD_PHIEU_THU")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class LOG_GD_PHIEU_THU : global::System.Data.DataSet {
+    public partial class DS_LOG_GD_PHIEU_THU : global::System.Data.DataSet {
         
         private LOG_GD_PHIEU_THUDataTable tableLOG_GD_PHIEU_THU;
         
@@ -30,7 +30,7 @@ namespace BKI_QLTTQuocAnh.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public LOG_GD_PHIEU_THU() {
+        public DS_LOG_GD_PHIEU_THU() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BKI_QLTTQuocAnh.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected LOG_GD_PHIEU_THU(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DS_LOG_GD_PHIEU_THU(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -79,7 +79,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public LOG_GD_PHIEU_THUDataTable _LOG_GD_PHIEU_THU {
+        public LOG_GD_PHIEU_THUDataTable LOG_GD_PHIEU_THU {
             get {
                 return this.tableLOG_GD_PHIEU_THU;
             }
@@ -127,7 +127,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            LOG_GD_PHIEU_THU cln = ((LOG_GD_PHIEU_THU)(base.Clone()));
+            DS_LOG_GD_PHIEU_THU cln = ((DS_LOG_GD_PHIEU_THU)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "LOG_GD_PHIEU_THU";
+            this.DataSetName = "DS_LOG_GD_PHIEU_THU";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/LOG_GD_PHIEU_THU.xsd";
+            this.Namespace = "http://tempuri.org/DS_LOG_GD_PHIEU_THU.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableLOG_GD_PHIEU_THU = new LOG_GD_PHIEU_THUDataTable();
@@ -210,7 +210,7 @@ namespace BKI_QLTTQuocAnh.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize_LOG_GD_PHIEU_THU() {
+        private bool ShouldSerializeLOG_GD_PHIEU_THU() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            LOG_GD_PHIEU_THU ds = new LOG_GD_PHIEU_THU();
+            DS_LOG_GD_PHIEU_THU ds = new DS_LOG_GD_PHIEU_THU();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -570,8 +570,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_NGUOI_EDIT.AllowDBNull = false;
                 this.columnLY_DO_EDIT.AllowDBNull = false;
                 this.columnLY_DO_EDIT.MaxLength = 250;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_LOG_GD_PHIEU_THU");
-                this.ExtendedProperties.Add("Generator_UserTableName", "LOG_GD_PHIEU_THU");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -639,7 +637,7 @@ namespace BKI_QLTTQuocAnh.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                LOG_GD_PHIEU_THU ds = new LOG_GD_PHIEU_THU();
+                DS_LOG_GD_PHIEU_THU ds = new DS_LOG_GD_PHIEU_THU();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -931,7 +929,7 @@ namespace BKI_QLTTQuocAnh.DS {
         }
     }
 }
-namespace BKI_QLTTQuocAnh.DS.LOG_GD_PHIEU_THUTableAdapters {
+namespace BKI_QLTTQuocAnh.DS.DS_LOG_GD_PHIEU_THUTableAdapters {
     
     
     /// <summary>
@@ -1161,7 +1159,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable) {
+        public virtual int Fill(DS_LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1174,9 +1172,9 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable GetData() {
+        public virtual DS_LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable = new LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable();
+            DS_LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable = new DS_LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1184,14 +1182,14 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable) {
+        public virtual int Update(DS_LOG_GD_PHIEU_THU.LOG_GD_PHIEU_THUDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LOG_GD_PHIEU_THU dataSet) {
+        public virtual int Update(DS_LOG_GD_PHIEU_THU dataSet) {
             return this.Adapter.Update(dataSet, "LOG_GD_PHIEU_THU");
         }
         
@@ -1560,10 +1558,10 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DS_LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._lOG_GD_PHIEU_THUTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -1579,10 +1577,10 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DS_LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._lOG_GD_PHIEU_THUTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._lOG_GD_PHIEU_THUTableAdapter.Update(addedRows));
@@ -1597,10 +1595,10 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DS_LOG_GD_PHIEU_THU dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._lOG_GD_PHIEU_THUTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.LOG_GD_PHIEU_THU.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._lOG_GD_PHIEU_THUTableAdapter.Update(deletedRows));
@@ -1639,7 +1637,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(LOG_GD_PHIEU_THU dataSet) {
+        public virtual int UpdateAll(DS_LOG_GD_PHIEU_THU dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
