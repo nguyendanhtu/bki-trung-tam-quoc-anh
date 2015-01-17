@@ -171,7 +171,7 @@
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f201_danh_sach_lop_mon";
-            this.Text = "f201_danh_sach_lop_mon";
+            this.Text = "F201 - Danh sách lớp môn";
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
