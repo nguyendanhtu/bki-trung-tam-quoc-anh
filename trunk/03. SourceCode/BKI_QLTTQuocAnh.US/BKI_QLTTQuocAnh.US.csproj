@@ -61,7 +61,7 @@
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BKI_KHO.DS\BKI_QLTTQuocAnh.DS.csproj">
+    <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">
       <Project>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</Project>
       <Name>BKI_QLTTQuocAnh.DS</Name>
     </ProjectReference>
