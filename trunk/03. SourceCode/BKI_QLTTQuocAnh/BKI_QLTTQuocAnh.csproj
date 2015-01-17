@@ -90,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="DanhMuc\f200_danh_sach_lop_mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -149,6 +152,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="DanhMuc\f200_danh_sach_lop_mon.resx" />
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,7 +250,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaoCao\" />
-    <Folder Include="DanhMuc\" />
     <Folder Include="NghiepVu\" />
     <Folder Include="Resources\" />
   </ItemGroup>
