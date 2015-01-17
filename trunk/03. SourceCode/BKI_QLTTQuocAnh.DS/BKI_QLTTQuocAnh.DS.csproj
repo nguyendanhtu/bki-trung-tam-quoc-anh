@@ -57,6 +57,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_HOC_SINH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_LOP_MON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_DIEM_DANH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_DIEM_DANH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_HOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_GD_PHIEU_THU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_PHIEU_THU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LOG_GD_PHIEU_THU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LOG_GD_PHIEU_THU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +150,50 @@
     </None>
     <None Include="DS_DM_HOC_SINH.xss">
       <DependentUpon>DS_DM_HOC_SINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_LOP_MON.xsc">
+      <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_LOP_MON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_LOP_MON.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_LOP_MON.xss">
+      <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_DIEM_DANH.xsc">
+      <DependentUpon>DS_GD_DIEM_DANH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_DIEM_DANH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_DIEM_DANH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_DIEM_DANH.xss">
+      <DependentUpon>DS_GD_DIEM_DANH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_HOC.xsc">
+      <DependentUpon>DS_GD_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_HOC.xss">
+      <DependentUpon>DS_GD_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_PHIEU_THU.xsc">
+      <DependentUpon>DS_GD_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_PHIEU_THU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_PHIEU_THU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_PHIEU_THU.xss">
+      <DependentUpon>DS_GD_PHIEU_THU.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_FORM.xsc">
       <DependentUpon>DS_HT_FORM.xsd</DependentUpon>
@@ -202,6 +271,17 @@
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xss">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
+    </None>
+    <None Include="LOG_GD_PHIEU_THU.xsc">
+      <DependentUpon>LOG_GD_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="LOG_GD_PHIEU_THU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LOG_GD_PHIEU_THU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LOG_GD_PHIEU_THU.xss">
+      <DependentUpon>LOG_GD_PHIEU_THU.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
