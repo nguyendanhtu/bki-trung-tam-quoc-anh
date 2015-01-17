@@ -34,8 +34,8 @@ namespace BKI_QLTTQuocAnh.HeThong
         #endregion
 
         #region Member
-        US_HT_USER_GROUP m_us_ht_user_group = new US_HT_USER_GROUP();
-        DS_HT_USER_GROUP m_ds_ht_user_group = new DS_HT_USER_GROUP();
+        BKI_QLTTQuocAnh.US.US_HT_USER_GROUP m_us_ht_user_group = new US_HT_USER_GROUP();
+        BKI_QLTTQuocAnh.DS.DS_HT_USER_GROUP m_ds_ht_user_group = new DS_HT_USER_GROUP();
         Boolean m_bool_load_data_complete = false;
         int m_dc_index_in_left = 0;
         int m_dc_index_in_right = 0;

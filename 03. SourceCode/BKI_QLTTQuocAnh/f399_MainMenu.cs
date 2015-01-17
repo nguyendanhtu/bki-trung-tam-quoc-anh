@@ -42,27 +42,26 @@ namespace Form_menu {
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             this.ShowInTaskbar = true;
-            m_cmd_dang_nhap.Enabled = false;
-            m_cmd_thong_tin.Enabled = false;
-            m_cmd_sao_luu.Enabled = false;
-            m_cmd_phuc_hoi.Enabled = false;
-            m_cmd_doi_mat_khau.Enabled = true;
-            m_cmd_nhat_ky_he_thong.Enabled = false;
-            m_cmd_mua_hang.Enabled = false;
-            m_cmd_ban_hang.Enabled = false;
-            m_cmd_nhap_tu_excel.Enabled = false;
-            m_cmd_tien_te.Enabled = false;
-            m_cmd_thue.Enabled = false;
-            m_cmd_tai_khoan.Enabled = false;
-            //m_cmd_nha_cung_cap.Enabled = false;
-            //m_cmd_nhap_so_du_dau.Enabled = false;
-            m_cmd_ma_vach.Enabled = false;
         }
         #endregion
         // Event handlers
         private void set_define_events() {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
+            m_cmd_danh_sach_lop_mon.Click += m_cmd_danh_sach_lop_mon_Click;
+        }
+
+        private void m_cmd_danh_sach_lop_mon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f200_danh_sach_lop_mon v_frm = new f200_danh_sach_lop_mon();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_xuat_kho_Click(object sender, EventArgs e) {

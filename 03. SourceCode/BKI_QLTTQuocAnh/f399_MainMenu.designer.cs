@@ -44,6 +44,7 @@ namespace Form_menu
             this.m_cmd_phan_quyen_cho_nhom = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nhat_ky_he_thong = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_phan_quyen_he_thong = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_he_thong = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_dang_nhap = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_thong_tin = new DevComponents.DotNetBar.ButtonItem();
@@ -88,7 +89,7 @@ namespace Form_menu
             this.m_cmd_loai_chung_tu = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_ma_vach = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_excel = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_nhap_tu_excel = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_danh_sach_lop_mon = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbtab_tab1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.m_rbtab_tab2 = new DevComponents.DotNetBar.RibbonTabItem();
             this.m_rbtab_tab3 = new DevComponents.DotNetBar.RibbonTabItem();
@@ -96,7 +97,6 @@ namespace Form_menu
             this.m_rbtab_tab5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.m_cmd_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -119,11 +119,11 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_rbc_menu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_rbtab_tab1,
@@ -184,6 +184,7 @@ namespace Form_menu
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // m_rbb_du_lieu
             // 
@@ -322,6 +323,16 @@ namespace Form_menu
             this.m_cmd_phan_quyen_he_thong.SubItemsExpandWidth = 14;
             this.m_cmd_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
             this.m_cmd_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_phan_quyen_he_thong_Click);
+            // 
+            // m_cmd_phan_quyen_chi_tiet
+            // 
+            this.m_cmd_phan_quyen_chi_tiet.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_chi_tiet.Icon")));
+            this.m_cmd_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
+            this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
+            this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
+            this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
             // 
             // m_rbb_he_thong
             // 
@@ -765,7 +776,6 @@ namespace Form_menu
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // m_rbb_khac
             // 
@@ -1058,7 +1068,7 @@ namespace Form_menu
             this.m_rbb_excel.ContainerControlProcessDialogKey = true;
             this.m_rbb_excel.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_rbb_excel.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_nhap_tu_excel});
+            this.m_cmd_danh_sach_lop_mon});
             this.m_rbb_excel.Location = new System.Drawing.Point(4, 0);
             this.m_rbb_excel.Margin = new System.Windows.Forms.Padding(4);
             this.m_rbb_excel.Name = "m_rbb_excel";
@@ -1073,27 +1083,25 @@ namespace Form_menu
             // 
             // 
             this.m_rbb_excel.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_rbb_excel.Visible = false;
             // 
-            // m_cmd_nhap_tu_excel
+            // m_cmd_danh_sach_lop_mon
             // 
-            this.m_cmd_nhap_tu_excel.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_nhap_tu_excel.Icon")));
-            this.m_cmd_nhap_tu_excel.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_nhap_tu_excel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_nhap_tu_excel.Name = "m_cmd_nhap_tu_excel";
-            this.m_cmd_nhap_tu_excel.SubItemsExpandWidth = 14;
-            this.m_cmd_nhap_tu_excel.Text = "Nhập vào từ excel";
-            this.m_cmd_nhap_tu_excel.Visible = false;
+            this.m_cmd_danh_sach_lop_mon.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_danh_sach_lop_mon.Icon")));
+            this.m_cmd_danh_sach_lop_mon.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_danh_sach_lop_mon.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_danh_sach_lop_mon.Name = "m_cmd_danh_sach_lop_mon";
+            this.m_cmd_danh_sach_lop_mon.SubItemsExpandWidth = 14;
+            this.m_cmd_danh_sach_lop_mon.Text = "Nhập vào từ excel";
             // 
             // m_rbtab_tab1
             // 
-            this.m_rbtab_tab1.Checked = true;
             this.m_rbtab_tab1.Name = "m_rbtab_tab1";
             this.m_rbtab_tab1.Panel = this.ribbonPanel1;
             this.m_rbtab_tab1.Text = "Hệ thống";
             // 
             // m_rbtab_tab2
             // 
+            this.m_rbtab_tab2.Checked = true;
             this.m_rbtab_tab2.Name = "m_rbtab_tab2";
             this.m_rbtab_tab2.Panel = this.ribbonPanel2;
             this.m_rbtab_tab2.Text = "Danh mục";
@@ -1119,16 +1127,6 @@ namespace Form_menu
             // qatCustomizeItem1
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
-            // 
-            // m_cmd_phan_quyen_chi_tiet
-            // 
-            this.m_cmd_phan_quyen_chi_tiet.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phan_quyen_chi_tiet.Icon")));
-            this.m_cmd_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_phan_quyen_chi_tiet.Name = "m_cmd_phan_quyen_chi_tiet";
-            this.m_cmd_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
-            this.m_cmd_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
-            this.m_cmd_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_phan_quyen_chi_tiet_Click);
             // 
             // f399_MainMenu
             // 
@@ -1190,7 +1188,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_tien_te;
         private DevComponents.DotNetBar.ButtonItem m_cmd_don_vi_tinh;
         private DevComponents.DotNetBar.RibbonBar m_rbb_excel;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_nhap_tu_excel;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_danh_sach_lop_mon;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nhat_ky_he_thong;
         private DevComponents.DotNetBar.ButtonItem m_cmd_tu_dien;
         private DevComponents.DotNetBar.ButtonItem m_cmd_loai_chung_tu;
