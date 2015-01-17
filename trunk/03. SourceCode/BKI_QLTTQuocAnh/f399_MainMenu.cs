@@ -14,6 +14,7 @@ using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
 
 using BKI_QLTTQuocAnh.HeThong;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 namespace Form_menu {
     public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm {
@@ -55,8 +56,8 @@ namespace Form_menu {
         {
             try
             {
-                f200_danh_sach_lop_mon v_frm = new f200_danh_sach_lop_mon();
-                v_frm.ShowDialog();
+                f201_danh_sach_lop_mon v_frm = new f201_danh_sach_lop_mon();
+                v_frm.display();
             }
             catch (System.Exception v_e)
             {
