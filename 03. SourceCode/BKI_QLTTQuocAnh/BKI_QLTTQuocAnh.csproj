@@ -203,11 +203,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BKI_KHO.DS\BKI_QLTTQuocAnh.DS.csproj">
+    <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">
       <Project>{4AEBA63F-E5B5-4D0C-B1B5-E6BCB13E1B5A}</Project>
       <Name>BKI_QLTTQuocAnh.DS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BKI_KHO.US\BKI_QLTTQuocAnh.US.csproj">
+    <ProjectReference Include="..\BKI_QLTTQuocAnh.US\BKI_QLTTQuocAnh.US.csproj">
       <Project>{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}</Project>
       <Name>BKI_QLTTQuocAnh.US</Name>
     </ProjectReference>
