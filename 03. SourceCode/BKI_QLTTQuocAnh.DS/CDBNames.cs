@@ -196,5 +196,66 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string COMPANY_ADDRESS = "COMPANY_ADDRESS";
     }
 
-   
+    public class DM_COMPANY_INFO {
+        public const string ID = "ID";
+        public const string SHORT_NAME = "SHORT_NAME";
+        public const string FULL_NAME = "FULL_NAME";
+        public const string ADDRESS = "ADDRESS";
+        public const string MOBLIE = "MOBLIE";
+        public const string EMAIL = "EMAIL";
+        public const string TAX_CODE = "TAX_CODE";
+    }
+
+    public class DM_HOC_SINH {
+        public const string ID = "ID";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string EMAIL_PH = "EMAIL_PH";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT_HS = "SDT_HS";
+        public const string SDT_PH = "SDT_PH";
+        public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string SDT_CO_DINH = "SDT_CO_DINH";
+    }
+
+    public class DM_LOP_MON {
+        public const string ID = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string MO_TA = "MO_TA";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+    }
+
+    public class GD_DIEM_DANH {
+        public const string ID = "ID";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string ID_NGUOI_DIEM_DANH = "ID_NGUOI_DIEM_DANH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string NGAY_HOC = "NGAY_HOC";
+        public const string ID_CA_HOC = "ID_CA_HOC";
+    }
+
+    public class GD_HOC {
+        public const string ID = "ID";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string TRANG_THAI_YN = "TRANG_THAI_YN";
+    }
+
+    public class GD_PHIEU_THU {
+        public const string ID = "ID";
+        public const string SO_PHIEU = "SO_PHIEU";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string ID_NGUOI_THU = "ID_NGUOI_THU";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string TEN_NGUOI_NOP_TIEN = "TEN_NGUOI_NOP_TIEN";
+        public const string NOI_DUNG = "NOI_DUNG";
+        public const string SO_TIEN = "SO_TIEN";
+        public const string NGAY_THU = "NGAY_THU";
+        public const string NGAY_NHAP = "NGAY_NHAP";
+    }   
 }
