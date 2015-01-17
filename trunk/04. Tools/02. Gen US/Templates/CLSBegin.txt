@@ -1,4 +1,4 @@
-namespace BKI_KHO.US{
+namespace BKI_QLTTQuocAnh.US{
 
 public class US_<TABLE_NAME> : US_Object
 {

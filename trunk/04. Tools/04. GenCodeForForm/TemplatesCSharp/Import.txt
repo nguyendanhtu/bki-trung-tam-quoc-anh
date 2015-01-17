@@ -11,11 +11,11 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
 
-using BKI_KHO.US;
-using BKI_KHO.DS;
-using BKI_KHO.DS.CDBNames;
+using BKI_QLTTQuocAnh.US;
+using BKI_QLTTQuocAnh.DS;
+using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 
-namespace BKI_KHO
+namespace BKI_QLTTQuocAnh
 {
