@@ -34,7 +34,7 @@
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
@@ -45,6 +45,10 @@
             this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lbl_tong_con_phai_thu = new System.Windows.Forms.Label();
+            this.m_lbl_tong_thuc_thu = new System.Windows.Forms.Label();
+            this.m_lbl_tong_phai_thu = new System.Windows.Forms.Label();
+            this.m_lbl_tong = new System.Windows.Forms.Label();
             this.m_cmd_search = new System.Windows.Forms.Button();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -83,7 +87,7 @@
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -123,20 +127,20 @@
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
             // 
-            // m_cmd_view
+            // m_cmd_xuat_excel
             // 
-            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_view.ImageIndex = 18;
-            this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 21;
-            this.m_cmd_view.Text = "Xem";
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
             // 
@@ -199,7 +203,7 @@
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(220, 47);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(220, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(190, 20);
             this.m_dat_tu_ngay.TabIndex = 24;
@@ -225,14 +229,18 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 168);
+            this.m_fg.Location = new System.Drawing.Point(0, 204);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(597, 209);
+            this.m_fg.Size = new System.Drawing.Size(597, 173);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 26;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_lbl_tong_con_phai_thu);
+            this.panel1.Controls.Add(this.m_lbl_tong_thuc_thu);
+            this.panel1.Controls.Add(this.m_lbl_tong_phai_thu);
+            this.panel1.Controls.Add(this.m_lbl_tong);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Controls.Add(this.m_dat_tu_ngay);
@@ -244,8 +252,44 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 168);
+            this.panel1.Size = new System.Drawing.Size(597, 204);
             this.panel1.TabIndex = 27;
+            // 
+            // m_lbl_tong_con_phai_thu
+            // 
+            this.m_lbl_tong_con_phai_thu.AutoSize = true;
+            this.m_lbl_tong_con_phai_thu.Location = new System.Drawing.Point(478, 172);
+            this.m_lbl_tong_con_phai_thu.Name = "m_lbl_tong_con_phai_thu";
+            this.m_lbl_tong_con_phai_thu.Size = new System.Drawing.Size(94, 13);
+            this.m_lbl_tong_con_phai_thu.TabIndex = 28;
+            this.m_lbl_tong_con_phai_thu.Text = "Tổng còn phải thu";
+            // 
+            // m_lbl_tong_thuc_thu
+            // 
+            this.m_lbl_tong_thuc_thu.AutoSize = true;
+            this.m_lbl_tong_thuc_thu.Location = new System.Drawing.Point(380, 172);
+            this.m_lbl_tong_thuc_thu.Name = "m_lbl_tong_thuc_thu";
+            this.m_lbl_tong_thuc_thu.Size = new System.Drawing.Size(74, 13);
+            this.m_lbl_tong_thuc_thu.TabIndex = 29;
+            this.m_lbl_tong_thuc_thu.Text = "Tổng thực thu";
+            // 
+            // m_lbl_tong_phai_thu
+            // 
+            this.m_lbl_tong_phai_thu.AutoSize = true;
+            this.m_lbl_tong_phai_thu.Location = new System.Drawing.Point(279, 172);
+            this.m_lbl_tong_phai_thu.Name = "m_lbl_tong_phai_thu";
+            this.m_lbl_tong_phai_thu.Size = new System.Drawing.Size(73, 13);
+            this.m_lbl_tong_phai_thu.TabIndex = 30;
+            this.m_lbl_tong_phai_thu.Text = "Tổng phải thu";
+            // 
+            // m_lbl_tong
+            // 
+            this.m_lbl_tong.AutoSize = true;
+            this.m_lbl_tong.Location = new System.Drawing.Point(145, 172);
+            this.m_lbl_tong.Name = "m_lbl_tong";
+            this.m_lbl_tong.Size = new System.Drawing.Size(35, 13);
+            this.m_lbl_tong.TabIndex = 31;
+            this.m_lbl_tong.Text = "Tổng:";
             // 
             // m_cmd_search
             // 
@@ -292,7 +336,7 @@
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
-        internal SIS.Controls.Button.SiSButton m_cmd_view;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_tu_ngay;
@@ -305,5 +349,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button m_cmd_search;
         private System.Windows.Forms.Label m_lbl_header;
+        private System.Windows.Forms.Label m_lbl_tong_con_phai_thu;
+        private System.Windows.Forms.Label m_lbl_tong_thuc_thu;
+        private System.Windows.Forms.Label m_lbl_tong_phai_thu;
+        private System.Windows.Forms.Label m_lbl_tong;
     }
 }
