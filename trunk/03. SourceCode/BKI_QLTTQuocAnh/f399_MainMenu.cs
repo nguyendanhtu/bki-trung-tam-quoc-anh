@@ -50,6 +50,20 @@ namespace Form_menu {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
             m_cmd_phai_thu_thuc_thu_theo_lop.Click += m_cmd_phai_thu_thuc_thu_theo_lop_Click;
+            m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Click += m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh_Click;
+        }
+
+        private void m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh v_frm = new F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_phai_thu_thuc_thu_theo_lop_Click(object sender, EventArgs e)

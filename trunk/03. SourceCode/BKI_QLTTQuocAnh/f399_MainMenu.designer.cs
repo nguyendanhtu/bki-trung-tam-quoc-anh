@@ -36,7 +36,7 @@ namespace Form_menu
             this.m_rbc_menu = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.m_rbb_doanh_thu = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_loi_nhuan_gop = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_doanh_thu_theo_nhan_vien = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
@@ -175,7 +175,7 @@ namespace Form_menu
             this.m_rbb_doanh_thu.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_rbb_doanh_thu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_cmd_phai_thu_thuc_thu_theo_lop,
-            this.m_cmd_loi_nhuan_gop,
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh,
             this.m_cmd_doanh_thu_theo_nhan_vien,
             this.buttonItem1,
             this.buttonItem2,
@@ -195,15 +195,15 @@ namespace Form_menu
             // 
             this.m_rbb_doanh_thu.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // m_cmd_loi_nhuan_gop
+            // m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh
             // 
-            this.m_cmd_loi_nhuan_gop.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_loi_nhuan_gop.Icon")));
-            this.m_cmd_loi_nhuan_gop.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_loi_nhuan_gop.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_loi_nhuan_gop.Name = "m_cmd_loi_nhuan_gop";
-            this.m_cmd_loi_nhuan_gop.SubItemsExpandWidth = 14;
-            this.m_cmd_loi_nhuan_gop.Text = "Tiền phải thu theo lớp môn, học sinh";
-            this.m_cmd_loi_nhuan_gop.Click += new System.EventHandler(this.m_cmd_loi_nhuan_gop_Click);
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Icon")));
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Name = "m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh";
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.SubItemsExpandWidth = 14;
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Text = "Tiền phải thu theo lớp môn, học sinh";
+            this.m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh.Click += new System.EventHandler(this.m_cmd_loi_nhuan_gop_Click);
             // 
             // m_cmd_doanh_thu_theo_nhan_vien
             // 
@@ -781,7 +781,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_hoc_sinh;
         private DevComponents.DotNetBar.ButtonItem m_cmd_mat_hang;
         private DevComponents.DotNetBar.RibbonBar m_rbb_doanh_thu;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_loi_nhuan_gop;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_tien_phai_thu_thuc_thu_theo_lop_hoc_sinh;
         private DevComponents.DotNetBar.ButtonItem m_cmd_doanh_thu_theo_nhan_vien;
         private DevComponents.DotNetBar.RibbonBar m_rbb_tra_cuu;
         private DevComponents.DotNetBar.ButtonItem m_cmd_mat_hang_theo_nhom;
