@@ -4,6 +4,22 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH
+    {
+        public const string ID = "ID";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string HO_TEN = "HO_TEN";
+        public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string SDT_HS = "SDT_HS";
+        public const string SDT_PH = "SDT_PH";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string EMAIL_PH = "EMAIL_PH";
+        public const string TONG_PHAI_THU = "TONG_PHAI_THU";
+        public const string TONG_GIAM_TRU = "TONG_GIAM_TRU";
+        public const string TONG_THUC_THU = "TONG_THUC_THU";
+        public const string TONG_CON_NO = "TONG_CON_NO";
+    }
+
     public class HT_FORM {
         public const string ID =  "ID";
         public const string FORM_NAME =  "FORM_NAME";
