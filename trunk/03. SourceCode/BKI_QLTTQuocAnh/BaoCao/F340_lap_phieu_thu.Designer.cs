@@ -39,8 +39,28 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_ten_nguoi_nop_tien = new System.Windows.Forms.TextBox();
+            this.m_txt_nguoi_nhap = new System.Windows.Forms.TextBox();
+            this.m_txt_nguoi_thu = new System.Windows.Forms.TextBox();
+            this.m_txt_ho_ten_hoc_sinh = new System.Windows.Forms.TextBox();
+            this.m_lbl_ten_nguoi_nop_tien = new System.Windows.Forms.Label();
+            this.m_lbl_nguoi_nhap = new System.Windows.Forms.Label();
+            this.m_lbl_nguoi_thu = new System.Windows.Forms.Label();
+            this.m_lbl_ho_ten_hoc_sinh = new System.Windows.Forms.Label();
+            this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_lbl_so_tien = new System.Windows.Forms.Label();
+            this.m_txt_so_tien = new System.Windows.Forms.TextBox();
+            this.m_lbl_ngay_thu = new System.Windows.Forms.Label();
+            this.m_lbl_ngay_nhap = new System.Windows.Forms.Label();
+            this.m_lbl_noi_dung = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.m_dat_ngay_thu = new System.Windows.Forms.DateTimePicker();
+            this.m_dat_ngay_nhap = new System.Windows.Forms.DateTimePicker();
+            this.m_lbl_so_tien_bang_chu = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -163,19 +183,195 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 168);
+            this.m_fg.Location = new System.Drawing.Point(0, 257);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(727, 216);
+            this.m_fg.Size = new System.Drawing.Size(727, 127);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 22;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_dat_ngay_nhap);
+            this.panel1.Controls.Add(this.m_dat_ngay_thu);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.m_txt_ten_nguoi_nop_tien);
+            this.panel1.Controls.Add(this.m_txt_nguoi_nhap);
+            this.panel1.Controls.Add(this.m_txt_nguoi_thu);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.m_txt_so_tien);
+            this.panel1.Controls.Add(this.m_txt_ho_ten_hoc_sinh);
+            this.panel1.Controls.Add(this.m_lbl_noi_dung);
+            this.panel1.Controls.Add(this.m_lbl_ngay_nhap);
+            this.panel1.Controls.Add(this.m_lbl_ten_nguoi_nop_tien);
+            this.panel1.Controls.Add(this.m_lbl_ngay_thu);
+            this.panel1.Controls.Add(this.m_lbl_nguoi_nhap);
+            this.panel1.Controls.Add(this.m_lbl_so_tien_bang_chu);
+            this.panel1.Controls.Add(this.m_lbl_so_tien);
+            this.panel1.Controls.Add(this.m_lbl_nguoi_thu);
+            this.panel1.Controls.Add(this.m_lbl_ho_ten_hoc_sinh);
+            this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 168);
+            this.panel1.Size = new System.Drawing.Size(727, 257);
             this.panel1.TabIndex = 23;
+            // 
+            // m_txt_ten_nguoi_nop_tien
+            // 
+            this.m_txt_ten_nguoi_nop_tien.Location = new System.Drawing.Point(115, 142);
+            this.m_txt_ten_nguoi_nop_tien.Name = "m_txt_ten_nguoi_nop_tien";
+            this.m_txt_ten_nguoi_nop_tien.Size = new System.Drawing.Size(204, 20);
+            this.m_txt_ten_nguoi_nop_tien.TabIndex = 29;
+            // 
+            // m_txt_nguoi_nhap
+            // 
+            this.m_txt_nguoi_nhap.Location = new System.Drawing.Point(115, 107);
+            this.m_txt_nguoi_nhap.Name = "m_txt_nguoi_nhap";
+            this.m_txt_nguoi_nhap.Size = new System.Drawing.Size(204, 20);
+            this.m_txt_nguoi_nhap.TabIndex = 29;
+            // 
+            // m_txt_nguoi_thu
+            // 
+            this.m_txt_nguoi_thu.Location = new System.Drawing.Point(115, 73);
+            this.m_txt_nguoi_thu.Name = "m_txt_nguoi_thu";
+            this.m_txt_nguoi_thu.Size = new System.Drawing.Size(204, 20);
+            this.m_txt_nguoi_thu.TabIndex = 29;
+            // 
+            // m_txt_ho_ten_hoc_sinh
+            // 
+            this.m_txt_ho_ten_hoc_sinh.Location = new System.Drawing.Point(115, 41);
+            this.m_txt_ho_ten_hoc_sinh.Name = "m_txt_ho_ten_hoc_sinh";
+            this.m_txt_ho_ten_hoc_sinh.Size = new System.Drawing.Size(204, 20);
+            this.m_txt_ho_ten_hoc_sinh.TabIndex = 29;
+            // 
+            // m_lbl_ten_nguoi_nop_tien
+            // 
+            this.m_lbl_ten_nguoi_nop_tien.AutoSize = true;
+            this.m_lbl_ten_nguoi_nop_tien.Location = new System.Drawing.Point(13, 145);
+            this.m_lbl_ten_nguoi_nop_tien.Name = "m_lbl_ten_nguoi_nop_tien";
+            this.m_lbl_ten_nguoi_nop_tien.Size = new System.Drawing.Size(99, 13);
+            this.m_lbl_ten_nguoi_nop_tien.TabIndex = 28;
+            this.m_lbl_ten_nguoi_nop_tien.Text = "Tên người nộp tiền:";
+            // 
+            // m_lbl_nguoi_nhap
+            // 
+            this.m_lbl_nguoi_nhap.AutoSize = true;
+            this.m_lbl_nguoi_nhap.Location = new System.Drawing.Point(13, 110);
+            this.m_lbl_nguoi_nhap.Name = "m_lbl_nguoi_nhap";
+            this.m_lbl_nguoi_nhap.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_nguoi_nhap.TabIndex = 28;
+            this.m_lbl_nguoi_nhap.Text = "Người nhập";
+            // 
+            // m_lbl_nguoi_thu
+            // 
+            this.m_lbl_nguoi_thu.AutoSize = true;
+            this.m_lbl_nguoi_thu.Location = new System.Drawing.Point(13, 76);
+            this.m_lbl_nguoi_thu.Name = "m_lbl_nguoi_thu";
+            this.m_lbl_nguoi_thu.Size = new System.Drawing.Size(56, 13);
+            this.m_lbl_nguoi_thu.TabIndex = 28;
+            this.m_lbl_nguoi_thu.Text = "Người thu:";
+            // 
+            // m_lbl_ho_ten_hoc_sinh
+            // 
+            this.m_lbl_ho_ten_hoc_sinh.AutoSize = true;
+            this.m_lbl_ho_ten_hoc_sinh.Location = new System.Drawing.Point(13, 44);
+            this.m_lbl_ho_ten_hoc_sinh.Name = "m_lbl_ho_ten_hoc_sinh";
+            this.m_lbl_ho_ten_hoc_sinh.Size = new System.Drawing.Size(85, 13);
+            this.m_lbl_ho_ten_hoc_sinh.TabIndex = 28;
+            this.m_lbl_ho_ten_hoc_sinh.Text = "Họ tên học sinh:";
+            // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(727, 27);
+            this.m_lbl_header.TabIndex = 27;
+            this.m_lbl_header.Text = "LẬP PHIẾU THU";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lbl_so_tien
+            // 
+            this.m_lbl_so_tien.AutoSize = true;
+            this.m_lbl_so_tien.Location = new System.Drawing.Point(396, 44);
+            this.m_lbl_so_tien.Name = "m_lbl_so_tien";
+            this.m_lbl_so_tien.Size = new System.Drawing.Size(107, 13);
+            this.m_lbl_so_tien.TabIndex = 28;
+            this.m_lbl_so_tien.Text = "Số tiền (ghi bằng số):";
+            // 
+            // m_txt_so_tien
+            // 
+            this.m_txt_so_tien.Location = new System.Drawing.Point(514, 41);
+            this.m_txt_so_tien.Name = "m_txt_so_tien";
+            this.m_txt_so_tien.Size = new System.Drawing.Size(201, 20);
+            this.m_txt_so_tien.TabIndex = 29;
+            // 
+            // m_lbl_ngay_thu
+            // 
+            this.m_lbl_ngay_thu.AutoSize = true;
+            this.m_lbl_ngay_thu.Location = new System.Drawing.Point(396, 110);
+            this.m_lbl_ngay_thu.Name = "m_lbl_ngay_thu";
+            this.m_lbl_ngay_thu.Size = new System.Drawing.Size(53, 13);
+            this.m_lbl_ngay_thu.TabIndex = 28;
+            this.m_lbl_ngay_thu.Text = "Ngày thu:";
+            // 
+            // m_lbl_ngay_nhap
+            // 
+            this.m_lbl_ngay_nhap.AutoSize = true;
+            this.m_lbl_ngay_nhap.Location = new System.Drawing.Point(396, 144);
+            this.m_lbl_ngay_nhap.Name = "m_lbl_ngay_nhap";
+            this.m_lbl_ngay_nhap.Size = new System.Drawing.Size(62, 13);
+            this.m_lbl_ngay_nhap.TabIndex = 28;
+            this.m_lbl_ngay_nhap.Text = "Ngày nhập:";
+            // 
+            // m_lbl_noi_dung
+            // 
+            this.m_lbl_noi_dung.AutoSize = true;
+            this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 180);
+            this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
+            this.m_lbl_noi_dung.Size = new System.Drawing.Size(99, 13);
+            this.m_lbl_noi_dung.TabIndex = 28;
+            this.m_lbl_noi_dung.Text = "Tên người nộp tiền:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(115, 177);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(600, 20);
+            this.textBox4.TabIndex = 29;
+            // 
+            // m_dat_ngay_thu
+            // 
+            this.m_dat_ngay_thu.Location = new System.Drawing.Point(514, 106);
+            this.m_dat_ngay_thu.Name = "m_dat_ngay_thu";
+            this.m_dat_ngay_thu.Size = new System.Drawing.Size(201, 20);
+            this.m_dat_ngay_thu.TabIndex = 30;
+            // 
+            // m_dat_ngay_nhap
+            // 
+            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(514, 138);
+            this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
+            this.m_dat_ngay_nhap.Size = new System.Drawing.Size(201, 20);
+            this.m_dat_ngay_nhap.TabIndex = 30;
+            // 
+            // m_lbl_so_tien_bang_chu
+            // 
+            this.m_lbl_so_tien_bang_chu.AutoSize = true;
+            this.m_lbl_so_tien_bang_chu.Location = new System.Drawing.Point(396, 76);
+            this.m_lbl_so_tien_bang_chu.Name = "m_lbl_so_tien_bang_chu";
+            this.m_lbl_so_tien_bang_chu.Size = new System.Drawing.Size(114, 13);
+            this.m_lbl_so_tien_bang_chu.TabIndex = 28;
+            this.m_lbl_so_tien_bang_chu.Text = "Số tiền (ghi bằng chữ):";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(514, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(201, 20);
+            this.textBox1.TabIndex = 29;
             // 
             // F340_lap_phieu_thu
             // 
@@ -189,6 +385,8 @@
             this.Text = "F340 - Lập phiếu thu";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +402,24 @@
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox m_txt_ten_nguoi_nop_tien;
+        private System.Windows.Forms.TextBox m_txt_nguoi_nhap;
+        private System.Windows.Forms.TextBox m_txt_nguoi_thu;
+        private System.Windows.Forms.TextBox m_txt_ho_ten_hoc_sinh;
+        private System.Windows.Forms.Label m_lbl_ten_nguoi_nop_tien;
+        private System.Windows.Forms.Label m_lbl_nguoi_nhap;
+        private System.Windows.Forms.Label m_lbl_nguoi_thu;
+        private System.Windows.Forms.Label m_lbl_ho_ten_hoc_sinh;
+        private System.Windows.Forms.Label m_lbl_header;
+        private System.Windows.Forms.DateTimePicker m_dat_ngay_nhap;
+        private System.Windows.Forms.DateTimePicker m_dat_ngay_thu;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txt_so_tien;
+        private System.Windows.Forms.Label m_lbl_noi_dung;
+        private System.Windows.Forms.Label m_lbl_ngay_nhap;
+        private System.Windows.Forms.Label m_lbl_ngay_thu;
+        private System.Windows.Forms.Label m_lbl_so_tien_bang_chu;
+        private System.Windows.Forms.Label m_lbl_so_tien;
     }
 }
