@@ -42,9 +42,11 @@
             this.m_lbl_tong_phai_thu = new System.Windows.Forms.Label();
             this.m_lbl_tong = new System.Windows.Forms.Label();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_lbl_tim_kiem = new System.Windows.Forms.Label();
             this.m_lbl_lop_mon = new System.Windows.Forms.Label();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -66,7 +68,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(599, 27);
+            this.m_lbl_header.Size = new System.Drawing.Size(725, 27);
             this.m_lbl_header.TabIndex = 26;
             this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU CỦA HỌC SINH THEO TỪNG LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,7 +79,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 237);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(599, 179);
+            this.m_fg.Size = new System.Drawing.Size(725, 277);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 29;
             // 
@@ -93,15 +95,17 @@
             this.panel1.Controls.Add(this.m_lbl_tong_phai_thu);
             this.panel1.Controls.Add(this.m_lbl_tong);
             this.panel1.Controls.Add(this.m_lbl_tu_ngay);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.m_lbl_den_ngay);
             this.panel1.Controls.Add(this.m_dat_den_ngay);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_lbl_tim_kiem);
             this.panel1.Controls.Add(this.m_lbl_lop_mon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 237);
+            this.panel1.Size = new System.Drawing.Size(725, 237);
             this.panel1.TabIndex = 30;
             // 
             // m_cmd_search
@@ -183,12 +187,20 @@
             this.m_lbl_tu_ngay.TabIndex = 23;
             this.m_lbl_tu_ngay.Text = "Từ ngày:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(413, 107);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(87, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
             // m_cbo_lop
             // 
             this.m_cbo_lop.FormattingEnabled = true;
             this.m_cbo_lop.Location = new System.Drawing.Point(220, 107);
             this.m_cbo_lop.Name = "m_cbo_lop";
-            this.m_cbo_lop.Size = new System.Drawing.Size(190, 21);
+            this.m_cbo_lop.Size = new System.Drawing.Size(87, 21);
             this.m_cbo_lop.TabIndex = 25;
             // 
             // m_lbl_den_ngay
@@ -209,6 +221,15 @@
             this.m_dat_den_ngay.Size = new System.Drawing.Size(190, 20);
             this.m_dat_den_ngay.TabIndex = 24;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(353, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Môn:";
+            // 
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
@@ -223,9 +244,9 @@
             this.m_lbl_lop_mon.AutoSize = true;
             this.m_lbl_lop_mon.Location = new System.Drawing.Point(145, 110);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
-            this.m_lbl_lop_mon.Size = new System.Drawing.Size(51, 13);
+            this.m_lbl_lop_mon.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_lop_mon.TabIndex = 23;
-            this.m_lbl_lop_mon.Text = "Lớp môn:";
+            this.m_lbl_lop_mon.Text = "Lớp:";
             // 
             // ImageList
             // 
@@ -262,10 +283,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 380);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 478);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(599, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(725, 36);
             this.m_pnl_out_place_dm.TabIndex = 31;
             // 
             // m_cmd_insert
@@ -277,7 +298,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(243, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(369, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -292,7 +313,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(331, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(457, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -322,7 +343,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(419, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(545, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -337,7 +358,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(507, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(633, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -347,7 +368,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 416);
+            this.ClientSize = new System.Drawing.Size(725, 514);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
@@ -387,5 +408,7 @@
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
