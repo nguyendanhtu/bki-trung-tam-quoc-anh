@@ -16,5 +16,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
             InitializeComponent();
         }
 
+        #region Public Properties
+        public void display()
+        {
+            this.ShowDialog();
+        }
+        #endregion
     }
 }
