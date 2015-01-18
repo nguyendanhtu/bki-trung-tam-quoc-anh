@@ -185,7 +185,7 @@ Public Class f101_Dang_Nhap
         Me.GroupBox1.Size = New System.Drawing.Size(302, 162)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý kho"
+        Me.GroupBox1.Text = "Đăng nhập - Hệ thống quản lý tài chính"
         '
         'Panel2
         '
