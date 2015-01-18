@@ -85,7 +85,7 @@
             this.m_txt_search.Location = new System.Drawing.Point(217, 74);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(260, 20);
-            this.m_txt_search.TabIndex = 36;
+            this.m_txt_search.TabIndex = 6;
             // 
             // m_cmd_search
             // 
@@ -98,7 +98,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(494, 66);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 35;
+            this.m_cmd_search.TabIndex = 7;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // imageList1
@@ -136,7 +136,7 @@
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(719, 45);
-            this.m_lbl_header.TabIndex = 26;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -154,7 +154,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(719, 107);
-            this.panel1.TabIndex = 30;
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -162,7 +162,7 @@
             this.label1.Location = new System.Drawing.Point(110, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 32;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Tìm kiếm (Lớp môn)";
             // 
             // m_dat_tu_ngay
@@ -172,7 +172,7 @@
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(217, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_tu_ngay.TabIndex = 24;
+            this.m_dat_tu_ngay.TabIndex = 2;
             // 
             // m_lbl_tu_ngay
             // 
@@ -180,7 +180,7 @@
             this.m_lbl_tu_ngay.Location = new System.Drawing.Point(140, 50);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
-            this.m_lbl_tu_ngay.TabIndex = 23;
+            this.m_lbl_tu_ngay.TabIndex = 1;
             this.m_lbl_tu_ngay.Text = "Từ ngày";
             // 
             // m_lbl_den_ngay
@@ -189,7 +189,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(324, 49);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
-            this.m_lbl_den_ngay.TabIndex = 23;
+            this.m_lbl_den_ngay.TabIndex = 3;
             this.m_lbl_den_ngay.Text = "Đến ngày";
             // 
             // m_dat_den_ngay
@@ -199,7 +199,7 @@
             this.m_dat_den_ngay.Location = new System.Drawing.Point(383, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_den_ngay.TabIndex = 24;
+            this.m_dat_den_ngay.TabIndex = 4;
             // 
             // m_cmd_delete
             // 
@@ -213,7 +213,7 @@
             this.m_cmd_delete.Location = new System.Drawing.Point(539, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_insert
@@ -228,7 +228,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(363, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_update
@@ -243,7 +243,7 @@
             this.m_cmd_update.Location = new System.Drawing.Point(451, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_xuat_excel
@@ -258,7 +258,7 @@
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_pnl_out_place_dm
@@ -273,7 +273,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(719, 36);
-            this.m_pnl_out_place_dm.TabIndex = 28;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_exit
             // 
@@ -287,7 +287,7 @@
             this.m_cmd_exit.Location = new System.Drawing.Point(627, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_fg
@@ -298,7 +298,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(719, 252);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 31;
+            this.m_fg.TabIndex = 1;
             // 
             // f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh
             // 
@@ -309,7 +309,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh";
-            this.Text = "f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh";
+            this.Text = "F470 - Báo cáo tình hình tài chính theo học sinh";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.m_pnl_out_place_dm.ResumeLayout(false);

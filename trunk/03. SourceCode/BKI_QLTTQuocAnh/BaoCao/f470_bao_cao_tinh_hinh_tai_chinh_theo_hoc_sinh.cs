@@ -74,12 +74,20 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
+            m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
+            m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
+
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
         }
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day+1);
+            m_cmd_insert.Visible = false;
+            m_cmd_update.Visible = false;
+            m_cmd_delete.Visible = false;
             load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -111,6 +119,27 @@ namespace BKI_QLTTQuocAnh.BaoCao
             );
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TONG_PHAI_THU
+                ,"Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TONG_THUC_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TONG_GIAM_TRU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 0
+             , -1
+             , (int)e_col_Number.TONG_CON_NO
+             , "Tổng cộng");
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH i_us
