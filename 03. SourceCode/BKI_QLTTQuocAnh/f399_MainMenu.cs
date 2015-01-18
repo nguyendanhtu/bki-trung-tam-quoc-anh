@@ -15,7 +15,7 @@ using System.Security.Policy;
 
 using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.DanhMuc;
-
+using BKI_QLTTQuocAnh.BaoCao;
 namespace Form_menu {
     public partial class f399_MainMenu : DevComponents.DotNetBar.Office2007RibbonForm {
         public f399_MainMenu() {
@@ -49,6 +49,20 @@ namespace Form_menu {
         private void set_define_events() {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
+            m_cmd_phai_thu_thuc_thu_theo_lop.Click += m_cmd_phai_thu_thuc_thu_theo_lop_Click;
+        }
+
+        private void m_cmd_phai_thu_thuc_thu_theo_lop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                F410_bao_cao_tien_phai_thu_theo_lop v_frm = new F410_bao_cao_tien_phai_thu_theo_lop();
+                v_frm.display();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_danh_sach_lop_mon_Click(object sender, EventArgs e)
