@@ -108,6 +108,12 @@
     <Compile Include="BaoCao\f430_bao_cao_danh_sach_phai_thu_thuc_thu.Designer.cs">
       <DependentUpon>f430_bao_cao_danh_sach_phai_thu_thuc_thu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.Designer.cs">
+      <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f201_danh_sach_lop_mon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f430_bao_cao_danh_sach_phai_thu_thuc_thu.resx">
       <DependentUpon>f430_bao_cao_danh_sach_phai_thu_thuc_thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.resx">
+      <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f201_danh_sach_lop_mon.resx">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
