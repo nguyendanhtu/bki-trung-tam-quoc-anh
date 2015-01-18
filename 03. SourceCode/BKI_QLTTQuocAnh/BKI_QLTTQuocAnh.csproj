@@ -69,6 +69,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\SiSButton.dll</HintPath>
@@ -99,7 +100,7 @@
     <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.Designer.cs">
+    <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.designer.cs">
       <DependentUpon>F410_bao_cao_tien_phai_thu_theo_lop.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCao\F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.cs">
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.Designer.cs">
       <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.Designer.cs">
+      <DependentUpon>f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\f201_danh_sach_lop_mon.cs">
       <SubType>Form</SubType>
@@ -199,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.resx">
       <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.resx">
+      <DependentUpon>f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f201_danh_sach_lop_mon.resx">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>

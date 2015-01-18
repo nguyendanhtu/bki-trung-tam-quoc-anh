@@ -66,6 +66,7 @@
     <Compile Include="US_LOG_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
+    <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_QLTTQuocAnh.DS\BKI_QLTTQuocAnh.DS.csproj">

@@ -70,7 +70,7 @@ namespace Form_menu {
         {
             try
             {
-                F410_bao_cao_tien_phai_thu_theo_lop v_frm = new F410_bao_cao_tien_phai_thu_theo_lop();
+                f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh v_frm = new f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh();
                 v_frm.display();
             }
             catch (System.Exception v_e)
