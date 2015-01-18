@@ -49,7 +49,6 @@ namespace Form_menu {
         private void set_define_events() {
             m_cmd_nhap_kho.Click += m_cmd_nhap_kho_Click;
             m_cmd_xuat_kho.Click += m_cmd_xuat_kho_Click;
-            m_cmd_danh_sach_lop_mon.Click += m_cmd_danh_sach_lop_mon_Click;
         }
 
         private void m_cmd_danh_sach_lop_mon_Click(object sender, EventArgs e)
