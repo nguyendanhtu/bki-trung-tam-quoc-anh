@@ -257,5 +257,22 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SO_TIEN = "SO_TIEN";
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
-    }   
+    }
+
+    public class V_GD_PHIEU_THU
+    {
+        public const string ID = "ID";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string HO_TEN = "HO_TEN";
+        public const string ID_NGUOI_THU = "ID_NGUOI_THU";
+        public const string NGUOI_THU = "NGUOI_THU";
+        public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
+        public const string NGUOI_NHAP = "NGUOI_NHAP";
+        public const string TEN_NGUOI_NOP_TIEN = "TEN_NGUOI_NOP_TIEN";
+        public const string NOI_DUNG = "NOI_DUNG";
+        public const string SO_TIEN = "SO_TIEN";
+        public const string NGAY_THU = "NGAY_THU";
+        public const string NGAY_NHAP = "NGAY_NHAP";
+    }
+
 }
