@@ -65,7 +65,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(286, 175);
+            this.m_cmd_search.Location = new System.Drawing.Point(286, 163);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 37;
@@ -101,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(167, 153);
+            this.label2.Location = new System.Drawing.Point(167, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 31;
@@ -109,7 +109,7 @@
             // 
             // m_txt_tim_kien
             // 
-            this.m_txt_tim_kien.Location = new System.Drawing.Point(266, 149);
+            this.m_txt_tim_kien.Location = new System.Drawing.Point(266, 137);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(190, 20);
             this.m_txt_tim_kien.TabIndex = 30;
@@ -117,7 +117,7 @@
             // m_lbl_nguoi_diem_danh
             // 
             this.m_lbl_nguoi_diem_danh.AutoSize = true;
-            this.m_lbl_nguoi_diem_danh.Location = new System.Drawing.Point(167, 121);
+            this.m_lbl_nguoi_diem_danh.Location = new System.Drawing.Point(167, 109);
             this.m_lbl_nguoi_diem_danh.Name = "m_lbl_nguoi_diem_danh";
             this.m_lbl_nguoi_diem_danh.Size = new System.Drawing.Size(77, 13);
             this.m_lbl_nguoi_diem_danh.TabIndex = 28;
@@ -140,13 +140,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(630, 224);
+            this.panel2.Size = new System.Drawing.Size(630, 199);
             this.panel2.TabIndex = 33;
             // 
             // m_cbo_nhan_vien_thu
             // 
             this.m_cbo_nhan_vien_thu.FormattingEnabled = true;
-            this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(266, 117);
+            this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(266, 105);
             this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
             this.m_cbo_nhan_vien_thu.Size = new System.Drawing.Size(190, 21);
             this.m_cbo_nhan_vien_thu.TabIndex = 29;
@@ -184,7 +184,7 @@
             // m_cbo_lop_môn
             // 
             this.m_cbo_lop_môn.FormattingEnabled = true;
-            this.m_cbo_lop_môn.Location = new System.Drawing.Point(266, 84);
+            this.m_cbo_lop_môn.Location = new System.Drawing.Point(266, 74);
             this.m_cbo_lop_môn.Name = "m_cbo_lop_môn";
             this.m_cbo_lop_môn.Size = new System.Drawing.Size(190, 21);
             this.m_cbo_lop_môn.TabIndex = 25;
@@ -210,7 +210,7 @@
             // m_lbl_lop_mon
             // 
             this.m_lbl_lop_mon.AutoSize = true;
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(167, 88);
+            this.m_lbl_lop_mon.Location = new System.Drawing.Point(167, 78);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(51, 13);
             this.m_lbl_lop_mon.TabIndex = 23;
@@ -247,9 +247,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 224);
+            this.m_fg.Location = new System.Drawing.Point(0, 199);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(630, 141);
+            this.m_fg.Size = new System.Drawing.Size(630, 166);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 32;
             // 
