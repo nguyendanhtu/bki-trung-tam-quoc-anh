@@ -112,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_LOG_GD_PHIEU_THU.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_HOC_SINH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_GD_PHIEU_THU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +131,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -282,6 +292,17 @@
     <None Include="DS_LOG_GD_PHIEU_THU.xss">
       <DependentUpon>DS_LOG_GD_PHIEU_THU.xsd</DependentUpon>
     </None>
+    <None Include="DS_V_DM_HOC_SINH.xsc">
+      <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_HOC_SINH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_HOC_SINH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_HOC_SINH.xss">
+      <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>
+    </None>
     <None Include="DS_V_GD_PHIEU_THU.xsc">
       <DependentUpon>DS_V_GD_PHIEU_THU.xsd</DependentUpon>
     </None>
@@ -314,6 +335,17 @@
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xss">
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsc">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xss">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

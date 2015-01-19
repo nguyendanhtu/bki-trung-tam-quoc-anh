@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" targetNamespace="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd" xmlns:mstns="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd" xmlns="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" targetNamespace="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd" xmlns:mstns="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd" xmlns="http://tempuri.org/DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -7,12 +7,12 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyTTQuocAnhConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyTTQuocAnhConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.QuanLyTTQuocAnhConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHTableAdapter" GeneratorDataComponentClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHTableAdapter" Name="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" UserDataComponentName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONTableAdapter" GeneratorDataComponentClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONTableAdapter" Name="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" UserDataComponentName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString1 (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString1 (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, MA_DOI_TUONG, HO_TEN, HO_TEN_PH, SDT_HS, SDT_PH, EMAIL_HS, EMAIL_PH, TONG_PHAI_THU, TONG_GIAM_TRU, TONG_THUC_THU, TONG_CON_NO FROM dbo.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH</CommandText>
+                    <CommandText>SELECT ID, MA_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, ID_LOP, ID_MON, HO_TEN_PH, SDT_HS, SDT_PH, EMAIL_HS, EMAIL_PH, TONG_PHAI_THU, TONG_GIAM_TRU, TONG_THUC_THU, TONG_CON_NO FROM dbo.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,6 +22,10 @@
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="MA_DOI_TUONG" DataSetColumn="MA_DOI_TUONG" />
               <Mapping SourceColumn="HO_TEN" DataSetColumn="HO_TEN" />
+              <Mapping SourceColumn="ID_LOP_MON" DataSetColumn="ID_LOP_MON" />
+              <Mapping SourceColumn="MA_LOP_MON" DataSetColumn="MA_LOP_MON" />
+              <Mapping SourceColumn="ID_LOP" DataSetColumn="ID_LOP" />
+              <Mapping SourceColumn="ID_MON" DataSetColumn="ID_MON" />
               <Mapping SourceColumn="HO_TEN_PH" DataSetColumn="HO_TEN_PH" />
               <Mapping SourceColumn="SDT_HS" DataSetColumn="SDT_HS" />
               <Mapping SourceColumn="SDT_PH" DataSetColumn="SDT_PH" />
@@ -39,13 +43,13 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msprop:Generator_UserDSName="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH">
+  <xs:element name="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msprop:Generator_UserDSName="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msprop:Generator_TableClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHDataTable" msprop:Generator_TableVarName="tableV_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msprop:Generator_RowChangedName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowChanged" msprop:Generator_TablePropName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msprop:Generator_RowDeletingName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowDeleting" msprop:Generator_RowChangingName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowChanging" msprop:Generator_RowEvHandlerName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowDeleted" msprop:Generator_RowClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRow" msprop:Generator_UserTableName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" msprop:Generator_RowEvArgName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINHRowChangeEvent">
+        <xs:element name="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msprop:Generator_TableClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONDataTable" msprop:Generator_TableVarName="tableV_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msprop:Generator_RowChangedName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowChanged" msprop:Generator_TablePropName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msprop:Generator_RowDeletingName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowDeleting" msprop:Generator_RowChangingName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowChanging" msprop:Generator_RowEvHandlerName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowChangeEventHandler" msprop:Generator_RowDeletedName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowDeleted" msprop:Generator_RowClassName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRow" msprop:Generator_UserTableName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON" msprop:Generator_RowEvArgName="V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MONRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
               <xs:element name="MA_DOI_TUONG" msprop:Generator_ColumnVarNameInTable="columnMA_DOI_TUONG" msprop:Generator_ColumnPropNameInRow="MA_DOI_TUONG" msprop:Generator_ColumnPropNameInTable="MA_DOI_TUONGColumn" msprop:Generator_UserColumnName="MA_DOI_TUONG">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -53,13 +57,23 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HO_TEN" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+              <xs:element name="HO_TEN" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="51" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID_LOP_MON" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" />
+              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_LOP" msprop:Generator_ColumnVarNameInTable="columnID_LOP" msprop:Generator_ColumnPropNameInRow="ID_LOP" msprop:Generator_ColumnPropNameInTable="ID_LOPColumn" msprop:Generator_UserColumnName="ID_LOP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_MON" msprop:Generator_ColumnVarNameInTable="columnID_MON" msprop:Generator_ColumnPropNameInRow="ID_MON" msprop:Generator_ColumnPropNameInTable="ID_MONColumn" msprop:Generator_UserColumnName="ID_MON" type="xs:decimal" minOccurs="0" />
               <xs:element name="HO_TEN_PH" msprop:Generator_ColumnVarNameInTable="columnHO_TEN_PH" msprop:Generator_ColumnPropNameInRow="HO_TEN_PH" msprop:Generator_ColumnPropNameInTable="HO_TEN_PHColumn" msprop:Generator_UserColumnName="HO_TEN_PH" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -104,9 +118,5 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH" />
-      <xs:field xpath="mstns:ID" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

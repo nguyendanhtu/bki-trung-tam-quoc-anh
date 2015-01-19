@@ -46,7 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.m_txt_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -237,7 +237,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.m_cbo_lop_mon);
             this.panel1.Controls.Add(this.m_txt_search);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label1);
@@ -288,13 +288,13 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // comboBox1
+            // m_cbo_lop_mon
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(265, 105);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 21);
-            this.comboBox1.TabIndex = 8;
+            this.m_cbo_lop_mon.FormattingEnabled = true;
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(265, 105);
+            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
+            this.m_cbo_lop_mon.Size = new System.Drawing.Size(171, 21);
+            this.m_cbo_lop_mon.TabIndex = 8;
             // 
             // label2
             // 
@@ -358,7 +358,7 @@
         private System.Windows.Forms.DateTimePicker m_dat_den_ngay;
         internal System.Windows.Forms.ImageList ImageList;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
         private System.Windows.Forms.TextBox m_txt_search;
         private System.Windows.Forms.Label label1;
     }
