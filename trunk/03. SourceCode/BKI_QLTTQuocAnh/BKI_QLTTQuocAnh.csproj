@@ -91,12 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
-    <Compile Include="BaoCao\F340_lap_phieu_thu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\F340_lap_phieu_thu.Designer.cs">
-      <DependentUpon>F340_lap_phieu_thu.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,9 +204,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
-    <EmbeddedResource Include="BaoCao\F340_lap_phieu_thu.resx">
-      <DependentUpon>F340_lap_phieu_thu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.resx">
       <DependentUpon>F410_bao_cao_tien_phai_thu_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
