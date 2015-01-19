@@ -15,6 +15,5 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
         }
-
     }
 }
