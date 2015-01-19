@@ -25,6 +25,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
             format_controls();
+            load_data_2_cbo_lop_mon();
         }
 
         #region Public Interface
@@ -120,9 +121,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             v_us.FillDataset(v_ds);
 
+            
             m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
             m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
             m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
+
+            DataRow v_dr = v_ds.V_DM_HOC_SINH.NewRow();
+            v_dr[V_DM_HOC_SINH.ID_LOP_MON] = -1;
+            v_dr[V_DM_HOC_SINH.MA_LOP_MON] = "--Tất cả---";
+            //v_dr[V_DM_HOC_SINH.TEN_PHONG_BAN] = "------------Tất cả------------";
+
+
+            v_ds.V_DM_HOC_SINH.Rows.InsertAt(v_dr, 0);
+            m_cbo_lop_mon.SelectedIndex = 0;
         }
         private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh){
             DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
@@ -154,7 +165,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void load_data_2_grid()
         {
-            load_data_2_grid();
+            //load_data_2_grid();
             m_ds = new DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
             m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
