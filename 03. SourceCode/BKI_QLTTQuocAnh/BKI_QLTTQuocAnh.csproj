@@ -121,6 +121,12 @@
     <Compile Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.Designer.cs">
       <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.Designer.cs">
+      <DependentUpon>F460_danh_sach_hoc_sinh_theo_lop_mon.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f450_bao_cao_thong_ke_so_luong_hoc_vien.resx">
       <DependentUpon>f450_bao_cao_thong_ke_so_luong_hoc_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.resx">
+      <DependentUpon>F460_danh_sach_hoc_sinh_theo_lop_mon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.resx">
       <DependentUpon>f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs</DependentUpon>
