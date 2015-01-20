@@ -86,13 +86,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
+            m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
+            m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
             set_define_events();
             this.KeyPreview = true;
         }
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-
             load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -121,18 +122,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             v_us.FillDataset(v_ds);
 
+            DataRow v_dr = v_ds.V_DM_HOC_SINH.NewRow();
+            v_dr[V_DM_HOC_SINH.ID] = -1;
+            v_dr[V_DM_HOC_SINH.ID_LOP_MON] = -1;
+            v_dr[V_DM_HOC_SINH.ID_GD_HOC] = -1;
+            v_dr[V_DM_HOC_SINH.MA_LOP_MON] = "--Tất cả---";
+            
+            v_ds.V_DM_HOC_SINH.Rows.InsertAt(v_dr, 0);
             
             m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
             m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
             m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
 
-            DataRow v_dr = v_ds.V_DM_HOC_SINH.NewRow();
-            v_dr[V_DM_HOC_SINH.ID_LOP_MON] = -1;
-            v_dr[V_DM_HOC_SINH.MA_LOP_MON] = "--Tất cả---";
-            //v_dr[V_DM_HOC_SINH.TEN_PHONG_BAN] = "------------Tất cả------------";
-
-
-            v_ds.V_DM_HOC_SINH.Rows.InsertAt(v_dr, 0);
             m_cbo_lop_mon.SelectedIndex = 0;
         }
         private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh){
@@ -161,6 +162,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
                                         , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TONG_PHAI_THU
+                , "Tổng cộng");
             m_fg.Redraw = true;
         }
         private void load_data_2_grid()
@@ -170,6 +176,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TONG_PHAI_THU
+                , "Tổng cộng");
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
