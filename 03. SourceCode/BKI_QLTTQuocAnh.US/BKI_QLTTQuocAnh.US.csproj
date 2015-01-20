@@ -67,6 +67,7 @@
     <Compile Include="US_V_DM_HOC_SINH.cs" />
     <Compile Include="US_V_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
+    <Compile Include="US_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.cs" />
   </ItemGroup>
