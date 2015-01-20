@@ -1,6 +1,6 @@
 ﻿namespace BKI_QLTTQuocAnh.BaoCao
 {
-    partial class f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon
+    partial class f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm));
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -73,7 +73,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(467, 100);
+            this.m_cmd_search.Location = new System.Drawing.Point(412, 100);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 7;
@@ -211,7 +211,7 @@
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(265, 48);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(210, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_tu_ngay.TabIndex = 2;
@@ -219,7 +219,7 @@
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(188, 50);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(133, 50);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
             this.m_lbl_tu_ngay.TabIndex = 1;
@@ -228,7 +228,7 @@
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(372, 49);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(317, 49);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
             this.m_lbl_den_ngay.TabIndex = 3;
@@ -255,7 +255,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(162, 108);
+            this.label2.Location = new System.Drawing.Point(107, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 9;
@@ -264,14 +264,14 @@
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(265, 105);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(210, 105);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(171, 21);
             this.m_cbo_lop_mon.TabIndex = 8;
             // 
             // m_txt_search
             // 
-            this.m_txt_search.Location = new System.Drawing.Point(265, 74);
+            this.m_txt_search.Location = new System.Drawing.Point(210, 74);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(260, 20);
             this.m_txt_search.TabIndex = 6;
@@ -279,7 +279,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 77);
+            this.label1.Location = new System.Drawing.Point(90, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 5;
@@ -289,7 +289,7 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(431, 48);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(376, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_den_ngay.TabIndex = 4;
@@ -321,7 +321,7 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon
+            // f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,7 +329,7 @@
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel1);
-            this.Name = "f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon";
+            this.Name = "f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm";
             this.Text = "F480 - Báo cáo tình hình tài chính học sinh theo lớp môn";
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);

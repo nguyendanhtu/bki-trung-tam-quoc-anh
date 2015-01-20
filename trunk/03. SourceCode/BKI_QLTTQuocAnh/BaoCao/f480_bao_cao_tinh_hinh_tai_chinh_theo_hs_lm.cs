@@ -19,9 +19,9 @@ using C1.Win.C1FlexGrid;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
-    public partial class f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon : Form
+    public partial class f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm : Form
     {
-        public f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon()
+        public f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm()
         {
             InitializeComponent();
             format_controls();
@@ -82,7 +82,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         #region Private Methods
         private void format_controls()
         {
-            CControlFormat.setFormStyle(this, new CAppContext_201());
+
+            //CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
