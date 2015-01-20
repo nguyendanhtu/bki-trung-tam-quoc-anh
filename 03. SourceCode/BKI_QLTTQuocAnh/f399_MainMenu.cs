@@ -57,7 +57,7 @@ namespace Form_menu {
         {
             try
             {
-                f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon();
+                f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm();
                 v_frm.display();
             }
             catch (System.Exception v_e)

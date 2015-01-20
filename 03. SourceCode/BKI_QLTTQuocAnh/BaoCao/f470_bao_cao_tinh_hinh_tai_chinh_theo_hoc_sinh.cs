@@ -233,7 +233,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                     if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                     grid2us_object(v_us, m_fg.Row);
 
-                    f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon();
+                    f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm();
                     v_frm.display(v_us.dcID, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
                 }
             }
