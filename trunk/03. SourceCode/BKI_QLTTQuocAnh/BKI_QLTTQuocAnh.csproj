@@ -212,6 +212,7 @@
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.resx">
       <DependentUpon>F410_bao_cao_tien_phai_thu_theo_lop.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.resx">
       <DependentUpon>F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.cs</DependentUpon>
