@@ -43,10 +43,10 @@
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_txt_search = new System.Windows.Forms.TextBox();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.label1 = new System.Windows.Forms.Label();
             this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -216,7 +216,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_txt_search);
+            this.panel1.Controls.Add(this.m_cbo_lop_mon);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_lbl_header);
@@ -229,13 +229,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(761, 107);
             this.panel1.TabIndex = 27;
-            // 
-            // m_txt_search
-            // 
-            this.m_txt_search.Location = new System.Drawing.Point(252, 74);
-            this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(260, 20);
-            this.m_txt_search.TabIndex = 36;
             // 
             // m_cmd_search
             // 
@@ -271,6 +264,14 @@
             this.m_lbl_header.TabIndex = 26;
             this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU, THỰC THU THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_cbo_lop_mon
+            // 
+            this.m_cbo_lop_mon.FormattingEnabled = true;
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(252, 74);
+            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
+            this.m_cbo_lop_mon.Size = new System.Drawing.Size(202, 21);
+            this.m_cbo_lop_mon.TabIndex = 36;
             // 
             // F410_bao_cao_tien_phai_thu_theo_lop
             // 
@@ -308,6 +309,6 @@
         private System.Windows.Forms.Label m_lbl_header;
         private System.Windows.Forms.Label label1;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
-        private System.Windows.Forms.TextBox m_txt_search;
+        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
     }
 }
