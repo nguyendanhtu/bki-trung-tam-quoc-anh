@@ -50,25 +50,25 @@
   <xs:element name="DS_V_DM_HOC_SINH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_DM_HOC_SINH" msprop:Generator_UserDSName="DS_V_DM_HOC_SINH">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_DM_HOC_SINH" msprop:Generator_TableClassName="V_DM_HOC_SINHDataTable" msprop:Generator_TableVarName="tableV_DM_HOC_SINH" msprop:Generator_TablePropName="V_DM_HOC_SINH" msprop:Generator_RowDeletingName="V_DM_HOC_SINHRowDeleting" msprop:Generator_RowChangingName="V_DM_HOC_SINHRowChanging" msprop:Generator_RowEvHandlerName="V_DM_HOC_SINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_HOC_SINHRowDeleted" msprop:Generator_UserTableName="V_DM_HOC_SINH" msprop:Generator_RowChangedName="V_DM_HOC_SINHRowChanged" msprop:Generator_RowEvArgName="V_DM_HOC_SINHRowChangeEvent" msprop:Generator_RowClassName="V_DM_HOC_SINHRow">
+        <xs:element name="V_DM_HOC_SINH" msprop:Generator_TableClassName="V_DM_HOC_SINHDataTable" msprop:Generator_TableVarName="tableV_DM_HOC_SINH" msprop:Generator_RowChangedName="V_DM_HOC_SINHRowChanged" msprop:Generator_TablePropName="V_DM_HOC_SINH" msprop:Generator_RowDeletingName="V_DM_HOC_SINHRowDeleting" msprop:Generator_RowChangingName="V_DM_HOC_SINHRowChanging" msprop:Generator_RowEvHandlerName="V_DM_HOC_SINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_HOC_SINHRowDeleted" msprop:Generator_RowClassName="V_DM_HOC_SINHRow" msprop:Generator_UserTableName="V_DM_HOC_SINH" msprop:Generator_RowEvArgName="V_DM_HOC_SINHRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
-              <xs:element name="MA_DOI_TUONG" msprop:Generator_ColumnVarNameInTable="columnMA_DOI_TUONG" msprop:Generator_ColumnPropNameInRow="MA_DOI_TUONG" msprop:Generator_ColumnPropNameInTable="MA_DOI_TUONGColumn" msprop:Generator_UserColumnName="MA_DOI_TUONG">
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MA_DOI_TUONG" msprop:Generator_ColumnVarNameInTable="columnMA_DOI_TUONG" msprop:Generator_ColumnPropNameInRow="MA_DOI_TUONG" msprop:Generator_ColumnPropNameInTable="MA_DOI_TUONGColumn" msprop:Generator_UserColumnName="MA_DOI_TUONG" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="35" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnPropNameInTable="HOColumn" msprop:Generator_UserColumnName="HO">
+              <xs:element name="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnPropNameInTable="HOColumn" msprop:Generator_UserColumnName="HO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="35" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN">
+              <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
@@ -138,19 +138,19 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" />
+              <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" minOccurs="0" />
               <xs:element name="ID_LOP" msprop:Generator_ColumnVarNameInTable="columnID_LOP" msprop:Generator_ColumnPropNameInRow="ID_LOP" msprop:Generator_ColumnPropNameInTable="ID_LOPColumn" msprop:Generator_UserColumnName="ID_LOP" type="xs:decimal" minOccurs="0" />
               <xs:element name="ID_MON" msprop:Generator_ColumnVarNameInTable="columnID_MON" msprop:Generator_ColumnPropNameInRow="ID_MON" msprop:Generator_ColumnPropNameInTable="ID_MONColumn" msprop:Generator_UserColumnName="ID_MON" type="xs:decimal" minOccurs="0" />
-              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON">
+              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DON_GIA_BUOI_HOC" msprop:Generator_ColumnVarNameInTable="columnDON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInRow="DON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInTable="DON_GIA_BUOI_HOCColumn" msprop:Generator_UserColumnName="DON_GIA_BUOI_HOC" type="xs:decimal" />
-              <xs:element name="ID_GD_HOC" msprop:Generator_ColumnVarNameInTable="columnID_GD_HOC" msprop:Generator_ColumnPropNameInRow="ID_GD_HOC" msprop:Generator_ColumnPropNameInTable="ID_GD_HOCColumn" msprop:Generator_UserColumnName="ID_GD_HOC" type="xs:decimal" />
-              <xs:element name="TRANG_THAI_YN" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_YN" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_YN" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_YNColumn" msprop:Generator_UserColumnName="TRANG_THAI_YN">
+              <xs:element name="DON_GIA_BUOI_HOC" msprop:Generator_ColumnVarNameInTable="columnDON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInRow="DON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInTable="DON_GIA_BUOI_HOCColumn" msprop:Generator_UserColumnName="DON_GIA_BUOI_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_GD_HOC" msprop:Generator_ColumnVarNameInTable="columnID_GD_HOC" msprop:Generator_ColumnPropNameInRow="ID_GD_HOC" msprop:Generator_ColumnPropNameInTable="ID_GD_HOCColumn" msprop:Generator_UserColumnName="ID_GD_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TRANG_THAI_YN" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_YN" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_YN" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_YNColumn" msprop:Generator_UserColumnName="TRANG_THAI_YN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
