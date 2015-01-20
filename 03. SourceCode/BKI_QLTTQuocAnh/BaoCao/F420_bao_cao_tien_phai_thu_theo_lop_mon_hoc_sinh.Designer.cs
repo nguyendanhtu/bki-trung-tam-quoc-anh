@@ -37,9 +37,6 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
-            this.m_lbl_tong_con_phai_thu = new System.Windows.Forms.Label();
-            this.m_lbl_tong_thuc_thu = new System.Windows.Forms.Label();
-            this.m_lbl_tong_phai_thu = new System.Windows.Forms.Label();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
@@ -73,9 +70,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 218);
+            this.m_fg.Location = new System.Drawing.Point(0, 131);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(726, 184);
+            this.m_fg.Size = new System.Drawing.Size(726, 311);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 29;
             // 
@@ -85,9 +82,6 @@
             this.panel1.Controls.Add(this.m_txt_tim_kiem);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Controls.Add(this.m_dat_tu_ngay);
-            this.panel1.Controls.Add(this.m_lbl_tong_con_phai_thu);
-            this.panel1.Controls.Add(this.m_lbl_tong_thuc_thu);
-            this.panel1.Controls.Add(this.m_lbl_tong_phai_thu);
             this.panel1.Controls.Add(this.m_lbl_tu_ngay);
             this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.m_lbl_den_ngay);
@@ -97,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 218);
+            this.panel1.Size = new System.Drawing.Size(726, 131);
             this.panel1.TabIndex = 30;
             // 
             // m_cmd_search
@@ -108,7 +102,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(317, 155);
+            this.m_cmd_search.Location = new System.Drawing.Point(516, 95);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 36;
@@ -143,7 +137,7 @@
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(282, 129);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(307, 103);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(190, 20);
             this.m_txt_tim_kiem.TabIndex = 28;
@@ -152,42 +146,15 @@
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(282, 47);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(257, 50);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
-            this.m_dat_tu_ngay.Size = new System.Drawing.Size(190, 20);
+            this.m_dat_tu_ngay.Size = new System.Drawing.Size(86, 20);
             this.m_dat_tu_ngay.TabIndex = 24;
-            // 
-            // m_lbl_tong_con_phai_thu
-            // 
-            this.m_lbl_tong_con_phai_thu.AutoSize = true;
-            this.m_lbl_tong_con_phai_thu.Location = new System.Drawing.Point(610, 202);
-            this.m_lbl_tong_con_phai_thu.Name = "m_lbl_tong_con_phai_thu";
-            this.m_lbl_tong_con_phai_thu.Size = new System.Drawing.Size(94, 13);
-            this.m_lbl_tong_con_phai_thu.TabIndex = 23;
-            this.m_lbl_tong_con_phai_thu.Text = "Tổng còn phải thu";
-            // 
-            // m_lbl_tong_thuc_thu
-            // 
-            this.m_lbl_tong_thuc_thu.AutoSize = true;
-            this.m_lbl_tong_thuc_thu.Location = new System.Drawing.Point(530, 202);
-            this.m_lbl_tong_thuc_thu.Name = "m_lbl_tong_thuc_thu";
-            this.m_lbl_tong_thuc_thu.Size = new System.Drawing.Size(74, 13);
-            this.m_lbl_tong_thuc_thu.TabIndex = 23;
-            this.m_lbl_tong_thuc_thu.Text = "Tổng thực thu";
-            // 
-            // m_lbl_tong_phai_thu
-            // 
-            this.m_lbl_tong_phai_thu.AutoSize = true;
-            this.m_lbl_tong_phai_thu.Location = new System.Drawing.Point(432, 202);
-            this.m_lbl_tong_phai_thu.Name = "m_lbl_tong_phai_thu";
-            this.m_lbl_tong_phai_thu.Size = new System.Drawing.Size(73, 13);
-            this.m_lbl_tong_phai_thu.TabIndex = 23;
-            this.m_lbl_tong_phai_thu.Text = "Tổng phải thu";
             // 
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(207, 50);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(202, 53);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_tu_ngay.TabIndex = 23;
@@ -196,7 +163,7 @@
             // m_cbo_lop
             // 
             this.m_cbo_lop.FormattingEnabled = true;
-            this.m_cbo_lop.Location = new System.Drawing.Point(282, 102);
+            this.m_cbo_lop.Location = new System.Drawing.Point(307, 76);
             this.m_cbo_lop.Name = "m_cbo_lop";
             this.m_cbo_lop.Size = new System.Drawing.Size(87, 21);
             this.m_cbo_lop.TabIndex = 25;
@@ -204,7 +171,7 @@
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(207, 77);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(360, 52);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(56, 13);
             this.m_lbl_den_ngay.TabIndex = 23;
@@ -214,24 +181,24 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(282, 76);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(418, 50);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
-            this.m_dat_den_ngay.Size = new System.Drawing.Size(190, 20);
+            this.m_dat_den_ngay.Size = new System.Drawing.Size(87, 20);
             this.m_dat_den_ngay.TabIndex = 24;
             // 
             // m_lbl_tim_kiem
             // 
             this.m_lbl_tim_kiem.AutoSize = true;
-            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(207, 134);
+            this.m_lbl_tim_kiem.Location = new System.Drawing.Point(202, 103);
             this.m_lbl_tim_kiem.Name = "m_lbl_tim_kiem";
-            this.m_lbl_tim_kiem.Size = new System.Drawing.Size(55, 13);
+            this.m_lbl_tim_kiem.Size = new System.Drawing.Size(91, 13);
             this.m_lbl_tim_kiem.TabIndex = 23;
-            this.m_lbl_tim_kiem.Text = "Tìm kiếm: ";
+            this.m_lbl_tim_kiem.Text = "Tìm kiếm (tên HS)";
             // 
             // m_lbl_lop_mon
             // 
             this.m_lbl_lop_mon.AutoSize = true;
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(207, 105);
+            this.m_lbl_lop_mon.Location = new System.Drawing.Point(232, 79);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_lop_mon.TabIndex = 23;
@@ -245,7 +212,7 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 366);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 406);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(726, 36);
@@ -330,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 402);
+            this.ClientSize = new System.Drawing.Size(726, 442);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
@@ -357,9 +324,6 @@
         private System.Windows.Forms.Label m_lbl_lop_mon;
         private System.Windows.Forms.TextBox m_txt_tim_kiem;
         private System.Windows.Forms.Label m_lbl_tim_kiem;
-        private System.Windows.Forms.Label m_lbl_tong_con_phai_thu;
-        private System.Windows.Forms.Label m_lbl_tong_thuc_thu;
-        private System.Windows.Forms.Label m_lbl_tong_phai_thu;
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
