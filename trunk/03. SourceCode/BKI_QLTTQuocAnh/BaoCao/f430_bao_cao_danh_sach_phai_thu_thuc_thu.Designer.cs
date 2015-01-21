@@ -38,7 +38,6 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
@@ -50,9 +49,10 @@
             this.m_txt_tim_kien = new System.Windows.Forms.TextBox();
             this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_pnl_out_place_dm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -180,18 +180,8 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(811, 44);
             this.m_lbl_header.TabIndex = 26;
-            this.m_lbl_header.Text = "BÁO CÁO DANH SÁCH PHIẾU THỰC THU";
+            this.m_lbl_header.Text = "BÁO CÁO DANH SÁCH PHIẾU THU";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // m_fg
-            // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 133);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(811, 327);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 29;
             // 
             // m_dat_tu_ngay
             // 
@@ -321,6 +311,16 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Nhân viên thu:";
             // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 133);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(811, 327);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 31;
+            // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,9 +332,9 @@
             this.Name = "f430_bao_cao_danh_sach_phai_thu_thuc_thu";
             this.Text = "F430 - Báo cáo phiếu thực thu";
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,7 +349,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.DateTimePicker m_dat_tu_ngay;
         internal System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label m_lbl_tu_ngay;
@@ -361,5 +360,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
     }
 }
