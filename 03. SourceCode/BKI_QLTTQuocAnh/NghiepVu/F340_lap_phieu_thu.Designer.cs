@@ -1,4 +1,4 @@
-﻿namespace BKI_QLTTQuocAnh.BaoCao
+﻿namespace BKI_QLTTQuocAnh.NghiepVu
 {
     partial class F340_lap_phieu_thu
     {
