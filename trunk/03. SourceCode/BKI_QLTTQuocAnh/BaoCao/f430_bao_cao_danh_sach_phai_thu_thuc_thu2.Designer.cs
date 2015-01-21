@@ -1,6 +1,6 @@
 ﻿namespace BKI_QLTTQuocAnh.BaoCao
 {
-    partial class f430_bao_cao_danh_sach_phai_thu_thuc_thu
+    partial class f430_bao_cao_danh_sach_phai_thu_thuc_thu2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f430_bao_cao_danh_sach_phai_thu_thuc_thu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f430_bao_cao_danh_sach_phai_thu_thuc_thu2));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -331,6 +331,7 @@
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f430_bao_cao_danh_sach_phai_thu_thuc_thu";
             this.Text = "F430 - Báo cáo phiếu thực thu";
+            this.Load += new System.EventHandler(this.f430_bao_cao_danh_sach_phai_thu_thuc_thu_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
