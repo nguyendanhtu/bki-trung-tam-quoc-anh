@@ -155,6 +155,28 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["HO_TEN_PH"] = System.Convert.DBNull;
         }
 
+        public string strNGUOI_THU
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "NGUOI_THU", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["NGUOI_THU"] = value;
+            }
+        }
+
+        public bool IsNGUOI_THUNull()
+        {
+            return pm_objDR.IsNull("NGUOI_THU");
+        }
+
+        public void SetNGUOI_THUNull()
+        {
+            pm_objDR["NGUOI_THU"] = System.Convert.DBNull;
+        }
+
         public decimal dcTIEN_PHAI_THU
         {
             get
