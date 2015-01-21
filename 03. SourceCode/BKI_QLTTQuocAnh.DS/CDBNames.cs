@@ -349,9 +349,11 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string MA_HOC_SINH = "MA_HOC_SINH";
         public const string HO_TEN_HS = "HO_TEN_HS";
         public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string NGUOI_THU = "NGUOI_THU";
         public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
         public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+        public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
 
 }
