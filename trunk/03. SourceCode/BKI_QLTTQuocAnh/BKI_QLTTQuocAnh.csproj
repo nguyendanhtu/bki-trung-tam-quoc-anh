@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AddTab">
+      <HintPath>..\DLL\AddTab.dll</HintPath>
+    </Reference>
     <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\C1.Common.dll</HintPath>
@@ -68,6 +71,22 @@
     <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Data.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Utils.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraBars.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraEditors.v12.2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
@@ -145,6 +164,12 @@
     <Compile Include="DanhMuc\f201_danh_sach_lop_mon.Designer.cs">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
     </Compile>
+    <Compile Include="f399_MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f399_MainMenu.designer.cs">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -178,12 +203,6 @@
     </Compile>
     <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.Designer.cs">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="f399_MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f399_MainMenu.designer.cs">
-      <DependentUpon>f399_MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
@@ -238,6 +257,9 @@
     <EmbeddedResource Include="DanhMuc\f201_danh_sach_lop_mon.resx">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="f399_MainMenu.resx">
+      <DependentUpon>f399_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f399_MainMenu.resx">
-      <DependentUpon>f399_MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>

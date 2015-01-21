@@ -31,10 +31,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         #endregion
         #region Public Interface
-        public void display()
-        {
-            this.ShowDialog();
-        }
+        //public void display()
+        //{
+        //    this.ShowDialog();
+        //}
         #endregion
 
         #region Data Structure
