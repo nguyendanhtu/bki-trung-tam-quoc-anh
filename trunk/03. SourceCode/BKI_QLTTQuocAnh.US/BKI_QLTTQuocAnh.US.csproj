@@ -70,6 +70,7 @@
     <Compile Include="US_V_HT_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.cs" />
+    <Compile Include="US_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.cs" />
   </ItemGroup>
