@@ -743,6 +743,7 @@ namespace Form_menu
             this.m_cmd_loi_nhuan_gop.SubItemsExpandWidth = 14;
             this.m_cmd_loi_nhuan_gop.Text = "Lợi nhuận gộp";
             this.m_cmd_loi_nhuan_gop.Tooltip = "Lợi nhuận gộp của hàng hóa";
+            this.m_cmd_loi_nhuan_gop.Visible = false;
             // 
             // m_cmd_doanh_thu_theo_nhan_vien
             // 
@@ -752,7 +753,6 @@ namespace Form_menu
             this.m_cmd_doanh_thu_theo_nhan_vien.Name = "m_cmd_doanh_thu_theo_nhan_vien";
             this.m_cmd_doanh_thu_theo_nhan_vien.SubItemsExpandWidth = 14;
             this.m_cmd_doanh_thu_theo_nhan_vien.Text = "Phải thu theo lớp môn, HS";
-            this.m_cmd_doanh_thu_theo_nhan_vien.Visible = false;
             // 
             // m_rbb_bao_cao_kho
             // 
