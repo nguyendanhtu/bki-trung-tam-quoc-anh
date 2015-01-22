@@ -439,6 +439,8 @@ namespace BKI_QLTTQuocAnh
             m_us_bc_tinh_hinh_tc = ip_us;
             m_dat_tu_ngay.Value = ip_dat_tu_ngay;
             m_dat_den_ngay.Value = ip_dat_den_ngay;
+            
+            
             this.ShowDialog();
         }
 
@@ -494,7 +496,12 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_2_grid();
+            if (m_us_bc_tinh_hinh_tc == null)
+            {
+                load_data_2_grid();
+            }
+            load_data_2_grid(m_us_bc_tinh_hinh_tc);
+            load_data_2_cbo_nguoi_thu();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -515,27 +522,35 @@ namespace BKI_QLTTQuocAnh
             return v_obj_trans;
         }
 
-        /*private void load_data_2_cbo_lop_mon()
+        private void load_data_2_cbo_nguoi_thu()
         {
-            DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
-            US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
+            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
 
             v_us.FillDataset(v_ds);
 
-            DataRow v_dr = v_ds.V_DM_HOC_SINH.NewRow();
-            v_dr[V_DM_HOC_SINH.ID] = -1;
-            v_dr[V_DM_HOC_SINH.ID_LOP_MON] = -1;
-            v_dr[V_DM_HOC_SINH.ID_GD_HOC] = -1;
-            v_dr[V_DM_HOC_SINH.MA_LOP_MON] = "--Tất cả---";
+            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Tất cả---";
+            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
 
-            v_ds.V_DM_HOC_SINH.Rows.InsertAt(v_dr, 0);
 
-            m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
-            m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
-            m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
+            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
 
-            m_cbo_lop_mon.SelectedIndex = 0;
-        }*/
+            m_cbo_nhan_vien_thu.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
+            m_cbo_nhan_vien_thu.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
+            m_cbo_nhan_vien_thu.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
+
+            m_cbo_nhan_vien_thu.SelectedIndex = 0;
+        }
+
+
         /*private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh)
         {
             DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
@@ -555,29 +570,24 @@ namespace BKI_QLTTQuocAnh
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
         }
-        /*private void load_data_2_grid(decimal ip_dc_id_hoc_sinh)
+        private void load_data_2_grid(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us_tc)
         {
-            ITransferDataRow m_obj_trans_temp = m_obj_trans = get_trans_object(m_fg);
-            load_data_2_cbo_lop_mon(m_id_hoc_sinh);
-            m_ds.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.Clear();
-            if (m_cbo_lop_mon == null)
-            {
-                return;
-            }
-            m_us.FillDataset(m_ds, m_dat_tu_ngay.Value.Date
-                                        , m_dat_den_ngay.Value.Date
-                                        , m_txt_search.Text.Trim()
-                                        , ip_dc_id_hoc_sinh
-                                        , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+            ITransferDataRow m_obj_trans_temp;
+            m_obj_trans_temp = get_trans_object(m_fg);
+            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            m_us.FillDataset(
+                m_ds
+                , m_us_bc_tinh_hinh_tc.dcID
+                , m_dat_tu_ngay.Value.Date
+                , m_dat_den_ngay.Value.Date
+                , -1
+                , m_txt_tim_kien.Text.Trim());
+            load_data_2_cbo_nguoi_thu();
+            m_cbo_nhan_vien_thu.SelectedIndex = 0;
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TONG_PHAI_THU
-                , "Tổng cộng");
             m_fg.Redraw = true;
-        }*/
+        }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
             , int i_grid_row)
