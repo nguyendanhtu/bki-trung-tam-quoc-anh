@@ -226,7 +226,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                if (m_fg.Col == (int) e_col_Number.TONG_PHAI_THU)
+                if (m_fg.Col == (int)e_col_Number.TONG_PHAI_THU)
                 {
                     US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
                     if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
@@ -236,7 +236,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                     f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm();
                     v_frm.display(v_us.dcID, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
                 }
-                if (m_fg.Col == (int)e_col_Number.TONG_THUC_THU)
+                else
                 {
                     US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
                     if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
