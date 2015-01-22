@@ -218,7 +218,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_search.Click += m_cmd_search_Click;
             this.Load += f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_Load;
-            m_fg.Click += m_fg_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
 
@@ -253,23 +252,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             }
         }
 
-        void m_fg_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
-                //if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                //if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                //grid2us_object(v_us, m_fg.Row);
-
-                //f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_lop_mon();
-                //v_frm.display(v_us.dcID, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        
 
         void m_cmd_search_Click(object sender, EventArgs e)
         {

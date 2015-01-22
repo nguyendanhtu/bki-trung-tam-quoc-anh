@@ -34,6 +34,13 @@ namespace Form_menu
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f399_MainMenu));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.m_rbc_menu = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.m_rbb_doanh_thu = new DevComponents.DotNetBar.RibbonBar();
+            this.m_cmd_loi_nhuan_gop = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_phai_thu_theo_lm_hs = new DevComponents.DotNetBar.ButtonItem();
+            this.m_rbb_bao_cao_kho = new DevComponents.DotNetBar.RibbonBar();
+            this.m_cmd_bc_thuc_thu_phai_thu_hs = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.m_rbb_khac = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_tai_khoan = new DevComponents.DotNetBar.ButtonItem();
@@ -64,13 +71,6 @@ namespace Form_menu
             this.m_rbb_mua_ban = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_mua_hang = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_ban_hang = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.m_rbb_doanh_thu = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_loi_nhuan_gop = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_doanh_thu_theo_nhan_vien = new DevComponents.DotNetBar.ButtonItem();
-            this.m_rbb_bao_cao_kho = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_bc_thuc_thu_phai_thu_hs = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.m_rbb_tra_cuu = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_mat_hang_theo_nhom = new DevComponents.DotNetBar.ButtonItem();
@@ -101,9 +101,9 @@ namespace Form_menu
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_rbc_menu.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -164,6 +164,134 @@ namespace Form_menu
             this.m_rbc_menu.TabGroupHeight = 14;
             this.m_rbc_menu.TabIndex = 0;
             this.m_rbc_menu.Text = "ribbonControl1";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.AutoSize = true;
+            this.ribbonPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.m_rbb_doanh_thu);
+            this.ribbonPanel4.Controls.Add(this.m_rbb_bao_cao_kho);
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1170, 102);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            // 
+            // m_rbb_doanh_thu
+            // 
+            this.m_rbb_doanh_thu.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.m_rbb_doanh_thu.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_rbb_doanh_thu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_doanh_thu.ContainerControlProcessDialogKey = true;
+            this.m_rbb_doanh_thu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_rbb_doanh_thu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_cmd_loi_nhuan_gop,
+            this.m_cmd_phai_thu_theo_lm_hs});
+            this.m_rbb_doanh_thu.ItemSpacing = 10;
+            this.m_rbb_doanh_thu.Location = new System.Drawing.Point(236, 0);
+            this.m_rbb_doanh_thu.Name = "m_rbb_doanh_thu";
+            this.m_rbb_doanh_thu.Size = new System.Drawing.Size(249, 98);
+            this.m_rbb_doanh_thu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_rbb_doanh_thu.TabIndex = 1;
+            // 
+            // 
+            // 
+            this.m_rbb_doanh_thu.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_rbb_doanh_thu.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // m_cmd_loi_nhuan_gop
+            // 
+            this.m_cmd_loi_nhuan_gop.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_loi_nhuan_gop.Icon")));
+            this.m_cmd_loi_nhuan_gop.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_loi_nhuan_gop.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_loi_nhuan_gop.Name = "m_cmd_loi_nhuan_gop";
+            this.m_cmd_loi_nhuan_gop.SubItemsExpandWidth = 14;
+            this.m_cmd_loi_nhuan_gop.Text = "Lợi nhuận gộp";
+            this.m_cmd_loi_nhuan_gop.Tooltip = "Lợi nhuận gộp của hàng hóa";
+            this.m_cmd_loi_nhuan_gop.Visible = false;
+            // 
+            // m_cmd_phai_thu_theo_lm_hs
+            // 
+            this.m_cmd_phai_thu_theo_lm_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_phai_thu_theo_lm_hs.Icon")));
+            this.m_cmd_phai_thu_theo_lm_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_phai_thu_theo_lm_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_phai_thu_theo_lm_hs.Name = "m_cmd_phai_thu_theo_lm_hs";
+            this.m_cmd_phai_thu_theo_lm_hs.SubItemsExpandWidth = 14;
+            this.m_cmd_phai_thu_theo_lm_hs.Text = "Phải thu theo lớp môn, HS";
+            // 
+            // m_rbb_bao_cao_kho
+            // 
+            this.m_rbb_bao_cao_kho.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.m_rbb_bao_cao_kho.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_rbb_bao_cao_kho.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_rbb_bao_cao_kho.ContainerControlProcessDialogKey = true;
+            this.m_rbb_bao_cao_kho.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_rbb_bao_cao_kho.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_cmd_bc_thuc_thu_phai_thu_hs,
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs});
+            this.m_rbb_bao_cao_kho.ItemSpacing = 10;
+            this.m_rbb_bao_cao_kho.Location = new System.Drawing.Point(4, 0);
+            this.m_rbb_bao_cao_kho.Name = "m_rbb_bao_cao_kho";
+            this.m_rbb_bao_cao_kho.Size = new System.Drawing.Size(232, 98);
+            this.m_rbb_bao_cao_kho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_rbb_bao_cao_kho.TabIndex = 0;
+            this.m_rbb_bao_cao_kho.Text = "Tình hình";
+            // 
+            // 
+            // 
+            this.m_rbb_bao_cao_kho.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_rbb_bao_cao_kho.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // m_cmd_bc_thuc_thu_phai_thu_hs
+            // 
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_thuc_thu_phai_thu_hs.Icon")));
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.Name = "m_cmd_bc_thuc_thu_phai_thu_hs";
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_thuc_thu_phai_thu_hs.Text = "Tài chính HS";
+            // 
+            // m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs
+            // 
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Icon")));
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Name = "m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs";
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Text = "Tài chính HS theo lớp môn";
             // 
             // ribbonPanel2
             // 
@@ -676,134 +804,6 @@ namespace Form_menu
             this.m_cmd_ban_hang.SubItemsExpandWidth = 14;
             this.m_cmd_ban_hang.Text = "Bán hàng";
             // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.AutoSize = true;
-            this.ribbonPanel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.m_rbb_doanh_thu);
-            this.ribbonPanel4.Controls.Add(this.m_rbb_bao_cao_kho);
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel4.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1170, 102);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            // 
-            // m_rbb_doanh_thu
-            // 
-            this.m_rbb_doanh_thu.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.m_rbb_doanh_thu.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_rbb_doanh_thu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_rbb_doanh_thu.ContainerControlProcessDialogKey = true;
-            this.m_rbb_doanh_thu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_rbb_doanh_thu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_loi_nhuan_gop,
-            this.m_cmd_doanh_thu_theo_nhan_vien});
-            this.m_rbb_doanh_thu.ItemSpacing = 10;
-            this.m_rbb_doanh_thu.Location = new System.Drawing.Point(236, 0);
-            this.m_rbb_doanh_thu.Name = "m_rbb_doanh_thu";
-            this.m_rbb_doanh_thu.Size = new System.Drawing.Size(249, 98);
-            this.m_rbb_doanh_thu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_rbb_doanh_thu.TabIndex = 1;
-            // 
-            // 
-            // 
-            this.m_rbb_doanh_thu.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_rbb_doanh_thu.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // m_cmd_loi_nhuan_gop
-            // 
-            this.m_cmd_loi_nhuan_gop.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_loi_nhuan_gop.Icon")));
-            this.m_cmd_loi_nhuan_gop.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_loi_nhuan_gop.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_loi_nhuan_gop.Name = "m_cmd_loi_nhuan_gop";
-            this.m_cmd_loi_nhuan_gop.SubItemsExpandWidth = 14;
-            this.m_cmd_loi_nhuan_gop.Text = "Lợi nhuận gộp";
-            this.m_cmd_loi_nhuan_gop.Tooltip = "Lợi nhuận gộp của hàng hóa";
-            this.m_cmd_loi_nhuan_gop.Visible = false;
-            // 
-            // m_cmd_doanh_thu_theo_nhan_vien
-            // 
-            this.m_cmd_doanh_thu_theo_nhan_vien.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_doanh_thu_theo_nhan_vien.Icon")));
-            this.m_cmd_doanh_thu_theo_nhan_vien.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_doanh_thu_theo_nhan_vien.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_doanh_thu_theo_nhan_vien.Name = "m_cmd_doanh_thu_theo_nhan_vien";
-            this.m_cmd_doanh_thu_theo_nhan_vien.SubItemsExpandWidth = 14;
-            this.m_cmd_doanh_thu_theo_nhan_vien.Text = "Phải thu theo lớp môn, HS";
-            // 
-            // m_rbb_bao_cao_kho
-            // 
-            this.m_rbb_bao_cao_kho.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.m_rbb_bao_cao_kho.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_rbb_bao_cao_kho.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_rbb_bao_cao_kho.ContainerControlProcessDialogKey = true;
-            this.m_rbb_bao_cao_kho.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_rbb_bao_cao_kho.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_bc_thuc_thu_phai_thu_hs,
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs});
-            this.m_rbb_bao_cao_kho.ItemSpacing = 10;
-            this.m_rbb_bao_cao_kho.Location = new System.Drawing.Point(4, 0);
-            this.m_rbb_bao_cao_kho.Name = "m_rbb_bao_cao_kho";
-            this.m_rbb_bao_cao_kho.Size = new System.Drawing.Size(232, 98);
-            this.m_rbb_bao_cao_kho.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_rbb_bao_cao_kho.TabIndex = 0;
-            this.m_rbb_bao_cao_kho.Text = "Tình hình";
-            // 
-            // 
-            // 
-            this.m_rbb_bao_cao_kho.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_rbb_bao_cao_kho.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // m_cmd_bc_thuc_thu_phai_thu_hs
-            // 
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_thuc_thu_phai_thu_hs.Icon")));
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.Name = "m_cmd_bc_thuc_thu_phai_thu_hs";
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_thuc_thu_phai_thu_hs.Text = "Tài chính HS";
-            // 
-            // m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs
-            // 
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Icon")));
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Name = "m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs";
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Text = "Tài chính HS theo lớp môn";
-            // 
             // ribbonPanel5
             // 
             this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1211,9 +1211,9 @@ namespace Form_menu
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.m_rbc_menu.ResumeLayout(false);
             this.m_rbc_menu.PerformLayout();
+            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -1266,7 +1266,7 @@ namespace Form_menu
         private DevComponents.DotNetBar.ButtonItem m_cmd_loai_chung_tu;
         private DevComponents.DotNetBar.RibbonBar m_rbb_doanh_thu;
         private DevComponents.DotNetBar.ButtonItem m_cmd_loi_nhuan_gop;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_doanh_thu_theo_nhan_vien;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_phai_thu_theo_lm_hs;
         private DevComponents.DotNetBar.RibbonBar m_rbb_bao_cao_kho;
         private DevComponents.DotNetBar.ButtonItem m_cmd_bc_thuc_thu_phai_thu_hs;
         private DevComponents.DotNetBar.ButtonItem m_cmd_sua_chua;
