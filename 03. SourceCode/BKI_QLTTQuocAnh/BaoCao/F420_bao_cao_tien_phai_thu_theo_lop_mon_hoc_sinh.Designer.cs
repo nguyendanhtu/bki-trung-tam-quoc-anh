@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh));
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -49,9 +48,10 @@
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // m_lbl_header
@@ -65,16 +65,6 @@
             this.m_lbl_header.TabIndex = 26;
             this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU CỦA HỌC SINH THEO TỪNG LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // m_fg
-            // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 131);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(726, 311);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 29;
             // 
             // panel1
             // 
@@ -293,20 +283,30 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 131);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(726, 275);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 32;
+            // 
             // F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 442);
-            this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel1);
             this.Name = "F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh";
             this.Text = "F420 - Báo cáo tiêng phải thu theo lớp môn, học sinh";
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +314,6 @@
         #endregion
 
         private System.Windows.Forms.Label m_lbl_header;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker m_dat_tu_ngay;
         private System.Windows.Forms.Label m_lbl_tu_ngay;
@@ -332,5 +331,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
     }
 }

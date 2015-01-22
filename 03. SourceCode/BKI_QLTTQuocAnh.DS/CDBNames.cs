@@ -371,6 +371,17 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
+    public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS
+    {
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string HO_TEN = "HO_TEN";
+        public const string PHAI_THU = "PHAI_THU";
+        public const string THUC_THU = "THUC_THU";
+        public const string GIAM_TRU = "GIAM_TRU";
+        public const string CON_PHAI_THU = "CON_PHAI_THU";
+    }
 
 
 }
