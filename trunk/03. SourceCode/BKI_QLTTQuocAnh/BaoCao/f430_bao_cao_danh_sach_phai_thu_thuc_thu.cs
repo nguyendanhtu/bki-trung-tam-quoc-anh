@@ -515,7 +515,7 @@ namespace BKI_QLTTQuocAnh
             return v_obj_trans;
         }
 
-        private void load_data_2_cbo_lop_mon()
+        /*private void load_data_2_cbo_lop_mon()
         {
             DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
             US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
@@ -535,7 +535,7 @@ namespace BKI_QLTTQuocAnh
             m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
 
             m_cbo_lop_mon.SelectedIndex = 0;
-        }
+        }*/
         /*private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh)
         {
             DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
