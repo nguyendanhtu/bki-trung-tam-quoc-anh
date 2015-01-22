@@ -146,6 +146,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -376,6 +381,17 @@
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.xss">
       <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsc">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xss">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsc">
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd</DependentUpon>
