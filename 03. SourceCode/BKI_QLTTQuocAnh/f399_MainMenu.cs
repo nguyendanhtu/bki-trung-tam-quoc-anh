@@ -74,6 +74,21 @@ namespace Form_menu {
             xtraTabControl1.CloseButtonClick += xtraTabControl1_CloseButtonClick;
             m_cmd_bc_thuc_thu_phai_thu_hs.Click += m_cmd_bc_thuc_thu_phai_thu_hs_Click;
             m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Click += m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs_Click;
+            m_cmd_phai_thu_theo_lm_hs.Click += m_cmd_phai_thu_theo_lm_hs_Click;
+        }
+
+        void m_cmd_phai_thu_theo_lm_hs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh v_frm = new F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+
+            }
         }
 
         void m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs_Click(object sender, EventArgs e)
