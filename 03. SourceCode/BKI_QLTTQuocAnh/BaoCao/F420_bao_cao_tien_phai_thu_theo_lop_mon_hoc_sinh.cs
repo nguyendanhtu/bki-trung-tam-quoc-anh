@@ -25,6 +25,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
         }
+
+        private void format_controls()
+        {
+            throw new NotImplementedException();
+        }
         #region Public Properties
         public void display()
         {
@@ -278,8 +283,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void load_data_2_grid()
         {
+            m_ds.V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.Clear();
             m_ds = new DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(
+                m_ds
+                
+                );
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -358,6 +367,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            this.Load += frm_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_Load;
         }
         #endregion
 
