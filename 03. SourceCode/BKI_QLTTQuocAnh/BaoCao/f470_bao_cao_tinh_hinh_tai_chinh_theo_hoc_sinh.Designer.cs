@@ -82,7 +82,7 @@
             // 
             // m_txt_search
             // 
-            this.m_txt_search.Location = new System.Drawing.Point(217, 74);
+            this.m_txt_search.Location = new System.Drawing.Point(118, 74);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(260, 20);
             this.m_txt_search.TabIndex = 6;
@@ -95,7 +95,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(494, 66);
+            this.m_cmd_search.Location = new System.Drawing.Point(118, 99);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.m_lbl_header.Size = new System.Drawing.Size(702, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU, THỰC THU THEO HỌC SINH";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -153,13 +153,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 107);
+            this.panel1.Size = new System.Drawing.Size(702, 136);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 77);
+            this.label1.Location = new System.Drawing.Point(11, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 5;
@@ -169,7 +169,7 @@
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(217, 48);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(118, 45);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_tu_ngay.TabIndex = 2;
@@ -177,7 +177,7 @@
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(140, 50);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(12, 49);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
             this.m_lbl_tu_ngay.TabIndex = 1;
@@ -186,7 +186,7 @@
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(324, 49);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(222, 49);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
             this.m_lbl_den_ngay.TabIndex = 3;
@@ -196,7 +196,7 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(383, 48);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(281, 45);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_den_ngay.TabIndex = 4;
@@ -294,9 +294,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 107);
+            this.m_fg.Location = new System.Drawing.Point(0, 136);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(702, 252);
+            this.m_fg.Size = new System.Drawing.Size(702, 223);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
