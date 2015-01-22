@@ -88,6 +88,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
+            m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
             set_define_events();
             this.KeyPreview = true;
@@ -141,7 +142,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
             US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
 
-            v_us.FillDataset(v_ds);
+            v_us.FillDataset(v_ds, "where id = " + ip_dc_id_hoc_sinh);
 
             DataRow v_dr = v_ds.V_DM_HOC_SINH.NewRow();
             v_dr[V_DM_HOC_SINH.ID] = -1;
@@ -156,14 +157,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
 
             m_cbo_lop_mon.SelectedIndex = 0;
-            //DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
-            //US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
-
-            //v_us.FillDataset(v_ds, "where id = "+ip_dc_id_hoc_sinh);
-
-            //m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
-            //m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
-            //m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
         }
         private void load_data_2_grid(decimal ip_dc_id_hoc_sinh)
         {
@@ -183,8 +176,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
-                , -1
+                , 2
                 , (int)e_col_Number.TONG_PHAI_THU
+                ,"{0}"
                 );
             m_fg.Redraw = true;
         }
@@ -197,7 +191,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
-                , -1
+                , 1
                 , (int)e_col_Number.TONG_PHAI_THU
                 , "Tổng cộng");
             m_fg.Redraw = true;
