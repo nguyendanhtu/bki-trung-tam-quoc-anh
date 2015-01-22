@@ -309,6 +309,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F470 - Báo cáo tình hình tài chính theo học sinh";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
