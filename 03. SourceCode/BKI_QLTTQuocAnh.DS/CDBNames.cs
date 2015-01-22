@@ -28,6 +28,21 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRANG_THAI_YN = "TRANG_THAI_YN";
     }
 
+    public class V_HT_NGUOI_SU_DUNG
+    {
+        public const string ID = "ID";
+        public const string TEN_TRUY_CAP = "TEN_TRUY_CAP";
+        public const string TEN = "TEN";
+        public const string MAT_KHAU = "MAT_KHAU";
+        public const string NGAY_TAO = "NGAY_TAO";
+        public const string NGUOI_TAO = "NGUOI_TAO";
+        public const string TRANG_THAI = "TRANG_THAI";
+        public const string BUILT_IN_YN = "BUILT_IN_YN";
+        public const string ID_USER_GROUP = "ID_USER_GROUP";
+        public const string ID_TRAINING_PROJECT = "ID_TRAINING_PROJECT";
+    }
+
+
     public class V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON
     {
         public const string ID = "ID";
@@ -346,6 +361,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGAY_THU = "NGAY_THU";
         public const string SO_PHIEU = "SO_PHIEU";
         public const string NOI_DUNG = "NOI_DUNG";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
         public const string MA_HOC_SINH = "MA_HOC_SINH";
         public const string HO_TEN_HS = "HO_TEN_HS";
         public const string HO_TEN_PH = "HO_TEN_PH";
@@ -355,5 +371,6 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
+
 
 }

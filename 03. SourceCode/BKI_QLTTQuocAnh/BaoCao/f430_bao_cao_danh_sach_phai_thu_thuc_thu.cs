@@ -39,7 +39,7 @@ namespace BKI_QLTTQuocAnh
         private TextBox m_txt_tim_kien;
         private ComboBox m_cbo_nhan_vien_thu;
         private Label m_lbl_nhan_vien_thu;
-        private Label label3;
+        private Label m_lbl_header;
         private DateTimePicker m_dat_tu_ngay;
         private Label m_lbl_tu_ngay;
         private Label m_lbl_den_ngay;
@@ -99,7 +99,7 @@ namespace BKI_QLTTQuocAnh
             this.m_txt_tim_kien = new System.Windows.Forms.TextBox();
             this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
             this.m_lbl_nhan_vien_thu = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
@@ -161,7 +161,7 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Controls.Add(this.m_txt_tim_kien);
             this.panel2.Controls.Add(this.m_cbo_nhan_vien_thu);
             this.panel2.Controls.Add(this.m_lbl_nhan_vien_thu);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.m_lbl_header);
             this.panel2.Controls.Add(this.m_dat_tu_ngay);
             this.panel2.Controls.Add(this.m_lbl_tu_ngay);
             this.panel2.Controls.Add(this.m_lbl_den_ngay);
@@ -219,17 +219,17 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_nhan_vien_thu.TabIndex = 28;
             this.m_lbl_nhan_vien_thu.Text = "Nhân viên thu:";
             // 
-            // label3
+            // m_lbl_header
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(842, 44);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "BÁO CÁO DANH SÁCH PHIẾU THU";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(842, 44);
+            this.m_lbl_header.TabIndex = 26;
+            this.m_lbl_header.Text = "BÁO CÁO DANH SÁCH PHIẾU THU";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // m_dat_tu_ngay
             // 

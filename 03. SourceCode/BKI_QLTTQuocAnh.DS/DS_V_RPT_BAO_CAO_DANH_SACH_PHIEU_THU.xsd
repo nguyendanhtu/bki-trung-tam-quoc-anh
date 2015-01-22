@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString1 (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT NGAY_THU, SO_PHIEU, NOI_DUNG, MA_HOC_SINH, HO_TEN_HS, HO_TEN_PH, NGUOI_THU, TIEN_PHAI_THU, TIEN_GIAM_TRU, TIEN_THUC_THU, TIEN_CON_PHAI_THU FROM dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU</CommandText>
+                    <CommandText>SELECT NGAY_THU, SO_PHIEU, NOI_DUNG, ID_HOC_SINH, MA_HOC_SINH, HO_TEN_HS, HO_TEN_PH, NGUOI_THU, TIEN_PHAI_THU, TIEN_GIAM_TRU, TIEN_THUC_THU, TIEN_CON_PHAI_THU FROM dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,6 +22,7 @@
               <Mapping SourceColumn="NGAY_THU" DataSetColumn="NGAY_THU" />
               <Mapping SourceColumn="SO_PHIEU" DataSetColumn="SO_PHIEU" />
               <Mapping SourceColumn="NOI_DUNG" DataSetColumn="NOI_DUNG" />
+              <Mapping SourceColumn="ID_HOC_SINH" DataSetColumn="ID_HOC_SINH" />
               <Mapping SourceColumn="MA_HOC_SINH" DataSetColumn="MA_HOC_SINH" />
               <Mapping SourceColumn="HO_TEN_HS" DataSetColumn="HO_TEN_HS" />
               <Mapping SourceColumn="HO_TEN_PH" DataSetColumn="HO_TEN_PH" />
@@ -59,6 +60,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID_HOC_SINH" msprop:Generator_ColumnVarNameInTable="columnID_HOC_SINH" msprop:Generator_ColumnPropNameInRow="ID_HOC_SINH" msprop:Generator_ColumnPropNameInTable="ID_HOC_SINHColumn" msprop:Generator_UserColumnName="ID_HOC_SINH" type="xs:decimal" />
               <xs:element name="MA_HOC_SINH" msprop:Generator_ColumnVarNameInTable="columnMA_HOC_SINH" msprop:Generator_ColumnPropNameInRow="MA_HOC_SINH" msprop:Generator_ColumnPropNameInTable="MA_HOC_SINHColumn" msprop:Generator_UserColumnName="MA_HOC_SINH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -127,6 +127,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_HT_NGUOI_SU_DUNG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HT_NGUOI_SU_DUNG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.cs">
       <DependentUpon>DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -338,6 +343,17 @@
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xss">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_NGUOI_SU_DUNG.xsc">
+      <DependentUpon>DS_V_HT_NGUOI_SU_DUNG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_NGUOI_SU_DUNG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HT_NGUOI_SU_DUNG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HT_NGUOI_SU_DUNG.xss">
+      <DependentUpon>DS_V_HT_NGUOI_SU_DUNG.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsc">
       <DependentUpon>DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsd</DependentUpon>
