@@ -378,7 +378,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_xuat_excel.TabIndex = 21;
-            this.m_cmd_xuat_excel.Text = "Xuat Excel";
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
             // 
@@ -485,11 +485,16 @@ namespace BKI_QLTTQuocAnh
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
-            CGridUtils.AddSave_Excel_Handlers(m_fg);
-            CGridUtils.AddSearch_Handlers(m_fg);
+            CGridUtils.AddSave_Excel_Handlers(m_fg);//Xuat excel
+            CGridUtils.AddSearch_Handlers(m_fg);//Ctrl F dc
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
+
+            m_fg.Tree.Column = (int)e_col_Number.NGAY_THU;
+            m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
+
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
         }
@@ -568,6 +573,28 @@ namespace BKI_QLTTQuocAnh
             m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_PHAI_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_GIAM_TRU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_THUC_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 0
+             , -1
+             , (int)e_col_Number.TIEN_CON_PHAI_THU
+             , "Tổng cộng");
+
             m_fg.Redraw = true;
         }
         private void load_data_2_grid(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us_tc)
@@ -586,6 +613,68 @@ namespace BKI_QLTTQuocAnh
             m_cbo_nhan_vien_thu.SelectedIndex = 0;
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_PHAI_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_GIAM_TRU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_THUC_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 0
+             , -1
+             , (int)e_col_Number.TIEN_CON_PHAI_THU
+             , "Tổng cộng");
+
+            m_fg.Redraw = true;
+        }
+
+        private void load_data_2_grid_search()
+        {
+            ITransferDataRow m_obj_trans_temp;
+            m_obj_trans_temp = get_trans_object(m_fg);
+            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            m_us.FillDataset(
+                m_ds
+                , -1
+                , m_dat_tu_ngay.Value.Date
+                , m_dat_den_ngay.Value.Date
+                , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                , m_txt_tim_kien.Text.Trim());
+            
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_PHAI_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_GIAM_TRU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_THUC_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 0
+             , -1
+             , (int)e_col_Number.TIEN_CON_PHAI_THU
+             , "Tổng cộng");
+
             m_fg.Redraw = true;
         }
 
@@ -656,6 +745,7 @@ namespace BKI_QLTTQuocAnh
             //	f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE v_fDE = new f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE();			
             //	v_fDE.display(m_us);
         }
+
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
@@ -736,7 +826,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                view_v_rpt_bao_cao_danh_sach_phieu_thu();
+                //view_v_rpt_bao_cao_danh_sach_phieu_thu();
+                load_data_2_grid_search();
+                
             }
             catch (Exception v_e)
             {
