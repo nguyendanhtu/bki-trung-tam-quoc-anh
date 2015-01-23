@@ -61,21 +61,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_transc_object(m_fg);
-            load_data_2_grid();
             load_data_2_cbo_lop_mon();
+            load_data_2_grid();
+            
         }
         private void load_data_2_cbo_lop_mon()
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
             v_us.FillDataset(v_ds);
+
             DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
             v_dr[DM_LOP_MON.ID] = -1;
             v_dr [DM_LOP_MON.MA_LOP_MON]="--Tất cả--";
             v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
             m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
             m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+
             m_cbo_lop.SelectedIndex = 0;
         }
         private ITransferDataRow get_transc_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -90,7 +94,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void load_data_2_grid()
         {
             m_ds = new DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds
+                ,CIPConvert.ToDecimal(m_cbo_lop.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -176,6 +181,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f450_bao_cao_thong_ke_so_luong_hoc_vien_Load;
+            m_cmd_search.Click += m_cmd_search_Click;
+        }
+
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f450_bao_cao_thong_ke_so_luong_hoc_vien_Load(object sender, EventArgs e)
