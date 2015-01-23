@@ -600,10 +600,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnHO_TEN_PH.MaxLength = 250;
                 this.columnID_NGUOI_THU.AllowDBNull = false;
                 this.columnNGUOI_THU.MaxLength = 250;
-                this.columnTIEN_PHAI_THU.ReadOnly = true;
-                this.columnTIEN_GIAM_TRU.ReadOnly = true;
-                this.columnTIEN_THUC_THU.ReadOnly = true;
-                this.columnTIEN_CON_PHAI_THU.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
