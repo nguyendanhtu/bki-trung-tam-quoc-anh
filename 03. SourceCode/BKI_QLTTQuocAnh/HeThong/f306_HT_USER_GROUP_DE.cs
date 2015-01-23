@@ -75,6 +75,7 @@ namespace BKI_QLTTQuocAnh.HeThong {
 
         private void format_control() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            m_cmd_exit.Visible = false;
         }
 
         private void us_obj_2_form() {
