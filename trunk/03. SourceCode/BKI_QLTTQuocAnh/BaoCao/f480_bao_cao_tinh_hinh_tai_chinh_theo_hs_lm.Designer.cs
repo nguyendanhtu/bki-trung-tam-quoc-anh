@@ -44,8 +44,6 @@
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_lbl_chon_lop = new System.Windows.Forms.Label();
-            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.m_txt_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
@@ -73,7 +71,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(299, 71);
+            this.m_cmd_search.Location = new System.Drawing.Point(311, 71);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 7;
@@ -219,25 +217,23 @@
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(13, 54);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(13, 52);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
-            this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
+            this.m_lbl_tu_ngay.Size = new System.Drawing.Size(72, 13);
             this.m_lbl_tu_ngay.TabIndex = 1;
-            this.m_lbl_tu_ngay.Text = "Từ ngày";
+            this.m_lbl_tu_ngay.Text = "Từ đầu tháng";
             // 
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(219, 49);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(225, 52);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
-            this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
+            this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
             this.m_lbl_den_ngay.TabIndex = 3;
-            this.m_lbl_den_ngay.Text = "Đến ngày";
+            this.m_lbl_den_ngay.Text = "Đến cuối tháng";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_lbl_chon_lop);
-            this.panel1.Controls.Add(this.m_cbo_lop_mon);
             this.panel1.Controls.Add(this.m_txt_search);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label1);
@@ -252,28 +248,11 @@
             this.panel1.Size = new System.Drawing.Size(799, 110);
             this.panel1.TabIndex = 3;
             // 
-            // m_lbl_chon_lop
-            // 
-            this.m_lbl_chon_lop.AutoSize = true;
-            this.m_lbl_chon_lop.Location = new System.Drawing.Point(409, 72);
-            this.m_lbl_chon_lop.Name = "m_lbl_chon_lop";
-            this.m_lbl_chon_lop.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_chon_lop.TabIndex = 9;
-            this.m_lbl_chon_lop.Text = "Chọn lớp môn";
-            // 
-            // m_cbo_lop_mon
-            // 
-            this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(508, 69);
-            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
-            this.m_cbo_lop_mon.Size = new System.Drawing.Size(171, 21);
-            this.m_cbo_lop_mon.TabIndex = 8;
-            // 
             // m_txt_search
             // 
             this.m_txt_search.Location = new System.Drawing.Point(112, 76);
             this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(171, 20);
+            this.m_txt_search.Size = new System.Drawing.Size(187, 20);
             this.m_txt_search.TabIndex = 6;
             // 
             // label1
@@ -289,7 +268,7 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(278, 48);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(311, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_den_ngay.TabIndex = 4;
@@ -357,8 +336,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker m_dat_den_ngay;
         internal System.Windows.Forms.ImageList ImageList;
-        private System.Windows.Forms.Label m_lbl_chon_lop;
-        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
         private System.Windows.Forms.TextBox m_txt_search;
         private System.Windows.Forms.Label label1;
     }

@@ -96,8 +96,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_exit.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
-            m_lbl_chon_lop.Visible = false;
-            m_cbo_lop_mon.Visible = false;
             m_cmd_delete.Visible = false;
 
             set_define_events();
