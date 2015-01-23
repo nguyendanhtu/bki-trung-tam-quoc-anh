@@ -331,8 +331,8 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["TIEN_CON_PHAI_THU"] = System.Convert.DBNull;
         }
 
-
         #endregion
+
         #region "Init Functions"
         public US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU()
         {
