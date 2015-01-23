@@ -44,6 +44,28 @@ public class US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU : US_Object
         pm_objDR["SO_PHIEU"] = System.Convert.DBNull;
     }
 
+    public decimal dcID_LOAI_PHIEU_THU
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_LOAI_PHIEU_THU", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_LOAI_PHIEU_THU"] = value;
+        }
+    }
+
+    public bool IsID_LOAI_PHIEU_THUNull()
+    {
+        return pm_objDR.IsNull("ID_LOAI_PHIEU_THU");
+    }
+
+    public void SetID_LOAI_PHIEU_THUNull()
+    {
+        pm_objDR["ID_LOAI_PHIEU_THU"] = System.Convert.DBNull;
+    }
+
     public decimal dcID_HOC_SINH
     {
         get
@@ -309,6 +331,7 @@ public class US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU : US_Object
     }
 
     #endregion
+
     
     #region "Init Functions"
     public US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU() 
