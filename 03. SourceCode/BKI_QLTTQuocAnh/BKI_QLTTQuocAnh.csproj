@@ -110,11 +110,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
-    <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.cs">
+    <Compile Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.designer.cs">
-      <DependentUpon>F410_bao_cao_tien_phai_thu_theo_lop.cs</DependentUpon>
+    <Compile Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.Designer.cs">
+      <DependentUpon>f410_bao_cao_tai_chinh_theo_lop_mon.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCao\F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.cs">
       <SubType>Form</SubType>
@@ -223,9 +223,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
-    <EmbeddedResource Include="BaoCao\F410_bao_cao_tien_phai_thu_theo_lop.resx">
-      <DependentUpon>F410_bao_cao_tien_phai_thu_theo_lop.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.resx">
+      <DependentUpon>f410_bao_cao_tai_chinh_theo_lop_mon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.resx">
       <DependentUpon>F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.cs</DependentUpon>
