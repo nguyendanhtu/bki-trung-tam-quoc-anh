@@ -89,8 +89,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_ds.V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.Clear();
             m_ds = new DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS();
             m_us.FillDataset(
-                m_ds
-
+                 m_ds
+                ,m_dat_tu_ngay.Value.Date
+                ,m_dat_den_ngay.Value.Date
+                ,m_cbo_lop.SelectedText
+                ,m_txt_tim_kiem.Text.Trim()
                 );
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
