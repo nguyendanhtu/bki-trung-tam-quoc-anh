@@ -128,10 +128,10 @@ namespace Form_menu
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
             this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
             this.m_rbc_menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_rbc_menu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_rbtab_tab1,

@@ -62,6 +62,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -71,7 +72,29 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            m_dat_den_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day).AddMonths(1).Date;
+            load_data_2_cbo_lop_mon();
             load_data_2_grid();
+        }
+
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+
+            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            v_dr[DM_LOP_MON.ID] = -1;
+            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+
+            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+
+            m_cbo_lop.SelectedIndex = 0;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -90,7 +113,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void load_data_2_grid()
         {
             m_ds = new DS_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds
+                            , m_dat_tu_ngay.Value.Date
+                            , m_dat_den_ngay.Value.Date
+                            , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                            , "");
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -176,6 +203,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
+            m_cmd_search.Click += m_cmd_search_Click;
+        }
+
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f410_bao_cao_tai_chinh_theo_lop_mon_Load(object sender, EventArgs e)

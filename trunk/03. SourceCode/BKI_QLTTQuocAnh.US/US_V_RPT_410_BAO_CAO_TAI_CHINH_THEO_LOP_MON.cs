@@ -250,5 +250,20 @@ public class US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+
+    public void FillDataset(DS_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON op_ds
+                                    , DateTime ip_dat_tu_ngay
+                                    , DateTime ip_dat_den_ngay
+                                    , decimal ip_dc_id_lop_mon
+                                    , string ip_str_search)
+    {
+        CStoredProc v_obj_spr = new CStoredProc("f410_bao_cao_tai_chinh_theo_lop_mon");
+        v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+        v_obj_spr.addDatetimeInputParam("@ip_dat_dau_thang", ip_dat_tu_ngay);
+        v_obj_spr.addDatetimeInputParam("@ip_dat_cuoi_thang", ip_dat_den_ngay);
+        v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
+        v_obj_spr.fillDataSetByCommand(this, op_ds);
+    }
+}
 }
