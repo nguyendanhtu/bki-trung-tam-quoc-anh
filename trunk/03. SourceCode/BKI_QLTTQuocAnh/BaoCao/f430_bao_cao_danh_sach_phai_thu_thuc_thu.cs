@@ -31,6 +31,7 @@ namespace BKI_QLTTQuocAnh
 
     public class f430_bao_cao_danh_sach_phai_thu_thuc_thu : System.Windows.Forms.Form
     {
+        #region Design_Form
         internal System.Windows.Forms.ImageList ImageList;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private Panel panel2;
@@ -53,6 +54,7 @@ namespace BKI_QLTTQuocAnh
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.ComponentModel.IContainer components;
+        #endregion
 
         public f430_bao_cao_danh_sach_phai_thu_thuc_thu()
         {
