@@ -211,10 +211,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
+                US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON v_us = new US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
+
                 F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh v_frm = new F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh();
                 v_frm.display(m_dat_tu_ngay.Value.Date
                                 ,m_dat_den_ngay.Value.Date
-                                ,CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                                ,v_us.dcID
                                 );
             }
             catch (Exception v_e)
