@@ -724,6 +724,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 			}
 		}
 
-	}
+
+        internal void display(decimal p)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 

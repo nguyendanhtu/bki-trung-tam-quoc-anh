@@ -372,6 +372,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
 
     public class V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU
     {
+        public const string ID = "ID";
         public const string NGAY_THU = "NGAY_THU";
         public const string SO_PHIEU = "SO_PHIEU";
         public const string NOI_DUNG = "NOI_DUNG";
@@ -379,12 +380,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string MA_HOC_SINH = "MA_HOC_SINH";
         public const string HO_TEN_HS = "HO_TEN_HS";
         public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string ID_NGUOI_THU = "ID_NGUOI_THU";
         public const string NGUOI_THU = "NGUOI_THU";
         public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
         public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
+
 
     public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS
     {
