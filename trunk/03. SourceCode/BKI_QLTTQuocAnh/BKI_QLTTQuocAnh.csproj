@@ -213,9 +213,6 @@
     <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\f340_lap_phieu_thu.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -285,9 +282,6 @@
     <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
       <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
-      <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -350,6 +344,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NghiepVu\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
