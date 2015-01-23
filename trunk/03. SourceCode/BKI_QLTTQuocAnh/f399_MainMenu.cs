@@ -84,6 +84,20 @@ namespace Form_menu
             m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs.Click += m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs_Click;
             m_cmd_phai_thu_theo_lm_hs.Click += m_cmd_phai_thu_theo_lm_hs_Click;
             m_cmd_tai_chinh_theo_lm.Click += m_cmd_tai_chinh_theo_lm_Click;
+            m_cmd_bao_cao_ds_phieu.Click += m_cmd_bao_cao_ds_phieu_Click;
+        }
+
+        void m_cmd_bao_cao_ds_phieu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_tai_chinh_theo_lm_Click(object sender, EventArgs e)
