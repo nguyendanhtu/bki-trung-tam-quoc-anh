@@ -797,7 +797,7 @@ namespace BKI_QLTTQuocAnh
                 grid2us_object(v_us, m_fg.Row);
 
                 f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.display(v_us.dcID);
+                v_frm.display();
             }
             catch (Exception v_e)
             {
