@@ -76,7 +76,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         ITransferDataRow m_obj_trans;
         DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON m_ds = new DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
         US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON m_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
-        decimal m_id_hoc_sinh;
+   
         #endregion
 
         #region Private Methods
@@ -89,8 +89,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
 
-            m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
-            //m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+            m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
+            m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+            m_fg.Cols[(int)e_col_Number.HO_TEN].Visible = false;
             m_fg.Tree.Style = TreeStyleFlags.CompleteLeaf;
 
             m_cmd_exit.Visible = false;
@@ -135,30 +136,63 @@ namespace BKI_QLTTQuocAnh.BaoCao
                                         , m_txt_search.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
+            {
+                m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN]
+                    = m_fg[v_i_cur_row, (int)e_col_Number.MA_DOI_TUONG]
+                    +"-"
+                    + m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN];
+            }
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
-                , (int) e_col_Number.MA_DOI_TUONG
+                , -1
                 , (int)e_col_Number.TONG_PHAI_THU
-                ,"{0}");
+                ,"Tổng");
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
-                , (int)e_col_Number.MA_DOI_TUONG
+                , -1
+                , (int)e_col_Number.TONG_GIAM_TRU
+                , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                 , 0
+                , -1
+                , (int)e_col_Number.TONG_THUC_THU
+               , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+              , 0
+                , -1
+                , (int)e_col_Number.TONG_CON_NO
+               , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+              , 1
+              , (int)e_col_Number.HO_TEN
+              , (int)e_col_Number.TONG_PHAI_THU
+              , "{0}");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                ,1
+                , (int)e_col_Number.HO_TEN
                 , (int)e_col_Number.TONG_GIAM_TRU
                 , "{0}");
 
             m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , (int)e_col_Number.MA_DOI_TUONG
+                , 1
+                , (int)e_col_Number.HO_TEN
                 , (int)e_col_Number.TONG_THUC_THU
                 , "{0}");
 
             m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , (int)e_col_Number.MA_DOI_TUONG
+                , 1
+                , (int)e_col_Number.HO_TEN
                 , (int)e_col_Number.TONG_CON_NO
                 , "{0}");
+
+            m_fg.Tree.Show(1);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
