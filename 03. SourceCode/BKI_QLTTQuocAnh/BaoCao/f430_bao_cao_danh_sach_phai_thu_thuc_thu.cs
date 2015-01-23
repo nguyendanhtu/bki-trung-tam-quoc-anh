@@ -21,7 +21,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
-
+using BKI_QLTTQuocAnh.NghiepVu;
 using C1.Win.C1FlexGrid;
 
 namespace BKI_QLTTQuocAnh
@@ -555,22 +555,8 @@ namespace BKI_QLTTQuocAnh
             m_cbo_nhan_vien_thu.SelectedIndex = 0;
         }
 
-
-        /*private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh)
+        private void create_tree_2grid()
         {
-            DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
-            US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
-
-            v_us.FillDataset(v_ds, "where id = " + ip_dc_id_hoc_sinh);
-
-            m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
-            m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
-            m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
-        */
-        private void load_data_2_grid()
-        {
-            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
@@ -597,6 +583,49 @@ namespace BKI_QLTTQuocAnh
 
             m_fg.Redraw = true;
         }
+
+        /*private void load_data_2_cbo_lop_mon(decimal ip_dc_id_hoc_sinh)
+        {
+            DS_V_DM_HOC_SINH v_ds = new DS_V_DM_HOC_SINH();
+            US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
+
+            v_us.FillDataset(v_ds, "where id = " + ip_dc_id_hoc_sinh);
+
+            m_cbo_lop_mon.DataSource = v_ds.V_DM_HOC_SINH;
+            m_cbo_lop_mon.DisplayMember = V_DM_HOC_SINH.MA_LOP_MON;
+            m_cbo_lop_mon.ValueMember = V_DM_HOC_SINH.ID_LOP_MON;
+        */
+        private void load_data_2_grid()
+        {
+            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            m_us.FillDataset(m_ds);
+            /*m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_PHAI_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_GIAM_TRU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_THUC_THU
+                , "Tổng cộng");
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 0
+             , -1
+             , (int)e_col_Number.TIEN_CON_PHAI_THU
+             , "Tổng cộng");
+
+            m_fg.Redraw = true;*/
+            create_tree_2grid();
+        }
         private void load_data_2_grid(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us_tc)
         {
             ITransferDataRow m_obj_trans_temp;
@@ -611,8 +640,8 @@ namespace BKI_QLTTQuocAnh
                 , m_txt_tim_kien.Text.Trim());
             load_data_2_cbo_nguoi_thu();
             m_cbo_nhan_vien_thu.SelectedIndex = 0;
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
+            /*m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
@@ -635,7 +664,8 @@ namespace BKI_QLTTQuocAnh
              , (int)e_col_Number.TIEN_CON_PHAI_THU
              , "Tổng cộng");
 
-            m_fg.Redraw = true;
+            m_fg.Redraw = true;*/
+            create_tree_2grid();
         }
 
         private void load_data_2_grid_search()
@@ -650,9 +680,9 @@ namespace BKI_QLTTQuocAnh
                 , m_dat_den_ngay.Value.Date
                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
                 , m_txt_tim_kien.Text.Trim());
-            
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans_temp);
+
+            /*m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
@@ -675,7 +705,8 @@ namespace BKI_QLTTQuocAnh
              , (int)e_col_Number.TIEN_CON_PHAI_THU
              , "Tổng cộng");
 
-            m_fg.Redraw = true;
+            m_fg.Redraw = true;*/
+            create_tree_2grid();
         }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
@@ -746,14 +777,7 @@ namespace BKI_QLTTQuocAnh
             //	v_fDE.display(m_us);
         }
 
-        private void set_define_events()
-        {
-            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
-        }
+               
         #endregion
 
         //
@@ -761,6 +785,16 @@ namespace BKI_QLTTQuocAnh
         //		EVENT HANLDERS
         //
         //
+        private void set_define_events()
+        {
+            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
+            //m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
         private void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Load(object sender, System.EventArgs e)
         {
             try
@@ -836,7 +870,24 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-
+        /*void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                    US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+                    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                    grid2us_object(v_us, m_fg.Row);
+                    
+                    F340_lap_phieu_thu v_frm = new F340_lap_phieu_thu();
+                    v_frm.display();
+                           
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }*/
 
     }
 }

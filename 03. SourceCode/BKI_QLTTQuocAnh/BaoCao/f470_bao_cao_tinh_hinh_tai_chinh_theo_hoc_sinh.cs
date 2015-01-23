@@ -220,6 +220,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
 
+        
+
         void m_fg_DoubleClick(object sender, EventArgs e)
         {
             try
