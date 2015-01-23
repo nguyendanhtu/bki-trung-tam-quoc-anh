@@ -538,10 +538,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnMO_TA.MaxLength = 250;
                 this.columnDON_GIA_BUOI_HOC.AllowDBNull = false;
-                this.columnTIEN_PHAI_THU.ReadOnly = true;
-                this.columnTIEN_GIAM_TRU.ReadOnly = true;
-                this.columnTIEN_THUC_THU.ReadOnly = true;
-                this.columnTIEN_CON_PHAI_THU.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -33,12 +33,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         public void display(DateTime ip_dat_dau_thang, DateTime ip_dat_cuoi_thang, decimal ip_dc_id_lop_mon)
         {
+            load_data_2_cbo_lop_mon();
+
             m_dat_tu_ngay.Value = ip_dat_dau_thang.Date;
             m_dat_den_ngay.Value = ip_dat_cuoi_thang.Date;
             m_cbo_lop.SelectedValue = ip_dc_id_lop_mon;
 
             m_flag_trang_thai_click = 1; // trạng thái click từ from 410
-
+            
             this.ShowDialog();
         }
         #endregion
@@ -93,10 +95,13 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_obj_trans = get_trans_object(m_fg);
             if (m_flag_trang_thai_click == 1)
             {
-                
+                load_data_2_grid();
             }
-            load_data_2_cbo_lop_mon();
-            load_data_2_grid();
+            else
+            {
+                load_data_2_cbo_lop_mon();
+                load_data_2_grid();
+            }
         }
 
         private void load_data_2_cbo_lop_mon()
