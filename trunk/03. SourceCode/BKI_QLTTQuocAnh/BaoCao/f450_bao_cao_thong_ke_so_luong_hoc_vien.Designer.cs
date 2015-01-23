@@ -41,7 +41,7 @@
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -184,12 +184,12 @@
             this.m_lbl_header.Size = new System.Drawing.Size(588, 39);
             this.m_lbl_header.TabIndex = 34;
             this.m_lbl_header.Text = "BÁO CÁO THỐNG KÊ SỐ LƯỢNG HỌC VIÊN HIỆN NAY";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.m_cmd_search);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 39);
@@ -205,24 +205,24 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(365, 8);
+            this.m_cmd_search.Location = new System.Drawing.Point(232, 14);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 38;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
-            // comboBox1
+            // m_cbo_lop
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.m_cbo_lop.FormattingEnabled = true;
+            this.m_cbo_lop.Location = new System.Drawing.Point(75, 15);
+            this.m_cbo_lop.Name = "m_cbo_lop";
+            this.m_cbo_lop.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_lop.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 16);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 0;
@@ -259,7 +259,7 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Label m_lbl_header;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox m_cbo_lop;
         private System.Windows.Forms.Label label1;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
     }

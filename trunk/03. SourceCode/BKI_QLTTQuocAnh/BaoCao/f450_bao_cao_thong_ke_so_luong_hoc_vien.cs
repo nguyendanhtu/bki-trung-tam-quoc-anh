@@ -51,6 +51,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -59,10 +60,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void set_initial_form_load()
         {
-            m_obj_trans = get_trans_object(m_fg);
+            m_obj_trans = get_transc_object(m_fg);
             load_data_2_grid();
+            load_data_2_cbo_lop_mon();
         }
-        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            v_dr[DM_LOP_MON.ID] = -1;
+            v_dr [DM_LOP_MON.MA_LOP_MON]="--Tất cả--";
+            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+            m_cbo_lop.SelectedIndex = 0;
+        }
+        private ITransferDataRow get_transc_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.MA_LOP_MON, e_col_Number.MA_LOP_MON);
