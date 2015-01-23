@@ -30,8 +30,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
 
 	public class f340_lap_phieu_thu : System.Windows.Forms.Form
-	{
-		internal System.Windows.Forms.ImageList ImageList;
+    {
+        #region Design_Form
+        internal System.Windows.Forms.ImageList ImageList;
 		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
 		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
 		internal SIS.Controls.Button.SiSButton m_cmd_delete;
@@ -42,7 +43,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private Panel panel1;
         private Label m_lbl_header;
         private Label m_lbl_noi_dung;
-        private TextBox textBox1;
+        private TextBox m_txt_noi_dung;
         private Label m_lbl_ten_nguoi_nop_tien;
         private Label m_lbl_hoc_sinh;
         private TextBox m_txt_ten_nguoi_nop_tien;
@@ -52,20 +53,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private ComboBox m_cbo_nhan_vien_thu;
         private Label m_lbl_nhan_vien_thu;
-        private DateTimePicker m_dat_tu_ngay;
+        private DateTimePicker m_dat_ngay_thu;
         private Label m_lbl_ngay_thu;
         private Label m_lbl_den_ngay;
-        private DateTimePicker m_dat_den_ngay;
+        private DateTimePicker m_dat_ngay_nhap;
         internal ImageList imageList1;
-        private TextBox textBox2;
+        private TextBox m_txt_so_tien_bang_chu;
         private Label m_lbl_so_tien_bang_chu;
         private Label m_lbl_so_tien_bang_so;
-        private TextBox textBox3;
+        private TextBox m_txt_so_tien_bang_so;
         private ComboBox m_cbo_nhan_vien_nhap;
         private Label m_lbl_nhan_vien_nhap;
 		private System.ComponentModel.IContainer components;
+        #endregion
 
-		public f340_lap_phieu_thu()
+        public f340_lap_phieu_thu()
 		{
 			//
 			// Required for Windows Form Designer support
@@ -111,29 +113,29 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
-            this.m_lbl_nhan_vien_thu = new System.Windows.Forms.Label();
-            this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
-            this.m_lbl_ngay_thu = new System.Windows.Forms.Label();
-            this.m_lbl_den_ngay = new System.Windows.Forms.Label();
-            this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_lbl_so_phieu = new System.Windows.Forms.Label();
-            this.m_txt_so_phieu = new System.Windows.Forms.TextBox();
-            this.m_lbl_hoc_sinh = new System.Windows.Forms.Label();
-            this.m_txt_ho_ten_hs = new System.Windows.Forms.TextBox();
-            this.m_lbl_ten_nguoi_nop_tien = new System.Windows.Forms.Label();
-            this.m_txt_ten_nguoi_nop_tien = new System.Windows.Forms.TextBox();
-            this.m_lbl_noi_dung = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_txt_so_tien_bang_chu = new System.Windows.Forms.TextBox();
             this.m_lbl_so_tien_bang_chu = new System.Windows.Forms.Label();
             this.m_lbl_so_tien_bang_so = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.m_lbl_nhan_vien_nhap = new System.Windows.Forms.Label();
+            this.m_txt_so_tien_bang_so = new System.Windows.Forms.TextBox();
+            this.m_lbl_noi_dung = new System.Windows.Forms.Label();
+            this.m_txt_noi_dung = new System.Windows.Forms.TextBox();
+            this.m_lbl_ten_nguoi_nop_tien = new System.Windows.Forms.Label();
+            this.m_lbl_hoc_sinh = new System.Windows.Forms.Label();
+            this.m_txt_ten_nguoi_nop_tien = new System.Windows.Forms.TextBox();
+            this.m_txt_ho_ten_hs = new System.Windows.Forms.TextBox();
+            this.m_lbl_so_phieu = new System.Windows.Forms.Label();
+            this.m_txt_so_phieu = new System.Windows.Forms.TextBox();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_cbo_nhan_vien_nhap = new System.Windows.Forms.ComboBox();
+            this.m_lbl_nhan_vien_nhap = new System.Windows.Forms.Label();
+            this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
+            this.m_lbl_nhan_vien_thu = new System.Windows.Forms.Label();
+            this.m_dat_ngay_thu = new System.Windows.Forms.DateTimePicker();
+            this.m_lbl_ngay_thu = new System.Windows.Forms.Label();
+            this.m_lbl_den_ngay = new System.Windows.Forms.Label();
+            this.m_dat_ngay_nhap = new System.Windows.Forms.DateTimePicker();
+            this.m_lbl_header = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -267,12 +269,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.m_txt_so_tien_bang_chu);
             this.panel1.Controls.Add(this.m_lbl_so_tien_bang_chu);
             this.panel1.Controls.Add(this.m_lbl_so_tien_bang_so);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.m_txt_so_tien_bang_so);
             this.panel1.Controls.Add(this.m_lbl_noi_dung);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.m_txt_noi_dung);
             this.panel1.Controls.Add(this.m_lbl_ten_nguoi_nop_tien);
             this.panel1.Controls.Add(this.m_lbl_hoc_sinh);
             this.panel1.Controls.Add(this.m_txt_ten_nguoi_nop_tien);
@@ -284,10 +286,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.panel1.Controls.Add(this.m_lbl_nhan_vien_nhap);
             this.panel1.Controls.Add(this.m_cbo_nhan_vien_thu);
             this.panel1.Controls.Add(this.m_lbl_nhan_vien_thu);
-            this.panel1.Controls.Add(this.m_dat_tu_ngay);
+            this.panel1.Controls.Add(this.m_dat_ngay_thu);
             this.panel1.Controls.Add(this.m_lbl_ngay_thu);
             this.panel1.Controls.Add(this.m_lbl_den_ngay);
-            this.panel1.Controls.Add(this.m_dat_den_ngay);
+            this.panel1.Controls.Add(this.m_dat_ngay_nhap);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -295,17 +297,102 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.panel1.Size = new System.Drawing.Size(857, 239);
             this.panel1.TabIndex = 21;
             // 
-            // m_lbl_header
+            // m_txt_so_tien_bang_chu
             // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(857, 44);
-            this.m_lbl_header.TabIndex = 27;
-            this.m_lbl_header.Text = "LẬP PHIẾU THU";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_txt_so_tien_bang_chu.Location = new System.Drawing.Point(456, 127);
+            this.m_txt_so_tien_bang_chu.Name = "m_txt_so_tien_bang_chu";
+            this.m_txt_so_tien_bang_chu.Size = new System.Drawing.Size(386, 20);
+            this.m_txt_so_tien_bang_chu.TabIndex = 59;
+            // 
+            // m_lbl_so_tien_bang_chu
+            // 
+            this.m_lbl_so_tien_bang_chu.AutoSize = true;
+            this.m_lbl_so_tien_bang_chu.Location = new System.Drawing.Point(327, 130);
+            this.m_lbl_so_tien_bang_chu.Name = "m_lbl_so_tien_bang_chu";
+            this.m_lbl_so_tien_bang_chu.Size = new System.Drawing.Size(123, 13);
+            this.m_lbl_so_tien_bang_chu.TabIndex = 58;
+            this.m_lbl_so_tien_bang_chu.Text = "Số tiền bằng chữ (VNĐ):";
+            // 
+            // m_lbl_so_tien_bang_so
+            // 
+            this.m_lbl_so_tien_bang_so.AutoSize = true;
+            this.m_lbl_so_tien_bang_so.Location = new System.Drawing.Point(7, 131);
+            this.m_lbl_so_tien_bang_so.Name = "m_lbl_so_tien_bang_so";
+            this.m_lbl_so_tien_bang_so.Size = new System.Drawing.Size(75, 13);
+            this.m_lbl_so_tien_bang_so.TabIndex = 57;
+            this.m_lbl_so_tien_bang_so.Text = "Số tiền (VNĐ):";
+            // 
+            // m_txt_so_tien_bang_so
+            // 
+            this.m_txt_so_tien_bang_so.Location = new System.Drawing.Point(98, 127);
+            this.m_txt_so_tien_bang_so.Name = "m_txt_so_tien_bang_so";
+            this.m_txt_so_tien_bang_so.Size = new System.Drawing.Size(205, 20);
+            this.m_txt_so_tien_bang_so.TabIndex = 56;
+            // 
+            // m_lbl_noi_dung
+            // 
+            this.m_lbl_noi_dung.AutoSize = true;
+            this.m_lbl_noi_dung.Location = new System.Drawing.Point(7, 105);
+            this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
+            this.m_lbl_noi_dung.Size = new System.Drawing.Size(53, 13);
+            this.m_lbl_noi_dung.TabIndex = 54;
+            this.m_lbl_noi_dung.Text = "Nội dung:";
+            // 
+            // m_txt_noi_dung
+            // 
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(98, 101);
+            this.m_txt_noi_dung.Multiline = true;
+            this.m_txt_noi_dung.Name = "m_txt_noi_dung";
+            this.m_txt_noi_dung.Size = new System.Drawing.Size(744, 20);
+            this.m_txt_noi_dung.TabIndex = 53;
+            // 
+            // m_lbl_ten_nguoi_nop_tien
+            // 
+            this.m_lbl_ten_nguoi_nop_tien.AutoSize = true;
+            this.m_lbl_ten_nguoi_nop_tien.Location = new System.Drawing.Point(429, 79);
+            this.m_lbl_ten_nguoi_nop_tien.Name = "m_lbl_ten_nguoi_nop_tien";
+            this.m_lbl_ten_nguoi_nop_tien.Size = new System.Drawing.Size(99, 13);
+            this.m_lbl_ten_nguoi_nop_tien.TabIndex = 52;
+            this.m_lbl_ten_nguoi_nop_tien.Text = "Tên người nộp tiền:";
+            // 
+            // m_lbl_hoc_sinh
+            // 
+            this.m_lbl_hoc_sinh.AutoSize = true;
+            this.m_lbl_hoc_sinh.Location = new System.Drawing.Point(7, 79);
+            this.m_lbl_hoc_sinh.Name = "m_lbl_hoc_sinh";
+            this.m_lbl_hoc_sinh.Size = new System.Drawing.Size(85, 13);
+            this.m_lbl_hoc_sinh.TabIndex = 50;
+            this.m_lbl_hoc_sinh.Text = "Họ tên học sinh:";
+            // 
+            // m_txt_ten_nguoi_nop_tien
+            // 
+            this.m_txt_ten_nguoi_nop_tien.Location = new System.Drawing.Point(534, 75);
+            this.m_txt_ten_nguoi_nop_tien.Name = "m_txt_ten_nguoi_nop_tien";
+            this.m_txt_ten_nguoi_nop_tien.Size = new System.Drawing.Size(308, 20);
+            this.m_txt_ten_nguoi_nop_tien.TabIndex = 49;
+            // 
+            // m_txt_ho_ten_hs
+            // 
+            this.m_txt_ho_ten_hs.Location = new System.Drawing.Point(98, 75);
+            this.m_txt_ho_ten_hs.Name = "m_txt_ho_ten_hs";
+            this.m_txt_ho_ten_hs.Size = new System.Drawing.Size(308, 20);
+            this.m_txt_ho_ten_hs.TabIndex = 49;
+            // 
+            // m_lbl_so_phieu
+            // 
+            this.m_lbl_so_phieu.AutoSize = true;
+            this.m_lbl_so_phieu.Location = new System.Drawing.Point(7, 51);
+            this.m_lbl_so_phieu.Name = "m_lbl_so_phieu";
+            this.m_lbl_so_phieu.Size = new System.Drawing.Size(52, 13);
+            this.m_lbl_so_phieu.TabIndex = 48;
+            this.m_lbl_so_phieu.Text = "Số phiếu:";
+            // 
+            // m_txt_so_phieu
+            // 
+            this.m_txt_so_phieu.Location = new System.Drawing.Point(65, 47);
+            this.m_txt_so_phieu.Name = "m_txt_so_phieu";
+            this.m_txt_so_phieu.Size = new System.Drawing.Size(76, 20);
+            this.m_txt_so_phieu.TabIndex = 47;
             // 
             // m_cmd_search
             // 
@@ -320,6 +407,23 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 46;
             this.m_cmd_search.Text = "Lọc dữ liệu";
+            // 
+            // m_cbo_nhan_vien_nhap
+            // 
+            this.m_cbo_nhan_vien_nhap.FormattingEnabled = true;
+            this.m_cbo_nhan_vien_nhap.Location = new System.Drawing.Point(501, 153);
+            this.m_cbo_nhan_vien_nhap.Name = "m_cbo_nhan_vien_nhap";
+            this.m_cbo_nhan_vien_nhap.Size = new System.Drawing.Size(190, 21);
+            this.m_cbo_nhan_vien_nhap.TabIndex = 43;
+            // 
+            // m_lbl_nhan_vien_nhap
+            // 
+            this.m_lbl_nhan_vien_nhap.AutoSize = true;
+            this.m_lbl_nhan_vien_nhap.Location = new System.Drawing.Point(415, 157);
+            this.m_lbl_nhan_vien_nhap.Name = "m_lbl_nhan_vien_nhap";
+            this.m_lbl_nhan_vien_nhap.Size = new System.Drawing.Size(86, 13);
+            this.m_lbl_nhan_vien_nhap.TabIndex = 42;
+            this.m_lbl_nhan_vien_nhap.Text = "Nhân viên nhập:";
             // 
             // m_cbo_nhan_vien_thu
             // 
@@ -338,14 +442,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_lbl_nhan_vien_thu.TabIndex = 42;
             this.m_lbl_nhan_vien_thu.Text = "Nhân viên thu:";
             // 
-            // m_dat_tu_ngay
+            // m_dat_ngay_thu
             // 
-            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(304, 180);
-            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
-            this.m_dat_tu_ngay.Size = new System.Drawing.Size(82, 20);
-            this.m_dat_tu_ngay.TabIndex = 40;
+            this.m_dat_ngay_thu.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_ngay_thu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_ngay_thu.Location = new System.Drawing.Point(304, 180);
+            this.m_dat_ngay_thu.Name = "m_dat_ngay_thu";
+            this.m_dat_ngay_thu.Size = new System.Drawing.Size(82, 20);
+            this.m_dat_ngay_thu.TabIndex = 40;
             // 
             // m_lbl_ngay_thu
             // 
@@ -365,14 +469,26 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_lbl_den_ngay.TabIndex = 39;
             this.m_lbl_den_ngay.Text = "Ngày nhập:";
             // 
-            // m_dat_den_ngay
+            // m_dat_ngay_nhap
             // 
-            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(469, 180);
-            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
-            this.m_dat_den_ngay.Size = new System.Drawing.Size(84, 20);
-            this.m_dat_den_ngay.TabIndex = 41;
+            this.m_dat_ngay_nhap.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_ngay_nhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(469, 180);
+            this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
+            this.m_dat_ngay_nhap.Size = new System.Drawing.Size(84, 20);
+            this.m_dat_ngay_nhap.TabIndex = 41;
+            // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(857, 44);
+            this.m_lbl_header.TabIndex = 27;
+            this.m_lbl_header.Text = "LẬP PHIẾU THU";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // imageList1
             // 
@@ -401,120 +517,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_lbl_so_phieu
-            // 
-            this.m_lbl_so_phieu.AutoSize = true;
-            this.m_lbl_so_phieu.Location = new System.Drawing.Point(7, 51);
-            this.m_lbl_so_phieu.Name = "m_lbl_so_phieu";
-            this.m_lbl_so_phieu.Size = new System.Drawing.Size(52, 13);
-            this.m_lbl_so_phieu.TabIndex = 48;
-            this.m_lbl_so_phieu.Text = "Số phiếu:";
-            // 
-            // m_txt_so_phieu
-            // 
-            this.m_txt_so_phieu.Location = new System.Drawing.Point(65, 47);
-            this.m_txt_so_phieu.Name = "m_txt_so_phieu";
-            this.m_txt_so_phieu.Size = new System.Drawing.Size(76, 20);
-            this.m_txt_so_phieu.TabIndex = 47;
-            // 
-            // m_lbl_hoc_sinh
-            // 
-            this.m_lbl_hoc_sinh.AutoSize = true;
-            this.m_lbl_hoc_sinh.Location = new System.Drawing.Point(7, 79);
-            this.m_lbl_hoc_sinh.Name = "m_lbl_hoc_sinh";
-            this.m_lbl_hoc_sinh.Size = new System.Drawing.Size(85, 13);
-            this.m_lbl_hoc_sinh.TabIndex = 50;
-            this.m_lbl_hoc_sinh.Text = "Họ tên học sinh:";
-            // 
-            // m_txt_ho_ten_hs
-            // 
-            this.m_txt_ho_ten_hs.Location = new System.Drawing.Point(98, 75);
-            this.m_txt_ho_ten_hs.Name = "m_txt_ho_ten_hs";
-            this.m_txt_ho_ten_hs.Size = new System.Drawing.Size(308, 20);
-            this.m_txt_ho_ten_hs.TabIndex = 49;
-            // 
-            // m_lbl_ten_nguoi_nop_tien
-            // 
-            this.m_lbl_ten_nguoi_nop_tien.AutoSize = true;
-            this.m_lbl_ten_nguoi_nop_tien.Location = new System.Drawing.Point(429, 79);
-            this.m_lbl_ten_nguoi_nop_tien.Name = "m_lbl_ten_nguoi_nop_tien";
-            this.m_lbl_ten_nguoi_nop_tien.Size = new System.Drawing.Size(99, 13);
-            this.m_lbl_ten_nguoi_nop_tien.TabIndex = 52;
-            this.m_lbl_ten_nguoi_nop_tien.Text = "Tên người nộp tiền:";
-            // 
-            // m_txt_ten_nguoi_nop_tien
-            // 
-            this.m_txt_ten_nguoi_nop_tien.Location = new System.Drawing.Point(534, 75);
-            this.m_txt_ten_nguoi_nop_tien.Name = "m_txt_ten_nguoi_nop_tien";
-            this.m_txt_ten_nguoi_nop_tien.Size = new System.Drawing.Size(308, 20);
-            this.m_txt_ten_nguoi_nop_tien.TabIndex = 49;
-            // 
-            // m_lbl_noi_dung
-            // 
-            this.m_lbl_noi_dung.AutoSize = true;
-            this.m_lbl_noi_dung.Location = new System.Drawing.Point(7, 105);
-            this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
-            this.m_lbl_noi_dung.Size = new System.Drawing.Size(53, 13);
-            this.m_lbl_noi_dung.TabIndex = 54;
-            this.m_lbl_noi_dung.Text = "Nội dung:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(98, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(744, 20);
-            this.textBox1.TabIndex = 53;
-            // 
-            // m_lbl_so_tien_bang_chu
-            // 
-            this.m_lbl_so_tien_bang_chu.AutoSize = true;
-            this.m_lbl_so_tien_bang_chu.Location = new System.Drawing.Point(327, 130);
-            this.m_lbl_so_tien_bang_chu.Name = "m_lbl_so_tien_bang_chu";
-            this.m_lbl_so_tien_bang_chu.Size = new System.Drawing.Size(123, 13);
-            this.m_lbl_so_tien_bang_chu.TabIndex = 58;
-            this.m_lbl_so_tien_bang_chu.Text = "Số tiền bằng chữ (VNĐ):";
-            // 
-            // m_lbl_so_tien_bang_so
-            // 
-            this.m_lbl_so_tien_bang_so.AutoSize = true;
-            this.m_lbl_so_tien_bang_so.Location = new System.Drawing.Point(7, 131);
-            this.m_lbl_so_tien_bang_so.Name = "m_lbl_so_tien_bang_so";
-            this.m_lbl_so_tien_bang_so.Size = new System.Drawing.Size(75, 13);
-            this.m_lbl_so_tien_bang_so.TabIndex = 57;
-            this.m_lbl_so_tien_bang_so.Text = "Số tiền (VNĐ):";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(98, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 20);
-            this.textBox3.TabIndex = 56;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(456, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(386, 20);
-            this.textBox2.TabIndex = 59;
-            // 
-            // m_lbl_nhan_vien_nhap
-            // 
-            this.m_lbl_nhan_vien_nhap.AutoSize = true;
-            this.m_lbl_nhan_vien_nhap.Location = new System.Drawing.Point(415, 157);
-            this.m_lbl_nhan_vien_nhap.Name = "m_lbl_nhan_vien_nhap";
-            this.m_lbl_nhan_vien_nhap.Size = new System.Drawing.Size(86, 13);
-            this.m_lbl_nhan_vien_nhap.TabIndex = 42;
-            this.m_lbl_nhan_vien_nhap.Text = "Nhân viên nhập:";
-            // 
-            // m_cbo_nhan_vien_nhap
-            // 
-            this.m_cbo_nhan_vien_nhap.FormattingEnabled = true;
-            this.m_cbo_nhan_vien_nhap.Location = new System.Drawing.Point(501, 153);
-            this.m_cbo_nhan_vien_nhap.Name = "m_cbo_nhan_vien_nhap";
-            this.m_cbo_nhan_vien_nhap.Size = new System.Drawing.Size(190, 21);
-            this.m_cbo_nhan_vien_nhap.TabIndex = 43;
-            // 
             // f340_lap_phieu_thu
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -538,6 +540,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 		public void display(){			
 			this.ShowDialog();
 		}
+
+        public void display(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us, decimal ip_dc_id_hs)
+        {
+            m_txt_so_phieu.Text = ip_us.strSO_PHIEU.Trim();
+            m_txt_ho_ten_hs.Text = ip_us.strHO_TEN_HS.Trim();
+            m_txt_ten_nguoi_nop_tien.Text = ip_us.strHO_TEN_PH.Trim();
+            m_txt_noi_dung.Text = ip_us.strNOI_DUNG.Trim();
+
+            m_txt_so_tien_bang_so.Text = ip_us.dcTIEN_THUC_THU.ToString();
+
+            m_dat_ngay_thu.Value = ip_us.datNGAY_THU;
+            m_dat_ngay_nhap.Value = DateTime.Now;
+            this.ShowDialog();
+        }
+
 		#endregion
 
 		#region Data Structure
@@ -559,6 +576,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 		ITransferDataRow m_obj_trans;		
 		DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU m_ds = new DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU();
 		US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU m_us = new US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU();
+        
 		#endregion
 
 		#region Private Methods
@@ -589,6 +607,63 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_RPT_NGHIEP_VU_LAP_PHIEU_THU.NewRow());
 			return v_obj_trans;			
 		}
+
+        private void load_data_2_cbo_nguoi_thu()
+        {
+            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+
+            v_us.FillDataset(v_ds);
+
+            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Tất cả---";
+            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
+
+
+            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_nhan_vien_thu.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
+            m_cbo_nhan_vien_thu.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
+            m_cbo_nhan_vien_thu.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
+
+            m_cbo_nhan_vien_thu.SelectedIndex = 0;
+        }
+
+        private void load_data_2_cbo_nguoi_nhap()
+        {
+            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+
+            v_us.FillDataset(v_ds);
+
+            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Tất cả---";
+            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
+
+
+            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_nhan_vien_nhap.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
+            m_cbo_nhan_vien_nhap.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
+            m_cbo_nhan_vien_nhap.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
+
+            m_cbo_nhan_vien_nhap.SelectedIndex = 0;
+        }
+
 		private void load_data_2_grid(){						
 			m_ds = new DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU();			
 			m_us.FillDataset(m_ds);
@@ -596,6 +671,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
 		}
+
 		private void grid2us_object(US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU i_us
 			, int i_grid_row) {
 			DataRow v_dr;
@@ -632,7 +708,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
 			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU v_us = new US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU();
+			US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU v_us = new  US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU();
 			grid2us_object(v_us, m_fg.Row);
 			try {			
 				v_us.BeginTransaction();    											
@@ -655,13 +731,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 		//	f340_lap_phieu_thu_DE v_fDE = new f340_lap_phieu_thu_DE();			
 		//	v_fDE.display(m_us);
 		}
-		private void set_define_events(){
-			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
-		}
+
 		#endregion
 
 //
@@ -669,6 +739,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 		//		EVENT HANLDERS
 		//
 		//
+
+        private void set_define_events()
+        {
+            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
+        }
 		private void f340_lap_phieu_thu_Load(object sender, System.EventArgs e) {
 			try{
 				set_initial_form_load();
@@ -723,12 +802,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
-
-
-        internal void display(decimal p)
-        {
-            throw new NotImplementedException();
-        }
+                    
     }
 }
 

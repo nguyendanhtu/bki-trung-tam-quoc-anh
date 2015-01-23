@@ -281,9 +281,17 @@ namespace BKI_QLTTQuocAnh.DS {
             
             private global::System.Data.DataColumn columnSO_PHIEU;
             
+            private global::System.Data.DataColumn columnID_HOC_SINH;
+            
+            private global::System.Data.DataColumn columnMA_HOC_SINH;
+            
             private global::System.Data.DataColumn columnHO_TEN_HOC_SINH;
             
+            private global::System.Data.DataColumn columnID_NGUOI_THU;
+            
             private global::System.Data.DataColumn columnNGUOI_THU;
+            
+            private global::System.Data.DataColumn columnID_NGUOI_NHAP;
             
             private global::System.Data.DataColumn columnNGUOI_NHAP;
             
@@ -340,6 +348,22 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_HOC_SINHColumn {
+                get {
+                    return this.columnID_HOC_SINH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MA_HOC_SINHColumn {
+                get {
+                    return this.columnMA_HOC_SINH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn HO_TEN_HOC_SINHColumn {
                 get {
                     return this.columnHO_TEN_HOC_SINH;
@@ -348,9 +372,25 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_NGUOI_THUColumn {
+                get {
+                    return this.columnID_NGUOI_THU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn NGUOI_THUColumn {
                 get {
                     return this.columnNGUOI_THU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_NGUOI_NHAPColumn {
+                get {
+                    return this.columnID_NGUOI_NHAP;
                 }
             }
             
@@ -439,12 +479,16 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_RPT_NGHIEP_VU_LAP_PHIEU_THURow AddV_RPT_NGHIEP_VU_LAP_PHIEU_THURow(string SO_PHIEU, string HO_TEN_HOC_SINH, string NGUOI_THU, string NGUOI_NHAP, string TEN_NGUOI_NOP_TIEN, string NOI_DUNG, decimal SO_TIEN, System.DateTime NGAY_THU, System.DateTime NGAY_NHAP) {
+            public V_RPT_NGHIEP_VU_LAP_PHIEU_THURow AddV_RPT_NGHIEP_VU_LAP_PHIEU_THURow(string SO_PHIEU, decimal ID_HOC_SINH, string MA_HOC_SINH, string HO_TEN_HOC_SINH, decimal ID_NGUOI_THU, string NGUOI_THU, decimal ID_NGUOI_NHAP, string NGUOI_NHAP, string TEN_NGUOI_NOP_TIEN, string NOI_DUNG, decimal SO_TIEN, System.DateTime NGAY_THU, System.DateTime NGAY_NHAP) {
                 V_RPT_NGHIEP_VU_LAP_PHIEU_THURow rowV_RPT_NGHIEP_VU_LAP_PHIEU_THURow = ((V_RPT_NGHIEP_VU_LAP_PHIEU_THURow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SO_PHIEU,
+                        ID_HOC_SINH,
+                        MA_HOC_SINH,
                         HO_TEN_HOC_SINH,
+                        ID_NGUOI_THU,
                         NGUOI_THU,
+                        ID_NGUOI_NHAP,
                         NGUOI_NHAP,
                         TEN_NGUOI_NOP_TIEN,
                         NOI_DUNG,
@@ -474,8 +518,12 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnSO_PHIEU = base.Columns["SO_PHIEU"];
+                this.columnID_HOC_SINH = base.Columns["ID_HOC_SINH"];
+                this.columnMA_HOC_SINH = base.Columns["MA_HOC_SINH"];
                 this.columnHO_TEN_HOC_SINH = base.Columns["HO_TEN_HOC_SINH"];
+                this.columnID_NGUOI_THU = base.Columns["ID_NGUOI_THU"];
                 this.columnNGUOI_THU = base.Columns["NGUOI_THU"];
+                this.columnID_NGUOI_NHAP = base.Columns["ID_NGUOI_NHAP"];
                 this.columnNGUOI_NHAP = base.Columns["NGUOI_NHAP"];
                 this.columnTEN_NGUOI_NOP_TIEN = base.Columns["TEN_NGUOI_NOP_TIEN"];
                 this.columnNOI_DUNG = base.Columns["NOI_DUNG"];
@@ -489,10 +537,18 @@ namespace BKI_QLTTQuocAnh.DS {
             private void InitClass() {
                 this.columnSO_PHIEU = new global::System.Data.DataColumn("SO_PHIEU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSO_PHIEU);
+                this.columnID_HOC_SINH = new global::System.Data.DataColumn("ID_HOC_SINH", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_HOC_SINH);
+                this.columnMA_HOC_SINH = new global::System.Data.DataColumn("MA_HOC_SINH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMA_HOC_SINH);
                 this.columnHO_TEN_HOC_SINH = new global::System.Data.DataColumn("HO_TEN_HOC_SINH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHO_TEN_HOC_SINH);
+                this.columnID_NGUOI_THU = new global::System.Data.DataColumn("ID_NGUOI_THU", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_NGUOI_THU);
                 this.columnNGUOI_THU = new global::System.Data.DataColumn("NGUOI_THU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNGUOI_THU);
+                this.columnID_NGUOI_NHAP = new global::System.Data.DataColumn("ID_NGUOI_NHAP", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_NGUOI_NHAP);
                 this.columnNGUOI_NHAP = new global::System.Data.DataColumn("NGUOI_NHAP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNGUOI_NHAP);
                 this.columnTEN_NGUOI_NOP_TIEN = new global::System.Data.DataColumn("TEN_NGUOI_NOP_TIEN", typeof(string), null, global::System.Data.MappingType.Element);
@@ -507,10 +563,15 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnNGAY_NHAP);
                 this.columnSO_PHIEU.AllowDBNull = false;
                 this.columnSO_PHIEU.MaxLength = 35;
+                this.columnID_HOC_SINH.AllowDBNull = false;
+                this.columnMA_HOC_SINH.AllowDBNull = false;
+                this.columnMA_HOC_SINH.MaxLength = 35;
                 this.columnHO_TEN_HOC_SINH.AllowDBNull = false;
                 this.columnHO_TEN_HOC_SINH.MaxLength = 51;
+                this.columnID_NGUOI_THU.AllowDBNull = false;
                 this.columnNGUOI_THU.AllowDBNull = false;
                 this.columnNGUOI_THU.MaxLength = 250;
+                this.columnID_NGUOI_NHAP.AllowDBNull = false;
                 this.columnNGUOI_NHAP.AllowDBNull = false;
                 this.columnNGUOI_NHAP.MaxLength = 250;
                 this.columnTEN_NGUOI_NOP_TIEN.MaxLength = 250;
@@ -671,6 +732,28 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ID_HOC_SINH {
+                get {
+                    return ((decimal)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_HOC_SINHColumn]));
+                }
+                set {
+                    this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_HOC_SINHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MA_HOC_SINH {
+                get {
+                    return ((string)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.MA_HOC_SINHColumn]));
+                }
+                set {
+                    this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.MA_HOC_SINHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string HO_TEN_HOC_SINH {
                 get {
                     return ((string)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.HO_TEN_HOC_SINHColumn]));
@@ -682,12 +765,34 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ID_NGUOI_THU {
+                get {
+                    return ((decimal)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_NGUOI_THUColumn]));
+                }
+                set {
+                    this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_NGUOI_THUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NGUOI_THU {
                 get {
                     return ((string)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.NGUOI_THUColumn]));
                 }
                 set {
                     this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.NGUOI_THUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ID_NGUOI_NHAP {
+                get {
+                    return ((decimal)(this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_NGUOI_NHAPColumn]));
+                }
+                set {
+                    this[this.tableV_RPT_NGHIEP_VU_LAP_PHIEU_THU.ID_NGUOI_NHAPColumn] = value;
                 }
             }
             
@@ -954,8 +1059,12 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THUTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "V_RPT_NGHIEP_VU_LAP_PHIEU_THU";
             tableMapping.ColumnMappings.Add("SO_PHIEU", "SO_PHIEU");
+            tableMapping.ColumnMappings.Add("ID_HOC_SINH", "ID_HOC_SINH");
+            tableMapping.ColumnMappings.Add("MA_HOC_SINH", "MA_HOC_SINH");
             tableMapping.ColumnMappings.Add("HO_TEN_HOC_SINH", "HO_TEN_HOC_SINH");
+            tableMapping.ColumnMappings.Add("ID_NGUOI_THU", "ID_NGUOI_THU");
             tableMapping.ColumnMappings.Add("NGUOI_THU", "NGUOI_THU");
+            tableMapping.ColumnMappings.Add("ID_NGUOI_NHAP", "ID_NGUOI_NHAP");
             tableMapping.ColumnMappings.Add("NGUOI_NHAP", "NGUOI_NHAP");
             tableMapping.ColumnMappings.Add("TEN_NGUOI_NOP_TIEN", "TEN_NGUOI_NOP_TIEN");
             tableMapping.ColumnMappings.Add("NOI_DUNG", "NOI_DUNG");
@@ -978,8 +1087,9 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THUTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT SO_PHIEU, HO_TEN_HOC_SINH, NGUOI_THU, NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_" +
-                "DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP FROM dbo.V_RPT_NGHIEP_VU_LAP_PHIEU_THU";
+            this._commandCollection[0].CommandText = "SELECT SO_PHIEU, ID_HOC_SINH, MA_HOC_SINH, HO_TEN_HOC_SINH, ID_NGUOI_THU, NGUOI_T" +
+                "HU, ID_NGUOI_NHAP, NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, " +
+                "NGAY_NHAP FROM dbo.V_RPT_NGHIEP_VU_LAP_PHIEU_THU";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
