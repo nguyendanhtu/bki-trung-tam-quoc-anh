@@ -588,7 +588,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnMA_LOP_MON.AllowDBNull = false;
                 this.columnMA_LOP_MON.MaxLength = 15;
@@ -600,14 +599,10 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnHO.MaxLength = 35;
                 this.columnTEN.AllowDBNull = false;
                 this.columnTEN.MaxLength = 15;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnMO_TA.MaxLength = 250;
                 this.columnDON_GIA_BUOI_HOC.AllowDBNull = false;
                 this.columnTIEN_PHAI_THU.ReadOnly = true;
-                this.columnTIEN_GIAM_TRU.ReadOnly = true;
-                this.columnTIEN_THUC_THU.ReadOnly = true;
-                this.columnTIEN_CON_PHAI_THU.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
