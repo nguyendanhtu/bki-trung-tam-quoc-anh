@@ -109,5 +109,12 @@ public class US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDataset(DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY ip_op_ds, decimal ip_dc_id_lop_mon)
+    {
+        CStoredProc v_obj = new CStoredProc("f450_bao_cao_so_luong_hoc_vien_hien_nay");
+        v_obj.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+        v_obj.fillDataSetByCommand(this, ip_op_ds);
+    }
+}
 }
