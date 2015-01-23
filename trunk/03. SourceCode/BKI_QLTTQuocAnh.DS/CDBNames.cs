@@ -353,7 +353,8 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRANG_THAI_YN = "TRANG_THAI_YN";
     }
 
-    public class GD_PHIEU_THU {
+    public class GD_PHIEU_THU
+    {
         public const string ID = "ID";
         public const string SO_PHIEU = "SO_PHIEU";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
@@ -364,12 +365,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SO_TIEN = "SO_TIEN";
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
+        public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
     }
 
     public class V_GD_PHIEU_THU
     {
         public const string ID = "ID";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string SO_PHIEU = "SO_PHIEU";
         public const string HO_TEN = "HO_TEN";
         public const string ID_NGUOI_THU = "ID_NGUOI_THU";
         public const string NGUOI_THU = "NGUOI_THU";
@@ -380,7 +383,11 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SO_TIEN = "SO_TIEN";
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
+        public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
+        public const string TEN_NGAN = "TEN_NGAN";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
     }
+
     public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON
     {
         public const string ID_LOP_MON = "ID_LOP_MON";
@@ -422,6 +429,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
     public class V_RPT_NGHIEP_VU_LAP_PHIEU_THU
     {
         public const string SO_PHIEU = "SO_PHIEU";
+        public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
         public const string MA_HOC_SINH = "MA_HOC_SINH";
         public const string HO_TEN_HOC_SINH = "HO_TEN_HOC_SINH";
@@ -435,6 +443,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
     }
+
 
 
     public class V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY
