@@ -431,6 +431,13 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
     }
+    public class V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY
+    {
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TONG_SO_HS = "TONG_SO_HS";
+    }
+
 
 
 }

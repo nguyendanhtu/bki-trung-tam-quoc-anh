@@ -87,7 +87,7 @@ public class US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY : US_Object
 #region "Init Functions"
 	public US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY() 
 	{
-		pm_objDS = new DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAY();
+		pm_objDS = new DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY();
 		pm_strTableName = c_TableName;
 		pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
 	}
@@ -99,7 +99,7 @@ public class US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY : US_Object
 
 	public US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY(decimal i_dbID) 
 	{
-		pm_objDS = new DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAY();
+		pm_objDS = new DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY();
 		pm_strTableName = c_TableName;
 		IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
 		v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
