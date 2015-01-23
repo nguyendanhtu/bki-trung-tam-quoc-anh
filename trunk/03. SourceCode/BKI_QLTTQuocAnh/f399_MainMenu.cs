@@ -92,8 +92,8 @@ namespace Form_menu
         {
             try
             {
-                f450_bao_cao_thong_ke_so_luong_hoc_vien v_frm  = new f450_bao_cao_thong_ke_so_luong_hoc_vien();
-                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+                //f450_bao_cao_thong_ke_so_luong_hoc_vien v_frm  = new f450_bao_cao_thong_ke_so_luong_hoc_vien();
+                //m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (Exception v_e)
             {
