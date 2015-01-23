@@ -31,6 +31,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             this.ShowDialog();
         }
+        public void display(DateTime ip_dat_dau_thang, DateTime ip_dat_cuoi_thang, decimal ip_dc_id_lop_mon)
+        {
+            m_dat_tu_ngay.Value = ip_dat_dau_thang.Date;
+            m_dat_den_ngay.Value = ip_dat_cuoi_thang.Date;
+            m_cbo_lop.SelectedValue = ip_dc_id_lop_mon;
+
+            m_flag_trang_thai_click = 1; // trạng thái click từ from 410
+
+            this.ShowDialog();
+        }
         #endregion
 
         #region Data Structure
@@ -64,6 +74,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         ITransferDataRow m_obj_trans;
         DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS m_ds = new DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS();
         US_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS m_us = new US_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS();
+        int m_flag_trang_thai_click = 0;// = 0 nếu click từ nút trên menu, = 1 nếu click từ form 410
         #endregion
 
         #region Private Methods
@@ -80,6 +91,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
+            if (m_flag_trang_thai_click == 1)
+            {
+                
+            }
             load_data_2_cbo_lop_mon();
             load_data_2_grid();
         }
@@ -289,5 +304,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+       
     }
 }

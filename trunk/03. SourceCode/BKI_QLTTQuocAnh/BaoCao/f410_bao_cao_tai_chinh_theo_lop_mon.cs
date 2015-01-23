@@ -204,6 +204,23 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh v_frm = new F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh();
+                v_frm.display(m_dat_tu_ngay.Value.Date
+                                ,m_dat_den_ngay.Value.Date
+                                ,CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                                );
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
