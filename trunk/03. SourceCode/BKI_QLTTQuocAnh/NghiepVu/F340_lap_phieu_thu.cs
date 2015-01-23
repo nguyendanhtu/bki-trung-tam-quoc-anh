@@ -15,8 +15,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             InitializeComponent();
         }
-
-        
-
-    }
+        public void display()
+        {
+            this.ShowDialog();
+        }
+   }
 }
