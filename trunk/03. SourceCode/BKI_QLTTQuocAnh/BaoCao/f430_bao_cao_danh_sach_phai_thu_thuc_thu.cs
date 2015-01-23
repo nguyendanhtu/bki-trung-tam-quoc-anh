@@ -488,9 +488,11 @@ namespace BKI_QLTTQuocAnh
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);//Xuat excel
             CGridUtils.AddSearch_Handlers(m_fg);//Ctrl F dc
+
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
+            m_cmd_exit.Visible = false;
 
             m_fg.Tree.Column = (int)e_col_Number.NGAY_THU;
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
@@ -502,12 +504,44 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            if (m_us_bc_tinh_hinh_tc == null)
+            if (m_us_bc_tinh_hinh_tc.dcID == -1)
             {
-                load_data_2_grid();
+                m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+                m_dat_den_ngay.Value = DateTime.Now.Date;
+                load_data_2_cbo_nv_thu();
+                load_data_2_grid_search();
             }
-            load_data_2_grid(m_us_bc_tinh_hinh_tc);
-            load_data_2_cbo_nguoi_thu();
+            else
+            {
+                load_data_2_grid(m_us_bc_tinh_hinh_tc);
+                load_data_2_cbo_nguoi_thu();
+            }
+        }
+
+        private void load_data_2_cbo_nv_thu()
+        {
+            DS_HT_NGUOI_SU_DUNG v_ds_ht_nsd = new DS_HT_NGUOI_SU_DUNG();
+            US_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_HT_NGUOI_SU_DUNG();
+            v_us_ht_nsd.FillDataset(v_ds_ht_nsd);
+
+            DataRow v_dr = v_ds_ht_nsd.HT_NGUOI_SU_DUNG.NewRow();
+            v_dr[HT_NGUOI_SU_DUNG.ID] = -1;
+            v_dr[HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "";
+            v_dr[HT_NGUOI_SU_DUNG.TEN] = "--Tất cả--";
+            v_dr[HT_NGUOI_SU_DUNG.MAT_KHAU] = "";
+            v_dr[HT_NGUOI_SU_DUNG.NGAY_TAO] = DateTime.Now.Date;
+            v_dr[HT_NGUOI_SU_DUNG.NGUOI_TAO] = "";
+            v_dr[HT_NGUOI_SU_DUNG.TRANG_THAI] = "";
+            v_dr[HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+
+
+            v_ds_ht_nsd.HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+            
+            m_cbo_nhan_vien_thu.ValueMember = HT_NGUOI_SU_DUNG.ID;
+            m_cbo_nhan_vien_thu.DisplayMember = HT_NGUOI_SU_DUNG.TEN;
+            m_cbo_nhan_vien_thu.DataSource = v_ds_ht_nsd.HT_NGUOI_SU_DUNG;
+
+            m_cbo_nhan_vien_thu.SelectedIndex = 0;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -600,31 +634,9 @@ namespace BKI_QLTTQuocAnh
         {
             m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             m_us.FillDataset(m_ds);
-            /*m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_PHAI_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_GIAM_TRU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_THUC_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-             , 0
-             , -1
-             , (int)e_col_Number.TIEN_CON_PHAI_THU
-             , "Tổng cộng");
-
-            m_fg.Redraw = true;*/
+            m_fg.Redraw = true;
             create_tree_2grid();
         }
         private void load_data_2_grid(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us_tc)
@@ -641,31 +653,7 @@ namespace BKI_QLTTQuocAnh
                 , m_txt_tim_kien.Text.Trim());
             load_data_2_cbo_nguoi_thu();
             m_cbo_nhan_vien_thu.SelectedIndex = 0;
-            /*m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_PHAI_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_GIAM_TRU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_THUC_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-             , 0
-             , -1
-             , (int)e_col_Number.TIEN_CON_PHAI_THU
-             , "Tổng cộng");
-
-            m_fg.Redraw = true;*/
+            
             create_tree_2grid();
         }
 
@@ -704,9 +692,9 @@ namespace BKI_QLTTQuocAnh
              , 0
              , -1
              , (int)e_col_Number.TIEN_CON_PHAI_THU
-             , "Tổng cộng");
+             , "Tổng cộng");*/
 
-            m_fg.Redraw = true;*/
+            m_fg.Redraw = true;
             create_tree_2grid();
         }
 
@@ -794,6 +782,25 @@ namespace BKI_QLTTQuocAnh
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             //m_fg.DoubleClick += m_fg_DoubleClick;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
+
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                v_frm.display(v_us.dcID);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Load(object sender, System.EventArgs e)

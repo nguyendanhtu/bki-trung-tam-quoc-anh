@@ -23,6 +23,28 @@ namespace BKI_QLTTQuocAnh.US
     {
         private const string c_TableName = "V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU";
         #region "Public Properties"
+        public decimal dcID
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID"] = value;
+            }
+        }
+
+        public bool IsIDNull()
+        {
+            return pm_objDR.IsNull("ID");
+        }
+
+        public void SetIDNull()
+        {
+            pm_objDR["ID"] = System.Convert.DBNull;
+        }
+
         public DateTime datNGAY_THU
         {
             get
@@ -177,6 +199,28 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["HO_TEN_PH"] = System.Convert.DBNull;
         }
 
+        public decimal dcID_NGUOI_THU
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_THU", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGUOI_THU"] = value;
+            }
+        }
+
+        public bool IsID_NGUOI_THUNull()
+        {
+            return pm_objDR.IsNull("ID_NGUOI_THU");
+        }
+
+        public void SetID_NGUOI_THUNull()
+        {
+            pm_objDR["ID_NGUOI_THU"] = System.Convert.DBNull;
+        }
+
         public string strNGUOI_THU
         {
             get
@@ -286,6 +330,7 @@ namespace BKI_QLTTQuocAnh.US
         {
             pm_objDR["TIEN_CON_PHAI_THU"] = System.Convert.DBNull;
         }
+
 
         #endregion
         #region "Init Functions"
