@@ -69,6 +69,7 @@
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
     <Compile Include="US_V_HT_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON.cs" />
+    <Compile Include="US_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.cs" />
