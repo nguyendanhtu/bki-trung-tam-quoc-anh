@@ -95,7 +95,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(118, 99);
+            this.m_cmd_search.Location = new System.Drawing.Point(396, 69);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 7;
@@ -153,7 +153,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 136);
+            this.panel1.Size = new System.Drawing.Size(702, 104);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -196,7 +196,7 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(281, 45);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(282, 45);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
             this.m_dat_den_ngay.TabIndex = 4;
@@ -294,9 +294,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 136);
+            this.m_fg.Location = new System.Drawing.Point(0, 104);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(702, 223);
+            this.m_fg.Size = new System.Drawing.Size(702, 255);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
