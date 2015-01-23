@@ -226,18 +226,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                if (m_fg.Col == (int)e_col_Number.TONG_PHAI_THU)
-                {
-                    US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
-                    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                    grid2us_object(v_us, m_fg.Row);
-
-                    f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm();
-                    v_frm.display(v_us.dcID, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
-                }
-                else
-                {
                     US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
                     if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
                     if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
@@ -245,7 +233,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
                     f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
                     v_frm.display(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
-                }
             }
             catch (Exception v_e)
             {

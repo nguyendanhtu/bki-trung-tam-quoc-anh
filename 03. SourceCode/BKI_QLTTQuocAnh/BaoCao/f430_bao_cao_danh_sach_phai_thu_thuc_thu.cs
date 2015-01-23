@@ -439,7 +439,8 @@ namespace BKI_QLTTQuocAnh
             m_us_bc_tinh_hinh_tc = ip_us;
             m_dat_tu_ngay.Value = ip_dat_tu_ngay;
             m_dat_den_ngay.Value = ip_dat_den_ngay;
-            
+
+            m_txt_tim_kien.Text = ip_us.strHO_TEN.Trim();
             
             this.ShowDialog();
         }
