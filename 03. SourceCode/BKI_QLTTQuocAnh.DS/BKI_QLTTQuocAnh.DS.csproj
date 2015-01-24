@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.cs">
       <DependentUpon>DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -396,6 +401,17 @@
     </None>
     <None Include="DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS.xss">
       <DependentUpon>DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsc">
+      <DependentUpon>DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xss">
+      <DependentUpon>DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsc">
       <DependentUpon>DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.xsd</DependentUpon>
