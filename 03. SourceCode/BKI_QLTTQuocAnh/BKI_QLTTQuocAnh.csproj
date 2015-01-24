@@ -150,6 +150,12 @@
     <Compile Include="BaoCao\f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.Designer.cs">
       <DependentUpon>f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\f_diem_danh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f_diem_danh.Designer.cs">
+      <DependentUpon>f_diem_danh.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f201_danh_sach_lop_mon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.resx">
       <DependentUpon>f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f_diem_danh.resx">
+      <DependentUpon>f_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f201_danh_sach_lop_mon.resx">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
