@@ -20,7 +20,7 @@ namespace BKI_QLTTQuocAnh.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAY")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY : global::System.Data.DataSet {
         
@@ -199,9 +199,9 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAY";
+            this.DataSetName = "DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAY.xsd";
+            this.Namespace = "http://tempuri.org/DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableV_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY = new V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYDataTable();
@@ -279,7 +279,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYDataTable : global::System.Data.TypedTableBase<V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYRow> {
             
-            private global::System.Data.DataColumn columnID_LOP_MON;
+            private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnMA_LOP_MON;
             
@@ -320,9 +320,9 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_LOP_MONColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnID_LOP_MON;
+                    return this.columnID;
                 }
             }
             
@@ -392,9 +392,9 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYRow FindByID_LOP_MON(decimal ID_LOP_MON) {
+            public V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYRow FindByID(decimal ID) {
                 return ((V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYRow)(this.Rows.Find(new object[] {
-                            ID_LOP_MON})));
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -414,7 +414,7 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_LOP_MON = base.Columns["ID_LOP_MON"];
+                this.columnID = base.Columns["ID"];
                 this.columnMA_LOP_MON = base.Columns["MA_LOP_MON"];
                 this.columnTONG_SO_HS = base.Columns["TONG_SO_HS"];
             }
@@ -422,20 +422,20 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_LOP_MON = new global::System.Data.DataColumn("ID_LOP_MON", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_LOP_MON);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.columnMA_LOP_MON = new global::System.Data.DataColumn("MA_LOP_MON", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_LOP_MON);
                 this.columnTONG_SO_HS = new global::System.Data.DataColumn("TONG_SO_HS", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTONG_SO_HS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_LOP_MON}, true));
-                this.columnID_LOP_MON.AutoIncrement = true;
-                this.columnID_LOP_MON.AutoIncrementSeed = -1;
-                this.columnID_LOP_MON.AutoIncrementStep = -1;
-                this.columnID_LOP_MON.AllowDBNull = false;
-                this.columnID_LOP_MON.ReadOnly = true;
-                this.columnID_LOP_MON.Unique = true;
+                                this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
                 this.columnMA_LOP_MON.AllowDBNull = false;
                 this.columnMA_LOP_MON.MaxLength = 15;
             }
@@ -580,12 +580,12 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID_LOP_MON {
+            public decimal ID {
                 get {
-                    return ((decimal)(this[this.tableV_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.ID_LOP_MONColumn]));
+                    return ((decimal)(this[this.tableV_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.IDColumn]));
                 }
                 set {
-                    this[this.tableV_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.ID_LOP_MONColumn] = value;
+                    this[this.tableV_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY.IDColumn] = value;
                 }
             }
             
@@ -665,7 +665,7 @@ namespace BKI_QLTTQuocAnh.DS {
         }
     }
 }
-namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAYTableAdapters {
+namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAYTableAdapters {
     
     
     /// <summary>
@@ -789,7 +789,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAYTableA
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY";
-            tableMapping.ColumnMappings.Add("ID_LOP_MON", "ID_LOP_MON");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("MA_LOP_MON", "MA_LOP_MON");
             tableMapping.ColumnMappings.Add("TONG_SO_HS", "TONG_SO_HS");
             this._adapter.TableMappings.Add(tableMapping);
@@ -799,7 +799,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAYTableA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhConnectionString1;
+            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhVer2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -808,8 +808,8 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_BAO_CAO_DANH_SACH_SINH_VIEN_HIEN_NAYTableA
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_LOP_MON, MA_LOP_MON, TONG_SO_HS FROM dbo.V_RPT_450_BAO_CAO_SO_LUONG_LUO" +
-                "NG_HOC_VIEN_HIEN_NAY";
+            this._commandCollection[0].CommandText = "SELECT ID, MA_LOP_MON, TONG_SO_HS FROM dbo.V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_V" +
+                "IEN_HIEN_NAY";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
