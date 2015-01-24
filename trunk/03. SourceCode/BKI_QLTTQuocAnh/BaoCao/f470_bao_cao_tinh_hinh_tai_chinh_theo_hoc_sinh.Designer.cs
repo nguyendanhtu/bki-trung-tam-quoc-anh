@@ -85,7 +85,7 @@
             this.m_txt_search.Location = new System.Drawing.Point(118, 74);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_search.TabIndex = 6;
+            this.m_txt_search.TabIndex = 5;
             // 
             // m_cmd_search
             // 
@@ -98,7 +98,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(419, 69);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 7;
+            this.m_cmd_search.TabIndex = 6;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // imageList1
@@ -162,7 +162,7 @@
             this.label1.Location = new System.Drawing.Point(11, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Tìm kiếm (Tên HS)";
             // 
             // m_dat_tu_ngay
@@ -172,7 +172,7 @@
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(118, 45);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_tu_ngay.TabIndex = 2;
+            this.m_dat_tu_ngay.TabIndex = 1;
             // 
             // m_lbl_tu_ngay
             // 
@@ -189,7 +189,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(222, 49);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
-            this.m_lbl_den_ngay.TabIndex = 3;
+            this.m_lbl_den_ngay.TabIndex = 2;
             this.m_lbl_den_ngay.Text = "Đến cuối tháng";
             // 
             // m_dat_den_ngay
@@ -199,7 +199,7 @@
             this.m_dat_den_ngay.Location = new System.Drawing.Point(308, 45);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_den_ngay.TabIndex = 4;
+            this.m_dat_den_ngay.TabIndex = 3;
             // 
             // m_cmd_delete
             // 
