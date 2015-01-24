@@ -331,7 +331,6 @@ public class US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU : US_Object
     }
 
     #endregion
-
     
     #region "Init Functions"
     public US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU() 
