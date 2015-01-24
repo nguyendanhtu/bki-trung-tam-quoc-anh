@@ -110,7 +110,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void load_data_2_grid()
         {
-            m_ds.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.Clear();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDataset(
                 m_ds
                 , m_dat_tu_ngay.Value.Date

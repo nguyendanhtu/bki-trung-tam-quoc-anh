@@ -137,7 +137,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(702, 45);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO TIỀN PHẢI THU, THỰC THU THEO HỌC SINH";
+            this.m_lbl_header.Text = "BÁO CÁO TÌNH HÌNH TÀI CHÍNH THEO HỌC SINH";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
