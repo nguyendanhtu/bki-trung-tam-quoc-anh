@@ -67,6 +67,28 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["NGAY_THU"] = System.Convert.DBNull;
         }
 
+        public decimal dcID_LOAI_PHIEU_THU
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_LOAI_PHIEU_THU", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_LOAI_PHIEU_THU"] = value;
+            }
+        }
+
+        public bool IsID_LOAI_PHIEU_THUNull()
+        {
+            return pm_objDR.IsNull("ID_LOAI_PHIEU_THU");
+        }
+
+        public void SetID_LOAI_PHIEU_THUNull()
+        {
+            pm_objDR["ID_LOAI_PHIEU_THU"] = System.Convert.DBNull;
+        }
+
         public string strSO_PHIEU
         {
             get

@@ -28,7 +28,12 @@ namespace BKI_QLTTQuocAnh.US {
         public const string CAP_DON_VI = "CAP_DON_VI";
         public const string LOAI_QUYET_DINH = "LOAI_QUYET_DINH";
     }
-
+    public static class ID_LOAI_PHIEU_THU
+    {
+        public const decimal ID_PHIEU_PHAI_THU = 27;
+        public const decimal ID_PHIEU_THUC_THU = 26;
+        public const decimal ID_PHIEU_GIAM_TRU = 54;
+    }
 
 
     //public class TU_DIEN {

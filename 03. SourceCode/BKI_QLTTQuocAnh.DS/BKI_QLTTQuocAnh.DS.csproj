@@ -176,6 +176,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU.cs">
+      <DependentUpon>DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

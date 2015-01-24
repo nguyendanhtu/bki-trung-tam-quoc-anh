@@ -1122,7 +1122,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_NGHIEP_VU_LAP_PHIEU_THUTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhConnectionString1;
+            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhVer2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
