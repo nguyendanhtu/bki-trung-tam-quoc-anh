@@ -65,7 +65,9 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
         public const string ID_GD_HOC = "ID_GD_HOC";
         public const string TRANG_THAI_YN = "TRANG_THAI_YN";
+        public const string TRANG_THAI_HS = "TRANG_THAI_HS";
     }
+
 
     public class V_HT_NGUOI_SU_DUNG
     {

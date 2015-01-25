@@ -194,6 +194,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             this.Load += f450_bc_so_luong_hs_hien_nay_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY v_us = new US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
+
+                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                v_frm.display(v_us.dcID);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
