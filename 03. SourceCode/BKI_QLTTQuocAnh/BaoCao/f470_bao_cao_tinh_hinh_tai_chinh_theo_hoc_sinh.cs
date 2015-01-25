@@ -108,6 +108,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.NewRow());
             return v_obj_trans;
         }
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
         private void load_data_2_grid()
         {
             m_ds.Clear();
@@ -140,6 +146,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
              , -1
              , (int)e_col_Number.TONG_CON_NO
              , "Tổng cộng");
+
+            wrap_text_cell();
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH i_us
