@@ -87,6 +87,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
+
+            m_fg.Tree.Column = (int)e_col_Number.HO_TEN;
+            m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
+            m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+
             set_define_events();
             this.KeyPreview = true;
         }
@@ -104,7 +109,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 load_data_2_grid();
             }
         }
-
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
         private void load_data_2_cbo_lop_mon()
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
@@ -151,6 +161,65 @@ namespace BKI_QLTTQuocAnh.BaoCao
                              , -1);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
+            {
+                m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN]
+                    = m_fg[v_i_cur_row, (int)e_col_Number.MA_DOI_TUONG]
+                    + "-"
+                    + m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN];
+            }
+            m_fg.Subtotal(AggregateEnum.Sum
+               , 0
+               , -1
+               , (int)e_col_Number.TIEN_PHAI_THU
+               , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.TIEN_GIAM_TRU
+                , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                 , 0
+                , -1
+                , (int)e_col_Number.TIEN_THUC_THU
+               , "Tổng");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+              , 0
+                , -1
+                , (int)e_col_Number.TIEN_CON_PHAI_THU
+               , "Tổng");
+
+            //m_fg.Subtotal(AggregateEnum.Sum
+            //  , 1
+            //  , (int)e_col_Number.HO_TEN
+            //  , (int)e_col_Number.TIEN_PHAI_THU
+            //  , "{0}");
+
+            //m_fg.Subtotal(AggregateEnum.Sum
+            //    , 1
+            //    , (int)e_col_Number.HO_TEN
+            //    , (int)e_col_Number.TIEN_GIAM_TRU
+            //    , "{0}");
+
+            //m_fg.Subtotal(AggregateEnum.Sum
+            //    , 1
+            //    , (int)e_col_Number.HO_TEN
+            //    , (int)e_col_Number.TIEN_THUC_THU
+            //    , "{0}");
+
+            //m_fg.Subtotal(AggregateEnum.Sum
+            //    , 1
+            //    , (int)e_col_Number.HO_TEN
+            //    , (int)e_col_Number.TIEN_CON_PHAI_THU
+            //    , "{0}");
+
+            //m_fg.Tree.Show(1);
+
+            wrap_text_cell();
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS i_us

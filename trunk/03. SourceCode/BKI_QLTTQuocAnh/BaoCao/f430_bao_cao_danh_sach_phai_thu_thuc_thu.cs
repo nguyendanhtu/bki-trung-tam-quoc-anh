@@ -499,6 +499,10 @@ namespace BKI_QLTTQuocAnh
             m_fg.Tree.Column = (int)e_col_Number.NGAY_THU;
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
 
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
@@ -519,7 +523,12 @@ namespace BKI_QLTTQuocAnh
                 load_data_2_cbo_nguoi_thu();
             }
         }
-
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
         private void load_data_2_cbo_nv_thu()
         {
             DS_HT_NGUOI_SU_DUNG v_ds_ht_nsd = new DS_HT_NGUOI_SU_DUNG();
@@ -639,7 +648,10 @@ namespace BKI_QLTTQuocAnh
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Redraw = true;
+
+
             create_tree_2grid();
+            wrap_text_cell();
         }
         private void load_data_2_grid(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us_tc)
         {
@@ -655,8 +667,12 @@ namespace BKI_QLTTQuocAnh
                 , m_txt_tim_kien.Text.Trim());
             load_data_2_cbo_nguoi_thu();
             m_cbo_nhan_vien_thu.SelectedIndex = 0;
-            
+
+          
+
             create_tree_2grid();
+
+            wrap_text_cell();
         }
 
         private void load_data_2_grid_search()
@@ -672,32 +688,10 @@ namespace BKI_QLTTQuocAnh
                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
                 , m_txt_tim_kien.Text.Trim());
 
-            /*m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_PHAI_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_GIAM_TRU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-                , 0
-                , -1
-                , (int)e_col_Number.TIEN_THUC_THU
-                , "Tổng cộng");
-            m_fg.Subtotal(AggregateEnum.Sum
-             , 0
-             , -1
-             , (int)e_col_Number.TIEN_CON_PHAI_THU
-             , "Tổng cộng");*/
-
             m_fg.Redraw = true;
             create_tree_2grid();
+
+            wrap_text_cell();
         }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
@@ -796,8 +790,10 @@ namespace BKI_QLTTQuocAnh
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(v_us, m_fg.Row);
 
+                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
+
                 f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.display(v_us);
+                v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
             }
             catch (Exception v_e)
             {

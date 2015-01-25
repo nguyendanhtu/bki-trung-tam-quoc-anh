@@ -77,7 +77,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
             load_data_2_cbo_lop_mon();
             load_data_2_grid();
         }
-
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
         private void load_data_2_cbo_lop_mon()
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
@@ -120,6 +125,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
                             , "");
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            wrap_text_cell();
+
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON i_us
