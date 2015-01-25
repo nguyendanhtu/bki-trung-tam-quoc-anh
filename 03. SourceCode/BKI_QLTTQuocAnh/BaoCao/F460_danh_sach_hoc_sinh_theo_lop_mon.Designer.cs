@@ -229,9 +229,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 109);
+            this.m_fg.Location = new System.Drawing.Point(0, 219);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(720, 297);
+            this.m_fg.Size = new System.Drawing.Size(720, 187);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 6;
             // 

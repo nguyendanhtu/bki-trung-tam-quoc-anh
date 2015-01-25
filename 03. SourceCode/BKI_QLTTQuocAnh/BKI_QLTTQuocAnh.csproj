@@ -168,6 +168,9 @@
     <Compile Include="DanhMuc\f201_danh_sach_lop_mon.Designer.cs">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f230_danh_muc_hs_theo_lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="f399_MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f201_danh_sach_lop_mon.resx">
       <DependentUpon>f201_danh_sach_lop_mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f230_danh_muc_hs_theo_lop.resx">
+      <DependentUpon>f230_danh_muc_hs_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f399_MainMenu.resx">
       <DependentUpon>f399_MainMenu.cs</DependentUpon>
