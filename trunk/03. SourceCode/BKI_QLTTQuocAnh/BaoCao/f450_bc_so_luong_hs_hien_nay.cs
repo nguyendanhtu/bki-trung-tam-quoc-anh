@@ -102,6 +102,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void load_data_2_grid()
         {
             m_ds = new DS_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDataset(m_ds
                                 , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue));
             m_fg.Redraw = false;
