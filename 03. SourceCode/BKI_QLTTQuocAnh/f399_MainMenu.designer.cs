@@ -40,6 +40,7 @@ namespace Form_menu
             this.m_rbb_doanh_thu = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_tai_chinh_theo_lm = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_phai_thu_theo_lm_hs = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_bc_so_luong_hs_hien_nay = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_bao_cao_kho = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_bc_thuc_thu_phai_thu_hs = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_bc_phai_thu_thuc_thu_theo_lm_hs = new DevComponents.DotNetBar.ButtonItem();
@@ -102,7 +103,6 @@ namespace Form_menu
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.m_cmd_bc_so_luong_hs_hien_nay = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -285,6 +285,15 @@ namespace Form_menu
             this.m_cmd_phai_thu_theo_lm_hs.Name = "m_cmd_phai_thu_theo_lm_hs";
             this.m_cmd_phai_thu_theo_lm_hs.SubItemsExpandWidth = 14;
             this.m_cmd_phai_thu_theo_lm_hs.Text = "Tài chính theo Lớp môn, HS";
+            // 
+            // m_cmd_bc_so_luong_hs_hien_nay
+            // 
+            this.m_cmd_bc_so_luong_hs_hien_nay.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_so_luong_hs_hien_nay.Icon")));
+            this.m_cmd_bc_so_luong_hs_hien_nay.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_bc_so_luong_hs_hien_nay.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_bc_so_luong_hs_hien_nay.Name = "m_cmd_bc_so_luong_hs_hien_nay";
+            this.m_cmd_bc_so_luong_hs_hien_nay.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_so_luong_hs_hien_nay.Text = "Số lượng HS hiện nay";
             // 
             // m_rbb_bao_cao_kho
             // 
@@ -1225,27 +1234,21 @@ namespace Form_menu
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(205, 160);
+            this.xtraTabControl1.Location = new System.Drawing.Point(29, 160);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(970, 270);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1146, 270);
             this.xtraTabControl1.TabIndex = 1;
             // 
             // panelControl1
             // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(5, 160);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(200, 270);
+            this.panelControl1.Size = new System.Drawing.Size(24, 270);
             this.panelControl1.TabIndex = 2;
-            // 
-            // m_cmd_bc_so_luong_hs_hien_nay
-            // 
-            this.m_cmd_bc_so_luong_hs_hien_nay.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_bc_so_luong_hs_hien_nay.Icon")));
-            this.m_cmd_bc_so_luong_hs_hien_nay.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_bc_so_luong_hs_hien_nay.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_bc_so_luong_hs_hien_nay.Name = "m_cmd_bc_so_luong_hs_hien_nay";
-            this.m_cmd_bc_so_luong_hs_hien_nay.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_so_luong_hs_hien_nay.Text = "Số lượng HS hiện nay";
             // 
             // f399_MainMenu
             // 

@@ -500,7 +500,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
 
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
-            m_fg.AllowResizing = AllowResizingEnum.Rows;
+           // m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
 
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
