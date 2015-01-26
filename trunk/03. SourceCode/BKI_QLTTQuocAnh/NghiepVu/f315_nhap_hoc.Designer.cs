@@ -40,11 +40,11 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_cbo_nhap_vao_lop = new System.Windows.Forms.ComboBox();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tai_ngay = new System.Windows.Forms.Label();
             this.m_lbl_nhap_vao_lop = new System.Windows.Forms.Label();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_txt_email_phu_huynh = new System.Windows.Forms.TextBox();
@@ -67,13 +67,11 @@
             this.m_txt_ma_hoc_sinh = new System.Windows.Forms.TextBox();
             this.m_lbl_truong_dang_hoc = new System.Windows.Forms.Label();
             this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.m_txt_chon_ma_hoc_sinh = new System.Windows.Forms.TextBox();
             this.m_lbl_chon_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -138,10 +136,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 352);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 306);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(652, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(712, 41);
             this.m_pnl_out_place_dm.TabIndex = 3;
             // 
             // m_cmd_insert
@@ -153,9 +151,9 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.imageList1;
-            this.m_cmd_insert.Location = new System.Drawing.Point(296, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(356, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
@@ -168,9 +166,9 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.imageList1;
-            this.m_cmd_update.Location = new System.Drawing.Point(384, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(444, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
@@ -185,7 +183,7 @@
             this.m_cmd_nhap_hoc.ImageList = this.imageList1;
             this.m_cmd_nhap_hoc.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_nhap_hoc.Name = "m_cmd_nhap_hoc";
-            this.m_cmd_nhap_hoc.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_nhap_hoc.Size = new System.Drawing.Size(87, 33);
             this.m_cmd_nhap_hoc.TabIndex = 0;
             this.m_cmd_nhap_hoc.Text = "Nhập học";
             // 
@@ -198,9 +196,9 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.imageList1;
-            this.m_cmd_delete.Location = new System.Drawing.Point(472, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(532, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
@@ -213,15 +211,18 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.imageList1;
-            this.m_cmd_exit.Location = new System.Drawing.Point(560, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(620, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_txt_chon_ma_hoc_sinh);
+            this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.m_cbo_nhap_vao_lop);
+            this.panel1.Controls.Add(this.m_lbl_chon_ma_hoc_sinh);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Controls.Add(this.m_dat_tu_ngay);
             this.panel1.Controls.Add(this.m_lbl_tai_ngay);
@@ -229,7 +230,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 72);
+            this.panel1.Size = new System.Drawing.Size(712, 78);
             this.panel1.TabIndex = 4;
             // 
             // m_cbo_nhap_vao_lop
@@ -240,20 +241,6 @@
             this.m_cbo_nhap_vao_lop.Size = new System.Drawing.Size(113, 21);
             this.m_cbo_nhap_vao_lop.TabIndex = 7;
             // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(296, 8);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(88, 39);
-            this.m_cmd_search.TabIndex = 6;
-            this.m_cmd_search.Text = "Danh sách học sinh";
-            // 
             // m_lbl_header
             // 
             this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -261,7 +248,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(652, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(712, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "NHẬP HỌC";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,6 +280,20 @@
             this.m_lbl_nhap_vao_lop.TabIndex = 2;
             this.m_lbl_nhap_vao_lop.Text = "Nhập vào lớp";
             // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.ImageList = this.imageList1;
+            this.m_cmd_search.Location = new System.Drawing.Point(618, 39);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(83, 33);
+            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.Text = "Lọc";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.m_txt_email_phu_huynh);
@@ -316,16 +317,16 @@
             this.panel2.Controls.Add(this.m_lbl_truong_dang_hoc);
             this.panel2.Controls.Add(this.m_lbl_ma_so_hoc_sinh);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 72);
+            this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(652, 227);
+            this.panel2.Size = new System.Drawing.Size(712, 226);
             this.panel2.TabIndex = 5;
             // 
             // m_txt_email_phu_huynh
             // 
             this.m_txt_email_phu_huynh.Location = new System.Drawing.Point(108, 163);
             this.m_txt_email_phu_huynh.Name = "m_txt_email_phu_huynh";
-            this.m_txt_email_phu_huynh.Size = new System.Drawing.Size(246, 20);
+            this.m_txt_email_phu_huynh.Size = new System.Drawing.Size(291, 20);
             this.m_txt_email_phu_huynh.TabIndex = 21;
             // 
             // m_lbl_email_phu_huynh
@@ -339,7 +340,7 @@
             // 
             // m_txt_so_dien_thoai_phu_huynh
             // 
-            this.m_txt_so_dien_thoai_phu_huynh.Location = new System.Drawing.Point(474, 137);
+            this.m_txt_so_dien_thoai_phu_huynh.Location = new System.Drawing.Point(535, 137);
             this.m_txt_so_dien_thoai_phu_huynh.Name = "m_txt_so_dien_thoai_phu_huynh";
             this.m_txt_so_dien_thoai_phu_huynh.Size = new System.Drawing.Size(166, 20);
             this.m_txt_so_dien_thoai_phu_huynh.TabIndex = 17;
@@ -347,7 +348,7 @@
             // m_lbl_so_dien_thoai_phu_huynh
             // 
             this.m_lbl_so_dien_thoai_phu_huynh.AutoSize = true;
-            this.m_lbl_so_dien_thoai_phu_huynh.Location = new System.Drawing.Point(367, 140);
+            this.m_lbl_so_dien_thoai_phu_huynh.Location = new System.Drawing.Point(428, 140);
             this.m_lbl_so_dien_thoai_phu_huynh.Name = "m_lbl_so_dien_thoai_phu_huynh";
             this.m_lbl_so_dien_thoai_phu_huynh.Size = new System.Drawing.Size(94, 13);
             this.m_lbl_so_dien_thoai_phu_huynh.TabIndex = 16;
@@ -357,7 +358,7 @@
             // 
             this.m_txt_ho_ten_phu_huynh.Location = new System.Drawing.Point(108, 137);
             this.m_txt_ho_ten_phu_huynh.Name = "m_txt_ho_ten_phu_huynh";
-            this.m_txt_ho_ten_phu_huynh.Size = new System.Drawing.Size(246, 20);
+            this.m_txt_ho_ten_phu_huynh.Size = new System.Drawing.Size(291, 20);
             this.m_txt_ho_ten_phu_huynh.TabIndex = 15;
             // 
             // m_lbl_ho_ten_phu_huynh
@@ -390,7 +391,7 @@
             // 
             this.m_txt_email_hoc_sinh.Location = new System.Drawing.Point(108, 58);
             this.m_txt_email_hoc_sinh.Name = "m_txt_email_hoc_sinh";
-            this.m_txt_email_hoc_sinh.Size = new System.Drawing.Size(246, 20);
+            this.m_txt_email_hoc_sinh.Size = new System.Drawing.Size(291, 20);
             this.m_txt_email_hoc_sinh.TabIndex = 11;
             // 
             // m_lbl_email_hoc_sinh
@@ -404,7 +405,7 @@
             // 
             // m_txt_so_dien_thoai_hoc_sinh
             // 
-            this.m_txt_so_dien_thoai_hoc_sinh.Location = new System.Drawing.Point(474, 32);
+            this.m_txt_so_dien_thoai_hoc_sinh.Location = new System.Drawing.Point(535, 32);
             this.m_txt_so_dien_thoai_hoc_sinh.Name = "m_txt_so_dien_thoai_hoc_sinh";
             this.m_txt_so_dien_thoai_hoc_sinh.Size = new System.Drawing.Size(166, 20);
             this.m_txt_so_dien_thoai_hoc_sinh.TabIndex = 9;
@@ -412,24 +413,23 @@
             // m_lbl_so_dien_thoai_hoc_sinh
             // 
             this.m_lbl_so_dien_thoai_hoc_sinh.AutoSize = true;
-            this.m_lbl_so_dien_thoai_hoc_sinh.Location = new System.Drawing.Point(367, 35);
+            this.m_lbl_so_dien_thoai_hoc_sinh.Location = new System.Drawing.Point(428, 35);
             this.m_lbl_so_dien_thoai_hoc_sinh.Name = "m_lbl_so_dien_thoai_hoc_sinh";
             this.m_lbl_so_dien_thoai_hoc_sinh.Size = new System.Drawing.Size(94, 13);
             this.m_lbl_so_dien_thoai_hoc_sinh.TabIndex = 8;
             this.m_lbl_so_dien_thoai_hoc_sinh.Text = "Số điên thoại (HS)";
-            this.m_lbl_so_dien_thoai_hoc_sinh.Click += new System.EventHandler(this.label1_Click);
             // 
             // m_txt_ten
             // 
-            this.m_txt_ten.Location = new System.Drawing.Point(572, 6);
+            this.m_txt_ten.Location = new System.Drawing.Point(618, 6);
             this.m_txt_ten.Name = "m_txt_ten";
-            this.m_txt_ten.Size = new System.Drawing.Size(68, 20);
+            this.m_txt_ten.Size = new System.Drawing.Size(82, 20);
             this.m_txt_ten.TabIndex = 7;
             // 
             // m_lbl_ten
             // 
             this.m_lbl_ten.AutoSize = true;
-            this.m_lbl_ten.Location = new System.Drawing.Point(540, 9);
+            this.m_lbl_ten.Location = new System.Drawing.Point(586, 9);
             this.m_lbl_ten.Name = "m_lbl_ten";
             this.m_lbl_ten.Size = new System.Drawing.Size(26, 13);
             this.m_lbl_ten.TabIndex = 6;
@@ -437,7 +437,7 @@
             // 
             // m_txt_ho_va_ten_lot
             // 
-            this.m_txt_ho_va_ten_lot.Location = new System.Drawing.Point(360, 6);
+            this.m_txt_ho_va_ten_lot.Location = new System.Drawing.Point(392, 6);
             this.m_txt_ho_va_ten_lot.Name = "m_txt_ho_va_ten_lot";
             this.m_txt_ho_va_ten_lot.Size = new System.Drawing.Size(166, 20);
             this.m_txt_ho_va_ten_lot.TabIndex = 5;
@@ -445,7 +445,7 @@
             // m_lbl_ho_va_ten_lot
             // 
             this.m_lbl_ho_va_ten_lot.AutoSize = true;
-            this.m_lbl_ho_va_ten_lot.Location = new System.Drawing.Point(286, 9);
+            this.m_lbl_ho_va_ten_lot.Location = new System.Drawing.Point(318, 9);
             this.m_lbl_ho_va_ten_lot.Name = "m_lbl_ho_va_ten_lot";
             this.m_lbl_ho_va_ten_lot.Size = new System.Drawing.Size(68, 13);
             this.m_lbl_ho_va_ten_lot.TabIndex = 4;
@@ -455,7 +455,7 @@
             // 
             this.m_txt_truong_dang_hoc.Location = new System.Drawing.Point(108, 32);
             this.m_txt_truong_dang_hoc.Name = "m_txt_truong_dang_hoc";
-            this.m_txt_truong_dang_hoc.Size = new System.Drawing.Size(246, 20);
+            this.m_txt_truong_dang_hoc.Size = new System.Drawing.Size(291, 20);
             this.m_txt_truong_dang_hoc.TabIndex = 3;
             // 
             // m_txt_ma_hoc_sinh
@@ -483,20 +483,9 @@
             this.m_lbl_ma_so_hoc_sinh.TabIndex = 2;
             this.m_lbl_ma_so_hoc_sinh.Text = "Mã số học sinh";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.m_txt_chon_ma_hoc_sinh);
-            this.panel3.Controls.Add(this.m_cmd_search);
-            this.panel3.Controls.Add(this.m_lbl_chon_ma_hoc_sinh);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 299);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(652, 52);
-            this.panel3.TabIndex = 6;
-            // 
             // m_txt_chon_ma_hoc_sinh
             // 
-            this.m_txt_chon_ma_hoc_sinh.Location = new System.Drawing.Point(108, 17);
+            this.m_txt_chon_ma_hoc_sinh.Location = new System.Drawing.Point(485, 45);
             this.m_txt_chon_ma_hoc_sinh.Name = "m_txt_chon_ma_hoc_sinh";
             this.m_txt_chon_ma_hoc_sinh.Size = new System.Drawing.Size(118, 20);
             this.m_txt_chon_ma_hoc_sinh.TabIndex = 5;
@@ -504,7 +493,7 @@
             // m_lbl_chon_ma_hoc_sinh
             // 
             this.m_lbl_chon_ma_hoc_sinh.AutoSize = true;
-            this.m_lbl_chon_ma_hoc_sinh.Location = new System.Drawing.Point(12, 21);
+            this.m_lbl_chon_ma_hoc_sinh.Location = new System.Drawing.Point(389, 49);
             this.m_lbl_chon_ma_hoc_sinh.Name = "m_lbl_chon_ma_hoc_sinh";
             this.m_lbl_chon_ma_hoc_sinh.Size = new System.Drawing.Size(95, 13);
             this.m_lbl_chon_ma_hoc_sinh.TabIndex = 4;
@@ -514,20 +503,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 388);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(712, 347);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f315_nhap_hoc";
-            this.Text = "f315_nhap_hoc";
+            this.Text = "F315 - Nhập học";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -571,7 +557,6 @@
         private System.Windows.Forms.TextBox m_txt_ma_hoc_sinh;
         private System.Windows.Forms.Label m_lbl_truong_dang_hoc;
         private System.Windows.Forms.Label m_lbl_ma_so_hoc_sinh;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox m_txt_chon_ma_hoc_sinh;
         private System.Windows.Forms.Label m_lbl_chon_ma_hoc_sinh;
     }
