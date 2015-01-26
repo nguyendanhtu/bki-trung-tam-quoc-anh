@@ -87,6 +87,20 @@ namespace Form_menu
             m_cmd_bao_cao_ds_phieu.Click += m_cmd_bao_cao_ds_phieu_Click;
             m_cmd_bc_so_luong_hs_hien_nay.Click += m_cmd_bc_so_luong_hs_hien_nay_Click;
             m_cmd_nhap_hoc.Click += m_cmd_nhap_hoc_Click;
+            m_cmd_nghi_hoc.Click += m_cmd_nghi_hoc_Click;
+        }
+
+        void m_cmd_nghi_hoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f316_nghi_hoc v_frm = new f316_nghi_hoc();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_nhap_hoc_Click(object sender, EventArgs e)
