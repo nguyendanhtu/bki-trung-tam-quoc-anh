@@ -62,7 +62,7 @@ namespace Form_menu
             m_cmd_doi_mat_khau.Enabled = true;
             m_cmd_nhat_ky_he_thong.Enabled = false;
             m_cmd_mua_hang.Enabled = false;
-            m_cmd_ban_hang.Enabled = false;
+            m_cmd_nhap_hoc.Enabled = false;
             m_cmd_nhap_tu_excel.Enabled = false;
             m_cmd_tien_te.Enabled = false;
             m_cmd_thue.Enabled = false;
