@@ -42,7 +42,17 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_txt_ma_hoc_sinh = new System.Windows.Forms.TextBox();
+            this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.m_pnl_out_place_dm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // m_dat_tu_ngay
@@ -209,11 +219,96 @@
             this.m_lbl_header.Text = "LẬP PHẢI THU";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // m_cbo_lop_mon
+            // 
+            this.m_cbo_lop_mon.FormattingEnabled = true;
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(110, 156);
+            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
+            this.m_cbo_lop_mon.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_lop_mon.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Chọn lớp môn";
+            // 
+            // m_txt_ma_hoc_sinh
+            // 
+            this.m_txt_ma_hoc_sinh.Location = new System.Drawing.Point(453, 67);
+            this.m_txt_ma_hoc_sinh.Name = "m_txt_ma_hoc_sinh";
+            this.m_txt_ma_hoc_sinh.Size = new System.Drawing.Size(118, 20);
+            this.m_txt_ma_hoc_sinh.TabIndex = 41;
+            // 
+            // m_lbl_ma_so_hoc_sinh
+            // 
+            this.m_lbl_ma_so_hoc_sinh.AutoSize = true;
+            this.m_lbl_ma_so_hoc_sinh.Location = new System.Drawing.Point(357, 70);
+            this.m_lbl_ma_so_hoc_sinh.Name = "m_lbl_ma_so_hoc_sinh";
+            this.m_lbl_ma_so_hoc_sinh.Size = new System.Drawing.Size(44, 13);
+            this.m_lbl_ma_so_hoc_sinh.TabIndex = 40;
+            this.m_lbl_ma_so_hoc_sinh.Text = "Đơn giá";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(453, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(357, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Số buổi";
+            // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Location = new System.Drawing.Point(12, 183);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(662, 161);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 44;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Danh sách phiếu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(582, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "Lập";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // f330_lap_phai_thu_hoc_vien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 446);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.m_txt_ma_hoc_sinh);
+            this.Controls.Add(this.m_lbl_ma_so_hoc_sinh);
+            this.Controls.Add(this.m_cbo_lop_mon);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.m_lbl_header);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.dateTimePicker1);
@@ -223,6 +318,7 @@
             this.Name = "f330_lap_phai_thu_hoc_vien";
             this.Text = "f330_lap_phai_thu_hoc_vien";
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +338,14 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
+        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox m_txt_ma_hoc_sinh;
+        private System.Windows.Forms.Label m_lbl_ma_so_hoc_sinh;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
