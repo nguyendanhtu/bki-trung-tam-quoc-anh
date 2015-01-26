@@ -351,6 +351,9 @@
     <EmbeddedResource Include="NghiepVu\f315_nhap_hoc.resx">
       <DependentUpon>f315_nhap_hoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f316_nghi_hoc.resx">
+      <DependentUpon>f316_nghi_hoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
       <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
     </EmbeddedResource>
