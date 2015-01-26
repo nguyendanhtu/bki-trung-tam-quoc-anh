@@ -190,7 +190,7 @@
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 1;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Text = "&Bàn giao";
             // 
             // m_cmd_update
             // 
@@ -275,7 +275,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(399, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 29;
             // 
             // label3
