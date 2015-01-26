@@ -308,6 +308,9 @@
     <EmbeddedResource Include="BaoCao\f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.resx">
       <DependentUpon>f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f490_bc_thuc_thu_theo_nv.resx">
+      <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f_diem_danh.resx">
       <DependentUpon>f_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
