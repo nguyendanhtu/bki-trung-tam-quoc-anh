@@ -348,6 +348,9 @@
     <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
       <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f315_nhap_hoc.resx">
+      <DependentUpon>f315_nhap_hoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
       <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
     </EmbeddedResource>

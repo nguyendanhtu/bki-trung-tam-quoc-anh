@@ -225,9 +225,9 @@
             this.m_lbl_lop_mon.AutoSize = true;
             this.m_lbl_lop_mon.Location = new System.Drawing.Point(17, 83);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
-            this.m_lbl_lop_mon.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_lop_mon.Size = new System.Drawing.Size(51, 13);
             this.m_lbl_lop_mon.TabIndex = 4;
-            this.m_lbl_lop_mon.Text = "Lớp:";
+            this.m_lbl_lop_mon.Text = "Lớp môn:";
             // 
             // panel1
             // 
