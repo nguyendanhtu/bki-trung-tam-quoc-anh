@@ -88,6 +88,48 @@ namespace Form_menu
             m_cmd_bc_so_luong_hs_hien_nay.Click += m_cmd_bc_so_luong_hs_hien_nay_Click;
             m_cmd_nhap_hoc.Click += m_cmd_nhap_hoc_Click;
             m_cmd_nghi_hoc.Click += m_cmd_nghi_hoc_Click;
+            m_cmd_diem_danh.Click += m_cmd_diem_danh_Click;
+            m_cmd_lap_phai_thu.Click += m_cmd_lap_phai_thu_Click;
+            m_cmd_ban_giao_tien.Click += m_cmd_ban_giao_tien_Click;
+        }
+
+        void m_cmd_ban_giao_tien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f360_ban_giao_tien v_frm = new f360_ban_giao_tien();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_lap_phai_thu_Click(object sender, EventArgs e)
+        {
+             try
+            {
+                f330_lap_phai_thu_hoc_vien v_frm = new f330_lap_phai_thu_hoc_vien();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_diem_danh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f320_diem_danh v_frm = new f320_diem_danh();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_nghi_hoc_Click(object sender, EventArgs e)

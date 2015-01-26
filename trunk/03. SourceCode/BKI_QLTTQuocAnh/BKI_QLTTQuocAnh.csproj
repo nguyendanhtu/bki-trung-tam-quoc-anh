@@ -259,12 +259,6 @@
     <Compile Include="NghiepVu\f330_lap_phai_thu_hoc_vien.Designer.cs">
       <DependentUpon>f330_lap_phai_thu_hoc_vien.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\f330_lap_phai_thu_hs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NghiepVu\f330_lap_phai_thu_hs.Designer.cs">
-      <DependentUpon>f330_lap_phai_thu_hs.cs</DependentUpon>
-    </Compile>
     <Compile Include="NghiepVu\f340_lap_phieu_thu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,9 +359,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f330_lap_phai_thu_hoc_vien.resx">
       <DependentUpon>f330_lap_phai_thu_hoc_vien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f330_lap_phai_thu_hs.resx">
-      <DependentUpon>f330_lap_phai_thu_hs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
       <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
