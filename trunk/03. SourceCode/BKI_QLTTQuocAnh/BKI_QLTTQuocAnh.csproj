@@ -284,6 +284,9 @@
     <EmbeddedResource Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.resx">
       <DependentUpon>f410_bao_cao_tai_chinh_theo_lop_mon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f415_bc_chua_nop_tien_theo_lop_mon.resx">
+      <DependentUpon>f415_bc_chua_nop_tien_theo_lop_mon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.resx">
       <DependentUpon>F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh.cs</DependentUpon>
     </EmbeddedResource>
