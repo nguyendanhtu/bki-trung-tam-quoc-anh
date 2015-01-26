@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // f315_nhap_hoc
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(652, 439);
+            this.Name = "f315_nhap_hoc";
             this.Text = "f315_nhap_hoc";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
