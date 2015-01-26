@@ -55,21 +55,21 @@ namespace Form_menu
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             this.ShowInTaskbar = true;
-            m_cmd_dang_nhap.Enabled = false;
-            m_cmd_thong_tin.Enabled = false;
-            m_cmd_sao_luu.Enabled = false;
-            m_cmd_phuc_hoi.Enabled = false;
-            m_cmd_doi_mat_khau.Enabled = true;
-            m_cmd_nhat_ky_he_thong.Enabled = false;
+           // m_cmd_dang_nhap.Enabled = false;
+            //m_cmd_thong_tin.Enabled = false;
+            //m_cmd_sao_luu.Enabled = false;
+            //m_cmd_phuc_hoi.Enabled = false;
+            //m_cmd_doi_mat_khau.Enabled = true;
+            //m_cmd_nhat_ky_he_thong.Enabled = false;
             //m_cmd_mua_hang.Enabled = false;
-            m_cmd_nhap_hoc.Enabled = false;
-            m_cmd_nhap_tu_excel.Enabled = false;
-            m_cmd_tien_te.Enabled = false;
-            m_cmd_thue.Enabled = false;
-            m_cmd_tai_khoan.Enabled = false;
+            //m_cmd_nhap_hoc.Enabled = false;
+            //m_cmd_nhap_tu_excel.Enabled = false;
+            //m_cmd_tien_te.Enabled = false;
+            //m_cmd_thue.Enabled = false;
+            //m_cmd_tai_khoan.Enabled = false;
             //m_cmd_nha_cung_cap.Enabled = false;
             //m_cmd_nhap_so_du_dau.Enabled = false;
-            m_cmd_ma_vach.Enabled = false;
+           // m_cmd_ma_vach.Enabled = false;
         }
         public void closeTabPage(EventArgs e)
         {
@@ -86,6 +86,20 @@ namespace Form_menu
             m_cmd_tai_chinh_theo_lm.Click += m_cmd_tai_chinh_theo_lm_Click;
             m_cmd_bao_cao_ds_phieu.Click += m_cmd_bao_cao_ds_phieu_Click;
             m_cmd_bc_so_luong_hs_hien_nay.Click += m_cmd_bc_so_luong_hs_hien_nay_Click;
+            m_cmd_nhap_hoc.Click += m_cmd_nhap_hoc_Click;
+        }
+
+        void m_cmd_nhap_hoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f315_nhap_hoc v_frm = new f315_nhap_hoc();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_bc_so_luong_hs_hien_nay_Click(object sender, EventArgs e)
