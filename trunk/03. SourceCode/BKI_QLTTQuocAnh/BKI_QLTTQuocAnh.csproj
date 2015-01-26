@@ -357,6 +357,9 @@
     <EmbeddedResource Include="NghiepVu\f320_diem_danh.resx">
       <DependentUpon>f320_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f330_lap_phai_thu_hs.resx">
+      <DependentUpon>f330_lap_phai_thu_hs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
       <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
     </EmbeddedResource>
