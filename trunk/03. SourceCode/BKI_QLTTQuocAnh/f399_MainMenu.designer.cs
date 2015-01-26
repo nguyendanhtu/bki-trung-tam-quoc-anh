@@ -1294,10 +1294,10 @@ namespace Form_menu
             this.m_cmd_thuc_thu_theo_nv});
             this.ribbonBar4.Location = new System.Drawing.Point(737, 0);
             this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(136, 98);
+            this.ribbonBar4.Size = new System.Drawing.Size(242, 98);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar4.TabIndex = 3;
-            this.ribbonBar4.Text = "Báo cáo NV";
+            this.ribbonBar4.Text = "NV";
             // 
             // 
             // 
