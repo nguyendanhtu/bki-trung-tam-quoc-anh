@@ -14,11 +14,33 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         public f315_nhap_hoc()
         {
             InitializeComponent();
+            format_controls();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        #region public interface
+        #endregion
 
+        #region Datastruct
+        #endregion
+
+        #region Members
+        #endregion
+
+        #region Private Methods
+        private void format_controls()
+        {
+            m_cmd_insert.Visible = false;
+            m_cmd_update.Visible = false;
+            m_cmd_delete.Visible = false;
+
+            set_define_events();
+            this.KeyPreview = true;
+        }
+
+        #endregion
+        private void set_define_events()
+        {
+           
         }
 
     }
