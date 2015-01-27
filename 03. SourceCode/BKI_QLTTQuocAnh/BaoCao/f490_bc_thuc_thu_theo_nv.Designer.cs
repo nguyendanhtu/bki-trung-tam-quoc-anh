@@ -48,11 +48,9 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.c1FlexGrid1 = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // m_dat_den_ngay
@@ -303,22 +301,11 @@
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 21;
             // 
-            // c1FlexGrid1
-            // 
-            this.c1FlexGrid1.ColumnInfo = resources.GetString("c1FlexGrid1.ColumnInfo");
-            this.c1FlexGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.c1FlexGrid1.Location = new System.Drawing.Point(0, 110);
-            this.c1FlexGrid1.Name = "c1FlexGrid1";
-            this.c1FlexGrid1.Size = new System.Drawing.Size(637, 208);
-            this.c1FlexGrid1.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("c1FlexGrid1.Styles"));
-            this.c1FlexGrid1.TabIndex = 22;
-            // 
             // f490_bc_thuc_thu_theo_nv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 354);
-            this.Controls.Add(this.c1FlexGrid1);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel1);
@@ -328,7 +315,6 @@
             this.panel1.PerformLayout();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c1FlexGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,7 +339,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private System.Windows.Forms.ComboBox m_cbo_nhan_vien;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
-        private C1.Win.C1FlexGrid.C1FlexGrid c1FlexGrid1;
 
     }
 }
