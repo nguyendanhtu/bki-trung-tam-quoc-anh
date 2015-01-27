@@ -297,5 +297,16 @@ public class US_V_PHIEU_THU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
+    public void FillDataset(DS_V_PHIEU_THU m_ds
+       , DateTime ip_dat_from_date
+       , DateTime ip_dat_to_date
+       , decimal ip_dc_id_nhan_vien)
+    {
+        CStoredProc v_obj_pr = new CStoredProc("f490_bao_cao_thuc_thu_theo_nhan_vien");
+        v_obj_pr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_from_date);
+        v_obj_pr.addDatetimeInputParam("@ip_dat_toi_ngay", ip_dat_to_date);
+        v_obj_pr.addNVarcharInputParam("@ip_dc_ip_nhan_vien", ip_dc_id_nhan_vien);
+        v_obj_pr.fillDataSetByCommand(this, m_ds);
+    }
 	}
 }
