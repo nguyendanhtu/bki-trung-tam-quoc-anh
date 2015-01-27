@@ -91,6 +91,34 @@ namespace Form_menu
             m_cmd_diem_danh.Click += m_cmd_diem_danh_Click;
             m_cmd_lap_phai_thu.Click += m_cmd_lap_phai_thu_Click;
             m_cmd_ban_giao_tien.Click += m_cmd_ban_giao_tien_Click;
+            m_cmd_bc_diem_danh.Click += m_cmd_bc_diem_danh_Click;
+            m_cmd_thuc_thu_theo_nv.Click += m_cmd_thuc_thu_theo_nv_Click;
+        }
+
+        void m_cmd_thuc_thu_theo_nv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f490_bc_thuc_thu_theo_nv v_frm = new f490_bc_thuc_thu_theo_nv();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_bc_diem_danh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f_diem_danh v_frm = new f_diem_danh();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_ban_giao_tien_Click(object sender, EventArgs e)
