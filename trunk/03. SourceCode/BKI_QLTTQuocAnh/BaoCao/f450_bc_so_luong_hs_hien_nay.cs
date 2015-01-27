@@ -59,6 +59,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
             this.KeyPreview = true;
+
+
         }
         private void set_initial_form_load()
         {
@@ -83,7 +85,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
 
             v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
-
             m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
             m_cbo_lop.ValueMember = DM_LOP_MON.ID;
