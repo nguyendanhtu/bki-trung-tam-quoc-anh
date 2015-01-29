@@ -69,6 +69,9 @@
             this.m_txt_ma_hoc_sinh = new System.Windows.Forms.TextBox();
             this.m_lbl_truong_dang_hoc = new System.Windows.Forms.Label();
             this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,10 +139,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 306);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 426);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(712, 41);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(713, 41);
             this.m_pnl_out_place_dm.TabIndex = 3;
             // 
             // m_cmd_insert
@@ -151,7 +154,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.imageList1;
-            this.m_cmd_insert.Location = new System.Drawing.Point(356, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(357, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_insert.TabIndex = 1;
@@ -166,7 +169,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.imageList1;
-            this.m_cmd_update.Location = new System.Drawing.Point(444, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(445, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_update.TabIndex = 2;
@@ -196,7 +199,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.imageList1;
-            this.m_cmd_delete.Location = new System.Drawing.Point(532, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(533, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_delete.TabIndex = 3;
@@ -211,7 +214,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.imageList1;
-            this.m_cmd_exit.Location = new System.Drawing.Point(620, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(621, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_exit.TabIndex = 4;
@@ -230,7 +233,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 78);
+            this.panel1.Size = new System.Drawing.Size(713, 78);
             this.panel1.TabIndex = 4;
             // 
             // m_txt_chon_ma_hoc_sinh
@@ -278,7 +281,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(712, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(713, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "NHẬP HỌC";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,6 +315,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.m_txt_email_phu_huynh);
             this.panel2.Controls.Add(this.m_lbl_email_phu_huynh);
             this.panel2.Controls.Add(this.m_txt_so_dien_thoai_phu_huynh);
@@ -335,7 +341,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(712, 226);
+            this.panel2.Size = new System.Drawing.Size(713, 226);
             this.panel2.TabIndex = 5;
             // 
             // m_txt_email_phu_huynh
@@ -445,7 +451,7 @@
             // m_lbl_ten
             // 
             this.m_lbl_ten.AutoSize = true;
-            this.m_lbl_ten.Location = new System.Drawing.Point(586, 9);
+            this.m_lbl_ten.Location = new System.Drawing.Point(563, 9);
             this.m_lbl_ten.Name = "m_lbl_ten";
             this.m_lbl_ten.Size = new System.Drawing.Size(26, 13);
             this.m_lbl_ten.TabIndex = 6;
@@ -461,7 +467,7 @@
             // m_lbl_ho_va_ten_lot
             // 
             this.m_lbl_ho_va_ten_lot.AutoSize = true;
-            this.m_lbl_ho_va_ten_lot.Location = new System.Drawing.Point(318, 9);
+            this.m_lbl_ho_va_ten_lot.Location = new System.Drawing.Point(301, 9);
             this.m_lbl_ho_va_ten_lot.Name = "m_lbl_ho_va_ten_lot";
             this.m_lbl_ho_va_ten_lot.Size = new System.Drawing.Size(68, 13);
             this.m_lbl_ho_va_ten_lot.TabIndex = 4;
@@ -499,11 +505,41 @@
             this.m_lbl_ma_so_hoc_sinh.TabIndex = 2;
             this.m_lbl_ma_so_hoc_sinh.Text = "Mã số học sinh";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(369, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "(*)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(87, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "(*)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(595, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "(*)";
+            // 
             // f315_nhap_hoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 347);
+            this.ClientSize = new System.Drawing.Size(713, 467);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -559,5 +595,8 @@
         private System.Windows.Forms.Label m_lbl_ma_so_hoc_sinh;
         private System.Windows.Forms.TextBox m_txt_chon_ma_hoc_sinh;
         private System.Windows.Forms.Label m_lbl_chon_ma_hoc_sinh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

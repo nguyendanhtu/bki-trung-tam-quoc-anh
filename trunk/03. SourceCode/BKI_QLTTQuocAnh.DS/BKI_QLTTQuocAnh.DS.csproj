@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_GD_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_GD_PHIEU_THU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -360,6 +365,17 @@
     </None>
     <None Include="DS_V_DM_HOC_SINH.xss">
       <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_HOC.xsc">
+      <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_HOC.xss">
+      <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_PHIEU_THU.xsc">
       <DependentUpon>DS_V_GD_PHIEU_THU.xsd</DependentUpon>
