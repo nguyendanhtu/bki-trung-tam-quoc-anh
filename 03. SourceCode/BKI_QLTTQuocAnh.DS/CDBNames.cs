@@ -469,4 +469,23 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string NGAY_THU = "NGAY_THU";
         public const string TRANG_THAI = "TRANG_THAI";
     }
+
+    public class V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON
+    {
+        public const string ID = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string MO_TA = "MO_TA";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
+        public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
+        public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+        public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
+    }
+
 }
