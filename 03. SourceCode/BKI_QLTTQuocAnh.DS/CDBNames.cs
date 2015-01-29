@@ -496,7 +496,16 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
         public const string ID_CA_HOC = "ID_CA_HOC";
         public const string CA_HOC = "CA_HOC";
+
     }
+    public class V_GD_HOC
+    {
+        public const string STT = "STT";
+        public const string HO_TEN = "HO_TEN";
+        public const string MO_TA = "MO_TA";
+        public const string TRANG_THAI = "TRANG_THAI";
+    }
+
 
 
 }
