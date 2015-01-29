@@ -134,8 +134,8 @@ namespace Form_menu
             // 
             this.m_rbc_menu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_rbc_menu.CaptionVisible = true;
-            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel4);
+            this.m_rbc_menu.Controls.Add(this.ribbonPanel3);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel2);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel1);
             this.m_rbc_menu.Controls.Add(this.ribbonPanel5);
@@ -202,7 +202,6 @@ namespace Form_menu
             // 
             this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // ribbonBar4
             // 
@@ -438,6 +437,7 @@ namespace Form_menu
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar3
             // 
@@ -1296,13 +1296,13 @@ namespace Form_menu
             // 
             // m_rbtab_tab3
             // 
-            this.m_rbtab_tab3.Checked = true;
             this.m_rbtab_tab3.Name = "m_rbtab_tab3";
             this.m_rbtab_tab3.Panel = this.ribbonPanel3;
             this.m_rbtab_tab3.Text = "NGHIỆP VỤ";
             // 
             // m_rbtab_tab4
             // 
+            this.m_rbtab_tab4.Checked = true;
             this.m_rbtab_tab4.Name = "m_rbtab_tab4";
             this.m_rbtab_tab4.Panel = this.ribbonPanel4;
             this.m_rbtab_tab4.Text = "BÁO CÁO";
