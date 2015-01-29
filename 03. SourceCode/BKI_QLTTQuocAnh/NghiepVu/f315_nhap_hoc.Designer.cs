@@ -39,12 +39,14 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_chon_ma_hoc_sinh = new System.Windows.Forms.TextBox();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_cbo_nhap_vao_lop = new System.Windows.Forms.ComboBox();
+            this.m_lbl_chon_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tai_ngay = new System.Windows.Forms.Label();
             this.m_lbl_nhap_vao_lop = new System.Windows.Forms.Label();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_txt_email_phu_huynh = new System.Windows.Forms.TextBox();
@@ -67,8 +69,6 @@
             this.m_txt_ma_hoc_sinh = new System.Windows.Forms.TextBox();
             this.m_lbl_truong_dang_hoc = new System.Windows.Forms.Label();
             this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
-            this.m_txt_chon_ma_hoc_sinh = new System.Windows.Forms.TextBox();
-            this.m_lbl_chon_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -233,6 +233,27 @@
             this.panel1.Size = new System.Drawing.Size(712, 78);
             this.panel1.TabIndex = 4;
             // 
+            // m_txt_chon_ma_hoc_sinh
+            // 
+            this.m_txt_chon_ma_hoc_sinh.Location = new System.Drawing.Point(485, 45);
+            this.m_txt_chon_ma_hoc_sinh.Name = "m_txt_chon_ma_hoc_sinh";
+            this.m_txt_chon_ma_hoc_sinh.Size = new System.Drawing.Size(118, 20);
+            this.m_txt_chon_ma_hoc_sinh.TabIndex = 5;
+            // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.ImageList = this.imageList1;
+            this.m_cmd_search.Location = new System.Drawing.Point(618, 39);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(83, 33);
+            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.Text = "Lọc";
+            // 
             // m_cbo_nhap_vao_lop
             // 
             this.m_cbo_nhap_vao_lop.FormattingEnabled = true;
@@ -240,6 +261,15 @@
             this.m_cbo_nhap_vao_lop.Name = "m_cbo_nhap_vao_lop";
             this.m_cbo_nhap_vao_lop.Size = new System.Drawing.Size(113, 21);
             this.m_cbo_nhap_vao_lop.TabIndex = 7;
+            // 
+            // m_lbl_chon_ma_hoc_sinh
+            // 
+            this.m_lbl_chon_ma_hoc_sinh.AutoSize = true;
+            this.m_lbl_chon_ma_hoc_sinh.Location = new System.Drawing.Point(389, 49);
+            this.m_lbl_chon_ma_hoc_sinh.Name = "m_lbl_chon_ma_hoc_sinh";
+            this.m_lbl_chon_ma_hoc_sinh.Size = new System.Drawing.Size(95, 13);
+            this.m_lbl_chon_ma_hoc_sinh.TabIndex = 4;
+            this.m_lbl_chon_ma_hoc_sinh.Text = "Chọn mã học sinh:";
             // 
             // m_lbl_header
             // 
@@ -279,20 +309,6 @@
             this.m_lbl_nhap_vao_lop.Size = new System.Drawing.Size(71, 13);
             this.m_lbl_nhap_vao_lop.TabIndex = 2;
             this.m_lbl_nhap_vao_lop.Text = "Nhập vào lớp";
-            // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(618, 39);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(83, 33);
-            this.m_cmd_search.TabIndex = 6;
-            this.m_cmd_search.Text = "Lọc";
             // 
             // panel2
             // 
@@ -482,22 +498,6 @@
             this.m_lbl_ma_so_hoc_sinh.Size = new System.Drawing.Size(79, 13);
             this.m_lbl_ma_so_hoc_sinh.TabIndex = 2;
             this.m_lbl_ma_so_hoc_sinh.Text = "Mã số học sinh";
-            // 
-            // m_txt_chon_ma_hoc_sinh
-            // 
-            this.m_txt_chon_ma_hoc_sinh.Location = new System.Drawing.Point(485, 45);
-            this.m_txt_chon_ma_hoc_sinh.Name = "m_txt_chon_ma_hoc_sinh";
-            this.m_txt_chon_ma_hoc_sinh.Size = new System.Drawing.Size(118, 20);
-            this.m_txt_chon_ma_hoc_sinh.TabIndex = 5;
-            // 
-            // m_lbl_chon_ma_hoc_sinh
-            // 
-            this.m_lbl_chon_ma_hoc_sinh.AutoSize = true;
-            this.m_lbl_chon_ma_hoc_sinh.Location = new System.Drawing.Point(389, 49);
-            this.m_lbl_chon_ma_hoc_sinh.Name = "m_lbl_chon_ma_hoc_sinh";
-            this.m_lbl_chon_ma_hoc_sinh.Size = new System.Drawing.Size(95, 13);
-            this.m_lbl_chon_ma_hoc_sinh.TabIndex = 4;
-            this.m_lbl_chon_ma_hoc_sinh.Text = "Chọn mã học sinh:";
             // 
             // f315_nhap_hoc
             // 
