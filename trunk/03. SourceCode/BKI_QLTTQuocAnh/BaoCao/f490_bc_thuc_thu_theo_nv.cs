@@ -32,6 +32,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
             format_controls();
+            m_fg.Tree.Column = (int)e_col_Number.SO_PHIEU;
+            m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
+
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            // m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
         }
         #region Public Interface
         public void display()
@@ -85,6 +91,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
             load_data_2_cbo_nhan_vien();
             load_data_2_grid();
         }
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
         private void load_data_2_cbo_nhan_vien()
         {
             DS_HT_NGUOI_SU_DUNG v_ds_ht_nsd = new DS_HT_NGUOI_SU_DUNG();
@@ -109,6 +121,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cbo_nhan_vien.DataSource = v_ds_ht_nsd.HT_NGUOI_SU_DUNG;
 
             m_cbo_nhan_vien.SelectedIndex = 0;
+        }
+        private void create_tree_2grid()
+        {
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 0
+                , -1
+                , (int)e_col_Number.SO_TIEN
+                , "Tổng cộng");
+            m_fg.Redraw = true;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -138,6 +162,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
+            create_tree_2grid();
+            wrap_text_cell();
         }
         private void grid2us_object(US_V_PHIEU_THU i_us
             , int i_grid_row)

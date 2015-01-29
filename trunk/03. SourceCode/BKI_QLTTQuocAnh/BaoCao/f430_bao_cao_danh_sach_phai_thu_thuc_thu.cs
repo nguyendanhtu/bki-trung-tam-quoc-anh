@@ -648,8 +648,6 @@ namespace BKI_QLTTQuocAnh
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Redraw = true;
-
-
             create_tree_2grid();
             wrap_text_cell();
         }
