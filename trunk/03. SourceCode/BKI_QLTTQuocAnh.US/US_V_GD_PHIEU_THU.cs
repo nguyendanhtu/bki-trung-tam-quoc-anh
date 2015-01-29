@@ -330,28 +330,6 @@ public class US_V_GD_PHIEU_THU : US_Object
         pm_objDR["ID_LOAI_PHIEU_THU"] = System.Convert.DBNull;
     }
 
-    public string strTEN_NGAN
-    {
-        get
-        {
-            return CNull.RowNVLString(pm_objDR, "TEN_NGAN", IPConstants.c_DefaultString);
-        }
-        set
-        {
-            pm_objDR["TEN_NGAN"] = value;
-        }
-    }
-
-    public bool IsTEN_NGANNull()
-    {
-        return pm_objDR.IsNull("TEN_NGAN");
-    }
-
-    public void SetTEN_NGANNull()
-    {
-        pm_objDR["TEN_NGAN"] = System.Convert.DBNull;
-    }
-
     public string strMA_DOI_TUONG
     {
         get
@@ -372,6 +350,28 @@ public class US_V_GD_PHIEU_THU : US_Object
     public void SetMA_DOI_TUONGNull()
     {
         pm_objDR["MA_DOI_TUONG"] = System.Convert.DBNull;
+    }
+
+    public string strTEN_NGAN
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TEN_NGAN", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TEN_NGAN"] = value;
+        }
+    }
+
+    public bool IsTEN_NGANNull()
+    {
+        return pm_objDR.IsNull("TEN_NGAN");
+    }
+
+    public void SetTEN_NGANNull()
+    {
+        pm_objDR["TEN_NGAN"] = System.Convert.DBNull;
     }
 
 #endregion
