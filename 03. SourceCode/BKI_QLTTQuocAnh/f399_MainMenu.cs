@@ -94,6 +94,20 @@ namespace Form_menu
             m_cmd_bc_diem_danh.Click += m_cmd_bc_diem_danh_Click;
             m_cmd_thuc_thu_theo_nv.Click += m_cmd_thuc_thu_theo_nv_Click;
             m_cmd_bc_chua_nop_tien_lop_mon.Click += m_cmd_bc_chua_nop_tien_lop_mon_Click;
+            m_cmd_dm_lop_mon.Click += m_cmd_dm_lop_mon_Click;
+        }
+
+        void m_cmd_dm_lop_mon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f210_dm_lop_mon v_frm = new f210_dm_lop_mon();
+                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_bc_chua_nop_tien_lop_mon_Click(object sender, EventArgs e)
