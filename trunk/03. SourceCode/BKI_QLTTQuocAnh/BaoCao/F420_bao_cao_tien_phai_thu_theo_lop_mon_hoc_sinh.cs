@@ -193,32 +193,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , (int)e_col_Number.TIEN_CON_PHAI_THU
                , "Tổng");
 
-            //m_fg.Subtotal(AggregateEnum.Sum
-            //  , 1
-            //  , (int)e_col_Number.HO_TEN
-            //  , (int)e_col_Number.TIEN_PHAI_THU
-            //  , "{0}");
-
-            //m_fg.Subtotal(AggregateEnum.Sum
-            //    , 1
-            //    , (int)e_col_Number.HO_TEN
-            //    , (int)e_col_Number.TIEN_GIAM_TRU
-            //    , "{0}");
-
-            //m_fg.Subtotal(AggregateEnum.Sum
-            //    , 1
-            //    , (int)e_col_Number.HO_TEN
-            //    , (int)e_col_Number.TIEN_THUC_THU
-            //    , "{0}");
-
-            //m_fg.Subtotal(AggregateEnum.Sum
-            //    , 1
-            //    , (int)e_col_Number.HO_TEN
-            //    , (int)e_col_Number.TIEN_CON_PHAI_THU
-            //    , "{0}");
-
-            //m_fg.Tree.Show(1);
-
             wrap_text_cell();
             m_fg.Redraw = true;
         }
