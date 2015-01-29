@@ -100,7 +100,7 @@ namespace Form_menu
         {
             try
             {
-                f415_bc_chua_nop_tien_theo_lop_mon v_frm = new f415_bc_chua_nop_tien_theo_lop_mon();
+                f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon v_frm = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon();
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (Exception v_e)
