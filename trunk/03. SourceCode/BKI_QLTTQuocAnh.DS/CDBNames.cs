@@ -488,4 +488,15 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
 
+    public class V_RPT_210_DM_LOP_MON
+    {
+        public const string ID = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string ID_CA_HOC = "ID_CA_HOC";
+        public const string CA_HOC = "CA_HOC";
+    }
+
+
 }
