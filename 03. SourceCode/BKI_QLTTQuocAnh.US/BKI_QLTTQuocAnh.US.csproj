@@ -65,6 +65,7 @@
     <Compile Include="US_HT_USER_GROUP.cs" />
     <Compile Include="US_LOG_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_DM_HOC_SINH.cs" />
+    <Compile Include="US_V_GD_HOC.cs" />
     <Compile Include="US_V_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
     <Compile Include="US_V_HT_NGUOI_SU_DUNG.cs" />
