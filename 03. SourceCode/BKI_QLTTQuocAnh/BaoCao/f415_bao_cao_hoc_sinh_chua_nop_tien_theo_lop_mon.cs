@@ -40,7 +40,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        internal SIS.Controls.Button.SiSButton m_cmd_excel;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal ImageList imageList1;
         private Panel panel1;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
@@ -97,7 +97,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_excel = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -149,7 +149,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_excel);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -189,20 +189,20 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
             // 
-            // m_cmd_excel
+            // m_cmd_xuat_excel
             // 
-            this.m_cmd_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_excel.ImageIndex = 19;
-            this.m_cmd_excel.ImageList = this.ImageList;
-            this.m_cmd_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_excel.Name = "m_cmd_excel";
-            this.m_cmd_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_excel.TabIndex = 21;
-            this.m_cmd_excel.Text = "Xuất Excel";
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
             // 
@@ -302,6 +302,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 9;
             this.m_cmd_search.Text = "Lọc dữ liệu";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // m_txt_tim_kiem
             // 
@@ -317,9 +318,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(653, 44);
+            this.m_lbl_header.Size = new System.Drawing.Size(653, 43);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO TÀI CHÍNH HS THEO LỚP";
+            this.m_lbl_header.Text = "BÁO CÁO HỌC SINH CHƯA NỘP TIỀN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_dat_tu_ngay
@@ -392,7 +393,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon";
-            this.Text = "f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon";
+            this.Text = "F415 - Báo cáo học sinh chưa nộp tiền theo lớp môn";
             this.Load += new System.EventHandler(this.f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
@@ -404,7 +405,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
 		#endregion
 
 		#region Public Interface
-		public void display(){			
+		public void display(){
+            load_data_2_cbo_lop_mon();
 			this.ShowDialog();
 		}
 		#endregion
@@ -428,19 +430,33 @@ namespace BKI_QLTTQuocAnh.BaoCao
 		#region Private Methods
 		private void format_controls(){
 			CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			CControlFormat.setC1FlexFormat(m_fg);
 			CGridUtils.AddSave_Excel_Handlers(m_fg);
-            			CGridUtils.AddSearch_Handlers(m_fg);
+            CGridUtils.AddSearch_Handlers(m_fg);
+
+            m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
+            //m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+
 			set_define_events();
 			this.KeyPreview = true;
             m_cmd_insert.Visible = false;
             m_cmd_delete.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_exit.Visible = false;
+            m_cmd_xuat_excel.Visible = false;
 		}
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AutoSizeRows();
+        }
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
-			load_data_2_grid();		
+			load_data_2_grid();
+            load_data_2_cbo_lop_mon();
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
@@ -452,14 +468,51 @@ namespace BKI_QLTTQuocAnh.BaoCao
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.NewRow());
 			return v_obj_trans;			
 		}
-		private void load_data_2_grid(){						
-			m_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();			
-			m_us.FillDataset(m_ds);
+		private void load_data_2_grid(){
+            DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+            US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+            v_ds.EnforceConstraints = false;
+            if (m_cbo_lop.DataSource == null)
+            {
+                return;
+            }
+            v_us.FillDatasetSearch(v_ds
+                , m_dat_tu_ngay.Value.Date
+                , m_dat_den_ngay.Value.Date
+                , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                , -1
+                ,m_txt_tim_kiem.Text.Trim());
 			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+
+            //m_fg.Subtotal(AggregateEnum.Sum
+            //  , 0
+            //    , -1
+            //    , (int)e_col_Number.TIEN_CON_PHAI_THU
+            //   , "Tổng");
+
+            wrap_text_cell();
+
 			m_fg.Redraw = true;
 		}
-		private void grid2us_object(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            v_dr[DM_LOP_MON.ID] = -1;
+            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+
+            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+
+            m_cbo_lop.SelectedIndex = 0;
+        }
+        private void grid2us_object(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
 			, int i_grid_row) {
 			DataRow v_dr;
 			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
@@ -518,13 +571,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 		//	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();			
 		//	v_fDE.display(m_us);
 		}
-		private void set_define_events(){
-			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_excel.Click += new EventHandler(m_cmd_view_Click);
-		}
+		
 		#endregion
 
 //
@@ -532,6 +579,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
 		//		EVENT HANLDERS
 		//
 		//
+        private void set_define_events()
+        {
+            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
+        }
+
 		private void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load(object sender, System.EventArgs e) {
 			try{
 				set_initial_form_load();
@@ -578,7 +634,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 			}
 		}
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
+		private void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
 			try{
 				view_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
 			}
@@ -586,6 +642,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
+
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
 	}
 }
