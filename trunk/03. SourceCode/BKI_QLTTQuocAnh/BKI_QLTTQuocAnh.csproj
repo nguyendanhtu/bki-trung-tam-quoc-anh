@@ -165,6 +165,9 @@
     <Compile Include="BaoCao\f490_bc_thuc_thu_theo_nv.Designer.cs">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\frm_440.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaoCao\f_diem_danh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f490_bc_thuc_thu_theo_nv.resx">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frm_440.resx">
+      <DependentUpon>frm_440.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f_diem_danh.resx">
       <DependentUpon>f_diem_danh.cs</DependentUpon>

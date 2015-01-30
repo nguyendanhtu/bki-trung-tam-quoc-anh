@@ -4,6 +4,18 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class V_RPT_BAO_CAO_TINH_HINH_DI_HOC
+    {
+        public const string ID = "ID";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string MO_TA = "MO_TA";
+        public const string MA_HOC_SINH = "MA_HOC_SINH";
+        public const string HO_TEN = "HO_TEN";
+        public const string TONG_SO_BUOI_DI_HOC = "TONG_SO_BUOI_DI_HOC";
+    }
+
     public class V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY
     {
         public const string ID = "ID";

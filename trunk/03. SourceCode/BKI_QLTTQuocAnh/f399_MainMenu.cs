@@ -138,7 +138,7 @@ namespace Form_menu
         {
             try
             {
-                f_diem_danh v_frm = new f_diem_danh();
+                f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs v_frm = new f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs();
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
             }
             catch (Exception v_e)
