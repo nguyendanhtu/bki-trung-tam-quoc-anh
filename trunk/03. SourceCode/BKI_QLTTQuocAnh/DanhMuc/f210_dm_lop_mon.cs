@@ -41,12 +41,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private Panel panel1;
-        private ComboBox m_cbo_nhan_vien;
-        private Label m_lbl_lop_mon;
         private Label m_lbl_header;
         internal ImageList imageList1;
         internal ImageList imageList2;
-        internal SIS.Controls.Button.SiSButton m_cmd_search;
 		private System.ComponentModel.IContainer components;
         #endregion
 
@@ -96,12 +93,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_cbo_nhan_vien = new System.Windows.Forms.ComboBox();
-            this.m_lbl_lop_mon = new System.Windows.Forms.Label();
-            this.m_lbl_header = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_lbl_header = new System.Windows.Forms.Label();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -227,52 +221,20 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 89);
+            this.m_fg.Location = new System.Drawing.Point(0, 51);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 284);
+            this.m_fg.Size = new System.Drawing.Size(686, 322);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_cmd_search);
-            this.panel1.Controls.Add(this.m_cbo_nhan_vien);
-            this.panel1.Controls.Add(this.m_lbl_lop_mon);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 89);
+            this.panel1.Size = new System.Drawing.Size(686, 51);
             this.panel1.TabIndex = 21;
-            // 
-            // m_cbo_nhan_vien
-            // 
-            this.m_cbo_nhan_vien.FormattingEnabled = true;
-            this.m_cbo_nhan_vien.Location = new System.Drawing.Point(92, 55);
-            this.m_cbo_nhan_vien.Name = "m_cbo_nhan_vien";
-            this.m_cbo_nhan_vien.Size = new System.Drawing.Size(149, 21);
-            this.m_cbo_nhan_vien.TabIndex = 8;
-            // 
-            // m_lbl_lop_mon
-            // 
-            this.m_lbl_lop_mon.AutoSize = true;
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(27, 59);
-            this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
-            this.m_lbl_lop_mon.Size = new System.Drawing.Size(48, 13);
-            this.m_lbl_lop_mon.TabIndex = 4;
-            this.m_lbl_lop_mon.Text = "Lớp môn";
-            // 
-            // m_lbl_header
-            // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(686, 45);
-            this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO THỰC THU THEO NHÂN VIÊN";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imageList1
             // 
@@ -301,6 +263,18 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(686, 45);
+            this.m_lbl_header.TabIndex = 0;
+            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // imageList2
             // 
             this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
@@ -328,20 +302,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.imageList2.Images.SetKeyName(20, "");
             this.imageList2.Images.SetKeyName(21, "");
             // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(287, 51);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 9;
-            this.m_cmd_search.Text = "Lọc dữ liệu";
-            // 
             // f210_dm_lop_mon
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -355,7 +315,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
 		}
