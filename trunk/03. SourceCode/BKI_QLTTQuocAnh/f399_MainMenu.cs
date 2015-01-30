@@ -5,11 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-//using System.Threading.Tasks;
 using System.Windows.Forms;
 using IP.Core.IPCommon;
 using BKI_QLTTQuocAnh;
-//using DevComponents.DotNetBar;
 using IP.Core.IPSystemAdmin;
 using System.Security.Policy;
 using BKI_QLTTQuocAnh.NghiepVu;
@@ -55,7 +53,7 @@ namespace Form_menu
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             this.ShowInTaskbar = true;
-           // m_cmd_dang_nhap.Enabled = false;
+            // m_cmd_dang_nhap.Enabled = false;
             //m_cmd_thong_tin.Enabled = false;
             //m_cmd_sao_luu.Enabled = false;
             //m_cmd_phuc_hoi.Enabled = false;
@@ -69,7 +67,7 @@ namespace Form_menu
             //m_cmd_tai_khoan.Enabled = false;
             //m_cmd_nha_cung_cap.Enabled = false;
             //m_cmd_nhap_so_du_dau.Enabled = false;
-           // m_cmd_ma_vach.Enabled = false;
+            // m_cmd_ma_vach.Enabled = false;
         }
         public void closeTabPage(EventArgs e)
         {
@@ -164,7 +162,7 @@ namespace Form_menu
 
         void m_cmd_lap_phai_thu_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 f330_lap_phai_thu_hoc_vien v_frm = new f330_lap_phai_thu_hoc_vien();
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
