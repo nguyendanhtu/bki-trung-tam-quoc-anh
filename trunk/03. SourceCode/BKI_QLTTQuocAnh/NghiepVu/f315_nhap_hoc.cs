@@ -55,6 +55,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         #region Members
         ITransferDataRow m_obj_trans;
+        DataEntryFormMode m_e_form_mode;
+        DS_DM_HOC_SINH m_ds_dm_hoc_sinh = new DS_DM_HOC_SINH();
+        US_DM_HOC_SINH m_us_dm_hoc_sinh = new US_DM_HOC_SINH();
+        DS_GD_HOC m_ds_gd_hoc = new DS_GD_HOC();
+        US_GD_HOC m_us_gd_hoc = new US_GD_HOC();
         DS_V_GD_HOC m_ds = new DS_V_GD_HOC();
         US_V_GD_HOC m_us = new US_V_GD_HOC();
         #endregion
@@ -87,6 +92,44 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cbo_nhap_vao_lop.ValueMember = DM_LOP_MON.ID;
 
             m_cbo_nhap_vao_lop.SelectedIndex = 1;
+        }
+        private bool check_data_is_ok()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+            else
+            return true;
+        }
+        private void form_2_us_object()
+        {
+        }
+        private void save_data()
+        {
+            if (check_data_is_ok() == false) return;
+            form_2_us_object();
+            switch (m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us_dm_hoc_sinh.Insert();
+                    m_us_gd_hoc.Insert();
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_dm_hoc_sinh.Update();
+                    m_us_gd_hoc.Update();
+                    break;
+            }
+            BaseMessages.MsgBox_Infor("Dữ liệu đã được cập nhât!");
+            this.Close();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
