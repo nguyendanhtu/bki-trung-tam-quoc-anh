@@ -186,6 +186,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -513,6 +518,17 @@
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xss">
       <DependentUpon>DS_V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xsc">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xss">
+      <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsc">
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.xsd</DependentUpon>
