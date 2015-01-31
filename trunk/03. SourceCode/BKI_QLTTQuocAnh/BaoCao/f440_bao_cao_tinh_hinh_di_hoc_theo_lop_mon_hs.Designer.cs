@@ -34,13 +34,11 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.m_txt_tim_kien = new System.Windows.Forms.TextBox();
-            this.m_lbl_nguoi_diem_danh = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
-            this.m_cbo_lop_môn = new System.Windows.Forms.ComboBox();
+            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_lop_mon = new System.Windows.Forms.Label();
@@ -65,7 +63,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(317, 133);
+            this.m_cmd_search.Location = new System.Drawing.Point(324, 104);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 11;
@@ -101,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 141);
+            this.label2.Location = new System.Drawing.Point(12, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 9;
@@ -109,47 +107,28 @@
             // 
             // m_txt_tim_kien
             // 
-            this.m_txt_tim_kien.Location = new System.Drawing.Point(111, 138);
+            this.m_txt_tim_kien.Location = new System.Drawing.Point(111, 109);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(190, 20);
             this.m_txt_tim_kien.TabIndex = 10;
-            // 
-            // m_lbl_nguoi_diem_danh
-            // 
-            this.m_lbl_nguoi_diem_danh.AutoSize = true;
-            this.m_lbl_nguoi_diem_danh.Location = new System.Drawing.Point(12, 114);
-            this.m_lbl_nguoi_diem_danh.Name = "m_lbl_nguoi_diem_danh";
-            this.m_lbl_nguoi_diem_danh.Size = new System.Drawing.Size(91, 13);
-            this.m_lbl_nguoi_diem_danh.TabIndex = 7;
-            this.m_lbl_nguoi_diem_danh.Text = "Người điểm danh:";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.m_cmd_search);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.m_txt_tim_kien);
-            this.panel2.Controls.Add(this.m_cbo_nhan_vien_thu);
-            this.panel2.Controls.Add(this.m_lbl_nguoi_diem_danh);
             this.panel2.Controls.Add(this.m_lbl_header);
             this.panel2.Controls.Add(this.m_dat_tu_ngay);
             this.panel2.Controls.Add(this.m_lbl_tu_ngay);
-            this.panel2.Controls.Add(this.m_cbo_lop_môn);
+            this.panel2.Controls.Add(this.m_cbo_lop_mon);
             this.panel2.Controls.Add(this.m_lbl_den_ngay);
             this.panel2.Controls.Add(this.m_dat_den_ngay);
             this.panel2.Controls.Add(this.m_lbl_lop_mon);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 169);
+            this.panel2.Size = new System.Drawing.Size(592, 140);
             this.panel2.TabIndex = 33;
-            // 
-            // m_cbo_nhan_vien_thu
-            // 
-            this.m_cbo_nhan_vien_thu.FormattingEnabled = true;
-            this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(111, 111);
-            this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
-            this.m_cbo_nhan_vien_thu.Size = new System.Drawing.Size(190, 21);
-            this.m_cbo_nhan_vien_thu.TabIndex = 8;
             // 
             // m_lbl_header
             // 
@@ -181,13 +160,13 @@
             this.m_lbl_tu_ngay.TabIndex = 1;
             this.m_lbl_tu_ngay.Text = "Từ ngày:";
             // 
-            // m_cbo_lop_môn
+            // m_cbo_lop_mon
             // 
-            this.m_cbo_lop_môn.FormattingEnabled = true;
-            this.m_cbo_lop_môn.Location = new System.Drawing.Point(111, 83);
-            this.m_cbo_lop_môn.Name = "m_cbo_lop_môn";
-            this.m_cbo_lop_môn.Size = new System.Drawing.Size(137, 21);
-            this.m_cbo_lop_môn.TabIndex = 6;
+            this.m_cbo_lop_mon.FormattingEnabled = true;
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(111, 83);
+            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
+            this.m_cbo_lop_mon.Size = new System.Drawing.Size(137, 21);
+            this.m_cbo_lop_mon.TabIndex = 6;
             // 
             // m_lbl_den_ngay
             // 
@@ -336,9 +315,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 169);
+            this.m_fg.Location = new System.Drawing.Point(0, 140);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(592, 183);
+            this.m_fg.Size = new System.Drawing.Size(592, 212);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 34;
             // 
@@ -366,13 +345,11 @@
         internal System.Windows.Forms.ImageList ImageList;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox m_txt_tim_kien;
-        private System.Windows.Forms.Label m_lbl_nguoi_diem_danh;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox m_cbo_nhan_vien_thu;
         private System.Windows.Forms.Label m_lbl_header;
         private System.Windows.Forms.DateTimePicker m_dat_tu_ngay;
         private System.Windows.Forms.Label m_lbl_tu_ngay;
-        private System.Windows.Forms.ComboBox m_cbo_lop_môn;
+        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
         private System.Windows.Forms.Label m_lbl_den_ngay;
         private System.Windows.Forms.DateTimePicker m_dat_den_ngay;
         private System.Windows.Forms.Label m_lbl_lop_mon;

@@ -11,7 +11,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-
+using System.Collections.Generic;
 using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
@@ -72,9 +72,28 @@ namespace BKI_QLTTQuocAnh.BaoCao
             set_define_events();
             this.KeyPreview = true;
         }
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+
+            //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            //v_dr[DM_LOP_MON.ID] = -1;
+            //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+
+            //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MA_LOP_MON;
+            m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
+
+            //m_cbo_lop_mon.SelectedIndex = 0;
+        }
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
+            load_data_2_cbo_lop_mon();
             load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -91,11 +110,33 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void load_data_2_grid()
         {
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
+
             m_ds = new DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
-            m_us.FillDataset(m_ds);
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-            m_fg.Redraw = true;
+
+            m_us.FillDataset(m_ds, m_dat_tu_ngay.Value
+                                , m_dat_den_ngay.Value
+                                , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                                , m_txt_tim_kien.Text.Trim());
+            load_cot_dong_tung_ngay_hoc();
+            //m_fg.Redraw = false;
+            //CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            //m_fg.Redraw = true;
+        }
+
+        private void load_cot_dong_tung_ngay_hoc()
+        {
+            //Buoc 1: Lay du lieu do len Dataset
+            DataSet v_ds = new DataSet();
+            v_ds.Tables.Add();
+            US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC v_us = new US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
+            v_us.FillDuLieuDiemDanh(v_ds
+                                        , m_dat_tu_ngay.Value
+                                        , m_dat_den_ngay.Value
+                                        , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+           
+            //Buoc 2: Insert tung thang theo tung cot
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC i_us
             , int i_grid_row)
@@ -178,6 +219,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs_Load;
+            m_cmd_search.Click += m_cmd_search_Click;
+        }
+
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs_Load(object sender, EventArgs e)

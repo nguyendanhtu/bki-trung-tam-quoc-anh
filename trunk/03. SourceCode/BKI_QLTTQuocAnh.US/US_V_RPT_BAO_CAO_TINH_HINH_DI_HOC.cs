@@ -212,5 +212,33 @@ public class US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDataset(DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC ip_op_ds
+                            , DateTime ip_dat_tu_ngay
+                            , DateTime ip_dat_den_ngay
+                            , decimal ip_dc_id_lop_mon
+                            , string ip_str_tim_kiem)
+    {
+        CStoredProc v_obj = new CStoredProc("f440_bao_cao_diem_danh_theo_lop_mon");
+        v_obj.addDecimalInputParam("@ip_dc_id_lop_mon",ip_dc_id_lop_mon);
+        v_obj.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+        v_obj.addDatetimeInputParam("@ip_dat_den_ngay",ip_dat_den_ngay);
+        v_obj.addNVarcharInputParam("@ip_str_search", ip_str_tim_kiem);
+
+        v_obj.fillDataSetByCommand(this, ip_op_ds);
+    }
+
+    public void FillDuLieuDiemDanh(DataSet ip_op_ds
+                            , DateTime ip_dat_tu_ngay
+                            , DateTime ip_dat_den_ngay
+                            , decimal ip_dc_id_lop_mon)
+    {
+        CStoredProc v_obj = new CStoredProc("pr_lay_du_lieu_diem_danh_hs");
+        v_obj.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+        v_obj.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+        v_obj.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+
+        v_obj.fillDataSetByCommand(this, ip_op_ds);
+    }
+}
 }
