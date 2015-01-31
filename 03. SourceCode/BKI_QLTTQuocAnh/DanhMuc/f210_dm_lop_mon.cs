@@ -352,6 +352,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_exit.Visible = false;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			set_define_events();
 			this.KeyPreview = true;		
 		}
