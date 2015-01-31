@@ -119,24 +119,69 @@ namespace BKI_QLTTQuocAnh.BaoCao
                                 , m_dat_den_ngay.Value
                                 , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
                                 , m_txt_tim_kien.Text.Trim());
-            load_cot_dong_tung_ngay_hoc();
-            //m_fg.Redraw = false;
-            //CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-            //m_fg.Redraw = true;
+
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Redraw = true;
+            load_cot_dong_tung_ngay_hoc(m_ds);
         }
 
-        private void load_cot_dong_tung_ngay_hoc()
+        private void load_cot_dong_tung_ngay_hoc(DS_V_RPT_BAO_CAO_TINH_HINH_DI_HOC ip_ds_rpt)
         {
-            //Buoc 1: Lay du lieu do len Dataset
-            DataSet v_ds = new DataSet();
-            v_ds.Tables.Add();
-            US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC v_us = new US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
-            v_us.FillDuLieuDiemDanh(v_ds
+            //Buoc 0: Xoa cot dong
+            if (m_fg.Cols.Count > 6)
+            {
+                int v_tong_so_cot = m_fg.Cols.Count;
+                for (int i = 6; i < v_tong_so_cot; i++)
+                {
+                    m_fg.Cols.Remove(m_fg.Cols.Count - 1);
+                }
+            }
+
+            //Buoc 1: Lay du lieu cac ban ghi trong GD_HOC do len Dataset
+            DataSet v_ds_gd_hoc = new DataSet();
+            v_ds_gd_hoc.Tables.Add();
+            US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC v_us_gd_hoc = new US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
+            v_us_gd_hoc.FillDuLieuDiemDanh(v_ds_gd_hoc
                                         , m_dat_tu_ngay.Value
                                         , m_dat_den_ngay.Value
                                         , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
-           
-            //Buoc 2: Insert tung thang theo tung cot
+            DataView v_dv = v_ds_gd_hoc.Tables[0].DefaultView;
+
+            //Buoc 2:Insert cac ngay hoc cua lop do
+            //Buoc 2.1: Lay du lieu cac ngay hoc
+            DataSet v_ds_ngay_hoc = new DataSet();
+            v_ds_ngay_hoc.Tables.Add();
+            US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC v_us_ngay_hoc = new US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
+            v_us_ngay_hoc.FillDuLieuNgayHoc(v_ds_ngay_hoc
+                                            , m_dat_tu_ngay.Value
+                                            , m_dat_den_ngay.Value
+                                            , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+            //Buoc 2.2: Insert cac cot vao grid
+            int v_count_col_grid = m_fg.Cols.Count;
+            for (int i = 0; i < v_ds_ngay_hoc.Tables[0].Rows.Count; i++)//For tren cac ngay hoc
+            {
+                m_fg.Cols.Insert(v_count_col_grid);
+                DateTime v_dat = CIPConvert.ToDatetime(v_ds_ngay_hoc.Tables[0].Rows[i][0].ToString().Substring(0, 10));
+                m_fg.Cols[v_count_col_grid].Caption = v_ds_ngay_hoc.Tables[0].Rows[i][0].ToString().Substring(0, 10);
+                m_fg.Cols[v_count_col_grid].DataType = typeof(Boolean);
+
+               
+                for (int v_i_current_row = m_fg.Rows.Fixed; v_i_current_row < m_fg.Rows.Count; v_i_current_row++)
+                {
+                    US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC v_us_di_hoc = new US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC();
+                    grid2us_object(v_us_di_hoc, v_i_current_row);
+                    foreach (DataRow v_dr in v_ds_gd_hoc.Tables[0].Rows)
+                    {
+                        if (v_dr["NGAY_HOC"].ToString() == v_dat.ToString() && v_dr["ID_HOC_SINH"].ToString() == v_us_di_hoc.dcID_HOC_SINH.ToString())
+                        {
+                            m_fg.SetCellCheck(v_i_current_row, v_count_col_grid, CheckEnum.Checked);
+                        }
+                    }
+                }
+                v_count_col_grid++;
+            }
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC i_us
             , int i_grid_row)

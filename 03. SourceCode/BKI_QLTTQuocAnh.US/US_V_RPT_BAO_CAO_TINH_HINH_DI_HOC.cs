@@ -240,5 +240,18 @@ public class US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC : US_Object
 
         v_obj.fillDataSetByCommand(this, ip_op_ds);
     }
+
+    public void FillDuLieuNgayHoc(DataSet ip_op_ds
+                                    , DateTime ip_dat_tu_ngay
+                                    , DateTime ip_dat_den_ngay
+                                    , decimal ip_dc_id_lop_mon)
+    {
+        CStoredProc v_obj = new CStoredProc("pr_get_du_lieu_ngay_diem_danh");
+        v_obj.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+        v_obj.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+        v_obj.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+
+        v_obj.fillDataSetByCommand(this, ip_op_ds);
+    }
 }
 }
