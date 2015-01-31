@@ -509,9 +509,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnMO_TA.MaxLength = 250;
                 this.columnMA_HOC_SINH.AllowDBNull = false;
                 this.columnMA_HOC_SINH.MaxLength = 35;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
-                this.columnTONG_SO_BUOI_DI_HOC.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
