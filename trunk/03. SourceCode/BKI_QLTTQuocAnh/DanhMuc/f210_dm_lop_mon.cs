@@ -93,8 +93,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_lbl_header = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -221,9 +221,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 51);
+            this.m_fg.Location = new System.Drawing.Point(0, 47);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 322);
+            this.m_fg.Size = new System.Drawing.Size(686, 326);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -233,8 +233,20 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 51);
+            this.panel1.Size = new System.Drawing.Size(686, 47);
             this.panel1.TabIndex = 21;
+            // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(686, 45);
+            this.m_lbl_header.TabIndex = 0;
+            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imageList1
             // 
@@ -262,18 +274,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.imageList1.Images.SetKeyName(19, "");
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
-            // 
-            // m_lbl_header
-            // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(686, 45);
-            this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imageList2
             // 
@@ -348,7 +348,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 			CControlFormat.setC1FlexFormat(m_fg);
 			CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_cmd_insert.Visible = false;
+            //m_cmd_insert.Visible = false;
             m_cmd_delete.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_exit.Visible = false;
@@ -471,7 +471,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
 		private void m_cmd_insert_Click(object sender, EventArgs e) {
 			try{
-				insert_v_rpt_210_dm_lop_mon();
+				//insert_v_rpt_210_dm_lop_mon();
+                f211_dm_lop_mon_de v_frm = new f211_dm_lop_mon_de();
+                v_frm.display();
 			}
 			catch (Exception v_e){
 				CSystemLog_301.ExceptionHandle(v_e);
