@@ -50,9 +50,9 @@ namespace BKI_QLTTQuocAnh
                 {
                     CAppContext_201.InitializeContext(v_obj_login_info);
                     CAppContext_201.LoadDecentralizationByUserLogin();
-                    //f399_MainMenu v_frm_main = new f399_MainMenu();
-                    //v_frm_main.display(ref v_exitmode);
-                   // v_frm_main.Dispose();
+                   // f399_MainMenu v_frm_main = new f399_MainMenu();
+                   //v_frm_main.display(ref v_exitmode);
+                   //v_frm_main.Dispose();
                     f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
                     v_frm.display();
                     // sau main form hiện thì login hoặc thóat

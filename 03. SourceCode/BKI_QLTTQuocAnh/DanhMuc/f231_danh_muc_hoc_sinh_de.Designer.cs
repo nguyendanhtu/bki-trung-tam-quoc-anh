@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f231_danh_muc_hoc_sinh_de));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_txt_ma_hoc_sinh = new System.Windows.Forms.TextBox();
+            this.m_txt_ma_lop_mon = new System.Windows.Forms.TextBox();
             this.m_lbl_ma_lop_mon = new System.Windows.Forms.Label();
             this.m_lbl_mo_ta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,8 +69,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.m_txt_ma_hoc_sinh);
+            this.panel1.Controls.Add(this.m_txt_ma_lop_mon);
             this.panel1.Controls.Add(this.m_lbl_ma_lop_mon);
             this.panel1.Controls.Add(this.m_lbl_mo_ta);
             this.panel1.Controls.Add(this.label1);
@@ -80,19 +80,19 @@
             this.panel1.Size = new System.Drawing.Size(613, 256);
             this.panel1.TabIndex = 3;
             // 
-            // textBox2
+            // m_txt_ma_hoc_sinh
             // 
-            this.textBox2.Location = new System.Drawing.Point(381, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 5;
+            this.m_txt_ma_hoc_sinh.Location = new System.Drawing.Point(381, 44);
+            this.m_txt_ma_hoc_sinh.Name = "m_txt_ma_hoc_sinh";
+            this.m_txt_ma_hoc_sinh.Size = new System.Drawing.Size(150, 20);
+            this.m_txt_ma_hoc_sinh.TabIndex = 5;
             // 
-            // textBox1
+            // m_txt_ma_lop_mon
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 5;
+            this.m_txt_ma_lop_mon.Location = new System.Drawing.Point(106, 41);
+            this.m_txt_ma_lop_mon.Name = "m_txt_ma_lop_mon";
+            this.m_txt_ma_lop_mon.Size = new System.Drawing.Size(150, 20);
+            this.m_txt_ma_lop_mon.TabIndex = 5;
             // 
             // m_lbl_ma_lop_mon
             // 
@@ -108,9 +108,9 @@
             this.m_lbl_mo_ta.AutoSize = true;
             this.m_lbl_mo_ta.Location = new System.Drawing.Point(287, 48);
             this.m_lbl_mo_ta.Name = "m_lbl_mo_ta";
-            this.m_lbl_mo_ta.Size = new System.Drawing.Size(79, 13);
+            this.m_lbl_mo_ta.Size = new System.Drawing.Size(65, 13);
             this.m_lbl_mo_ta.TabIndex = 2;
-            this.m_lbl_mo_ta.Text = "Mô tả (Tên gọi)";
+            this.m_lbl_mo_ta.Text = "Mã học sinh";
             // 
             // label1
             // 
@@ -121,7 +121,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(613, 45);
             this.label1.TabIndex = 1;
-            this.label1.Text = "THÊM MỚI LỚP MÔN";
+            this.label1.Text = "THÊM MỚI HỌC SINH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // f231_danh_muc_hoc_sinh_de
@@ -142,8 +142,8 @@
 
         internal System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txt_ma_hoc_sinh;
+        private System.Windows.Forms.TextBox m_txt_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_mo_ta;
         private System.Windows.Forms.Label label1;
