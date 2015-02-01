@@ -21,91 +21,141 @@ namespace BKI_QLTTQuocAnh.US{
 public class US_DM_LOP_MON : US_Object
 {
 	private const string c_TableName = "DM_LOP_MON";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
+    #region "Public Properties"
+    public decimal dcID
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID"] = value;
+        }
+    }
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
+    public bool IsIDNull()
+    {
+        return pm_objDR.IsNull("ID");
+    }
 
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+    public void SetIDNull()
+    {
+        pm_objDR["ID"] = System.Convert.DBNull;
+    }
 
-	public string strMA_LOP_MON 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MA_LOP_MON", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MA_LOP_MON"] = value;
-		}
-	}
+    public string strMA_LOP_MON
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "MA_LOP_MON", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["MA_LOP_MON"] = value;
+        }
+    }
 
-	public bool IsMA_LOP_MONNull() 
-	{
-		return pm_objDR.IsNull("MA_LOP_MON");
-	}
+    public bool IsMA_LOP_MONNull()
+    {
+        return pm_objDR.IsNull("MA_LOP_MON");
+    }
 
-	public void SetMA_LOP_MONNull() {
-		pm_objDR["MA_LOP_MON"] = System.Convert.DBNull;
-	}
+    public void SetMA_LOP_MONNull()
+    {
+        pm_objDR["MA_LOP_MON"] = System.Convert.DBNull;
+    }
 
-	public string strMO_TA 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MO_TA", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MO_TA"] = value;
-		}
-	}
+    public string strMO_TA
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "MO_TA", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["MO_TA"] = value;
+        }
+    }
 
-	public bool IsMO_TANull() 
-	{
-		return pm_objDR.IsNull("MO_TA");
-	}
+    public bool IsMO_TANull()
+    {
+        return pm_objDR.IsNull("MO_TA");
+    }
 
-	public void SetMO_TANull() {
-		pm_objDR["MO_TA"] = System.Convert.DBNull;
-	}
+    public void SetMO_TANull()
+    {
+        pm_objDR["MO_TA"] = System.Convert.DBNull;
+    }
 
-	public decimal dcDON_GIA_BUOI_HOC 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "DON_GIA_BUOI_HOC", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["DON_GIA_BUOI_HOC"] = value;
-		}
-	}
+    public decimal dcDON_GIA_BUOI_HOC
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "DON_GIA_BUOI_HOC", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["DON_GIA_BUOI_HOC"] = value;
+        }
+    }
 
-	public bool IsDON_GIA_BUOI_HOCNull()	{
-		return pm_objDR.IsNull("DON_GIA_BUOI_HOC");
-	}
+    public bool IsDON_GIA_BUOI_HOCNull()
+    {
+        return pm_objDR.IsNull("DON_GIA_BUOI_HOC");
+    }
 
-	public void SetDON_GIA_BUOI_HOCNull() {
-		pm_objDR["DON_GIA_BUOI_HOC"] = System.Convert.DBNull;
-	}
+    public void SetDON_GIA_BUOI_HOCNull()
+    {
+        pm_objDR["DON_GIA_BUOI_HOC"] = System.Convert.DBNull;
+    }
 
-#endregion
-#region "Init Functions"
+    public decimal dcID_LOP
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_LOP", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_LOP"] = value;
+        }
+    }
+
+    public bool IsID_LOPNull()
+    {
+        return pm_objDR.IsNull("ID_LOP");
+    }
+
+    public void SetID_LOPNull()
+    {
+        pm_objDR["ID_LOP"] = System.Convert.DBNull;
+    }
+
+    public decimal dcID_MON
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_MON", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_MON"] = value;
+        }
+    }
+
+    public bool IsID_MONNull()
+    {
+        return pm_objDR.IsNull("ID_MON");
+    }
+
+    public void SetID_MONNull()
+    {
+        pm_objDR["ID_MON"] = System.Convert.DBNull;
+    }
+
+    #endregion
+    #region "Init Functions"
 	public US_DM_LOP_MON() 
 	{
 		pm_objDS = new DS_DM_LOP_MON();
