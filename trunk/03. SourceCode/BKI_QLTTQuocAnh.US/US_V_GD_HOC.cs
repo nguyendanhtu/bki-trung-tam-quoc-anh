@@ -131,5 +131,12 @@ public class US_V_GD_HOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+    public void FillDataset(DS_V_GD_HOC op_ds
+      , string ip_str_search)
+    {
+        CStoredProc v_obj_spr = new CStoredProc("f315_nhap_hoc");
+        v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
+        v_obj_spr.fillDataSetByCommand(this, op_ds);
+    }
+}
 }
