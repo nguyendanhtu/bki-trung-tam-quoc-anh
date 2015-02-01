@@ -437,7 +437,7 @@ namespace BKI_QLTTQuocAnh
 			m_ds = new DS_V_DM_HOC_SINH();
             if (m_trang_thai_hien_thi == 0)
             {
-                m_us.FillDataset(m_ds, "where ho_ten like '%'+"+m_txt_search.Text+"'%'");
+                m_us.FillDataset(m_ds, "where HO_TEN like '%'+"+m_txt_search.Text+"+'%'");
             }
             else
             {
