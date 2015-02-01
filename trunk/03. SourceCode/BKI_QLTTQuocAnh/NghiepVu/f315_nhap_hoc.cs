@@ -78,21 +78,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_cbo_2_lop_mon();
             load_data_2_grid();
         }
-        private void load_data_cbo_2_lop_mon()
-        {
-            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
-
-            m_cbo_nhap_vao_lop.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_nhap_vao_lop.DisplayMember = DM_LOP_MON.MA_LOP_MON;
-            m_cbo_nhap_vao_lop.ValueMember = DM_LOP_MON.ID;
-
-            m_cbo_nhap_vao_lop.SelectedIndex = 1;
-        }
+    
         private bool check_data_is_ok()
         {
             if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO, true))
