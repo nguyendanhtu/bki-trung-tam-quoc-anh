@@ -55,11 +55,11 @@
             this.m_lbl_truong_dang_hoc = new System.Windows.Forms.Label();
             this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_txt_search = new System.Windows.Forms.TextBox();
-            this.m_cmd_search_2 = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -74,6 +74,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_pnl_out_place_dm);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label4);
@@ -296,53 +297,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_pnl_out_place_dm);
             this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_txt_search);
-            this.panel1.Controls.Add(this.m_cmd_search_2);
+            this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(0, 232);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 208);
             this.panel1.TabIndex = 8;
-            // 
-            // m_fg
-            // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 42);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(738, 166);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 29;
-            // 
-            // m_txt_search
-            // 
-            this.m_txt_search.Location = new System.Drawing.Point(114, 12);
-            this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(133, 20);
-            this.m_txt_search.TabIndex = 27;
-            // 
-            // m_cmd_search_2
-            // 
-            this.m_cmd_search_2.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search_2.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search_2.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search_2.ImageIndex = 5;
-            this.m_cmd_search_2.Location = new System.Drawing.Point(253, 9);
-            this.m_cmd_search_2.Name = "m_cmd_search_2";
-            this.m_cmd_search_2.Size = new System.Drawing.Size(98, 27);
-            this.m_cmd_search_2.TabIndex = 28;
-            this.m_cmd_search_2.Text = "Lọc dữ liệu";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Tên/Mã học sinh";
             // 
             // ImageList
             // 
@@ -371,6 +333,44 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Location = new System.Drawing.Point(0, 42);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(738, 166);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 29;
+            // 
+            // m_txt_search
+            // 
+            this.m_txt_search.Location = new System.Drawing.Point(114, 12);
+            this.m_txt_search.Name = "m_txt_search";
+            this.m_txt_search.Size = new System.Drawing.Size(133, 20);
+            this.m_txt_search.TabIndex = 27;
+            // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.Location = new System.Drawing.Point(253, 9);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(98, 27);
+            this.m_cmd_search.TabIndex = 28;
+            this.m_cmd_search.Text = "Lọc dữ liệu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Tên/Mã học sinh";
+            // 
             // m_pnl_out_place_dm
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
@@ -379,11 +379,11 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 172);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 190);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(738, 36);
-            this.m_pnl_out_place_dm.TabIndex = 30;
+            this.m_pnl_out_place_dm.TabIndex = 31;
             // 
             // m_cmd_insert
             // 
@@ -468,7 +468,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "f220_cap_nhat_thong_tin_hoc_sinh";
-            this.Text = "f220_cap_nhat_thong_tin_hoc_sinh";
+            this.Text = "f220 Cập nhật thông tin học sinh";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -507,7 +507,7 @@
         private System.Windows.Forms.Label m_lbl_ma_so_hoc_sinh;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox m_txt_search;
-        internal SIS.Controls.Button.SiSButton m_cmd_search_2;
+        internal SIS.Controls.Button.SiSButton m_cmd_search;
         private System.Windows.Forms.Label label5;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal System.Windows.Forms.ImageList ImageList;

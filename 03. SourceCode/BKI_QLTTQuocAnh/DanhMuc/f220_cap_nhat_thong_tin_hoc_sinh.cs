@@ -71,6 +71,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         ITransferDataRow m_obj_trans;
         DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
+        DataEntryFormMode m_e_form_mode;
         #endregion
 
         #region Private Methods
@@ -111,7 +112,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             m_ds = new DS_V_DM_HOC_SINH();
             m_ds.Clear();
-            m_us.FillDataset(m_ds);
+            m_ds.EnforceConstraints = false;
+            m_us.FillDataset(m_ds, m_txt_search.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -137,9 +139,50 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private void insert_v_dm_hoc_sinh()
         {
-            //	f_dm_hoc_sinh_DE v_fDE = new  f_dm_hoc_sinh_DE();								
-            //	v_fDE.display();
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            save_data();
             load_data_2_grid();
+        }
+
+        private void save_data()
+        {
+            check_validate_data();
+            form_2_us();
+            switch (m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us.Insert();
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us.Update();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void form_2_us()
+        {
+           
+        }
+
+        private bool check_validate_data()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO, true))
+            {
+                return false;
+            }
+
+            else
+                return true; 
         }
 
         private void update_v_dm_hoc_sinh()
@@ -190,6 +233,20 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
+            m_cmd_search.Click += m_cmd_search_Click;
+            m_cmd_insert.Click +=m_cmd_insert_Click;
+        }
+
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e)
