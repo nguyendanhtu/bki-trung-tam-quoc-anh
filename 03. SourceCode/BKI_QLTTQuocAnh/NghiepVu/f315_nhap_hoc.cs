@@ -357,7 +357,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void m_cmd_hs_moi_Click(object sender, EventArgs e)
         {
             f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_frm.display();
+            v_frm.display_for_insert();
         }
 
         private void m_cmd_danh_sach_Click(object sender, EventArgs e)
