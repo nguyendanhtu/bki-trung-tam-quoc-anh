@@ -8,6 +8,7 @@ using IP.Core.IPBusinessService;
 using IP.Core.IPUserService;
 using BKI_QLTTQuocAnh;
 using Form_menu;
+using BKI_QLTTQuocAnh.NghiepVu;
 
 
 
@@ -50,11 +51,11 @@ namespace BKI_QLTTQuocAnh
                 {
                     CAppContext_201.InitializeContext(v_obj_login_info);
                     CAppContext_201.LoadDecentralizationByUserLogin();
-                   // f399_MainMenu v_frm_main = new f399_MainMenu();
-                   //v_frm_main.display(ref v_exitmode);
-                   //v_frm_main.Dispose();
-                    f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
-                    v_frm.display();
+                    f399_MainMenu v_frm_main = new f399_MainMenu();
+                    v_frm_main.display(ref v_exitmode);
+                    v_frm_main.Dispose();
+                    //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                    //v_frm.display();
                     // sau main form hiện thì login hoặc thóat
                     switch (v_exitmode)
                     {

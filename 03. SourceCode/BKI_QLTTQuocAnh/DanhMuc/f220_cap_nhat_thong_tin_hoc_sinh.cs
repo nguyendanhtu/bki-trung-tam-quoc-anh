@@ -71,7 +71,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         ITransferDataRow m_obj_trans;
         DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
-        DataEntryFormMode m_e_form_mode;
         #endregion
 
         #region Private Methods
@@ -139,27 +138,27 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private void insert_v_dm_hoc_sinh()
         {
-            m_e_form_mode = DataEntryFormMode.InsertDataState;
-            save_data();
+            f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
+            v_frm.display();
             load_data_2_grid();
         }
 
-        private void save_data()
-        {
-            check_validate_data();
-            form_2_us();
-            switch (m_e_form_mode)
-            {
-                case DataEntryFormMode.InsertDataState:
-                    m_us.Insert();
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us.Update();
-                    break;
-                default:
-                    break;
-            }
-        }
+        //private void save_data()
+        //{
+        //    check_validate_data();
+        //    form_2_us();
+        //    switch (m_e_form_mode)
+        //    {
+        //        case DataEntryFormMode.InsertDataState:
+        //            m_us.Insert();
+        //            break;
+        //        case DataEntryFormMode.UpdateDataState:
+        //            m_us.Update();
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
 
         private void form_2_us()
         {
@@ -168,20 +167,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private bool check_validate_data()
         {
-            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-
-            else
+          
                 return true; 
         }
 
