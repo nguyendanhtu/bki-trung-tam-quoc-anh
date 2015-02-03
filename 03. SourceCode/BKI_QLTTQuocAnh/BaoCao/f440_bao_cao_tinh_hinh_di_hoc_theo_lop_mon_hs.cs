@@ -85,7 +85,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
 
             m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MA_LOP_MON;
+            m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
             m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
 
             //m_cbo_lop_mon.SelectedIndex = 0;
