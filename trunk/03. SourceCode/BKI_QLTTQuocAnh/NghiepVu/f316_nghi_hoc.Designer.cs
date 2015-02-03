@@ -85,7 +85,7 @@
             // m_cbo_hs
             // 
             this.m_cbo_hs.FormattingEnabled = true;
-            this.m_cbo_hs.Location = new System.Drawing.Point(95, 110);
+            this.m_cbo_hs.Location = new System.Drawing.Point(95, 104);
             this.m_cbo_hs.Name = "m_cbo_hs";
             this.m_cbo_hs.Size = new System.Drawing.Size(193, 21);
             this.m_cbo_hs.TabIndex = 9;
@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 113);
+            this.label2.Location = new System.Drawing.Point(12, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 8;
@@ -102,7 +102,7 @@
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(95, 76);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(95, 77);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(121, 21);
             this.m_cbo_lop_mon.TabIndex = 7;
@@ -110,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Location = new System.Drawing.Point(12, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 6;

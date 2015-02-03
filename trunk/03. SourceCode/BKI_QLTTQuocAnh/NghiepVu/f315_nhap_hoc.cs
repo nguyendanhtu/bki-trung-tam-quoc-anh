@@ -83,93 +83,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
     
         private bool check_data_is_ok()
         {
-            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-            if (!CValidateTextBox.IsValid(m_txt_chon_ma_hoc_sinh, DataType.StringType, allowNull.NO, true))
-            {
-                return false;
-            }
-
-            else
                 return true;
         }
         private void form_2_us_object()
         {
-            m_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tu_ngay.Value.Date;
-            m_us_gd_hoc.SetNGAY_KET_THUCNull();
-            m_us_gd_hoc.strTRANG_THAI_YN = "y";
-            m_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_nhap_vao_lop.SelectedValue);
-            m_us_gd_hoc.dcID_HOC_SINH = CIPConvert.ToDecimal(m_txt_chon_ma_hoc_sinh.Text);
-            m_us_dm_hoc_sinh.dcID_LOAI_DOI_TUONG = 18;
-            m_us_dm_hoc_sinh.strMA_DOI_TUONG = m_txt_ma_hoc_sinh.Text;
-            m_us_dm_hoc_sinh.strHO = m_txt_ho_va_ten_lot.Text;
-            m_us_dm_hoc_sinh.strTEN = m_txt_ten.Text;
-            if (m_txt_truong_dang_hoc.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetTRUONG_DANG_HOCNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text;
-            }
-            if (m_txt_so_dien_thoai_hoc_sinh.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetSDT_HSNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strSDT_HS = m_txt_so_dien_thoai_hoc_sinh.Text;
-            }
-            if (m_txt_email_hoc_sinh.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetEMAIL_HSNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strEMAIL_HS = m_txt_email_hoc_sinh.Text;
-            }
-            if (m_txt_dia_chi.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetDIA_CHINull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strDIA_CHI = m_txt_dia_chi.Text;
-            }
-            if (m_txt_ho_ten_phu_huynh.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetHO_TEN_PHNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strHO_TEN_PH = m_txt_ho_ten_phu_huynh.Text;
-            }
-            if (m_txt_email_phu_huynh.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetEMAIL_PHNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strEMAIL_PH = m_txt_email_phu_huynh.Text;
-            }
-            if (m_txt_so_dien_thoai_phu_huynh.Text == "")
-            {
-                m_us_dm_hoc_sinh.SetSDT_PHNull();
-            }
-            else
-            {
-                m_us_dm_hoc_sinh.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text;
-            }
+            
         }
         private void save_data()
         {
@@ -283,7 +201,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f315_nhap_hoc_Load;
-            m_cmd_nhap_hoc.Click += m_cmd_nhap_hoc_Click;
+            m_cmd_danh_sach.Click += m_cmd_nhap_hoc_Click;
             m_cmd_search_2.Click += m_cmd_search_2_Click;
         }
 
@@ -390,10 +308,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void m_cmd_hs_moi_Click(object sender, EventArgs e)
+        {
+            f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
+            v_frm.display();
         }
+
+       
 
     }
 }
