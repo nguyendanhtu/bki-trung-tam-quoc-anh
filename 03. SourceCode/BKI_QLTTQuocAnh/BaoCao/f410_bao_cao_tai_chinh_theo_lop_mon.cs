@@ -91,6 +91,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
             v_dr[DM_LOP_MON.ID] = -1;
+            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
             v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
             v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
 
