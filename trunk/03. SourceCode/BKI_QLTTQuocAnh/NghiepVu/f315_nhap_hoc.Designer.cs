@@ -263,6 +263,7 @@
             this.m_cmd_danh_sach.Size = new System.Drawing.Size(87, 33);
             this.m_cmd_danh_sach.TabIndex = 0;
             this.m_cmd_danh_sach.Text = "&Danh sách";
+            this.m_cmd_danh_sach.Click += new System.EventHandler(this.m_cmd_danh_sach_Click);
             // 
             // m_cmd_delete
             // 
@@ -308,7 +309,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(551, 149);
+            this.panel2.Size = new System.Drawing.Size(551, 116);
             this.panel2.TabIndex = 4;
             // 
             // m_cmd_chon_hs
@@ -319,7 +320,7 @@
             this.m_cmd_chon_hs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_hs.ImageIndex = 14;
             this.m_cmd_chon_hs.ImageList = this.imageList2;
-            this.m_cmd_chon_hs.Location = new System.Drawing.Point(12, 110);
+            this.m_cmd_chon_hs.Location = new System.Drawing.Point(234, 75);
             this.m_cmd_chon_hs.Name = "m_cmd_chon_hs";
             this.m_cmd_chon_hs.Size = new System.Drawing.Size(87, 30);
             this.m_cmd_chon_hs.TabIndex = 41;
@@ -360,7 +361,7 @@
             this.m_cmd_hs_moi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_hs_moi.ImageIndex = 16;
             this.m_cmd_hs_moi.ImageList = this.imageList2;
-            this.m_cmd_hs_moi.Location = new System.Drawing.Point(234, 75);
+            this.m_cmd_hs_moi.Location = new System.Drawing.Point(331, 75);
             this.m_cmd_hs_moi.Name = "m_cmd_hs_moi";
             this.m_cmd_hs_moi.Size = new System.Drawing.Size(88, 30);
             this.m_cmd_hs_moi.TabIndex = 40;
@@ -434,9 +435,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 149);
+            this.m_fg.Location = new System.Drawing.Point(0, 116);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(551, 277);
+            this.m_fg.Size = new System.Drawing.Size(551, 310);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 27;
             // 
