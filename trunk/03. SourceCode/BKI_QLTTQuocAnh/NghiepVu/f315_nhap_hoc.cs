@@ -241,7 +241,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cmd_danh_sach.Click += m_cmd_nhap_hoc_Click;
             m_cmd_search_2.Click += m_cmd_search_2_Click;
             m_cmd_chon_hs.Click += m_cmd_chon_hs_Click;
-
         }
 
         void m_cmd_search_2_Click(object sender, EventArgs e)
@@ -261,6 +260,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 save_data();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_chon_hs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
+                v_frm.display(ref m_us_v_dm_hoc_sinh);
+
+                m_txt_chon_hs.Text = m_us_v_dm_hoc_sinh.strHO_TEN;
             }
             catch (Exception v_e)
             {
@@ -351,21 +365,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 //load_data_2_grid();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        void m_cmd_chon_hs_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
-                v_frm.display(ref m_us_v_dm_hoc_sinh);
-
-                m_txt_chon_hs.Text = m_us_v_dm_hoc_sinh.strHO_TEN;
+                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                v_frm.display();
             }
             catch (Exception v_e)
             {
