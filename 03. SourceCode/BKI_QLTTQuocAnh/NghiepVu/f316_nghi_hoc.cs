@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BKI_QLTTQuocAnh.DS;
+using BKI_QLTTQuocAnh.US;
+using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,17 +22,25 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
 
         #region public interface
+        public void display()
+        {
+            this.ShowDialog();
+        }
         #endregion
 
         #region Datastruct
         #endregion
 
         #region Members
+        DS_GD_HOC m_ds_gd_hoc = new DS_GD_HOC();
+        US_GD_HOC m_us_gd_hoc = new US_GD_HOC();
         #endregion
 
         #region Private Methods
         private void format_controls()
         {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             //m_cmd_nghi_hoc.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;

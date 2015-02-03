@@ -78,7 +78,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private bool check_validate_data_is_OK()
         {
-
             return true;
         }
 
