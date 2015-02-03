@@ -228,10 +228,10 @@
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 219);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 119);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(720, 187);
+            this.m_fg.Size = new System.Drawing.Size(720, 287);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 6;
             // 
@@ -245,7 +245,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 100);
+            this.panel1.Size = new System.Drawing.Size(720, 74);
             this.panel1.TabIndex = 24;
             // 
             // F460_danh_sach_hoc_sinh_theo_lop_mon
