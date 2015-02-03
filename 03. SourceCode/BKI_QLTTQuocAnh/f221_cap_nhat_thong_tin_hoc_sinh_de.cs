@@ -52,6 +52,29 @@ namespace BKI_QLTTQuocAnh {
         }
 
         private void form_2_us() {
+            m_us.strMA_DOI_TUONG = m_txt_ma_hoc_sinh.Text.Trim();
+            m_us.strHO = m_txt_ho_va_ten_lot.Text.Trim();
+            m_us.strTEN = m_txt_ten.Text.Trim();
+            m_us.strSDT_HS = m_txt_so_dien_thoai_hoc_sinh.Text.Trim();
+            m_us.strEMAIL_HS = m_txt_email_hoc_sinh.Text.Trim();
+            m_us.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text.Trim();
+            m_us.strDIA_CHI = m_txt_dia_chi.Text.Trim();
+            m_us.strHO_TEN_PH = m_txt_ho_ten_phu_huynh.Text.Trim();
+            m_us.strEMAIL_PH = m_txt_email_phu_huynh.Text.Trim();
+            m_us.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text.Trim();
+
+            m_us.SetIDNull();
+            m_us.SetHO_TENNull();
+            m_us.SetHO_TEN_PHNull();
+            m_us.SetSDT_CO_DINHNull();
+            m_us.SetID_LOP_MONNull();
+            m_us.SetID_LOPNull();
+            m_us.SetID_MONNull();
+            m_us.SetMA_LOP_MONNull();
+            m_us.SetDON_GIA_BUOI_HOCNull();
+            m_us.SetID_GD_HOCNull();
+            m_us.SetTRANG_THAI_YNNull();
+            m_us.SetTRANG_THAI_HSNull();
         }
 
         private void check_validate_data() {
