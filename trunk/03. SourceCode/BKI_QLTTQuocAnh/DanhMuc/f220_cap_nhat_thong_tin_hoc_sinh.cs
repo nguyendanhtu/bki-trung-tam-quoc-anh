@@ -84,6 +84,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
         }
@@ -143,7 +144,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         private void insert_v_dm_hoc_sinh()
         {
             f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_frm.display();
+            v_frm.display_for_insert();
             load_data_2_grid();
         }
 
@@ -234,7 +235,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
             m_cmd_search.Click += m_cmd_search_Click;
-            m_cmd_insert.Click += m_cmd_insert_Click;
+            ///m_cmd_insert.Click += m_cmd_insert_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
 

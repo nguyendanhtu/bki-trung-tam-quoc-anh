@@ -19,7 +19,8 @@ namespace BKI_QLTTQuocAnh {
         }
 
         #region Public Interfaces
-        public void display() {
+        public void display_for_insert() {
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
         #endregion
