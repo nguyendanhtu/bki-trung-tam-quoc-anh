@@ -39,6 +39,7 @@ namespace BKI_QLTTQuocAnh.US {
         public const string LOAI_DON_VI = "LOAI_DON_VI";
         public const string CAP_DON_VI = "CAP_DON_VI";
         public const string LOAI_QUYET_DINH = "LOAI_QUYET_DINH";
+        public const string DM_CA_HOC = "DM_CA_HOC";
     }
     public static class ID_LOAI_PHIEU_THU
     {
