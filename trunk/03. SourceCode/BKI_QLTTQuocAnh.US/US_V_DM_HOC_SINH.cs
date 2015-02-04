@@ -492,5 +492,12 @@ public class US_V_DM_HOC_SINH : US_Object
         v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
         v_obj_spr.fillDataSetByCommand(this, op_ds);
     }
+    public void FillDataset_danh_sach_hoc_sinh_theo_lop_mon(DS_V_DM_HOC_SINH op_ds
+     , decimal ip_dc_id_lop_mon)
+    {
+        CStoredProc v_obj_spr = new CStoredProc("f320_danh_sach_hoc_sinh_theo_lop_mon");
+        v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+        v_obj_spr.fillDataSetByCommand(this, op_ds);
+    }
 	}
 }
