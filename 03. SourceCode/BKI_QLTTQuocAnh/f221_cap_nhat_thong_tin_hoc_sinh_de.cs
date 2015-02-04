@@ -42,7 +42,7 @@ namespace BKI_QLTTQuocAnh {
             this.KeyPreview = true;
         }
         private void save_data() {
-            check_validate_data();
+            if (check_validate_data() == false) return;
             form_2_us();
             switch (m_e_form_mode) {
                 case DataEntryFormMode.InsertDataState:
@@ -83,27 +83,28 @@ namespace BKI_QLTTQuocAnh {
             m_us.SetTRANG_THAI_HSNull();
         }
 
-        private void check_validate_data() {
-            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO)) {
+        private bool check_validate_data() {
+            if (!CValidateTextBox.IsValid(m_txt_ma_hoc_sinh, DataType.StringType, allowNull.NO,true)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập mã học sinh");
-                return;
+                return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO)) {
+            if (!CValidateTextBox.IsValid(m_txt_ho_va_ten_lot, DataType.StringType, allowNull.NO,true)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập họ đệm học sinh");
-                return;
+                return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO)) {
+            if (!CValidateTextBox.IsValid(m_txt_ten, DataType.StringType, allowNull.NO,true)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập tên học sinh");
-                return;
+                return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_so_dien_thoai_hoc_sinh, DataType.StringType, allowNull.NO)) {
+            if (!CValidateTextBox.IsValid(m_txt_so_dien_thoai_hoc_sinh, DataType.StringType, allowNull.NO,true)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập SĐT học sinh");
-                return;
+                return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_truong_dang_hoc, DataType.StringType, allowNull.NO)) {
+            if (!CValidateTextBox.IsValid(m_txt_truong_dang_hoc, DataType.StringType, allowNull.NO,true)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập trường đang học của học sinh");
-                return;
+                return false;
             }
+            return true;
         }
 
 
