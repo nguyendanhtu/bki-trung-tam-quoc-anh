@@ -23,6 +23,11 @@ namespace BKI_QLTTQuocAnh {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
+        public void display_for_update()
+        {
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            this.ShowDialog();
+        }
         #endregion
 
         #region Members

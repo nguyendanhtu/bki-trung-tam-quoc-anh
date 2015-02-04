@@ -42,6 +42,12 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_us = m_us_v_dm_hoc_sinh;
             this.ShowDialog();
         }
+        public void display_for_update()
+        {
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            this.ShowDialog();
+        }
+        
         #endregion
 
         #region Data Structure
@@ -72,6 +78,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         #endregion
 
         #region Members
+        DataEntryFormMode m_e_form_mode;
         ITransferDataRow m_obj_trans;
         DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
@@ -181,8 +188,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
-            //	f_dm_hoc_sinh_DE v_fDE = new f_dm_hoc_sinh_DE();
-            //	v_fDE.display(m_us);
+            f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();
+            v_fDE.display_for_update();
             load_data_2_grid();
         }
 
