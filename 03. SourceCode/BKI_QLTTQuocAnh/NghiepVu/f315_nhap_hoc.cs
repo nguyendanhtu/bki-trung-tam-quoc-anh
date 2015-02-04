@@ -112,7 +112,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     break;
             }
             BaseMessages.MsgBox_Infor("Dữ liệu đã được cập nhât!");
-            load_data_2_grid();
+            //load_data_2_grid();
         }
 
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
