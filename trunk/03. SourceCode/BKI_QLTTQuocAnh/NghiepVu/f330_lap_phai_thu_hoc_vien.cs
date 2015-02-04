@@ -32,7 +32,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             //m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
-
+            m_cmd_exit.Visible = false;
             set_define_events();
             this.KeyPreview = true;
         }

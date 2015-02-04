@@ -53,6 +53,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void set_initial_form_load()
         {
             load_data_2_cbo_chon_lop_mon();
+            m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
         }
 
         private void load_data_2_cbo_chon_lop_mon()
@@ -76,13 +77,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cbo_lop_mon.SelectedIndex = 0;
         }
 
-        private void load_data_2_cbo_hoc_sinh()
+        private void load_data_2_cbo_hoc_sinh(decimal ip_dc_id_lop_mon)
         {
             DS_V_F316_DM_HOC_SINH_LOP_MON v_ds_hoc_sinh_lop_mon = new DS_V_F316_DM_HOC_SINH_LOP_MON();
             US_V_F316_DM_HOC_SINH_LOP_MON v_us_hoc_sinh_lop_mon = new US_V_F316_DM_HOC_SINH_LOP_MON();
 
+            v_ds_hoc_sinh_lop_mon.Clear();
+            v_ds_hoc_sinh_lop_mon.EnforceConstraints = false;
+
             v_us_hoc_sinh_lop_mon.FillDataset(v_ds_hoc_sinh_lop_mon
-                , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+                , ip_dc_id_lop_mon);
 
             m_cbo_hs.DataSource = v_ds_hoc_sinh_lop_mon.V_F316_DM_HOC_SINH_LOP_MON;
             m_cbo_hs.DisplayMember = V_F316_DM_HOC_SINH_LOP_MON.HO_TEN;
@@ -91,14 +95,25 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void hoc_sinh_nghi_hoc()
         {
-            
+            if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn học sinh này nghỉ học không?"))
+            {
+                US_GD_HOC v_us = new US_GD_HOC();
+                decimal op_dc_id_gd_hoc = 0;
+                v_us.Find_ID_GD_HOC(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue), CIPConvert.ToDecimal(m_cbo_hs.SelectedValue), ref op_dc_id_gd_hoc);
+                US_GD_HOC v_us_gd_hoc = new US_GD_HOC(op_dc_id_gd_hoc);
+                v_us_gd_hoc.strTRANG_THAI_YN = "N";
+                v_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tu_ngay.Value.Date;
+                v_us_gd_hoc.Update();
+                BaseMessages.MsgBox_Infor("Xong!!!");
+                load_data_2_cbo_hoc_sinh(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+            }
         }
 
         #endregion
         private void set_define_events()
         {
             this.Load += f316_nghi_hoc_Load;
-            m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
+
             m_cmd_nghi_hoc.Click += m_cmd_nghi_hoc_Click;
         }
 
@@ -109,7 +124,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            load_data_2_cbo_hoc_sinh();
+            decimal ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
+            load_data_2_cbo_hoc_sinh(ip_dc_id_lop_mon);
         }
 
         void f316_nghi_hoc_Load(object sender, EventArgs e)
@@ -117,6 +133,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             set_initial_form_load();
         }
 
-        
+
     }
 }
