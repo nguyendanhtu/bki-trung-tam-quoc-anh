@@ -512,9 +512,11 @@ public class US_V_DM_HOC_SINH : US_Object
 	}
 #endregion
     public void FillDataset(DS_V_DM_HOC_SINH op_ds
-     , string ip_str_search)
+        , decimal ip_dc_id_lop_mon
+        , string ip_str_search)
     {
-        CStoredProc v_obj_spr = new CStoredProc("f220_cap_nhat_hoc_sinh");
+        CStoredProc v_obj_spr = new CStoredProc("f230_danh_muc_hoc_sinh_theo_lop_mon");
+        v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
         v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
         v_obj_spr.fillDataSetByCommand(this, op_ds);
     }

@@ -324,12 +324,18 @@ namespace BKI_QLTTQuocAnh
         #region Public Interface
         public void display()
         {
+            m_obj_trans = get_trans_object(m_fg);
+            m_trang_thai_hien_thi = 0;
+            load_data_2_cbo_lop_mon();
+            load_data_2_grid2();
             this.ShowDialog();
         }
         public void display(decimal ip_dc_id_lop_mon)
         {
+            m_obj_trans = get_trans_object(m_fg);
             m_trang_thai_hien_thi = 1;
             load_data_2_cbo_lop_mon(ip_dc_id_lop_mon, m_trang_thai_hien_thi);
+            load_data_2_grid();
             this.ShowDialog();
         }
         #endregion
@@ -392,6 +398,26 @@ namespace BKI_QLTTQuocAnh
             this.KeyPreview = true;
         }
 
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+
+            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            v_dr[DM_LOP_MON.ID] = -1;
+            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+            v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
+            v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = "0";
+            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
+
+            m_cbo_lop_mon.SelectedIndex = 0;
+        }
+
         private void load_data_2_cbo_lop_mon(decimal ip_dc_id_lop_mon, decimal ip_dc_trang_thai_hien_thi)
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
@@ -421,6 +447,7 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
+
             load_data_2_grid();
         }
 
@@ -456,14 +483,44 @@ namespace BKI_QLTTQuocAnh
         private void load_data_2_grid()
         {
             m_ds = new DS_V_DM_HOC_SINH();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             if (m_trang_thai_hien_thi == 0)
             {
-                m_us.FillDataset(m_ds, "where HO_TEN like '%'+" + m_txt_search.Text + "+'%'");
+                m_us.FillDataset(m_ds
+                    , -1
+                    , m_txt_search.Text.Trim());
             }
             else
             {
-                m_us.FillDataset(m_ds, "where ho_ten like '%'+" + m_txt_search.Text + "'%' AND " + "id_lop_mon = " + CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+                m_us.FillDataset(m_ds
+                    , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                    , m_txt_search.Text.Trim());
             }
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            m_fg.Subtotal(AggregateEnum.Count
+                , 0
+                , 0
+                , (int)e_col_Number.HO_TEN
+                , "Tổng");
+
+            wrap_text_cell();
+
+            m_fg.Redraw = true;
+        }
+
+        private void load_data_2_grid2()
+        {
+            m_ds = new DS_V_DM_HOC_SINH();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
+
+            m_us.FillDataset(m_ds
+                , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                , m_txt_search.Text.Trim());
+
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
@@ -567,7 +624,12 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                load_data_2_grid();
+                if (m_trang_thai_hien_thi == 0)
+                {
+                    load_data_2_grid2();
+                }
+                else
+                    load_data_2_grid();
 
             }
             catch (Exception v_e)
