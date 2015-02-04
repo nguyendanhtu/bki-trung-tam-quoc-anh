@@ -4,6 +4,12 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class GD_CHI_TIET_PHIEU_THU {
+        public const string ID = "ID";
+        public const string ID_GD_PHIEU_THU = "ID_GD_PHIEU_THU";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string SO_TIEN = "SO_TIEN";
+    }
     public class V_RPT_BAO_CAO_TINH_HINH_DI_HOC
     {
         public const string ID = "ID";
