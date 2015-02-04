@@ -97,6 +97,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            m_cmd_exit.Visible = false;
             set_define_events();
             this.KeyPreview = true;
         }
