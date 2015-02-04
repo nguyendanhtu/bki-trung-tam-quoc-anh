@@ -77,6 +77,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
             m_fg.Tree.Style = TreeStyleFlags.SimpleLeaf;
 
+            m_cmd_xuat_excel.Visible = false;
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;

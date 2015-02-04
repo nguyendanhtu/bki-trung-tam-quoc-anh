@@ -491,6 +491,7 @@ namespace BKI_QLTTQuocAnh
             CGridUtils.AddSave_Excel_Handlers(m_fg);//Xuat excel
             CGridUtils.AddSearch_Handlers(m_fg);//Ctrl F dc
 
+            m_cmd_xuat_excel.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
