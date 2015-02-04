@@ -23,10 +23,26 @@ namespace BKI_QLTTQuocAnh {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
-        public void display_for_update()
+        public void display_for_update(US_V_DM_HOC_SINH ip_us_test)
         {
-            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            m_us = ip_us_test;
+            us_obj_2_from();
             this.ShowDialog();
+        }
+
+        private void us_obj_2_from()
+        {
+            m_txt_ma_hoc_sinh.Text = m_us.strMA_DOI_TUONG;
+            m_txt_ho_va_ten_lot.Text = m_us.strHO;
+            m_txt_ten.Text = m_us.strTEN;
+            m_txt_so_dien_thoai_hoc_sinh.Text = m_us.strSDT_HS;
+            m_txt_so_dien_thoai_phu_huynh.Text = m_us.strSDT_PH;
+            m_txt_email_hoc_sinh.Text = m_us.strEMAIL_HS;
+            m_txt_email_phu_huynh.Text = m_us.strEMAIL_PH;
+            m_txt_truong_dang_hoc.Text = m_us.strTRUONG_DANG_HOC;
+            m_txt_dia_chi.Text = m_us.strDIA_CHI;
+            m_txt_ho_ten_phu_huynh.Text = m_us.strHO_TEN_PH;
         }
         #endregion
 
@@ -69,18 +85,18 @@ namespace BKI_QLTTQuocAnh {
             m_us.strEMAIL_PH = m_txt_email_phu_huynh.Text.Trim();
             m_us.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text.Trim();
 
-            m_us.SetIDNull();
-            m_us.SetHO_TENNull();
-            m_us.SetHO_TEN_PHNull();
-            m_us.SetSDT_CO_DINHNull();
-            m_us.SetID_LOP_MONNull();
-            m_us.SetID_LOPNull();
-            m_us.SetID_MONNull();
-            m_us.SetMA_LOP_MONNull();
-            m_us.SetDON_GIA_BUOI_HOCNull();
-            m_us.SetID_GD_HOCNull();
-            m_us.SetTRANG_THAI_YNNull();
-            m_us.SetTRANG_THAI_HSNull();
+            //m_us.SetIDNull();
+            //m_us.SetHO_TENNull();
+            //m_us.SetHO_TEN_PHNull();
+            //m_us.SetSDT_CO_DINHNull();
+            //m_us.SetID_LOP_MONNull();
+            //m_us.SetID_LOPNull();
+            //m_us.SetID_MONNull();
+            //m_us.SetMA_LOP_MONNull();
+            //m_us.SetDON_GIA_BUOI_HOCNull();
+            //m_us.SetID_GD_HOCNull();
+            //m_us.SetTRANG_THAI_YNNull();
+            //m_us.SetTRANG_THAI_HSNull();
         }
 
         private bool check_validate_data() {

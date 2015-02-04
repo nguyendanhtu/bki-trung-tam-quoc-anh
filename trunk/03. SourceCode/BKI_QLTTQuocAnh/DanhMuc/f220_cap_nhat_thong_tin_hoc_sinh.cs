@@ -192,9 +192,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            US_V_DM_HOC_SINH v_us_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+            grid2us_object(v_us_dm_hoc_sinh, m_fg.Row);
             f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_fDE.display_for_update();
+            v_fDE.display_for_update(v_us_dm_hoc_sinh);
             load_data_2_grid();
         }
 
@@ -268,6 +269,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
         void m_cmd_search_Click(object sender, EventArgs e)
         {
             try
