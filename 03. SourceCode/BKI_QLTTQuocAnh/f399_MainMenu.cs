@@ -122,6 +122,7 @@ namespace Form_menu
             try {
                 f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl());
+                v_frm.set_phieu_thuc_thu();
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
