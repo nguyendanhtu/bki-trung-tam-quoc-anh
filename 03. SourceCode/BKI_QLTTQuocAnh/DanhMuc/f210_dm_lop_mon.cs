@@ -405,6 +405,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
+            this.KeyDown += f210_dm_lop_mon_KeyDown;
+        }
+
+        void f210_dm_lop_mon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         private void f210_dm_lop_mon_Load(object sender, System.EventArgs e)

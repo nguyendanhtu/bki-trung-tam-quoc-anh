@@ -26,9 +26,6 @@ using C1.Win.C1FlexGrid;
 
 namespace BKI_QLTTQuocAnh
 {
-
-
-
     public class f430_bao_cao_danh_sach_phai_thu_thuc_thu : System.Windows.Forms.Form
     {
         #region Design_Form
@@ -778,6 +775,16 @@ namespace BKI_QLTTQuocAnh
             m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             //m_fg.DoubleClick += m_fg_DoubleClick;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            this.KeyDown += f430_bao_cao_danh_sach_phai_thu_thuc_thu_KeyDown;
+        }
+
+        void f430_bao_cao_danh_sach_phai_thu_thuc_thu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //load_data_2_grid();
+                load_data_2_grid_search();
+            }
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)
