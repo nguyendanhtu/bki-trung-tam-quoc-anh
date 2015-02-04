@@ -211,10 +211,21 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-            this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
+            this.KeyDown += f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown;
             m_fg.DoubleClick += m_fg_DoubleClick;
+           
         }
+
+        void f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
+        }
+
 
         void m_fg_DoubleClick(object sender, EventArgs e)
         {
