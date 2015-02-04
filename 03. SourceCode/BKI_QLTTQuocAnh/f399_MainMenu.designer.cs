@@ -45,6 +45,7 @@ namespace Form_menu
             this.m_rbb_mua_ban = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_nhap_hoc = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nghi_hoc = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_cap_nhat_thong_tin_hs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.m_rbb_khac = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_tai_khoan = new DevComponents.DotNetBar.ButtonItem();
@@ -66,6 +67,7 @@ namespace Form_menu
             this.m_cmd_ma_vach = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbb_excel = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_dm_lop_mon = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_dm_hs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_thuc_thu_theo_nv = new DevComponents.DotNetBar.ButtonItem();
@@ -110,8 +112,6 @@ namespace Form_menu
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_bao_cao_diem_danh = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_dm_hs = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_cap_nhat_thong_tin_hs = new DevComponents.DotNetBar.ButtonItem();
             this.m_rbc_menu.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -219,8 +219,8 @@ namespace Form_menu
             this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_cmd_lap_phai_thu_le,
-            this.m_cmd_lap_phai_thu,
             this.m_cmd_lap_thuc_thu,
+            this.m_cmd_lap_phai_thu,
             this.m_cmd_ban_giao_tien});
             this.ribbonBar3.Location = new System.Drawing.Point(304, 0);
             this.ribbonBar3.Name = "ribbonBar3";
@@ -368,6 +368,16 @@ namespace Form_menu
             this.m_cmd_nghi_hoc.Name = "m_cmd_nghi_hoc";
             this.m_cmd_nghi_hoc.SubItemsExpandWidth = 14;
             this.m_cmd_nghi_hoc.Text = "Nghỉ học";
+            // 
+            // m_cmd_cap_nhat_thong_tin_hs
+            // 
+            this.m_cmd_cap_nhat_thong_tin_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_cap_nhat_thong_tin_hs.Icon")));
+            this.m_cmd_cap_nhat_thong_tin_hs.ImageFixedSize = new System.Drawing.Size(32, 32);
+            this.m_cmd_cap_nhat_thong_tin_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_cap_nhat_thong_tin_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_cap_nhat_thong_tin_hs.Name = "m_cmd_cap_nhat_thong_tin_hs";
+            this.m_cmd_cap_nhat_thong_tin_hs.SubItemsExpandWidth = 14;
+            this.m_cmd_cap_nhat_thong_tin_hs.Text = "Cập nhật thông tin HS";
             // 
             // ribbonPanel2
             // 
@@ -723,6 +733,16 @@ namespace Form_menu
             this.m_cmd_dm_lop_mon.Name = "m_cmd_dm_lop_mon";
             this.m_cmd_dm_lop_mon.SubItemsExpandWidth = 14;
             this.m_cmd_dm_lop_mon.Text = "Lớp môn";
+            // 
+            // m_cmd_dm_hs
+            // 
+            this.m_cmd_dm_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_dm_hs.Icon")));
+            this.m_cmd_dm_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
+            this.m_cmd_dm_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_dm_hs.Name = "m_cmd_dm_hs";
+            this.m_cmd_dm_hs.SubItemsExpandWidth = 14;
+            this.m_cmd_dm_hs.Text = "Học sinh";
+            this.m_cmd_dm_hs.Tooltip = "Quản lý thông tin nhân viên";
             // 
             // ribbonPanel4
             // 
@@ -1369,26 +1389,6 @@ namespace Form_menu
             this.m_cmd_bao_cao_diem_danh.Name = "m_cmd_bao_cao_diem_danh";
             this.m_cmd_bao_cao_diem_danh.SubItemsExpandWidth = 14;
             this.m_cmd_bao_cao_diem_danh.Text = "Điểm danh theo lớp môn";
-            // 
-            // m_cmd_dm_hs
-            // 
-            this.m_cmd_dm_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_dm_hs.Icon")));
-            this.m_cmd_dm_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_dm_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_dm_hs.Name = "m_cmd_dm_hs";
-            this.m_cmd_dm_hs.SubItemsExpandWidth = 14;
-            this.m_cmd_dm_hs.Text = "Học sinh";
-            this.m_cmd_dm_hs.Tooltip = "Quản lý thông tin nhân viên";
-            // 
-            // m_cmd_cap_nhat_thong_tin_hs
-            // 
-            this.m_cmd_cap_nhat_thong_tin_hs.Icon = ((System.Drawing.Icon)(resources.GetObject("m_cmd_cap_nhat_thong_tin_hs.Icon")));
-            this.m_cmd_cap_nhat_thong_tin_hs.ImageFixedSize = new System.Drawing.Size(32, 32);
-            this.m_cmd_cap_nhat_thong_tin_hs.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_cap_nhat_thong_tin_hs.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_cap_nhat_thong_tin_hs.Name = "m_cmd_cap_nhat_thong_tin_hs";
-            this.m_cmd_cap_nhat_thong_tin_hs.SubItemsExpandWidth = 14;
-            this.m_cmd_cap_nhat_thong_tin_hs.Text = "Cập nhật thông tin HS";
             // 
             // f399_MainMenu
             // 

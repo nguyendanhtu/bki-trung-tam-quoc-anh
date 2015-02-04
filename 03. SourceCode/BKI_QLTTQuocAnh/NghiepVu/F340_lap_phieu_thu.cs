@@ -517,14 +517,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         #region Public Interface
         public void set_phieu_thuc_thu() {
-            m_str_loai_form = "PHAI_THU";
-            m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
-           
-        }
-        public void set_phieu_phai_thu() {
             m_str_loai_form = "THUC_THU";
             m_lbl_header.Text = "LẬP PHIẾU THỰC THU";
-            this.Text = "F340 - LẬP PHIẾU THỰC THU";
+        }
+        public void set_phieu_phai_thu() {
+            m_str_loai_form = "PHAI_THU";
+            m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
         }
         public void display(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us, decimal ip_dc_id_loai_phieu_thu, decimal ip_dc_id_nguoi_nhap) {
             m_txt_so_phieu.Text = ip_us.strSO_PHIEU.Trim();
@@ -670,11 +668,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private bool check_validate_data() {
             if (!CValidateTextBox.IsValid(m_txt_so_phieu, DataType.StringType, allowNull.NO,false)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập SỐ PHIẾU!");
-                return false; ;
+                return false; 
             }
             if (!CValidateTextBox.IsValid(m_txt_ho_ten_hs, DataType.StringType, allowNull.NO, false)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập HỌ TÊN học sinh!");
-                return false; ;
+                return false; 
             }
             if (!CValidateTextBox.IsValid(m_txt_ten_nguoi_nop_tien, DataType.StringType, allowNull.NO, false)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập TÊN NGƯỜI NỘP TIỀN!");
@@ -682,15 +680,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             }
             if (m_cbo_lop_mon.SelectedIndex == 0) {
                 BaseMessages.MsgBox_Infor("Bạn chưa chọn LỚP MÔN!");
-                return false; ;
+                return false; 
             }
             if (!CValidateTextBox.IsValid(m_txt_so_tien, DataType.StringType, allowNull.NO, false)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập SỐ TIỀN!");
-                return false; ;
+                return false; 
             }
             if (!CValidateTextBox.IsValid(m_txt_noi_dung, DataType.StringType, allowNull.NO, false)) {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập NỘI DUNG phiếu!");
-                return false; ;
+                return false; 
             }
 
             if (m_cbo_nhan_vien_nhap.SelectedIndex == 0) {
@@ -699,7 +697,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             }
             if (m_cbo_nhan_vien_thu.SelectedIndex == 0) {
                 BaseMessages.MsgBox_Infor("Bạn chưa chọn NHÂN VIÊN THU!");
-                return false; ;
+                return false; 
             }
 
             return true;
