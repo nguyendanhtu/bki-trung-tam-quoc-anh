@@ -518,6 +518,31 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRANG_THAI = "TRANG_THAI";
     }
 
+    public class V_F316_DM_HOC_SINH_LOP_MON
+    {
+        public const string ID = "ID";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string EMAIL_PH = "EMAIL_PH";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT_HS = "SDT_HS";
+        public const string SDT_PH = "SDT_PH";
+        public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string SDT_CO_DINH = "SDT_CO_DINH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string ID_LOP = "ID_LOP";
+        public const string ID_MON = "ID_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string MO_TA = "MO_TA";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string ID_GD_HOC = "ID_GD_HOC";
+        public const string TRANG_THAI_YN = "TRANG_THAI_YN";
+        public const string TRANG_THAI_HS = "TRANG_THAI_HS";
+    }
 
 
 }

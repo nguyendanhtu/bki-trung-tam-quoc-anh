@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_F316_DM_HOC_SINH_LOP_MON" targetNamespace="http://tempuri.org/DS_V_F316_DM_HOC_SINH_LOP_MON.xsd" xmlns:mstns="http://tempuri.org/DS_V_F316_DM_HOC_SINH_LOP_MON.xsd" xmlns="http://tempuri.org/DS_V_F316_DM_HOC_SINH_LOP_MON.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyTTQuocAnhConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyTTQuocAnhConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.QuanLyTTQuocAnhConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_F316_DM_HOC_SINH_LOP_MONTableAdapter" GeneratorDataComponentClassName="V_F316_DM_HOC_SINH_LOP_MONTableAdapter" Name="V_F316_DM_HOC_SINH_LOP_MON" UserDataComponentName="V_F316_DM_HOC_SINH_LOP_MONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString2 (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.V_F316_DM_HOC_SINH_LOP_MON" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, MA_DOI_TUONG, HO, TEN, HO_TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH, ID_LOP_MON, ID_LOP, ID_MON, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_GD_HOC, TRANG_THAI_YN, TRANG_THAI_HS FROM dbo.V_F316_DM_HOC_SINH_LOP_MON</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="MA_DOI_TUONG" DataSetColumn="MA_DOI_TUONG" />
+              <Mapping SourceColumn="HO" DataSetColumn="HO" />
+              <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
+              <Mapping SourceColumn="HO_TEN" DataSetColumn="HO_TEN" />
+              <Mapping SourceColumn="TRUONG_DANG_HOC" DataSetColumn="TRUONG_DANG_HOC" />
+              <Mapping SourceColumn="EMAIL_HS" DataSetColumn="EMAIL_HS" />
+              <Mapping SourceColumn="EMAIL_PH" DataSetColumn="EMAIL_PH" />
+              <Mapping SourceColumn="DIA_CHI" DataSetColumn="DIA_CHI" />
+              <Mapping SourceColumn="SDT_HS" DataSetColumn="SDT_HS" />
+              <Mapping SourceColumn="SDT_PH" DataSetColumn="SDT_PH" />
+              <Mapping SourceColumn="HO_TEN_PH" DataSetColumn="HO_TEN_PH" />
+              <Mapping SourceColumn="SDT_CO_DINH" DataSetColumn="SDT_CO_DINH" />
+              <Mapping SourceColumn="ID_LOP_MON" DataSetColumn="ID_LOP_MON" />
+              <Mapping SourceColumn="ID_LOP" DataSetColumn="ID_LOP" />
+              <Mapping SourceColumn="ID_MON" DataSetColumn="ID_MON" />
+              <Mapping SourceColumn="MA_LOP_MON" DataSetColumn="MA_LOP_MON" />
+              <Mapping SourceColumn="MO_TA" DataSetColumn="MO_TA" />
+              <Mapping SourceColumn="DON_GIA_BUOI_HOC" DataSetColumn="DON_GIA_BUOI_HOC" />
+              <Mapping SourceColumn="ID_GD_HOC" DataSetColumn="ID_GD_HOC" />
+              <Mapping SourceColumn="TRANG_THAI_YN" DataSetColumn="TRANG_THAI_YN" />
+              <Mapping SourceColumn="TRANG_THAI_HS" DataSetColumn="TRANG_THAI_HS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_F316_DM_HOC_SINH_LOP_MON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_F316_DM_HOC_SINH_LOP_MON" msprop:Generator_UserDSName="DS_V_F316_DM_HOC_SINH_LOP_MON">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_F316_DM_HOC_SINH_LOP_MON" msprop:Generator_TableClassName="V_F316_DM_HOC_SINH_LOP_MONDataTable" msprop:Generator_TableVarName="tableV_F316_DM_HOC_SINH_LOP_MON" msprop:Generator_TablePropName="V_F316_DM_HOC_SINH_LOP_MON" msprop:Generator_RowDeletingName="V_F316_DM_HOC_SINH_LOP_MONRowDeleting" msprop:Generator_RowChangingName="V_F316_DM_HOC_SINH_LOP_MONRowChanging" msprop:Generator_RowEvHandlerName="V_F316_DM_HOC_SINH_LOP_MONRowChangeEventHandler" msprop:Generator_RowDeletedName="V_F316_DM_HOC_SINH_LOP_MONRowDeleted" msprop:Generator_UserTableName="V_F316_DM_HOC_SINH_LOP_MON" msprop:Generator_RowChangedName="V_F316_DM_HOC_SINH_LOP_MONRowChanged" msprop:Generator_RowEvArgName="V_F316_DM_HOC_SINH_LOP_MONRowChangeEvent" msprop:Generator_RowClassName="V_F316_DM_HOC_SINH_LOP_MONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="MA_DOI_TUONG" msprop:Generator_ColumnVarNameInTable="columnMA_DOI_TUONG" msprop:Generator_ColumnPropNameInRow="MA_DOI_TUONG" msprop:Generator_ColumnPropNameInTable="MA_DOI_TUONGColumn" msprop:Generator_UserColumnName="MA_DOI_TUONG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnPropNameInTable="HOColumn" msprop:Generator_UserColumnName="HO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HO_TEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRUONG_DANG_HOC" msprop:Generator_ColumnVarNameInTable="columnTRUONG_DANG_HOC" msprop:Generator_ColumnPropNameInRow="TRUONG_DANG_HOC" msprop:Generator_ColumnPropNameInTable="TRUONG_DANG_HOCColumn" msprop:Generator_UserColumnName="TRUONG_DANG_HOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMAIL_HS" msprop:Generator_ColumnVarNameInTable="columnEMAIL_HS" msprop:Generator_ColumnPropNameInRow="EMAIL_HS" msprop:Generator_ColumnPropNameInTable="EMAIL_HSColumn" msprop:Generator_UserColumnName="EMAIL_HS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMAIL_PH" msprop:Generator_ColumnVarNameInTable="columnEMAIL_PH" msprop:Generator_ColumnPropNameInRow="EMAIL_PH" msprop:Generator_ColumnPropNameInTable="EMAIL_PHColumn" msprop:Generator_UserColumnName="EMAIL_PH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIA_CHI" msprop:Generator_ColumnVarNameInTable="columnDIA_CHI" msprop:Generator_ColumnPropNameInRow="DIA_CHI" msprop:Generator_ColumnPropNameInTable="DIA_CHIColumn" msprop:Generator_UserColumnName="DIA_CHI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SDT_HS" msprop:Generator_ColumnVarNameInTable="columnSDT_HS" msprop:Generator_ColumnPropNameInRow="SDT_HS" msprop:Generator_ColumnPropNameInTable="SDT_HSColumn" msprop:Generator_UserColumnName="SDT_HS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SDT_PH" msprop:Generator_ColumnVarNameInTable="columnSDT_PH" msprop:Generator_ColumnPropNameInRow="SDT_PH" msprop:Generator_ColumnPropNameInTable="SDT_PHColumn" msprop:Generator_UserColumnName="SDT_PH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HO_TEN_PH" msprop:Generator_ColumnVarNameInTable="columnHO_TEN_PH" msprop:Generator_ColumnPropNameInRow="HO_TEN_PH" msprop:Generator_ColumnPropNameInTable="HO_TEN_PHColumn" msprop:Generator_UserColumnName="HO_TEN_PH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SDT_CO_DINH" msprop:Generator_ColumnVarNameInTable="columnSDT_CO_DINH" msprop:Generator_ColumnPropNameInRow="SDT_CO_DINH" msprop:Generator_ColumnPropNameInTable="SDT_CO_DINHColumn" msprop:Generator_UserColumnName="SDT_CO_DINH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" />
+              <xs:element name="ID_LOP" msprop:Generator_ColumnVarNameInTable="columnID_LOP" msprop:Generator_ColumnPropNameInRow="ID_LOP" msprop:Generator_ColumnPropNameInTable="ID_LOPColumn" msprop:Generator_UserColumnName="ID_LOP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_MON" msprop:Generator_ColumnVarNameInTable="columnID_MON" msprop:Generator_ColumnPropNameInRow="ID_MON" msprop:Generator_ColumnPropNameInTable="ID_MONColumn" msprop:Generator_UserColumnName="ID_MON" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MO_TA" msprop:Generator_ColumnVarNameInTable="columnMO_TA" msprop:Generator_ColumnPropNameInRow="MO_TA" msprop:Generator_ColumnPropNameInTable="MO_TAColumn" msprop:Generator_UserColumnName="MO_TA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DON_GIA_BUOI_HOC" msprop:Generator_ColumnVarNameInTable="columnDON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInRow="DON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInTable="DON_GIA_BUOI_HOCColumn" msprop:Generator_UserColumnName="DON_GIA_BUOI_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_GD_HOC" msprop:Generator_ColumnVarNameInTable="columnID_GD_HOC" msprop:Generator_ColumnPropNameInRow="ID_GD_HOC" msprop:Generator_ColumnPropNameInTable="ID_GD_HOCColumn" msprop:Generator_UserColumnName="ID_GD_HOC" type="xs:decimal" />
+              <xs:element name="TRANG_THAI_YN" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_YN" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_YN" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_YNColumn" msprop:Generator_UserColumnName="TRANG_THAI_YN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANG_THAI_HS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_HS" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_HS" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_HSColumn" msprop:Generator_UserColumnName="TRANG_THAI_HS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_F316_DM_HOC_SINH_LOP_MON" />
+      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:ID_LOP_MON" />
+      <xs:field xpath="mstns:ID_GD_HOC" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

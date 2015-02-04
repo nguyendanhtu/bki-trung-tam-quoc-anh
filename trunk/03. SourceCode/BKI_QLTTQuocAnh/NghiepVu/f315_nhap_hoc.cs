@@ -75,6 +75,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             CGridUtils.AddSearch_Handlers(m_fg);
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             m_fg.Visible = false;
+            m_cmd_exit.Visible = false;
+            m_cmd_update.Visible = false;
+            m_cmd_danh_sach.Visible = false;
             set_define_events();
             this.KeyPreview = true;
         }
@@ -96,7 +99,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         }
 
-        private void save_data()
+        private void save_data()//Hien tai moi chi su dung insert TuyenNT xu ly update sau
         {
             if (check_data_is_ok() == false) return;
             form_2_us_object();
@@ -151,7 +154,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             m_ds = new DS_V_GD_HOC();
             m_ds.Clear();
-            m_us.FillDataset(m_ds, m_txt_search.Text.Trim());
+            m_us.FillDataset(m_ds,  m_txt_chon_hs.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -238,16 +241,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f315_nhap_hoc_Load;
-            m_cmd_danh_sach.Click += m_cmd_nhap_hoc_Click;
-            m_cmd_search_2.Click += m_cmd_search_2_Click;
+            m_cmd_danh_sach.Click += m_cmd_danh_sach_Click;
             m_cmd_chon_hs.Click += m_cmd_chon_hs_Click;
+
         }
 
-        void m_cmd_search_2_Click(object sender, EventArgs e)
+        void m_cmd_danh_sach_Click(object sender, EventArgs e)
         {
             try
             {
-                load_data_2_grid();
+                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                v_frm.display();
             }
             catch (Exception v_e)
             {
@@ -255,17 +259,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
         }
 
-        void m_cmd_nhap_hoc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                save_data();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //void m_cmd_search_2_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        load_data_2_grid();
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         void m_cmd_chon_hs_Click(object sender, EventArgs e)
         {
@@ -310,7 +314,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                insert_v_gd_hoc();
+                m_e_form_mode = DataEntryFormMode.InsertDataState;
+                save_data();
+                //insert_v_gd_hoc();
             }
             catch (Exception v_e)
             {
@@ -332,46 +338,13 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void m_cmd_delete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                delete_v_gd_hoc();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
 
-        private void m_cmd_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                view_v_gd_hoc();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
         }
 
         private void m_cmd_hs_moi_Click(object sender, EventArgs e)
         {
             f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
             v_frm.display_for_insert();
-        }
-
-        private void m_cmd_danh_sach_Click(object sender, EventArgs e)
-        {            
-            try
-            {
-                //load_data_2_grid();
-                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
-                v_frm.display();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
         }
 
     }
