@@ -569,7 +569,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_NGUOI_NHAP.AllowDBNull = false;
                 this.columnTEN_NGUOI_NOP_TIEN.MaxLength = 250;
                 this.columnNOI_DUNG.MaxLength = 250;
-                this.columnSO_TIEN.AllowDBNull = false;
                 this.columnNGAY_THU.AllowDBNull = false;
                 this.columnNGAY_NHAP.AllowDBNull = false;
                 this.columnID_LOAI_PHIEU_THU.AllowDBNull = false;
@@ -805,7 +804,12 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal SO_TIEN {
                 get {
-                    return ((decimal)(this[this.tableGD_PHIEU_THU.SO_TIENColumn]));
+                    try {
+                        return ((decimal)(this[this.tableGD_PHIEU_THU.SO_TIENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SO_TIEN\' in table \'GD_PHIEU_THU\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableGD_PHIEU_THU.SO_TIENColumn] = value;
@@ -878,6 +882,18 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNOI_DUNGNull() {
                 this[this.tableGD_PHIEU_THU.NOI_DUNGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSO_TIENNull() {
+                return this.IsNull(this.tableGD_PHIEU_THU.SO_TIENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSO_TIENNull() {
+                this[this.tableGD_PHIEU_THU.SO_TIENColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1196,7 +1212,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID, string Original_SO_PHIEU, decimal Original_ID_HOC_SINH, decimal Original_ID_NGUOI_THU, decimal Original_ID_NGUOI_NHAP, string Original_TEN_NGUOI_NOP_TIEN, string Original_NOI_DUNG, decimal Original_SO_TIEN, System.DateTime Original_NGAY_THU, System.DateTime Original_NGAY_NHAP, decimal Original_ID_LOAI_PHIEU_THU, decimal Original_ID_TRANG_THAI) {
+        public virtual int Delete(decimal Original_ID, string Original_SO_PHIEU, decimal Original_ID_HOC_SINH, decimal Original_ID_NGUOI_THU, decimal Original_ID_NGUOI_NHAP, string Original_TEN_NGUOI_NOP_TIEN, string Original_NOI_DUNG, global::System.Nullable<decimal> Original_SO_TIEN, System.DateTime Original_NGAY_THU, System.DateTime Original_NGAY_NHAP, decimal Original_ID_LOAI_PHIEU_THU, decimal Original_ID_TRANG_THAI) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
             if ((Original_SO_PHIEU == null)) {
                 throw new global::System.ArgumentNullException("Original_SO_PHIEU");
@@ -1223,7 +1239,12 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_NOI_DUNG));
             }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_SO_TIEN));
+            if ((Original_SO_TIEN.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_SO_TIEN.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_NGAY_THU));
             this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_NGAY_NHAP));
             this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_ID_LOAI_PHIEU_THU));
@@ -1248,7 +1269,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string SO_PHIEU, decimal ID_HOC_SINH, decimal ID_NGUOI_THU, decimal ID_NGUOI_NHAP, string TEN_NGUOI_NOP_TIEN, string NOI_DUNG, decimal SO_TIEN, System.DateTime NGAY_THU, System.DateTime NGAY_NHAP, decimal ID_LOAI_PHIEU_THU, decimal ID_TRANG_THAI) {
+        public virtual int Insert(string SO_PHIEU, decimal ID_HOC_SINH, decimal ID_NGUOI_THU, decimal ID_NGUOI_NHAP, string TEN_NGUOI_NOP_TIEN, string NOI_DUNG, global::System.Nullable<decimal> SO_TIEN, System.DateTime NGAY_THU, System.DateTime NGAY_NHAP, decimal ID_LOAI_PHIEU_THU, decimal ID_TRANG_THAI) {
             if ((SO_PHIEU == null)) {
                 throw new global::System.ArgumentNullException("SO_PHIEU");
             }
@@ -1270,7 +1291,12 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(NOI_DUNG));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(SO_TIEN));
+            if ((SO_TIEN.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(SO_TIEN.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(NGAY_THU));
             this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(NGAY_NHAP));
             this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(ID_LOAI_PHIEU_THU));
@@ -1302,7 +1328,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                     decimal ID_NGUOI_NHAP, 
                     string TEN_NGUOI_NOP_TIEN, 
                     string NOI_DUNG, 
-                    decimal SO_TIEN, 
+                    global::System.Nullable<decimal> SO_TIEN, 
                     System.DateTime NGAY_THU, 
                     System.DateTime NGAY_NHAP, 
                     decimal ID_LOAI_PHIEU_THU, 
@@ -1314,7 +1340,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                     decimal Original_ID_NGUOI_NHAP, 
                     string Original_TEN_NGUOI_NOP_TIEN, 
                     string Original_NOI_DUNG, 
-                    decimal Original_SO_TIEN, 
+                    global::System.Nullable<decimal> Original_SO_TIEN, 
                     System.DateTime Original_NGAY_THU, 
                     System.DateTime Original_NGAY_NHAP, 
                     decimal Original_ID_LOAI_PHIEU_THU, 
@@ -1341,7 +1367,12 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(NOI_DUNG));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(SO_TIEN));
+            if ((SO_TIEN.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(SO_TIEN.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(NGAY_THU));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(NGAY_NHAP));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(ID_LOAI_PHIEU_THU));
@@ -1372,7 +1403,12 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_NOI_DUNG));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_SO_TIEN));
+            if ((Original_SO_TIEN.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_SO_TIEN.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_NGAY_THU));
             this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_NGAY_NHAP));
             this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(Original_ID_LOAI_PHIEU_THU));
@@ -1405,7 +1441,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                     decimal ID_NGUOI_NHAP, 
                     string TEN_NGUOI_NOP_TIEN, 
                     string NOI_DUNG, 
-                    decimal SO_TIEN, 
+                    global::System.Nullable<decimal> SO_TIEN, 
                     System.DateTime NGAY_THU, 
                     System.DateTime NGAY_NHAP, 
                     decimal ID_LOAI_PHIEU_THU, 
@@ -1417,7 +1453,7 @@ SELECT ID, SO_PHIEU, ID_HOC_SINH, ID_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NOP_TIE
                     decimal Original_ID_NGUOI_NHAP, 
                     string Original_TEN_NGUOI_NOP_TIEN, 
                     string Original_NOI_DUNG, 
-                    decimal Original_SO_TIEN, 
+                    global::System.Nullable<decimal> Original_SO_TIEN, 
                     System.DateTime Original_NGAY_THU, 
                     System.DateTime Original_NGAY_NHAP, 
                     decimal Original_ID_LOAI_PHIEU_THU, 
