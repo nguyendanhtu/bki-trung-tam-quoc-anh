@@ -594,25 +594,26 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             v_us.FillDataset(v_ds);
 
-            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
-            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Chưa chọn---";
-            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
-            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
-            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
-            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
-            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
-            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
+            //DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            //v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            //v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            //v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Chưa chọn---";
+            //v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            //v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            //v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            //v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            //v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            //v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
 
 
-            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+            //v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
 
             m_cbo_nhan_vien_thu.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
             m_cbo_nhan_vien_thu.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
             m_cbo_nhan_vien_thu.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
 
-            m_cbo_nhan_vien_thu.SelectedIndex = 0;
+            //m_cbo_nhan_vien_thu.SelectedIndex = 0;
+            m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
         }
 
         private void load_data_2_cbo_nguoi_nhap() {
@@ -621,25 +622,26 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             v_us.FillDataset(v_ds);
 
-            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
-            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Chưa chọn---";
-            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
-            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
-            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
-            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
-            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
-            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
+            //DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            //v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            //v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            //v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Chưa chọn---";
+            //v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            //v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            //v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            //v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            //v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            //v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
 
 
-            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+            //v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
 
             m_cbo_nhan_vien_nhap.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
             m_cbo_nhan_vien_nhap.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
             m_cbo_nhan_vien_nhap.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
 
-            m_cbo_nhan_vien_nhap.SelectedIndex = 0;
+            //m_cbo_nhan_vien_nhap.SelectedIndex = 0;
+            m_cbo_nhan_vien_nhap.SelectedValue = CAppContext_201.getCurrentUserID();
         }
         private void load_data_2_cbo_lop_mon() {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
