@@ -705,7 +705,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnHO.MaxLength = 35;
                 this.columnTEN.AllowDBNull = false;
                 this.columnTEN.MaxLength = 15;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnTRUONG_DANG_HOC.MaxLength = 35;
                 this.columnEMAIL_HS.MaxLength = 250;
@@ -717,7 +716,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnSDT_CO_DINH.MaxLength = 15;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnTRANG_THAI_YN.MaxLength = 1;
-                this.columnTRANG_THAI_HS.ReadOnly = true;
                 this.columnTRANG_THAI_HS.MaxLength = 8;
             }
             

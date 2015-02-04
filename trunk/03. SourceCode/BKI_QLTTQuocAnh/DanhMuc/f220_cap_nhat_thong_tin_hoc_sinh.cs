@@ -38,8 +38,13 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             this.ShowDialog();
         }
-        public void display(ref US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh) {
+        public void display(ref US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh)
+        {
             m_us = m_us_v_dm_hoc_sinh;
+            m_cmd_delete.Visible = false;
+            m_cmd_insert.Visible = false;
+            m_cmd_update.Visible = false;
+            m_cmd_exit.Visible = true;
             this.ShowDialog();
         }
         public void display_for_update()
@@ -47,7 +52,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
-        
+
         #endregion
 
         #region Data Structure
@@ -100,7 +105,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
-        
+
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
@@ -174,13 +179,13 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private void form_2_us()
         {
-           
+
         }
 
         private bool check_validate_data()
         {
-          
-                return true; 
+
+            return true;
         }
 
         private void update_v_dm_hoc_sinh()
@@ -202,14 +207,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             grid2us_object(v_us, m_fg.Row);
             try
             {
-                v_us.BeginTransaction();
-                v_us.Delete();
-                v_us.CommitTransaction();
+                //v_us.BeginTransaction();
+                //v_us.Delete();
+                v_us.DeleteByID(v_us.dcID);
+                //v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
             }
             catch (Exception v_e)
             {
-                v_us.Rollback();
+                //v_us.Rollback();
                 CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
                     new CDBClientDBExceptionInterpret());
                 v_objErrHandler.showErrorMessage();
@@ -225,7 +231,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             //	v_fDE.display(m_us);
         }
 
-        
+
         #endregion
 
         //
@@ -235,7 +241,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         //
 
 
-        private void set_define_events() {
+        private void set_define_events()
+        {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
@@ -246,32 +253,41 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
 
-        void m_fg_DoubleClick(object sender, EventArgs e) {
-            try {
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(m_us, m_fg.Row);
 
                 this.Close();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        void m_cmd_search_Click(object sender, EventArgs e) {
-            try {
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 load_data_2_grid();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e) {
-            try {
+        void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e)
+        {
+            try
+            {
                 set_initial_form_load();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
