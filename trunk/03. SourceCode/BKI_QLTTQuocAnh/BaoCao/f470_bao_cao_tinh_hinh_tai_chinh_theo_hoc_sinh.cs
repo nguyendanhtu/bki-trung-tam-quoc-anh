@@ -85,7 +85,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day+1);
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
@@ -131,7 +131,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , 0
                 , -1
                 , (int)e_col_Number.TONG_PHAI_THU
-                ,"Tổng cộng");
+                , "Tổng cộng");
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
                 , -1
@@ -228,29 +228,34 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_search.Click += m_cmd_search_Click;
             this.Load += f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_Load;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            this.KeyDown += f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_KeyDown;
         }
 
-        
+        void f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
+        }
 
         void m_fg_DoubleClick(object sender, EventArgs e)
         {
             try
             {
-                    US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
-                    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                    grid2us_object(v_us, m_fg.Row);
+                US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH v_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
 
-                    f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
-                    v_frm.display(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+                f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                v_frm.display(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-        
 
         void m_cmd_search_Click(object sender, EventArgs e)
         {
@@ -275,7 +280,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-     
+
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
@@ -325,6 +330,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             }
         }
 
-     
+
     }
 }

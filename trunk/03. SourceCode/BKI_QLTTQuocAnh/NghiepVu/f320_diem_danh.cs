@@ -178,6 +178,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            this.KeyDown += f320_diem_danh_KeyDown;
+        }
+
+        void f320_diem_danh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

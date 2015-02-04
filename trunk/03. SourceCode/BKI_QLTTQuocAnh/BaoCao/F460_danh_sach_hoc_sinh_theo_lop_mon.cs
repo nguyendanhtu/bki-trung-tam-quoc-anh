@@ -15,5 +15,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
         }
+
+        #region Public interface
+        
+        #endregion
+        #region Members
+
+        #endregion
+
+        #region Private Methods
+
+        #endregion
+
     }
 }

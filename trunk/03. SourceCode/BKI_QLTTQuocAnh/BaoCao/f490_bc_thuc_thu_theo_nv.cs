@@ -232,6 +232,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	f490_bc_thuc_thu_theo_nv_DE v_fDE = new f490_bc_thuc_thu_theo_nv_DE();			
             //	v_fDE.display(m_us);
         }
+        
+        #endregion
+
+        //
+        //
+        //		EVENT HANLDERS
+        //
+        //
+
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
@@ -240,6 +249,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f490_bc_thuc_thu_theo_nv_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            this.KeyDown += f490_bc_thuc_thu_theo_nv_KeyDown;
+        }
+
+        void f490_bc_thuc_thu_theo_nv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
@@ -253,13 +271,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
 
-        //
-        //
-        //		EVENT HANLDERS
-        //
-        //
         private void f490_bc_thuc_thu_theo_nv_Load(object sender, System.EventArgs e)
         {
             try

@@ -243,7 +243,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.Load += f315_nhap_hoc_Load;
             m_cmd_danh_sach.Click += m_cmd_danh_sach_Click;
             m_cmd_chon_hs.Click += m_cmd_chon_hs_Click;
+            this.KeyDown += f315_nhap_hoc_KeyDown;
 
+        }
+
+        void f315_nhap_hoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_danh_sach_Click(object sender, EventArgs e)

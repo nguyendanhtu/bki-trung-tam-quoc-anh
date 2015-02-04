@@ -288,6 +288,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            this.KeyDown += f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_KeyDown;
+        }
+
+        void f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

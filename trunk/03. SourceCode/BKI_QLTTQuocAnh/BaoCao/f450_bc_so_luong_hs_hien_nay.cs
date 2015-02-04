@@ -200,6 +200,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += f450_bc_so_luong_hs_hien_nay_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            this.KeyDown += f450_bc_so_luong_hs_hien_nay_KeyDown;
+        }
+
+        void f450_bc_so_luong_hs_hien_nay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)

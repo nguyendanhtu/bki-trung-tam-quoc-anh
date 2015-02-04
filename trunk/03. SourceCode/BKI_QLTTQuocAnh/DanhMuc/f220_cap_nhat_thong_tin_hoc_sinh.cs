@@ -253,6 +253,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_search.Click += m_cmd_search_Click;
             ///m_cmd_insert.Click += m_cmd_insert_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            this.KeyDown += f220_cap_nhat_thong_tin_hoc_sinh_KeyDown;
+        }
+
+        void f220_cap_nhat_thong_tin_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)

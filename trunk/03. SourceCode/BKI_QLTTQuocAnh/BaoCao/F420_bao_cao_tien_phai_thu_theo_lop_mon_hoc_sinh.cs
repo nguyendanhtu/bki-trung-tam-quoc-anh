@@ -280,7 +280,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_Load;
+            this.KeyDown += F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_KeyDown;
             m_cmd_search.Click += m_cmd_search_Click;
+        }
+
+        void F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

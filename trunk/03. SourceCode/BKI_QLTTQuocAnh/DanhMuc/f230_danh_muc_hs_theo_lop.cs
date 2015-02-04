@@ -618,6 +618,23 @@ namespace BKI_QLTTQuocAnh
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             m_cmd_search.Click += m_cmd_search_Click;
+            this.KeyDown += f230_danh_muc_hs_theo_lop_KeyDown;
+        }
+
+        void f230_danh_muc_hs_theo_lop_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (m_trang_thai_hien_thi == 0)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid2();
+                }
+            }
+            else
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

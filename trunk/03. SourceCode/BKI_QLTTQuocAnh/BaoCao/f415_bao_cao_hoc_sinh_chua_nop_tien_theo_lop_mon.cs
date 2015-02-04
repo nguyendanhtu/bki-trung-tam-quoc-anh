@@ -588,6 +588,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
+            this.KeyDown += f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_KeyDown;
+        }
+
+        void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
 		private void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load(object sender, System.EventArgs e) {
