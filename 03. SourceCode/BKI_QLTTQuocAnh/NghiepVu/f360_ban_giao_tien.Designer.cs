@@ -49,8 +49,8 @@
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.panel1.SuspendLayout();
+<<<<<<< .mine=======            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+>>>>>>> .theirs            this.panel1.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +103,49 @@
             this.panel1.Size = new System.Drawing.Size(715, 93);
             this.panel1.TabIndex = 5;
             // 
-            // label3
+<<<<<<< .mine            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(513, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "(VNĐ)";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(399, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(275, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "TỔNG TIỀN ĐÃ THU";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(87, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Nhân viên";
+            // 
+=======            // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(248, 70);
@@ -146,7 +188,7 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Nhân viên";
             // 
-            // m_lbl_den_ngay
+>>>>>>> .theirs            // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(192, 7);
@@ -290,7 +332,7 @@
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 36;
             // 
-            // m_cmd_search
+<<<<<<< .mine=======            // m_cmd_search
             // 
             this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
@@ -304,7 +346,7 @@
             this.m_cmd_search.TabIndex = 31;
             this.m_cmd_search.Text = "&Lọc phiếu";
             // 
-            // f360_ban_giao_tien
+>>>>>>> .theirs            // f360_ban_giao_tien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
