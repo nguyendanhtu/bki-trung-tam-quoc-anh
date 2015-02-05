@@ -52,27 +52,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 22);
+            this.label1.Location = new System.Drawing.Point(39, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 14);
+            this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn nhóm người sử dụng";
             // 
             // m_cbo_user_group
             // 
             this.m_cbo_user_group.FormattingEnabled = true;
-            this.m_cbo_user_group.Location = new System.Drawing.Point(189, 13);
+            this.m_cbo_user_group.Location = new System.Drawing.Point(189, 12);
             this.m_cbo_user_group.Name = "m_cbo_user_group";
-            this.m_cbo_user_group.Size = new System.Drawing.Size(178, 22);
+            this.m_cbo_user_group.Size = new System.Drawing.Size(178, 21);
             this.m_cbo_user_group.TabIndex = 1;
             this.m_cbo_user_group.SelectedIndexChanged += new System.EventHandler(this.m_cbo_user_group_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.m_lbox_quyen_chua_cap);
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 256);
+            this.groupBox1.Size = new System.Drawing.Size(200, 238);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quyền chưa cấp";
@@ -80,19 +80,18 @@
             // m_lbox_quyen_chua_cap
             // 
             this.m_lbox_quyen_chua_cap.FormattingEnabled = true;
-            this.m_lbox_quyen_chua_cap.ItemHeight = 14;
-            this.m_lbox_quyen_chua_cap.Location = new System.Drawing.Point(6, 20);
+            this.m_lbox_quyen_chua_cap.Location = new System.Drawing.Point(6, 19);
             this.m_lbox_quyen_chua_cap.Name = "m_lbox_quyen_chua_cap";
-            this.m_lbox_quyen_chua_cap.Size = new System.Drawing.Size(188, 228);
+            this.m_lbox_quyen_chua_cap.Size = new System.Drawing.Size(188, 212);
             this.m_lbox_quyen_chua_cap.TabIndex = 0;
             this.m_lbox_quyen_chua_cap.SelectedIndexChanged += new System.EventHandler(this.m_lbox_quyen_chua_cap_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.m_lbox_quyen_da_cap);
-            this.groupBox2.Location = new System.Drawing.Point(324, 58);
+            this.groupBox2.Location = new System.Drawing.Point(324, 54);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 257);
+            this.groupBox2.Size = new System.Drawing.Size(200, 239);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quyền đã cấp";
@@ -100,10 +99,9 @@
             // m_lbox_quyen_da_cap
             // 
             this.m_lbox_quyen_da_cap.FormattingEnabled = true;
-            this.m_lbox_quyen_da_cap.ItemHeight = 14;
-            this.m_lbox_quyen_da_cap.Location = new System.Drawing.Point(6, 22);
+            this.m_lbox_quyen_da_cap.Location = new System.Drawing.Point(6, 20);
             this.m_lbox_quyen_da_cap.Name = "m_lbox_quyen_da_cap";
-            this.m_lbox_quyen_da_cap.Size = new System.Drawing.Size(188, 228);
+            this.m_lbox_quyen_da_cap.Size = new System.Drawing.Size(188, 212);
             this.m_lbox_quyen_da_cap.TabIndex = 1;
             this.m_lbox_quyen_da_cap.SelectedIndexChanged += new System.EventHandler(this.m_lbox_quyen_da_cap_SelectedIndexChanged);
             // 
@@ -114,9 +112,9 @@
             this.m_cmd_left_2_right.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_left_2_right.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_left_2_right.ImageIndex = 10;
-            this.m_cmd_left_2_right.Location = new System.Drawing.Point(231, 79);
+            this.m_cmd_left_2_right.Location = new System.Drawing.Point(231, 73);
             this.m_cmd_left_2_right.Name = "m_cmd_left_2_right";
-            this.m_cmd_left_2_right.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_left_2_right.Size = new System.Drawing.Size(75, 28);
             this.m_cmd_left_2_right.TabIndex = 9;
             this.m_cmd_left_2_right.Text = ">";
             this.m_cmd_left_2_right.Click += new System.EventHandler(this.m_cmd_left_2_right_Click);
@@ -128,9 +126,9 @@
             this.m_cmd_left_2_right_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_left_2_right_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_left_2_right_all.ImageIndex = 10;
-            this.m_cmd_left_2_right_all.Location = new System.Drawing.Point(231, 115);
+            this.m_cmd_left_2_right_all.Location = new System.Drawing.Point(231, 107);
             this.m_cmd_left_2_right_all.Name = "m_cmd_left_2_right_all";
-            this.m_cmd_left_2_right_all.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_left_2_right_all.Size = new System.Drawing.Size(75, 28);
             this.m_cmd_left_2_right_all.TabIndex = 10;
             this.m_cmd_left_2_right_all.Text = ">>";
             this.m_cmd_left_2_right_all.Click += new System.EventHandler(this.m_cmd_left_2_right_all_Click);
@@ -142,9 +140,9 @@
             this.m_cmd_right_2_left.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_right_2_left.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_right_2_left.ImageIndex = 10;
-            this.m_cmd_right_2_left.Location = new System.Drawing.Point(231, 240);
+            this.m_cmd_right_2_left.Location = new System.Drawing.Point(231, 223);
             this.m_cmd_right_2_left.Name = "m_cmd_right_2_left";
-            this.m_cmd_right_2_left.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_right_2_left.Size = new System.Drawing.Size(75, 28);
             this.m_cmd_right_2_left.TabIndex = 11;
             this.m_cmd_right_2_left.Text = "<";
             this.m_cmd_right_2_left.Click += new System.EventHandler(this.m_cmd_right_2_left_Click);
@@ -156,9 +154,9 @@
             this.m_cmd_right_2_left_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_right_2_left_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_right_2_left_all.ImageIndex = 10;
-            this.m_cmd_right_2_left_all.Location = new System.Drawing.Point(231, 277);
+            this.m_cmd_right_2_left_all.Location = new System.Drawing.Point(231, 257);
             this.m_cmd_right_2_left_all.Name = "m_cmd_right_2_left_all";
-            this.m_cmd_right_2_left_all.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_right_2_left_all.Size = new System.Drawing.Size(75, 28);
             this.m_cmd_right_2_left_all.TabIndex = 12;
             this.m_cmd_right_2_left_all.Text = "<<";
             this.m_cmd_right_2_left_all.Click += new System.EventHandler(this.m_cmd_right_2_left_all_Click);
@@ -195,10 +193,10 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_save);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 321);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 298);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(536, 40);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(536, 37);
             this.m_pnl_out_place_dm.TabIndex = 13;
             // 
             // m_cmd_save
@@ -212,7 +210,7 @@
             this.m_cmd_save.ImageList = this.ImageList;
             this.m_cmd_save.Location = new System.Drawing.Point(356, 4);
             this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(88, 32);
+            this.m_cmd_save.Size = new System.Drawing.Size(88, 29);
             this.m_cmd_save.TabIndex = 0;
             this.m_cmd_save.Text = "&Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
@@ -228,16 +226,16 @@
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(444, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 32);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 29);
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Trở về (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // f995_ht_phan_quyen_cho_nhom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 361);
+            this.ClientSize = new System.Drawing.Size(536, 335);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_cmd_right_2_left_all);
             this.Controls.Add(this.m_cmd_right_2_left);
@@ -248,7 +246,7 @@
             this.Controls.Add(this.m_cbo_user_group);
             this.Controls.Add(this.label1);
             this.Name = "f995_ht_phan_quyen_cho_nhom";
-            this.Text = "F995 Phân quyền cho nhóm";
+            this.Text = "F995 - Phân quyền cho nhóm";
             this.Load += new System.EventHandler(this.f995_ht_phan_quyen_cho_nhom_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
