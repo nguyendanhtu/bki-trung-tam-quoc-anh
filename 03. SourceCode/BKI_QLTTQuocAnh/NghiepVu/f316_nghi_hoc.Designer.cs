@@ -42,9 +42,9 @@
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_nghi_hoc = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.panel1.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.SuspendLayout();
@@ -174,11 +174,11 @@
             this.m_cmd_nghi_hoc.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_nghi_hoc.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_nghi_hoc.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_nghi_hoc.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_nghi_hoc.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_cmd_nghi_hoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_nghi_hoc.ImageIndex = 2;
             this.m_cmd_nghi_hoc.ImageList = this.ImageList;
-            this.m_cmd_nghi_hoc.Location = new System.Drawing.Point(39, 4);
+            this.m_cmd_nghi_hoc.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_nghi_hoc.Name = "m_cmd_nghi_hoc";
             this.m_cmd_nghi_hoc.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_nghi_hoc.TabIndex = 1;
@@ -198,21 +198,6 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
-            // 
-            // m_cmd_xuat_excel
-            // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.ImageList;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 0;
-            this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
             // 
@@ -244,6 +229,21 @@
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 0;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            // 
             // f316_nghi_hoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,10 +272,10 @@
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         internal SIS.Controls.Button.SiSButton m_cmd_nghi_hoc;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
-        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.ComboBox m_cbo_hs;
         private System.Windows.Forms.Label label2;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
     }
 }

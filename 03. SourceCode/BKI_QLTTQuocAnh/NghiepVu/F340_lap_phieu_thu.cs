@@ -307,7 +307,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 180);
+            this.label3.Location = new System.Drawing.Point(274, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 83;
@@ -315,7 +315,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_txt_so_tien
             // 
-            this.m_txt_so_tien.Location = new System.Drawing.Point(119, 177);
+            this.m_txt_so_tien.Location = new System.Drawing.Point(131, 177);
             this.m_txt_so_tien.Name = "m_txt_so_tien";
             this.m_txt_so_tien.Size = new System.Drawing.Size(129, 20);
             this.m_txt_so_tien.TabIndex = 11;
@@ -333,7 +333,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(121, 136);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(133, 136);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(127, 21);
             this.m_cbo_lop_mon.TabIndex = 9;
@@ -355,7 +355,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_cmd_chon_hs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_hs.ImageIndex = 7;
             this.m_cmd_chon_hs.ImageList = this.ImageList;
-            this.m_cmd_chon_hs.Location = new System.Drawing.Point(346, 60);
+            this.m_cmd_chon_hs.Location = new System.Drawing.Point(358, 60);
             this.m_cmd_chon_hs.Name = "m_cmd_chon_hs";
             this.m_cmd_chon_hs.Size = new System.Drawing.Size(81, 28);
             this.m_cmd_chon_hs.TabIndex = 5;
@@ -399,14 +399,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             this.m_dat_ngay_thu.CustomFormat = "dd/MM/yyyy";
             this.m_dat_ngay_thu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_ngay_thu.Location = new System.Drawing.Point(121, 36);
+            this.m_dat_ngay_thu.Location = new System.Drawing.Point(133, 36);
             this.m_dat_ngay_thu.Name = "m_dat_ngay_thu";
             this.m_dat_ngay_thu.Size = new System.Drawing.Size(103, 20);
             this.m_dat_ngay_thu.TabIndex = 3;
             // 
             // m_txt_noi_dung
             // 
-            this.m_txt_noi_dung.Location = new System.Drawing.Point(121, 215);
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(133, 215);
             this.m_txt_noi_dung.Multiline = true;
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Size = new System.Drawing.Size(219, 46);
@@ -424,7 +424,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(481, 80);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(485, 80);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
             this.m_lbl_den_ngay.TabIndex = 18;
@@ -441,7 +441,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_txt_ten_nguoi_nop_tien
             // 
-            this.m_txt_ten_nguoi_nop_tien.Location = new System.Drawing.Point(121, 101);
+            this.m_txt_ten_nguoi_nop_tien.Location = new System.Drawing.Point(133, 101);
             this.m_txt_ten_nguoi_nop_tien.Name = "m_txt_ten_nguoi_nop_tien";
             this.m_txt_ten_nguoi_nop_tien.Size = new System.Drawing.Size(219, 20);
             this.m_txt_ten_nguoi_nop_tien.TabIndex = 7;
@@ -449,7 +449,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_lbl_nhan_vien_nhap
             // 
             this.m_lbl_nhan_vien_nhap.AutoSize = true;
-            this.m_lbl_nhan_vien_nhap.Location = new System.Drawing.Point(481, 48);
+            this.m_lbl_nhan_vien_nhap.Location = new System.Drawing.Point(485, 48);
             this.m_lbl_nhan_vien_nhap.Name = "m_lbl_nhan_vien_nhap";
             this.m_lbl_nhan_vien_nhap.Size = new System.Drawing.Size(93, 13);
             this.m_lbl_nhan_vien_nhap.TabIndex = 16;
@@ -457,7 +457,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_txt_ho_ten_hs
             // 
-            this.m_txt_ho_ten_hs.Location = new System.Drawing.Point(121, 65);
+            this.m_txt_ho_ten_hs.Location = new System.Drawing.Point(133, 65);
             this.m_txt_ho_ten_hs.Name = "m_txt_ho_ten_hs";
             this.m_txt_ho_ten_hs.Size = new System.Drawing.Size(219, 20);
             this.m_txt_ho_ten_hs.TabIndex = 4;
@@ -474,7 +474,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_lbl_nhan_vien_thu
             // 
             this.m_lbl_nhan_vien_thu.AutoSize = true;
-            this.m_lbl_nhan_vien_thu.Location = new System.Drawing.Point(481, 12);
+            this.m_lbl_nhan_vien_thu.Location = new System.Drawing.Point(485, 12);
             this.m_lbl_nhan_vien_thu.Name = "m_lbl_nhan_vien_thu";
             this.m_lbl_nhan_vien_thu.Size = new System.Drawing.Size(84, 13);
             this.m_lbl_nhan_vien_thu.TabIndex = 14;
@@ -491,7 +491,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_txt_so_phieu
             // 
-            this.m_txt_so_phieu.Location = new System.Drawing.Point(121, 6);
+            this.m_txt_so_phieu.Location = new System.Drawing.Point(133, 6);
             this.m_txt_so_phieu.Name = "m_txt_so_phieu";
             this.m_txt_so_phieu.Size = new System.Drawing.Size(103, 20);
             this.m_txt_so_phieu.TabIndex = 1;
