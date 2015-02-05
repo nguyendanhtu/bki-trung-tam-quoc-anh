@@ -24,7 +24,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
 
         #region Data Structure
-        private enum e_col_Number {
+        private enum e_col_Number
+        {
             NGUOI_THU = 7
 ,
             SO_PHIEU = 2
@@ -56,7 +57,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         #endregion
 
         #region Private Methods
-        private void format_controls() {
+        private void format_controls()
+        {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);//Xuat excel
@@ -200,7 +202,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         //
         //Events
         //
-        private void set_define_events() {
+        private void set_define_events()
+        {
+            this.KeyDown += f360_ban_giao_tien_KeyDown;
+        }
+
+        void f360_ban_giao_tien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
+        }
+
+        private void load_data_2_grid()
+        {
             this.Load += f360_ban_giao_tien_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             m_cmd_insert.Click += m_cmd_insert_Click;
