@@ -206,6 +206,23 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(m_us, m_fg.Row);
+
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
