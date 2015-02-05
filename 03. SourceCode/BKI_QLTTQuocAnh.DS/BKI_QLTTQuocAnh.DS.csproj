@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_GD_PHIEU_THU.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_HOC_SINH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HOC_SINH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_HT_CONTROL_IN_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -424,6 +429,17 @@
     </None>
     <None Include="DS_V_GD_PHIEU_THU.xss">
       <DependentUpon>DS_V_GD_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HOC_SINH.xsc">
+      <DependentUpon>DS_V_HOC_SINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HOC_SINH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HOC_SINH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HOC_SINH.xss">
+      <DependentUpon>DS_V_HOC_SINH.xsd</DependentUpon>
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xsc">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>

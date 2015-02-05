@@ -64,6 +64,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         DS_V_GD_HOC m_ds = new DS_V_GD_HOC();
         US_V_GD_HOC m_us = new US_V_GD_HOC();
         US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
+        DS_V_HOC_SINH m_ds_v_hoc_sinh = new DS_V_HOC_SINH();
         #endregion
 
         #region Private Methods
@@ -310,9 +312,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
-                v_frm.display(ref m_us_v_dm_hoc_sinh);
-
-                m_txt_chon_hs.Text = m_us_v_dm_hoc_sinh.strHO_TEN;
+               v_frm.display(ref m_us_v_hoc_sinh);
+                m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO_TEN;
             }
             catch (Exception v_e)
             {

@@ -38,55 +38,50 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             this.ShowDialog();
         }
-        public void display(ref US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh)
+        public void display(ref US_V_HOC_SINH m_us_v_hoc_sinh)
         {
-            m_us_v_dm_hoc_sinh = m_us;
+            m_us_v_hoc_sinh = m_us;
             m_cmd_delete.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_exit.Visible = true;
             this.ShowDialog();
         }
-        public void display_for_update()
-        {
-            m_e_form_mode = DataEntryFormMode.InsertDataState;
-            this.ShowDialog();
-        }
-
         #endregion
 
         #region Data Structure
         private enum e_col_Number
         {
-            EMAIL_PH = 5
+            EMAIL_PH = 7
 ,
-            HO_TEN_PH = 9
+            HO_TEN_PH = 11
                 ,
             MA_DOI_TUONG = 1
                 ,
-            SDT_CO_DINH = 10
+            SDT_CO_DINH = 12
                 ,
-            SDT_PH = 8
+            DIA_CHI = 8
                 ,
-            HO_TEN = 2
+            SDT_PH = 10
                 ,
-            DIA_CHI = 6
+            HO_TEN = 4
                 ,
-            SDT_HS = 7
+            TEN = 3
                 ,
-            TRUONG_DANG_HOC = 3
+            SDT_HS = 9
                 ,
-            EMAIL_HS = 4
-                , TRANG_THAI_HS = 11
+            TRUONG_DANG_HOC = 5
+                ,
+            EMAIL_HS = 6
+                , HO = 2
 
         }
         #endregion
 
         #region Members
-        DataEntryFormMode m_e_form_mode;
         ITransferDataRow m_obj_trans;
-        DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
-        US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
+        DS_V_HOC_SINH m_ds = new DS_V_HOC_SINH();
+        US_V_HOC_SINH m_us = new US_V_HOC_SINH();
         #endregion
 
         #region Private Methods
@@ -96,8 +91,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            m_cmd_exit.Visible = false;
             set_define_events();
             this.KeyPreview = true;
         }
@@ -106,36 +99,35 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
-
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_DM_HOC_SINH.EMAIL_PH, e_col_Number.EMAIL_PH);
-            v_htb.Add(V_DM_HOC_SINH.HO_TEN_PH, e_col_Number.HO_TEN_PH);
-            v_htb.Add(V_DM_HOC_SINH.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
-            v_htb.Add(V_DM_HOC_SINH.SDT_CO_DINH, e_col_Number.SDT_CO_DINH);
-            v_htb.Add(V_DM_HOC_SINH.SDT_PH, e_col_Number.SDT_PH);
-            v_htb.Add(V_DM_HOC_SINH.HO_TEN, e_col_Number.HO_TEN);
-            v_htb.Add(V_DM_HOC_SINH.DIA_CHI, e_col_Number.DIA_CHI);
-            v_htb.Add(V_DM_HOC_SINH.SDT_HS, e_col_Number.SDT_HS);
-            v_htb.Add(V_DM_HOC_SINH.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);
-            v_htb.Add(V_DM_HOC_SINH.EMAIL_HS, e_col_Number.EMAIL_HS);
-            v_htb.Add(V_DM_HOC_SINH.TRANG_THAI_HS, e_col_Number.TRANG_THAI_HS);
+            v_htb.Add(V_HOC_SINH.EMAIL_PH, e_col_Number.EMAIL_PH);
+            v_htb.Add(V_HOC_SINH.HO_TEN_PH, e_col_Number.HO_TEN_PH);
+            v_htb.Add(V_HOC_SINH.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
+           v_htb.Add(V_HOC_SINH.SDT_CO_DINH, e_col_Number.SDT_CO_DINH);
+            v_htb.Add(V_HOC_SINH.DIA_CHI, e_col_Number.DIA_CHI);
+            v_htb.Add(V_HOC_SINH.SDT_PH, e_col_Number.SDT_PH);
+            v_htb.Add(V_HOC_SINH.HO_TEN, e_col_Number.HO_TEN);
+            v_htb.Add(V_HOC_SINH.TEN, e_col_Number.TEN);
+            v_htb.Add(V_HOC_SINH.SDT_HS, e_col_Number.SDT_HS);
+            v_htb.Add(V_HOC_SINH.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);
+            v_htb.Add(V_HOC_SINH.EMAIL_HS, e_col_Number.EMAIL_HS);
+            v_htb.Add(V_HOC_SINH.HO, e_col_Number.HO);
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_HOC_SINH.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_HOC_SINH.NewRow());
             return v_obj_trans;
         }
         private void load_data_2_grid()
         {
-            m_ds = new DS_V_DM_HOC_SINH();
+            m_ds = new DS_V_HOC_SINH();
             m_ds.Clear();
-            m_ds.EnforceConstraints = false;
-            m_us.FillDataset(m_ds, m_txt_search.Text.Trim());
+            m_us.FillDataset_danh_sach_hoc_sinh(m_ds, m_txt_search.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
         }
-        private void grid2us_object(US_V_DM_HOC_SINH i_us
+        private void grid2us_object(US_V_HOC_SINH i_us
             , int i_grid_row)
         {
             DataRow v_dr;
@@ -145,7 +137,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         }
 
 
-        private void us_object2grid(US_V_DM_HOC_SINH i_us
+        private void us_object2grid(US_V_HOC_SINH i_us
             , int i_grid_row)
         {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
@@ -154,95 +146,54 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         }
 
 
-        private void insert_v_dm_hoc_sinh()
+        private void insert_v_hoc_sinh()
         {
-            f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_frm.display_for_insert();
+            //	frm_V__HOC_SINH_DE v_fDE = new  frm_V__HOC_SINH_DE();								
+            //	v_fDE.display();
             load_data_2_grid();
         }
 
-        //private void save_data()
-        //{
-        //    check_validate_data();
-        //    form_2_us();
-        //    switch (m_e_form_mode)
-        //    {
-        //        case DataEntryFormMode.InsertDataState:
-        //            m_us.Insert();
-        //            break;
-        //        case DataEntryFormMode.UpdateDataState:
-        //            m_us.Update();
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
-
-        private void form_2_us()
-        {
-
-        }
-
-        private bool check_validate_data()
-        {
-
-            return true;
-        }
-
-        private void update_v_dm_hoc_sinh()
+        private void update_v_hoc_sinh()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            US_V_DM_HOC_SINH v_us_dm_hoc_sinh = new US_V_DM_HOC_SINH();
-            grid2us_object(v_us_dm_hoc_sinh, m_fg.Row);
-            f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_fDE.display_for_update(v_us_dm_hoc_sinh);
+            grid2us_object(m_us, m_fg.Row);
+            //	frm_V__HOC_SINH_DE v_fDE = new frm_V__HOC_SINH_DE();
+            //	v_fDE.display(m_us);
             load_data_2_grid();
         }
 
-        private void delete_v_dm_hoc_sinh()
+        private void delete_v_hoc_sinh()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
-            US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
+            US_V_HOC_SINH v_us = new US_V_HOC_SINH();
             grid2us_object(v_us, m_fg.Row);
             try
             {
-                //v_us.BeginTransaction();
-                //v_us.Delete();
-                v_us.DeleteByID(v_us.dcID);
-                //v_us.CommitTransaction();
+                v_us.BeginTransaction();
+                v_us.Delete();
+                v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
             }
             catch (Exception v_e)
             {
-                //v_us.Rollback();
+                v_us.Rollback();
                 CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
                     new CDBClientDBExceptionInterpret());
                 v_objErrHandler.showErrorMessage();
             }
         }
 
-        private void view_v_dm_hoc_sinh()
+        private void view_v_hoc_sinh()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
-            //	f_dm_hoc_sinh_DE v_fDE = new f_dm_hoc_sinh_DE();			
+            //	frm_V__HOC_SINH_DE v_fDE = new frm_V__HOC_SINH_DE();			
             //	v_fDE.display(m_us);
         }
-
-
-        #endregion
-
-        //
-        //
-        //		EVENT HANLDERS
-        //
-        //
-
-
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
@@ -251,45 +202,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
             m_cmd_search.Click += m_cmd_search_Click;
-            ///m_cmd_insert.Click += m_cmd_insert_Click;
-            //m_fg.DoubleClick += m_fg_DoubleClick;
-            this.KeyDown += f220_cap_nhat_thong_tin_hoc_sinh_KeyDown;
-        }
-
-        void f220_cap_nhat_thong_tin_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                load_data_2_grid();
-            }
-        }
-
-        void m_fg_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                grid2us_object(m_us, m_fg.Row);
-
-                this.Close();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
         {
-            try
-            {
-                load_data_2_grid();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
+            load_data_2_grid();
         }
 
         void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e)
@@ -303,6 +220,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        #endregion
+
+        //
+        //
+        //		EVENT HANLDERS
+        //
+        //
+
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try
@@ -319,7 +244,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                insert_v_dm_hoc_sinh();
+                insert_v_hoc_sinh();
             }
             catch (Exception v_e)
             {
@@ -331,7 +256,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                update_v_dm_hoc_sinh();
+                update_v_hoc_sinh();
             }
             catch (Exception v_e)
             {
@@ -343,7 +268,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                delete_v_dm_hoc_sinh();
+                delete_v_hoc_sinh();
             }
             catch (Exception v_e)
             {
@@ -355,7 +280,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                view_v_dm_hoc_sinh();
+                view_v_hoc_sinh();
             }
             catch (Exception v_e)
             {
