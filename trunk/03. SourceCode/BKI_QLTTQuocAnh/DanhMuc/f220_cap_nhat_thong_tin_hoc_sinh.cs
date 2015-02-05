@@ -44,7 +44,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
-            m_cmd_exit.Visible = true;
+           // m_cmd_exit.Visible = true;
             this.ShowDialog();
         }
         #endregion
@@ -197,7 +197,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         }
         private void set_define_events()
         {
-            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+           // m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
