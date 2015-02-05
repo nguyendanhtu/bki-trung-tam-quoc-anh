@@ -104,6 +104,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_txt_so_tien = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_chon_hs = new SIS.Controls.Button.SiSButton();
@@ -123,9 +126,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_lbl_nhan_vien_thu = new System.Windows.Forms.Label();
             this.m_lbl_so_phieu = new System.Windows.Forms.Label();
             this.m_txt_so_phieu = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_txt_so_tien = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -304,6 +304,32 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.panel3.Size = new System.Drawing.Size(901, 353);
             this.panel3.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(262, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "(VNĐ)";
+            // 
+            // m_txt_so_tien
+            // 
+            this.m_txt_so_tien.Location = new System.Drawing.Point(119, 177);
+            this.m_txt_so_tien.Name = "m_txt_so_tien";
+            this.m_txt_so_tien.Size = new System.Drawing.Size(129, 20);
+            this.m_txt_so_tien.TabIndex = 11;
+            this.m_txt_so_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "SỐ TIỀN(*)";
+            // 
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
@@ -470,31 +496,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_txt_so_phieu.Size = new System.Drawing.Size(103, 20);
             this.m_txt_so_phieu.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 180);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "SỐ TIỀN(*)";
-            // 
-            // m_txt_so_tien
-            // 
-            this.m_txt_so_tien.Location = new System.Drawing.Point(119, 177);
-            this.m_txt_so_tien.Name = "m_txt_so_tien";
-            this.m_txt_so_tien.Size = new System.Drawing.Size(129, 20);
-            this.m_txt_so_tien.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 83;
-            this.label3.Text = "(VNĐ)";
-            // 
             // f340_lap_phieu_thu
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -530,17 +531,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_txt_ten_nguoi_nop_tien.Text = ip_us.strHO_TEN_PH.Trim();
             m_txt_noi_dung.Text = ip_us.strNOI_DUNG.Trim();
             if (ip_dc_id_loai_phieu_thu == ID_LOAI_PHIEU_THU.ID_PHIEU_PHAI_THU) {
-                //m_txt_so_tien_bang_so.Text = ip_us.dcTIEN_PHAI_THU.ToString("#,###");
+                m_txt_so_tien.Text = ip_us.dcTIEN_PHAI_THU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_PHAI_THU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU PHẢI THU";
             }
             else if (ip_dc_id_loai_phieu_thu == ID_LOAI_PHIEU_THU.ID_PHIEU_GIAM_TRU) {
-                //m_txt_so_tien_bang_so.Text = ip_us.dcTIEN_GIAM_TRU.ToString("#,###");
+                m_txt_so_tien.Text = ip_us.dcTIEN_GIAM_TRU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_GIAM_TRU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU GIẢM TRỪ";
             }
             else if (ip_dc_id_loai_phieu_thu == ID_LOAI_PHIEU_THU.ID_PHIEU_THUC_THU) {
-                //m_txt_so_tien_bang_so.Text = ip_us.dcTIEN_THUC_THU.ToString("#,###");
+                m_txt_so_tien.Text = ip_us.dcTIEN_THUC_THU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_THUC_THU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU THỰC THU";
             }
@@ -798,7 +799,23 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
 
         private void m_cmd_ds_phieu_Click(object sender, EventArgs e) {
-            
+            try {
+                f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                switch (m_str_loai_form) {
+                    case "PHAI_THU":
+                        v_frm.display_phieu_phai_thu();
+                        break;
+                    case "THUC_THU":
+                        v_frm.display_phieu_thuc_thu();
+                        break;
+                    default:
+                        break;
+                }
+                
+            }
+            catch (Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_chon_hs_Click(object sender, EventArgs e) {

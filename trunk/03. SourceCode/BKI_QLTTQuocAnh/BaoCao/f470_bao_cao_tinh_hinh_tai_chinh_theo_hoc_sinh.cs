@@ -249,7 +249,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 grid2us_object(v_us, m_fg.Row);
 
                 f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
-                v_frm.display(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+                v_frm.display_from_f470(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
             }
             catch (Exception v_e)
             {
