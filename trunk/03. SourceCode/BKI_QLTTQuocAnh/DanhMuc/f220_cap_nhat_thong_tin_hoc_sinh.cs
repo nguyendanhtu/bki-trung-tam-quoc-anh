@@ -40,7 +40,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         }
         public void display(ref US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh)
         {
-            m_us = m_us_v_dm_hoc_sinh;
+            m_us_v_dm_hoc_sinh = m_us;
             m_cmd_delete.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;

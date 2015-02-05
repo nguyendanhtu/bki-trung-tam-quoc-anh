@@ -91,11 +91,36 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private bool check_data_is_ok()
         {
+            if (check_hs_in_lop_mon()==true)
+            {
+                //BaseMessagesa
+                return false;
+            } 
+
             return true;
+        }
+
+        private bool check_hs_in_lop_mon()
+        {
+            //xem voi id hoc sinh day va lop day, da co trong gd_hoc_chua
+            //Neu co roi thi hien form thong bao ra la co roi   
+            string v_op_kq_yn = "";
+            US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
+            v_us_gd_hoc.check_hoc_sinh_lm(m_us_dm_hoc_sinh.dcID, CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue), ref v_op_kq_yn);
+
+            if (v_op_kq_yn == "Y")
+            {
+                return true;
+            }
+            else return false; 
         }
 
         private void form_2_us_object()
         {
+            m_us_gd_hoc.dcID_HOC_SINH = m_us_v_dm_hoc_sinh.dcID;
+            m_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue);
+            m_us_gd_hoc.strTRANG_THAI_YN = "Y";
+            m_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tai_ngay.Value.Date;
 
         }
 
@@ -106,11 +131,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             switch (m_e_form_mode)
             {
                 case DataEntryFormMode.InsertDataState:
-                    m_us_dm_hoc_sinh.Insert();
+                   // m_us_dm_hoc_sinh.Insert();
                     m_us_gd_hoc.Insert();
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_hoc_sinh.Update();
+                  //  m_us_dm_hoc_sinh.Update();
                     m_us_gd_hoc.Update();
                     break;
             }
