@@ -55,6 +55,7 @@ namespace BKI_QLTTQuocAnh {
         private void format_controls() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
+            m_cmd_exit.Visible = false;
             this.KeyPreview = true;
         }
         private void save_data() {
