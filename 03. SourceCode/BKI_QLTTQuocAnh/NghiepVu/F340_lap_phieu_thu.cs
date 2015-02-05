@@ -567,6 +567,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         US_GD_PHIEU_THU m_us_gd_phieu_thu = new US_GD_PHIEU_THU();
         US_GD_CHI_TIET_PHIEU_THU m_us_gd_ct_phieu_thu = new US_GD_CHI_TIET_PHIEU_THU();
         US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
         DataEntryFormMode m_e_form_mode;
         string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
         #endregion
@@ -821,9 +822,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private void m_cmd_chon_hs_Click(object sender, EventArgs e) {
             try {
                 f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
-                v_frm.display(ref m_us_v_dm_hoc_sinh);
+                v_frm.display(ref m_us_v_hoc_sinh);//co sưa lay us_v_hoc_sinh
 
-                m_txt_ho_ten_hs.Text = m_us_v_dm_hoc_sinh.strHO_TEN;
+                m_txt_ho_ten_hs.Text = m_us_v_hoc_sinh.strHO_TEN;//lay ho ten tu view us_v_hoc_sinh ban dau la us_v_dm_hoc_sinh
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
