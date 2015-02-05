@@ -529,7 +529,7 @@ namespace BKI_QLTTQuocAnh
         //    m_fg.Redraw = true;
         //}
 
-        private void grid2us_object(US_V_DM_HOC_SINH i_us
+        private void grid2us_object(US_GD_HOC i_us
             , int i_grid_row)
         {
             DataRow v_dr;
@@ -559,7 +559,7 @@ namespace BKI_QLTTQuocAnh
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            ///grid2us_object(m_us, m_fg.Row);
             //	f230_danh_muc_hs_theo_lop_DE v_fDE = new f230_danh_muc_hs_theo_lop_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
@@ -570,7 +570,7 @@ namespace BKI_QLTTQuocAnh
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
-            US_V_DM_HOC_SINH v_us = new US_V_DM_HOC_SINH();
+            US_GD_HOC v_us = new US_GD_HOC();
             grid2us_object(v_us, m_fg.Row);
             try
             {
@@ -592,7 +592,7 @@ namespace BKI_QLTTQuocAnh
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(m_us, m_fg.Row);
+            //grid2us_object(m_us, m_fg.Row);
             //	f230_danh_muc_hs_theo_lop_DE v_fDE = new f230_danh_muc_hs_theo_lop_DE();			
             //	v_fDE.display(m_us);
         }
