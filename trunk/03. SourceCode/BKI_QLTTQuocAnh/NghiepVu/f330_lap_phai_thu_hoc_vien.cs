@@ -58,6 +58,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         #endregion
 
         #region Members
+        DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+        US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         ITransferDataRow m_obj_trans;
         #endregion
 
