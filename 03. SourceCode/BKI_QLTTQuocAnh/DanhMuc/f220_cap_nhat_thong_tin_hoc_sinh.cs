@@ -252,7 +252,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             ///m_cmd_insert.Click += m_cmd_insert_Click;
-            m_fg.DoubleClick += m_fg_DoubleClick;
+            //m_fg.DoubleClick += m_fg_DoubleClick;
             this.KeyDown += f220_cap_nhat_thong_tin_hoc_sinh_KeyDown;
         }
 
