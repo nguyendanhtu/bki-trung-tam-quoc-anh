@@ -40,7 +40,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         #endregion
         private void set_define_events()
         {
-            this.KeyPress += f330_lap_phai_thu_hoc_vien_KeyPress;
+            //this.KeyPress += f330_lap_phai_thu_hoc_vien_KeyPress;
         }
 
         //void f330_lap_phai_thu_hoc_vien_KeyPress(object sender, KeyPressEventArgs e)
@@ -53,7 +53,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void load_data_2_grid()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
