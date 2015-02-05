@@ -328,13 +328,14 @@ namespace BKI_QLTTQuocAnh
         }
 
 
-        public void display(decimal ip_dc_id_lop_mon)
+        public decimal display(decimal ip_dc_id_lop_mon)
         {
             m_obj_trans = get_trans_object(m_fg);
             m_trang_thai_hien_thi = 1;
             load_data_2_cbo_lop_mon(ip_dc_id_lop_mon, m_trang_thai_hien_thi);
             load_data_2_grid();
             this.ShowDialog();
+            return m_trang_thai_hien_thi;
         }
         #endregion
 
@@ -399,9 +400,15 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            m_trang_thai_hien_thi = 0;
-            load_data_2_cbo_lop_mon_tu_399();
-            load_data_2_grid();
+            if (m_trang_thai_hien_thi == 0)
+            {
+                load_data_2_cbo_lop_mon_tu_399();
+                load_data_2_grid();
+            }
+            else
+            {
+                //bo cung dc
+            }
         }
 
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)

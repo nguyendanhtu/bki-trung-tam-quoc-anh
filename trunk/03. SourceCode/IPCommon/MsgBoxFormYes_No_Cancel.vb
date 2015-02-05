@@ -199,7 +199,7 @@
 
 
         Private Sub FormatFormMsg(ByVal i_TitleMsg As String, ByVal i_Button As System.Windows.Forms.Control)
-            Dim v_FormHeight As Integer = Me.Height
+            Dim v_FormHeight As Integer = Me.Height - 10
             Dim v_FormWidth As Integer = Me.Width
             Dim v_FormTop As Integer = Me.Top
             Dim v_FormLeft As Integer = Me.Left
