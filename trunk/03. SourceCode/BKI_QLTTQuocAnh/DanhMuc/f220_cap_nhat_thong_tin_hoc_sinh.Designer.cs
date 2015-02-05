@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f220_cap_nhat_thong_tin_hoc_sinh));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
@@ -42,11 +43,10 @@
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -86,6 +86,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 436);
             this.panel1.TabIndex = 8;
+            // 
+            // m_fg
+            // 
+            this.m_fg.AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.FixedOnly;
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 106);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(738, 294);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 36;
             // 
             // panel2
             // 
@@ -214,17 +225,6 @@
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
             // 
-            // m_fg
-            // 
-            this.m_fg.AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.FixedOnly;
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 106);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(738, 294);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 36;
-            // 
             // f220_cap_nhat_thong_tin_hoc_sinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,10 +234,10 @@
             this.Name = "f220_cap_nhat_thong_tin_hoc_sinh";
             this.Text = "F220 - Thông tin học sinh";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.m_pnl_out_place_dm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
 
         }
