@@ -47,12 +47,13 @@ Namespace MessageForms
         Friend WithEvents LabMsg As System.Windows.Forms.Label
         Friend WithEvents PicIcon As System.Windows.Forms.PictureBox
         <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-            Me.components = New System.ComponentModel.Container
-            Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(MsgBoxForm_OK))
-            Me.CtlMsgButton = New System.Windows.Forms.Button
-            Me.PicIcon = New System.Windows.Forms.PictureBox
-            Me.LabMsg = New System.Windows.Forms.Label
+            Me.components = New System.ComponentModel.Container()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MsgBoxForm_OK))
+            Me.CtlMsgButton = New System.Windows.Forms.Button()
+            Me.PicIcon = New System.Windows.Forms.PictureBox()
+            Me.LabMsg = New System.Windows.Forms.Label()
             Me.MsgIcons = New System.Windows.Forms.ImageList(Me.components)
+            CType(Me.PicIcon, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
             'CtlMsgButton
@@ -87,15 +88,18 @@ Namespace MessageForms
             '
             'MsgIcons
             '
-            Me.MsgIcons.ImageSize = New System.Drawing.Size(32, 32)
             Me.MsgIcons.ImageStream = CType(resources.GetObject("MsgIcons.ImageStream"), System.Windows.Forms.ImageListStreamer)
             Me.MsgIcons.TransparentColor = System.Drawing.Color.Transparent
+            Me.MsgIcons.Images.SetKeyName(0, "")
+            Me.MsgIcons.Images.SetKeyName(1, "")
+            Me.MsgIcons.Images.SetKeyName(2, "")
+            Me.MsgIcons.Images.SetKeyName(3, "")
             '
             'MsgBoxForm_OK
             '
             Me.AutoScaleBaseSize = New System.Drawing.Size(6, 14)
             Me.CancelButton = Me.CtlMsgButton
-            Me.ClientSize = New System.Drawing.Size(278, 92)
+            Me.ClientSize = New System.Drawing.Size(304, 123)
             Me.Controls.Add(Me.LabMsg)
             Me.Controls.Add(Me.PicIcon)
             Me.Controls.Add(Me.CtlMsgButton)
@@ -104,6 +108,7 @@ Namespace MessageForms
             Me.Name = "MsgBoxForm_OK"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "MsgBoxForm_OK"
+            CType(Me.PicIcon, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
 
         End Sub
@@ -154,7 +159,7 @@ Namespace MessageForms
 
         Private Sub FormatFormMsg(ByVal i_TitleMsg As String, ByVal i_Button As System.Windows.Forms.Control)
             Try
-                Dim v_FormHeight As Integer = Me.Height
+                Dim v_FormHeight As Integer = Me.Height - 10
                 Dim v_FormWidth As Integer = Me.Width
                 Dim v_FormTop As Integer = Me.Top
                 Dim v_FormLeft As Integer = Me.Left
