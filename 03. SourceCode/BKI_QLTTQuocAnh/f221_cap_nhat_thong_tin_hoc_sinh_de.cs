@@ -23,32 +23,33 @@ namespace BKI_QLTTQuocAnh {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
-        public void display_for_update(US_V_DM_HOC_SINH ip_us_test)
+        public void display_for_update(US_V_HOC_SINH ip_us_test)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            m_us = ip_us_test;
+            m_us_hs = ip_us_test;
             us_obj_2_from();
             this.ShowDialog();
         }
 
         private void us_obj_2_from()
         {
-            m_txt_ma_hoc_sinh.Text = m_us.strMA_DOI_TUONG;
-            m_txt_ho_va_ten_lot.Text = m_us.strHO;
-            m_txt_ten.Text = m_us.strTEN;
-            m_txt_so_dien_thoai_hoc_sinh.Text = m_us.strSDT_HS;
-            m_txt_so_dien_thoai_phu_huynh.Text = m_us.strSDT_PH;
-            m_txt_email_hoc_sinh.Text = m_us.strEMAIL_HS;
-            m_txt_email_phu_huynh.Text = m_us.strEMAIL_PH;
-            m_txt_truong_dang_hoc.Text = m_us.strTRUONG_DANG_HOC;
-            m_txt_dia_chi.Text = m_us.strDIA_CHI;
-            m_txt_ho_ten_phu_huynh.Text = m_us.strHO_TEN_PH;
+            m_txt_ma_hoc_sinh.Text = m_us_hs.strMA_DOI_TUONG;
+            m_txt_ho_va_ten_lot.Text = m_us_hs.strHO;
+            m_txt_ten.Text = m_us_hs.strTEN;
+            m_txt_so_dien_thoai_hoc_sinh.Text = m_us_hs.strSDT_HS;
+            m_txt_so_dien_thoai_phu_huynh.Text = m_us_hs.strSDT_PH;
+            m_txt_email_hoc_sinh.Text = m_us_hs.strEMAIL_HS;
+            m_txt_email_phu_huynh.Text = m_us_hs.strEMAIL_PH;
+            m_txt_truong_dang_hoc.Text = m_us_hs.strTRUONG_DANG_HOC;
+            m_txt_dia_chi.Text = m_us_hs.strDIA_CHI;
+            m_txt_ho_ten_phu_huynh.Text = m_us_hs.strHO_TEN_PH;
         }
         #endregion
 
         #region Members
         DataEntryFormMode m_e_form_mode;
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
+        US_V_HOC_SINH m_us_hs = new US_V_HOC_SINH();
         #endregion
 
         #region Private Methods
@@ -66,7 +67,7 @@ namespace BKI_QLTTQuocAnh {
                     m_us.Insert();
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                    m_us.Update();
+                    m_us_hs.Update();
                     break;
                 default:
                     break;
@@ -75,16 +76,16 @@ namespace BKI_QLTTQuocAnh {
         }
 
         private void form_2_us() {
-            m_us.strMA_DOI_TUONG = m_txt_ma_hoc_sinh.Text.Trim();
-            m_us.strHO = m_txt_ho_va_ten_lot.Text.Trim();
-            m_us.strTEN = m_txt_ten.Text.Trim();
-            m_us.strSDT_HS = m_txt_so_dien_thoai_hoc_sinh.Text.Trim();
-            m_us.strEMAIL_HS = m_txt_email_hoc_sinh.Text.Trim();
-            m_us.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text.Trim();
-            m_us.strDIA_CHI = m_txt_dia_chi.Text.Trim();
-            m_us.strHO_TEN_PH = m_txt_ho_ten_phu_huynh.Text.Trim();
-            m_us.strEMAIL_PH = m_txt_email_phu_huynh.Text.Trim();
-            m_us.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text.Trim();
+            m_us_hs.strMA_DOI_TUONG = m_txt_ma_hoc_sinh.Text.Trim();
+            m_us_hs.strHO = m_txt_ho_va_ten_lot.Text.Trim();
+            m_us_hs.strTEN = m_txt_ten.Text.Trim();
+            m_us_hs.strSDT_HS = m_txt_so_dien_thoai_hoc_sinh.Text.Trim();
+            m_us_hs.strEMAIL_HS = m_txt_email_hoc_sinh.Text.Trim();
+            m_us_hs.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text.Trim();
+            m_us_hs.strDIA_CHI = m_txt_dia_chi.Text.Trim();
+            m_us_hs.strHO_TEN_PH = m_txt_ho_ten_phu_huynh.Text.Trim();
+            m_us_hs.strEMAIL_PH = m_txt_email_phu_huynh.Text.Trim();
+            m_us_hs.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text.Trim();
 
             //m_us.SetIDNull();
             //m_us.SetHO_TENNull();
