@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_QLTTQuocAnh.US {
+    public class CONST_ID_USER_GROUP {
+        public const decimal ADMIN = 1;
+    }
+
     public class CONST_ID_LOAI_PHIEU_THU {
 
         public const decimal PHIEU_PHAI_THU = 27;

@@ -63,7 +63,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         US_GD_HOC m_us_gd_hoc = new US_GD_HOC();
         DS_V_GD_HOC m_ds = new DS_V_GD_HOC();
         US_V_GD_HOC m_us = new US_V_GD_HOC();
-        US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        //US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
         DS_V_HOC_SINH m_ds_v_hoc_sinh = new DS_V_HOC_SINH();
         #endregion
@@ -119,7 +119,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void form_2_us_object()
         {
-            m_us_gd_hoc.dcID_HOC_SINH = m_us_v_dm_hoc_sinh.dcID;
+            m_us_gd_hoc.dcID_HOC_SINH = m_us_v_hoc_sinh.dcID;
             m_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue);
             m_us_gd_hoc.strTRANG_THAI_YN = "Y";
             m_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tai_ngay.Value.Date;
@@ -312,8 +312,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
-               v_frm.display(ref m_us_v_hoc_sinh);
-                m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO_TEN;
+                if (v_frm.select_hoc_sinh(ref m_us_v_hoc_sinh) == System.Windows.Forms.DialogResult.OK) {
+                    m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO_TEN;
+                    m_cbo_nhap_vao_lop_mon.Focus();
+                }
             }
             catch (Exception v_e)
             {

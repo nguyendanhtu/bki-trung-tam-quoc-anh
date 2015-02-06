@@ -166,6 +166,7 @@
     <Compile Include="BaoCao\f_diem_danh.Designer.cs">
       <DependentUpon>f_diem_danh.cs</DependentUpon>
     </Compile>
+    <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
       <SubType>Form</SubType>
     </Compile>

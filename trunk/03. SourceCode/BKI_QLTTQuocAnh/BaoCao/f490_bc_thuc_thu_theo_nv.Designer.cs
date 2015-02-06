@@ -57,18 +57,18 @@
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(277, 48);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(291, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_den_ngay.TabIndex = 3;
+            this.m_dat_den_ngay.TabIndex = 4;
             // 
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(212, 52);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(226, 52);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
-            this.m_lbl_den_ngay.TabIndex = 2;
+            this.m_lbl_den_ngay.TabIndex = 3;
             this.m_lbl_den_ngay.Text = "Đến ngày";
             // 
             // m_lbl_tu_ngay
@@ -84,10 +84,10 @@
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(78, 48);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(92, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_tu_ngay.TabIndex = 1;
+            this.m_dat_tu_ngay.TabIndex = 2;
             // 
             // m_lbl_header
             // 
@@ -106,9 +106,9 @@
             this.m_lbl_nhan_vien.AutoSize = true;
             this.m_lbl_nhan_vien.Location = new System.Drawing.Point(13, 79);
             this.m_lbl_nhan_vien.Name = "m_lbl_nhan_vien";
-            this.m_lbl_nhan_vien.Size = new System.Drawing.Size(56, 13);
+            this.m_lbl_nhan_vien.Size = new System.Drawing.Size(74, 13);
             this.m_lbl_nhan_vien.TabIndex = 4;
-            this.m_lbl_nhan_vien.Text = "Nhân viên";
+            this.m_lbl_nhan_vien.Text = "Nhân viên thu";
             // 
             // panel1
             // 
@@ -124,15 +124,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(637, 110);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             // 
             // m_cbo_nhan_vien
             // 
+            this.m_cbo_nhan_vien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhan_vien.FormattingEnabled = true;
-            this.m_cbo_nhan_vien.Location = new System.Drawing.Point(78, 75);
+            this.m_cbo_nhan_vien.Location = new System.Drawing.Point(92, 75);
             this.m_cbo_nhan_vien.Name = "m_cbo_nhan_vien";
-            this.m_cbo_nhan_vien.Size = new System.Drawing.Size(149, 21);
-            this.m_cbo_nhan_vien.TabIndex = 8;
+            this.m_cbo_nhan_vien.Size = new System.Drawing.Size(199, 21);
+            this.m_cbo_nhan_vien.TabIndex = 5;
             // 
             // m_cmd_search
             // 
@@ -142,10 +143,10 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(283, 71);
+            this.m_cmd_search.Location = new System.Drawing.Point(297, 71);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 7;
+            this.m_cmd_search.TabIndex = 6;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // imageList1
@@ -187,7 +188,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(637, 36);
-            this.m_pnl_out_place_dm.TabIndex = 6;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -299,7 +300,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(637, 208);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 21;
+            this.m_fg.TabIndex = 1;
             // 
             // f490_bc_thuc_thu_theo_nv
             // 

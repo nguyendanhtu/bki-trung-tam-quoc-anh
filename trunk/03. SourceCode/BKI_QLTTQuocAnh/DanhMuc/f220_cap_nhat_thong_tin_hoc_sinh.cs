@@ -38,14 +38,16 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             this.ShowDialog();
         }
-        public void display(ref US_V_HOC_SINH m_us_v_hoc_sinh)
+        public DialogResult select_hoc_sinh(ref US_V_HOC_SINH m_us_v_hoc_sinh)
         {
             m_us_v_hoc_sinh = m_us;
             m_cmd_delete.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
+            m_dgl_result = System.Windows.Forms.DialogResult.Cancel;
            // m_cmd_exit.Visible = true;
             this.ShowDialog();
+            return m_dgl_result;
         }
         #endregion
 
@@ -79,6 +81,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         #endregion
 
         #region Members
+        DialogResult m_dgl_result = DialogResult.Cancel;
         ITransferDataRow m_obj_trans;
         DS_V_HOC_SINH m_ds = new DS_V_HOC_SINH();
         US_V_HOC_SINH m_us = new US_V_HOC_SINH();
@@ -207,6 +210,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.Load += f220_cap_nhat_thong_tin_hoc_sinh_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            m_txt_search.TextChanged += m_txt_search_TextChanged;
+        }
+
+        void m_txt_search_TextChanged(object sender, EventArgs e) {
+            load_data_2_grid();
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)
@@ -216,7 +224,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(m_us, m_fg.Row);
-
+                m_dgl_result = System.Windows.Forms.DialogResult.OK;
                 this.Close();
             }
             catch (Exception v_e)

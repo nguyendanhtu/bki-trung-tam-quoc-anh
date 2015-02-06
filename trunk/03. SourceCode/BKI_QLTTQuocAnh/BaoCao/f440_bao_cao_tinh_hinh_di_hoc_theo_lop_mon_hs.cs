@@ -67,6 +67,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             CControlFormat.setC1FlexFormat(m_fg);
+            m_fg.Cols.Frozen = (int)e_col_Number.TONG_SO_BUOI_DI_HOC;
+
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();

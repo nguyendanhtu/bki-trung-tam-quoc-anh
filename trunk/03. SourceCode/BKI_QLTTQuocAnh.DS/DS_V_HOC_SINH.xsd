@@ -43,7 +43,7 @@
   <xs:element name="DS_V_HOC_SINH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_HOC_SINH" msprop:Generator_UserDSName="DS_V_HOC_SINH">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_HOC_SINH" msprop:Generator_TableClassName="V_HOC_SINHDataTable" msprop:Generator_TableVarName="tableV_HOC_SINH" msprop:Generator_TablePropName="V_HOC_SINH" msprop:Generator_RowDeletingName="V_HOC_SINHRowDeleting" msprop:Generator_RowChangingName="V_HOC_SINHRowChanging" msprop:Generator_RowEvHandlerName="V_HOC_SINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_HOC_SINHRowDeleted" msprop:Generator_UserTableName="V_HOC_SINH" msprop:Generator_RowChangedName="V_HOC_SINHRowChanged" msprop:Generator_RowEvArgName="V_HOC_SINHRowChangeEvent" msprop:Generator_RowClassName="V_HOC_SINHRow">
+        <xs:element name="V_HOC_SINH" msprop:Generator_TableClassName="V_HOC_SINHDataTable" msprop:Generator_TableVarName="tableV_HOC_SINH" msprop:Generator_RowChangedName="V_HOC_SINHRowChanged" msprop:Generator_TablePropName="V_HOC_SINH" msprop:Generator_RowDeletingName="V_HOC_SINHRowDeleting" msprop:Generator_RowChangingName="V_HOC_SINHRowChanging" msprop:Generator_RowEvHandlerName="V_HOC_SINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_HOC_SINHRowDeleted" msprop:Generator_RowClassName="V_HOC_SINHRow" msprop:Generator_UserTableName="V_HOC_SINH" msprop:Generator_RowEvArgName="V_HOC_SINHRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -68,7 +68,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HO_TEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+              <xs:element name="HO_TEN" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="51" />

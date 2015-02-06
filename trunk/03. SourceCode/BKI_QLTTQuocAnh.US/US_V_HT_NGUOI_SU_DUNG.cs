@@ -256,5 +256,20 @@ public class US_V_HT_NGUOI_SU_DUNG : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
+
+    public static bool isInAdminGroup(decimal ip_dc_id_user) {
+        try {
+            US_V_HT_NGUOI_SU_DUNG v_us_v_ht_nguoi_su_dung = new US_V_HT_NGUOI_SU_DUNG(ip_dc_id_user);
+            if (v_us_v_ht_nguoi_su_dung.dcID_USER_GROUP == CONST_ID_USER_GROUP.ADMIN)
+                return true;
+        }
+        catch (Exception) {
+
+            return false;
+        }
+        
+
+        return false;
+    }
 	}
 }
