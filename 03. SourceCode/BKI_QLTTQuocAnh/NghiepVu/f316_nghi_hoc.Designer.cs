@@ -185,7 +185,7 @@
             this.m_cmd_nghi_hoc.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_cmd_nghi_hoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_cmd_nghi_hoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_nghi_hoc.ImageIndex = 2;
+            this.m_cmd_nghi_hoc.ImageIndex = 12;
             this.m_cmd_nghi_hoc.ImageList = this.ImageList;
             this.m_cmd_nghi_hoc.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_nghi_hoc.Name = "m_cmd_nghi_hoc";
