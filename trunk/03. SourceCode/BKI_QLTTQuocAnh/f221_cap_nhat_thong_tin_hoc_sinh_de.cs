@@ -23,6 +23,21 @@ namespace BKI_QLTTQuocAnh {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
+        //public US_V_HOC_SINH get_us_v_dm_hoc_sinh()
+        //{
+        //    return m_us_hs;
+        //}
+        public US_V_HOC_SINH select_hoc_sinh(ref US_V_HOC_SINH m_us_v_hoc_sinh)
+        {
+            m_us_v_hoc_sinh = m_us_hs;
+            //m_cmd_delete.Visible = false;
+            //m_cmd_insert.Visible = false;
+            //m_cmd_update.Visible = false;
+           // m_dgl_result = System.Windows.Forms.DialogResult.Cancel;
+            //// m_cmd_exit.Visible = true;
+            //this.ShowDialog();
+            return m_us_v_hoc_sinh;
+        }
         public void display_for_update(US_V_HOC_SINH ip_us_test)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
@@ -48,6 +63,7 @@ namespace BKI_QLTTQuocAnh {
 
         #region Members
         DataEntryFormMode m_e_form_mode;
+        DialogResult m_dgl_result = DialogResult.Cancel;
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
         US_V_HOC_SINH m_us_hs = new US_V_HOC_SINH();
         #endregion
@@ -64,10 +80,10 @@ namespace BKI_QLTTQuocAnh {
             form_2_us();
             switch (m_e_form_mode) {
                 case DataEntryFormMode.InsertDataState:
-                    m_us.Insert();
+                    m_us_hs.Insert();
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                    m_us_hs.Update();
+                     m_us_hs.Update();
                     break;
                 default:
                     break;
@@ -99,6 +115,19 @@ namespace BKI_QLTTQuocAnh {
             //m_us.SetID_GD_HOCNull();
             //m_us.SetTRANG_THAI_YNNull();
             //m_us.SetTRANG_THAI_HSNull();
+        }
+        private void form_2_us_2()
+        {
+            m_us.strMA_DOI_TUONG = m_txt_ma_hoc_sinh.Text.Trim();
+            m_us.strHO = m_txt_ho_va_ten_lot.Text.Trim();
+            m_us.strTEN = m_txt_ten.Text.Trim();
+            m_us.strSDT_HS = m_txt_so_dien_thoai_hoc_sinh.Text.Trim();
+            m_us.strEMAIL_HS = m_txt_email_hoc_sinh.Text.Trim();
+            m_us.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text.Trim();
+            m_us.strDIA_CHI = m_txt_dia_chi.Text.Trim();
+            m_us.strHO_TEN_PH = m_txt_ho_ten_phu_huynh.Text.Trim();
+            m_us.strEMAIL_PH = m_txt_email_phu_huynh.Text.Trim();
+            m_us.strSDT_PH = m_txt_so_dien_thoai_phu_huynh.Text.Trim();
         }
 
         private bool check_validate_data() {
@@ -147,6 +176,7 @@ namespace BKI_QLTTQuocAnh {
         void m_cmd_save_Click(object sender, EventArgs e) {
             try {
                 save_data();
+                this.Close();
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
