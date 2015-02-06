@@ -67,6 +67,7 @@
     <Compile Include="US_LOG_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_DM_HOC_SINH.cs" />
     <Compile Include="US_V_F316_DM_HOC_SINH_LOP_MON.cs" />
+    <Compile Include="US_V_F340_LOP_MON_CUA_HS.cs" />
     <Compile Include="US_V_GD_HOC.cs" />
     <Compile Include="US_V_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_HOC_SINH.cs" />

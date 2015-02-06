@@ -127,6 +127,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_F316_DM_HOC_SINH_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_F340_LOP_MON_CUA_HS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_F340_LOP_MON_CUA_HS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_GD_HOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -407,6 +412,17 @@
     </None>
     <None Include="DS_V_F316_DM_HOC_SINH_LOP_MON.xss">
       <DependentUpon>DS_V_F316_DM_HOC_SINH_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F340_LOP_MON_CUA_HS.xsc">
+      <DependentUpon>DS_V_F340_LOP_MON_CUA_HS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F340_LOP_MON_CUA_HS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_F340_LOP_MON_CUA_HS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_F340_LOP_MON_CUA_HS.xss">
+      <DependentUpon>DS_V_F340_LOP_MON_CUA_HS.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_HOC.xsc">
       <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>
