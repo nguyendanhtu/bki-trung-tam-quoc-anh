@@ -41,13 +41,28 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            Design_for_form_316();
+
+            //m_cmd_nghi_hoc.Visible = false;
+            //m_cmd_nghi_hoc.Visible = false;
             //m_cmd_nghi_hoc.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_delete.Visible = false;
 
             set_define_events();
             this.KeyPreview = true;
+        }
+
+        private void Design_for_form_316()
+        {
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tu_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_lop_mon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_chon_hoc_sinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_dat_tu_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_cbo_lop_mon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_cbo_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_cmd_nghi_hoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
         }
 
         private void set_initial_form_load()
@@ -93,6 +108,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cbo_hs.ValueMember = V_F316_DM_HOC_SINH_LOP_MON.ID;
         }
 
+        private bool check_validate_data()
+        {
+            if (m_cbo_lop_mon.SelectedIndex == 0)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa chọn LỚP MÔN!");
+                return false;
+            }
+            //if (m_cbo_hs.SelectedIndex == 0)
+            //{
+            //    BaseMessages.MsgBox_Infor("Bạn chưa chọn HỌC SINH!");
+            //    return false;
+            //}
+
+            return true;
+        }
+
         private void hoc_sinh_nghi_hoc()
         {
             if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn học sinh này nghỉ học không?"))
@@ -119,38 +150,50 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         void m_cmd_nghi_hoc_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
+                if (!check_validate_data())
+                {
+                    return;
+                }
                 hoc_sinh_nghi_hoc();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-        
+
         }
 
-        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e) {
-            try {
+        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
                 decimal ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
                 load_data_2_cbo_hoc_sinh(ip_dc_id_lop_mon);
+                m_cbo_hs.Focus();
             }
-            catch (Exception v_e) {
-                
+            catch (Exception v_e)
+            {
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-        
+
         }
 
         void f316_nghi_hoc_Load(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 set_initial_form_load();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-          
+
         }
 
 

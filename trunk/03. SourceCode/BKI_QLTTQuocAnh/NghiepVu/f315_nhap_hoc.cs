@@ -91,6 +91,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             //load_data_2_grid();
         }
 
+        private bool check_validate_data()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_chon_hs, DataType.StringType, allowNull.NO, false))
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa chọn HỌC SINH!");
+                return false;
+            }
+            return true;
+        }
+
         private bool check_data_is_ok()
         {
             if (check_hs_in_lop_mon()==true)
@@ -129,6 +139,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void save_data()//Hien tai moi chi su dung insert TuyenNT xu ly update sau
         {
             if (check_data_is_ok() == false) return;
+            if (!check_validate_data())
+            {
+                return;
+            }
             form_2_us_object();
             switch (m_e_form_mode)
             {
