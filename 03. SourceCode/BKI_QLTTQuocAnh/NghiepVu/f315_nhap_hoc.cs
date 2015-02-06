@@ -63,9 +63,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         US_GD_HOC m_us_gd_hoc = new US_GD_HOC();
         DS_V_GD_HOC m_ds = new DS_V_GD_HOC();
         US_V_GD_HOC m_us = new US_V_GD_HOC();
-        //US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        DS_V_DM_HOC_SINH m_ds_v_dm_hoc_sinh = new DS_V_DM_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
         DS_V_HOC_SINH m_ds_v_hoc_sinh = new DS_V_HOC_SINH();
+
         #endregion
 
         #region Private Methods
@@ -411,6 +413,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
             v_frm.display_for_insert();
+            v_frm.select_hoc_sinh(ref m_us_v_hoc_sinh);
+             m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO+' '+m_us_v_hoc_sinh.strTEN;
+             m_cbo_nhap_vao_lop_mon.Focus();
+            
         }
 
     }
