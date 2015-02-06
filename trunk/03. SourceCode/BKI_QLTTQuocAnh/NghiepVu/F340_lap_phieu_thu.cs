@@ -566,7 +566,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         #region Members
         US_GD_PHIEU_THU m_us_gd_phieu_thu = new US_GD_PHIEU_THU();
         US_GD_CHI_TIET_PHIEU_THU m_us_gd_ct_phieu_thu = new US_GD_CHI_TIET_PHIEU_THU();
-        US_V_DM_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_DM_HOC_SINH();
+        US_V_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
         DataEntryFormMode m_e_form_mode;
         string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
