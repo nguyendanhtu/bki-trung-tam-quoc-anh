@@ -119,18 +119,38 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         void m_cmd_nghi_hoc_Click(object sender, EventArgs e)
         {
-            hoc_sinh_nghi_hoc();
+            try {
+                hoc_sinh_nghi_hoc();
+            }
+            catch (Exception v_e) {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        
         }
 
-        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            decimal ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
-            load_data_2_cbo_hoc_sinh(ip_dc_id_lop_mon);
+        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e) {
+            try {
+                decimal ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
+                load_data_2_cbo_hoc_sinh(ip_dc_id_lop_mon);
+            }
+            catch (Exception v_e) {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        
         }
 
         void f316_nghi_hoc_Load(object sender, EventArgs e)
         {
-            set_initial_form_load();
+            try {
+                set_initial_form_load();
+            }
+            catch (Exception v_e) {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+          
         }
 
 

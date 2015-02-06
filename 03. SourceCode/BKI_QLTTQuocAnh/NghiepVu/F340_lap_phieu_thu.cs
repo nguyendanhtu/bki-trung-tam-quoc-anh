@@ -712,7 +712,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_us_gd_phieu_thu.datNGAY_THU = m_dat_ngay_thu.Value.Date;
             m_us_gd_phieu_thu.datNGAY_NHAP = m_dat_ngay_nhap.Value.Date;
             m_us_gd_phieu_thu.strTEN_NGUOI_NOP_TIEN = m_txt_ten_nguoi_nop_tien.Text.Trim();
-            m_us_gd_phieu_thu.dcID_HOC_SINH = m_us_v_dm_hoc_sinh.dcID;
+            m_us_gd_phieu_thu.dcID_HOC_SINH = m_us_v_hoc_sinh.dcID;
             m_us_gd_phieu_thu.dcID_NGUOI_THU = CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue);
             m_us_gd_phieu_thu.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nhan_vien_nhap.SelectedValue);
             m_us_gd_phieu_thu.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
@@ -822,7 +822,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private void m_cmd_chon_hs_Click(object sender, EventArgs e) {
             try {
                 f220_cap_nhat_thong_tin_hoc_sinh v_frm = new f220_cap_nhat_thong_tin_hoc_sinh();
-                v_frm.display(ref m_us_v_hoc_sinh);//co sưa lay us_v_hoc_sinh
+                v_frm.select_hoc_sinh(ref m_us_v_hoc_sinh);//co sưa lay us_v_hoc_sinh
 
                 m_txt_ho_ten_hs.Text = m_us_v_hoc_sinh.strHO_TEN;//lay ho ten tu view us_v_hoc_sinh ban dau la us_v_dm_hoc_sinh
             }

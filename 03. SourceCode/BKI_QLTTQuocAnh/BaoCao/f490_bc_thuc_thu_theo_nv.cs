@@ -89,7 +89,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_2_cbo_nhan_vien();
+            CCommon.load_data_2_cbo_nhan_vien(
+                CAppContext_201.getCurrentUserID()
+                , m_cbo_nhan_vien);
             load_data_2_grid();
         }
         private void wrap_text_cell()
@@ -98,31 +100,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-        private void load_data_2_cbo_nhan_vien()
-        {
-            DS_HT_NGUOI_SU_DUNG v_ds_ht_nsd = new DS_HT_NGUOI_SU_DUNG();
-            US_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_HT_NGUOI_SU_DUNG();
-            v_us_ht_nsd.FillDataset(v_ds_ht_nsd);
-
-            DataRow v_dr = v_ds_ht_nsd.HT_NGUOI_SU_DUNG.NewRow();
-            v_dr[HT_NGUOI_SU_DUNG.ID] = -1;
-            v_dr[HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "";
-            v_dr[HT_NGUOI_SU_DUNG.TEN] = "--Tất cả--";
-            v_dr[HT_NGUOI_SU_DUNG.MAT_KHAU] = "";
-            v_dr[HT_NGUOI_SU_DUNG.NGAY_TAO] = DateTime.Now.Date;
-            v_dr[HT_NGUOI_SU_DUNG.NGUOI_TAO] = "";
-            v_dr[HT_NGUOI_SU_DUNG.TRANG_THAI] = "";
-            v_dr[HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
-
-
-            v_ds_ht_nsd.HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
-            
-            m_cbo_nhan_vien.ValueMember = HT_NGUOI_SU_DUNG.ID;
-            m_cbo_nhan_vien.DisplayMember = HT_NGUOI_SU_DUNG.TEN;
-            m_cbo_nhan_vien.DataSource = v_ds_ht_nsd.HT_NGUOI_SU_DUNG;
-
-            m_cbo_nhan_vien.SelectedIndex = 0;
-        }
+       
         private void create_tree_2grid()
         {
             m_fg.Redraw = false;

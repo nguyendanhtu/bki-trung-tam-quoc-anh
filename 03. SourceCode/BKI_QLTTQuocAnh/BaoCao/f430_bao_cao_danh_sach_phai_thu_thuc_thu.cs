@@ -144,7 +144,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(842, 325);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_fg.TabIndex = 1;
             // 
             // panel2
             // 
@@ -162,7 +162,7 @@ namespace BKI_QLTTQuocAnh {
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(842, 133);
-            this.panel2.TabIndex = 31;
+            this.panel2.TabIndex = 0;
             // 
             // m_cmd_search
             // 
@@ -175,7 +175,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_search.Location = new System.Drawing.Point(328, 101);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 37;
+            this.m_cmd_search.TabIndex = 9;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_lbl_search
@@ -184,7 +184,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_search.Location = new System.Drawing.Point(14, 109);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(67, 13);
-            this.m_lbl_search.TabIndex = 31;
+            this.m_lbl_search.TabIndex = 7;
             this.m_lbl_search.Text = "Lọc theo HS";
             // 
             // m_txt_tim_kien
@@ -192,15 +192,16 @@ namespace BKI_QLTTQuocAnh {
             this.m_txt_tim_kien.Location = new System.Drawing.Point(94, 106);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(222, 20);
-            this.m_txt_tim_kien.TabIndex = 30;
+            this.m_txt_tim_kien.TabIndex = 8;
             // 
             // m_cbo_nhan_vien_thu
             // 
+            this.m_cbo_nhan_vien_thu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhan_vien_thu.FormattingEnabled = true;
             this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(94, 75);
             this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
             this.m_cbo_nhan_vien_thu.Size = new System.Drawing.Size(222, 21);
-            this.m_cbo_nhan_vien_thu.TabIndex = 29;
+            this.m_cbo_nhan_vien_thu.TabIndex = 6;
             // 
             // m_lbl_nhan_vien_thu
             // 
@@ -208,7 +209,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_nhan_vien_thu.Location = new System.Drawing.Point(14, 78);
             this.m_lbl_nhan_vien_thu.Name = "m_lbl_nhan_vien_thu";
             this.m_lbl_nhan_vien_thu.Size = new System.Drawing.Size(74, 13);
-            this.m_lbl_nhan_vien_thu.TabIndex = 28;
+            this.m_lbl_nhan_vien_thu.TabIndex = 5;
             this.m_lbl_nhan_vien_thu.Text = "Nhân viên thu";
             // 
             // m_lbl_header
@@ -219,7 +220,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(842, 44);
-            this.m_lbl_header.TabIndex = 26;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO DANH SÁCH PHIẾU THU";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -230,7 +231,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(69, 46);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(82, 20);
-            this.m_dat_tu_ngay.TabIndex = 24;
+            this.m_dat_tu_ngay.TabIndex = 2;
             // 
             // m_lbl_tu_ngay
             // 
@@ -238,7 +239,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_tu_ngay.Location = new System.Drawing.Point(14, 50);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
-            this.m_lbl_tu_ngay.TabIndex = 23;
+            this.m_lbl_tu_ngay.TabIndex = 1;
             this.m_lbl_tu_ngay.Text = "Từ ngày";
             // 
             // m_lbl_den_ngay
@@ -247,7 +248,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(170, 50);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
-            this.m_lbl_den_ngay.TabIndex = 23;
+            this.m_lbl_den_ngay.TabIndex = 3;
             this.m_lbl_den_ngay.Text = "Đến ngày";
             // 
             // m_dat_den_ngay
@@ -257,7 +258,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_dat_den_ngay.Location = new System.Drawing.Point(232, 46);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(84, 20);
-            this.m_dat_den_ngay.TabIndex = 24;
+            this.m_dat_den_ngay.TabIndex = 4;
             // 
             // imageList1
             // 
@@ -325,7 +326,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(842, 36);
-            this.m_pnl_out_place_dm.TabIndex = 32;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -339,7 +340,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_insert.Location = new System.Drawing.Point(486, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_update
@@ -354,7 +355,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_update.Location = new System.Drawing.Point(574, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_xuat_excel
@@ -369,7 +370,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
@@ -384,7 +385,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_delete.Location = new System.Drawing.Point(662, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_exit
@@ -399,7 +400,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit.Location = new System.Drawing.Point(750, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
@@ -522,7 +523,9 @@ namespace BKI_QLTTQuocAnh {
         }
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_2_cbo_nguoi_thu();
+            CCommon.load_data_2_cbo_nhan_vien(
+                CAppContext_201.getCurrentUserID()
+                , m_cbo_nhan_vien_thu);
             load_data_2_grid();
         }
         private void wrap_text_cell() {
@@ -548,32 +551,7 @@ namespace BKI_QLTTQuocAnh {
             return v_obj_trans;
         }
 
-        private void load_data_2_cbo_nguoi_thu() {
-            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
-            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
-
-            v_us.FillDataset(v_ds);
-
-            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
-            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
-            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Tất cả---";
-            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
-            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
-            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
-            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
-            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
-            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
-
-
-            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
-
-            m_cbo_nhan_vien_thu.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
-            m_cbo_nhan_vien_thu.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
-            m_cbo_nhan_vien_thu.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
-
-            m_cbo_nhan_vien_thu.SelectedIndex = 0;
-        }
+        
 
         private void create_tree_2grid() {
             m_fg.Redraw = false;
