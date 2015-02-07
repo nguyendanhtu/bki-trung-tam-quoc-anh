@@ -588,25 +588,25 @@ namespace BKI_QLTTQuocAnh {
                 case "THUC_THU":
                     m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
                     m_dat_den_ngay.Value = DateTime.Now.Date;
-                    m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
+                    //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
                     m_us.FillDataset(
                              m_ds
                              , -1
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
-                             , CAppContext_201.getCurrentUserID()
+                             , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 case "PHAI_THU":
                     m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
                     m_dat_den_ngay.Value = DateTime.Now.Date;
-                    m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
+                    //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
                     m_us.FillDataset(
                              m_ds
                              , -1
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
-                             , CAppContext_201.getCurrentUserID()
+                             , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 case "F470":
