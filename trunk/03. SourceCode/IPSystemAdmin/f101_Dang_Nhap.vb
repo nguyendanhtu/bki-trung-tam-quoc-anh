@@ -138,7 +138,7 @@ Public Class f101_Dang_Nhap
         Me.m_txtMatKhau.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.m_txtMatKhau.Size = New System.Drawing.Size(98, 20)
         Me.m_txtMatKhau.TabIndex = 3
-        Me.m_txtMatKhau.Text = "admin"
+        Me.m_txtMatKhau.Text = "nv"
         '
         'Label2
         '
@@ -170,7 +170,7 @@ Public Class f101_Dang_Nhap
         Me.m_txtTenTruyNhap.Name = "m_txtTenTruyNhap"
         Me.m_txtTenTruyNhap.Size = New System.Drawing.Size(147, 20)
         Me.m_txtTenTruyNhap.TabIndex = 1
-        Me.m_txtTenTruyNhap.Text = "admin"
+        Me.m_txtTenTruyNhap.Text = "nhanvien"
         '
         'GroupBox1
         '
