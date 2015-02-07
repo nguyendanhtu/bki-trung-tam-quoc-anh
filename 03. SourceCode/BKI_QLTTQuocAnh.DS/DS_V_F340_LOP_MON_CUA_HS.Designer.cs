@@ -547,13 +547,10 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_HOC_SINH.AllowDBNull = false;
                 this.columnMA_HOC_SINH.AllowDBNull = false;
                 this.columnMA_HOC_SINH.MaxLength = 35;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnID_LOP_MON.AllowDBNull = false;
                 this.columnMO_TA.MaxLength = 250;
                 this.columnTRANG_THAI_YN.AllowDBNull = false;
-                this.columnTRANG_THAI_YN.MaxLength = 1;
-                this.columnSO_TIEN.ReadOnly = true;
                 this.columnSO_TIEN.MaxLength = 1;
             }
             
