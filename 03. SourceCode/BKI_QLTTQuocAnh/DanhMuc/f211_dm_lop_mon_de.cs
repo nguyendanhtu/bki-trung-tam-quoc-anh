@@ -65,6 +65,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
+            this.KeyPreview = true;
         }
 
         private void set_initial_form_load()
@@ -129,6 +130,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             this.Load += f211_dm_lop_mon_de_Load;
             m_cmd_luu.Click += m_cmd_luu_Click;
+            this.KeyDown += f211_dm_lop_mon_de_KeyDown;
+        }
+
+        void f211_dm_lop_mon_de_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
 
         void m_cmd_luu_Click(object sender, EventArgs e)
