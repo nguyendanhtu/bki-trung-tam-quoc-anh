@@ -765,6 +765,7 @@ namespace BKI_QLTTQuocAnh {
 
                 f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
                 v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
+                load_data_2_grid();
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
