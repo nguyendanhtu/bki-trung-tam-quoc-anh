@@ -283,5 +283,11 @@ public class US_V_F340_LOP_MON_CUA_HS : US_Object
         v_csp.addDecimalInputParam("@ip_dc_id_hoc_sinh", ip_dc_id_hoc_sinh);
         v_csp.fillDataSetByCommand(this, v_ds);
     }
+
+    public void FillDatasetDuLieuDaCo(DS_V_F340_LOP_MON_CUA_HS v_ds, decimal ip_dc_id_gd_phieu_thu) {
+        CStoredProc v_csp = new CStoredProc("pr_f340_get_so_tien_hoc_sinh_theo_phieu");
+        v_csp.addDecimalInputParam("@ip_dc_id_gd_phieu_thu", ip_dc_id_gd_phieu_thu);
+        v_csp.fillDataSetByCommand(this, v_ds);
+    }
 }
 }

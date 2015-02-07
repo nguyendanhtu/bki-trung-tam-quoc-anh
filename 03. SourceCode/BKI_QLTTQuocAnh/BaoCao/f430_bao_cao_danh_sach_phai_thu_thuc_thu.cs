@@ -48,6 +48,7 @@ namespace BKI_QLTTQuocAnh {
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        private Label m_lbl_goi_y;
         private System.ComponentModel.IContainer components;
         #endregion
 
@@ -104,6 +105,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_lbl_goi_y = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -148,6 +150,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_lbl_goi_y);
             this.panel2.Controls.Add(this.m_cmd_search);
             this.panel2.Controls.Add(this.m_lbl_search);
             this.panel2.Controls.Add(this.m_txt_tim_kien);
@@ -403,6 +406,16 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
+            // m_lbl_goi_y
+            // 
+            this.m_lbl_goi_y.AutoSize = true;
+            this.m_lbl_goi_y.Location = new System.Drawing.Point(571, 117);
+            this.m_lbl_goi_y.Name = "m_lbl_goi_y";
+            this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
+            this.m_lbl_goi_y.TabIndex = 10;
+            this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
+            this.m_lbl_goi_y.Visible = false;
+            // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -437,23 +450,23 @@ namespace BKI_QLTTQuocAnh {
         }
         public void display_phieu_phai_thu() {
             m_str_option_hien_thi = "PHAI_THU";
-            //m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU";
-            //this.Text = "F430 - Danh sách phiếu phải thu";
-
-            //m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
-            //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
-            //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
+            m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU THEO NHÂN VIÊN";
+            this.Text = "F430 - Danh sách phiếu phải thu theo nhân viên";
+            m_lbl_goi_y.Visible = true;
+            m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
             this.ShowDialog();
         }
         public void display_phieu_thuc_thu() {
             m_str_option_hien_thi = "THUC_THU";
-            //m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU";
-            //this.Text = "F430 - Danh sách phiếu thực thu";
-
-            //m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
-            //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
-            //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
+            m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU THEO NHÂN VIÊN";
+            this.Text = "F430 - Danh sách phiếu thực thu theo nhân viên";
+            m_lbl_goi_y.Visible = true;
+            m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
             this.ShowDialog();
         }
@@ -595,6 +608,7 @@ namespace BKI_QLTTQuocAnh {
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
                              , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                             , CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 case "PHAI_THU":
@@ -607,6 +621,7 @@ namespace BKI_QLTTQuocAnh {
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
                              , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                             , CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 case "F470":
@@ -614,6 +629,7 @@ namespace BKI_QLTTQuocAnh {
                                     , m_us_bc_tinh_hinh_tc.dcID
                                     , m_dat_tu_ngay.Value.Date
                                     , m_dat_den_ngay.Value.Date
+                                    , -1
                                     , -1
                                     , m_txt_tim_kien.Text.Trim());
                     break;
@@ -626,6 +642,7 @@ namespace BKI_QLTTQuocAnh {
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
                              , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                             ,-1
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 default:
@@ -654,7 +671,16 @@ namespace BKI_QLTTQuocAnh {
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-
+        private bool check_ban_giao_is_da_thu_or_admin(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us_rpt) {
+            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID())) {
+                return true;
+            }
+            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
+            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO) {
+                return false;
+            }
+            return true;
+        }
 
         private void insert_v_rpt_bao_cao_danh_sach_phieu_thu() {
             //	f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE v_fDE = new  f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE();								
@@ -729,6 +755,11 @@ namespace BKI_QLTTQuocAnh {
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(v_us, m_fg.Row);
+
+                if (!check_ban_giao_is_da_thu_or_admin(v_us)) {
+                    BaseMessages.MsgBox_Infor("Phiếu này đã bàn giao, không được quyền sửa!");
+                    return;
+                }
 
                 US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
 
