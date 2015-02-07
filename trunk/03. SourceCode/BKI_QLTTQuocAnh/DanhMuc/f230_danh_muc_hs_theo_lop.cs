@@ -29,6 +29,7 @@ namespace BKI_QLTTQuocAnh
 
     public class f230_danh_muc_hs_theo_lop : System.Windows.Forms.Form
     {
+        #region Design Form
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
@@ -45,6 +46,7 @@ namespace BKI_QLTTQuocAnh
         private Label label2;
         private Label m_lbl_header;
         private System.ComponentModel.IContainer components;
+        #endregion
 
         public f230_danh_muc_hs_theo_lop()
         {
@@ -585,6 +587,8 @@ namespace BKI_QLTTQuocAnh
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
+                //v_us.DeleteByID(v_us.dcID);
+                //m_fg.Rows.Remove(m_fg.Row);
             }
             catch (Exception v_e)
             {
