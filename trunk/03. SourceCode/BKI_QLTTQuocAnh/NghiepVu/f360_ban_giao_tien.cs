@@ -76,6 +76,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_fg.AutoSizeRows();
 
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
         }
@@ -204,6 +207,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.Load += f360_ban_giao_tien_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             m_cmd_insert.Click += m_cmd_insert_Click;
+            this.KeyDown += f360_ban_giao_tien_KeyDown;
+        }
+
+        void f360_ban_giao_tien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_data_2_grid();
+            }
         }
 
         void m_cmd_insert_Click(object sender, EventArgs e) {
@@ -213,9 +225,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-        }
-
-        
+        } 
 
         void m_cmd_search_Click(object sender, EventArgs e) {
             try {
@@ -238,5 +248,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        
     }
 }

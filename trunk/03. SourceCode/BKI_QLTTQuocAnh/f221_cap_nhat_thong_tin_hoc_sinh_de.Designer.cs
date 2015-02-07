@@ -27,6 +27,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f221_cap_nhat_thong_tin_hoc_sinh_de));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_txt_email_phu_huynh = new System.Windows.Forms.TextBox();
             this.m_lbl_email_phu_huynh = new System.Windows.Forms.Label();
             this.m_txt_so_dien_thoai_phu_huynh = new System.Windows.Forms.TextBox();
@@ -50,7 +51,8 @@
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_txt_sdt_co_dinh = new System.Windows.Forms.TextBox();
+            this.m_lbl_so_co_dinh = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +86,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_txt_sdt_co_dinh);
+            this.panel2.Controls.Add(this.m_lbl_so_co_dinh);
             this.panel2.Controls.Add(this.m_lbl_header);
             this.panel2.Controls.Add(this.m_txt_email_phu_huynh);
             this.panel2.Controls.Add(this.m_lbl_email_phu_huynh);
@@ -109,8 +113,20 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 571);
+            this.panel2.Size = new System.Drawing.Size(1111, 620);
             this.panel2.TabIndex = 0;
+            // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(1111, 45);
+            this.m_lbl_header.TabIndex = 20;
+            this.m_lbl_header.Text = "CHI TIẾT THÔNG TIN HỌC SINH";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_txt_email_phu_huynh
             // 
@@ -217,9 +233,9 @@
             this.m_lbl_so_dien_thoai_hoc_sinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_so_dien_thoai_hoc_sinh.Location = new System.Drawing.Point(5, 166);
             this.m_lbl_so_dien_thoai_hoc_sinh.Name = "m_lbl_so_dien_thoai_hoc_sinh";
-            this.m_lbl_so_dien_thoai_hoc_sinh.Size = new System.Drawing.Size(127, 29);
+            this.m_lbl_so_dien_thoai_hoc_sinh.Size = new System.Drawing.Size(101, 29);
             this.m_lbl_so_dien_thoai_hoc_sinh.TabIndex = 7;
-            this.m_lbl_so_dien_thoai_hoc_sinh.Text = "SĐT HS(*)";
+            this.m_lbl_so_dien_thoai_hoc_sinh.Text = "SĐT HS";
             // 
             // m_txt_ten
             // 
@@ -279,9 +295,9 @@
             this.m_lbl_truong_dang_hoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_truong_dang_hoc.Location = new System.Drawing.Point(5, 220);
             this.m_lbl_truong_dang_hoc.Name = "m_lbl_truong_dang_hoc";
-            this.m_lbl_truong_dang_hoc.Size = new System.Drawing.Size(222, 29);
+            this.m_lbl_truong_dang_hoc.Size = new System.Drawing.Size(196, 29);
             this.m_lbl_truong_dang_hoc.TabIndex = 11;
-            this.m_lbl_truong_dang_hoc.Text = "Trường đang học(*)";
+            this.m_lbl_truong_dang_hoc.Text = "Trường đang học";
             // 
             // m_lbl_ma_so_hoc_sinh
             // 
@@ -298,7 +314,7 @@
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_save);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 498);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 547);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1111, 73);
@@ -336,23 +352,29 @@
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "&Thoát (Esc)";
             // 
-            // m_lbl_header
+            // m_txt_sdt_co_dinh
             // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1111, 45);
-            this.m_lbl_header.TabIndex = 20;
-            this.m_lbl_header.Text = "CHI TIẾT THÔNG TIN HỌC SINH";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_txt_sdt_co_dinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_txt_sdt_co_dinh.Location = new System.Drawing.Point(233, 489);
+            this.m_txt_sdt_co_dinh.Name = "m_txt_sdt_co_dinh";
+            this.m_txt_sdt_co_dinh.Size = new System.Drawing.Size(327, 35);
+            this.m_txt_sdt_co_dinh.TabIndex = 21;
+            // 
+            // m_lbl_so_co_dinh
+            // 
+            this.m_lbl_so_co_dinh.AutoSize = true;
+            this.m_lbl_so_co_dinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_so_co_dinh.Location = new System.Drawing.Point(5, 492);
+            this.m_lbl_so_co_dinh.Name = "m_lbl_so_co_dinh";
+            this.m_lbl_so_co_dinh.Size = new System.Drawing.Size(146, 29);
+            this.m_lbl_so_co_dinh.TabIndex = 22;
+            this.m_lbl_so_co_dinh.Text = "SĐT cố định";
             // 
             // f221_cap_nhat_thong_tin_hoc_sinh_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 571);
+            this.ClientSize = new System.Drawing.Size(1111, 620);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel2);
             this.Name = "f221_cap_nhat_thong_tin_hoc_sinh_de";
@@ -392,6 +414,8 @@
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
+        private System.Windows.Forms.TextBox m_txt_sdt_co_dinh;
+        private System.Windows.Forms.Label m_lbl_so_co_dinh;
 
     }
 }

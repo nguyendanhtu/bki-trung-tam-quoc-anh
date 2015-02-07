@@ -187,9 +187,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             catch (Exception v_e)
             {
                 v_us.Rollback();
-                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-                    new CDBClientDBExceptionInterpret());
-                v_objErrHandler.showErrorMessage();
+                //CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                //    new CDBClientDBExceptionInterpret());
+                //v_objErrHandler.showErrorMessage();
+                BaseMessages.MsgBox_Infor("Không xóa được học sinh này do học sinh này đang học một lớp môn nào đó!");
             }
         }
 
@@ -201,6 +202,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             //	frm_V__HOC_SINH_DE v_fDE = new frm_V__HOC_SINH_DE();			
             //	v_fDE.display(m_us);
         }
+
         private void set_define_events()
         {
            // m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
@@ -301,7 +303,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             }
             catch (Exception v_e)
             {
-                CSystemLog_301.ExceptionHandle(v_e);
+                //CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
