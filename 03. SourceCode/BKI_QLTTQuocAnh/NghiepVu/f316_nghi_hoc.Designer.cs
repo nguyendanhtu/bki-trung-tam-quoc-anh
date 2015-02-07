@@ -54,7 +54,7 @@
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(182, 64);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(191, 76);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(232, 35);
             this.m_dat_tu_ngay.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
             this.m_lbl_tu_ngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(13, 70);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(22, 82);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(105, 29);
             this.m_lbl_tu_ngay.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.m_cbo_hs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cbo_hs.FormattingEnabled = true;
-            this.m_cbo_hs.Location = new System.Drawing.Point(182, 194);
+            this.m_cbo_hs.Location = new System.Drawing.Point(191, 206);
             this.m_cbo_hs.Name = "m_cbo_hs";
             this.m_cbo_hs.Size = new System.Drawing.Size(358, 37);
             this.m_cbo_hs.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             this.m_lbl_chon_hoc_sinh.AutoSize = true;
             this.m_lbl_chon_hoc_sinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_chon_hoc_sinh.Location = new System.Drawing.Point(13, 202);
+            this.m_lbl_chon_hoc_sinh.Location = new System.Drawing.Point(22, 214);
             this.m_lbl_chon_hoc_sinh.Name = "m_lbl_chon_hoc_sinh";
             this.m_lbl_chon_hoc_sinh.Size = new System.Drawing.Size(109, 29);
             this.m_lbl_chon_hoc_sinh.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.m_cbo_lop_mon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_lop_mon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(182, 128);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(191, 140);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(358, 37);
             this.m_cbo_lop_mon.TabIndex = 4;
@@ -118,7 +118,7 @@
             // 
             this.m_lbl_lop_mon.AutoSize = true;
             this.m_lbl_lop_mon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(13, 136);
+            this.m_lbl_lop_mon.Location = new System.Drawing.Point(22, 148);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(163, 29);
             this.m_lbl_lop_mon.TabIndex = 3;

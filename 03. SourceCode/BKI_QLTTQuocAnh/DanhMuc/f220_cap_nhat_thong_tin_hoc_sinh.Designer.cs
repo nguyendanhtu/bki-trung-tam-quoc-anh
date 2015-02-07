@@ -133,7 +133,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(738, 45);
             this.m_lbl_header.TabIndex = 29;
-            this.m_lbl_header.Text = "DANH MỤC HỌC SINH";
+            this.m_lbl_header.Text = "CẬP NHẬT THÔNG TIN HỌC SINH";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
