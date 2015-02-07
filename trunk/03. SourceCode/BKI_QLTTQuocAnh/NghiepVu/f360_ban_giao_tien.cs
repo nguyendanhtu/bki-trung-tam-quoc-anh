@@ -94,31 +94,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
-        private void load_data_2_cbo_nv_thu() {
-            DS_HT_NGUOI_SU_DUNG v_ds_ht_nsd = new DS_HT_NGUOI_SU_DUNG();
-            US_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_HT_NGUOI_SU_DUNG();
-            v_us_ht_nsd.FillDataset(v_ds_ht_nsd);
-
-            //DataRow v_dr = v_ds_ht_nsd.HT_NGUOI_SU_DUNG.NewRow();
-            //v_dr[HT_NGUOI_SU_DUNG.ID] = -1;
-            //v_dr[HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "";
-            //v_dr[HT_NGUOI_SU_DUNG.TEN] = "--Tất cả--";
-            //v_dr[HT_NGUOI_SU_DUNG.MAT_KHAU] = "";
-            //v_dr[HT_NGUOI_SU_DUNG.NGAY_TAO] = DateTime.Now.Date;
-            //v_dr[HT_NGUOI_SU_DUNG.NGUOI_TAO] = "";
-            //v_dr[HT_NGUOI_SU_DUNG.TRANG_THAI] = "";
-            //v_dr[HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
-
-
-            //v_ds_ht_nsd.HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
-
-            m_cbo_nhan_vien_thu.ValueMember = HT_NGUOI_SU_DUNG.ID;
-            m_cbo_nhan_vien_thu.DisplayMember = HT_NGUOI_SU_DUNG.TEN;
-            m_cbo_nhan_vien_thu.DataSource = v_ds_ht_nsd.HT_NGUOI_SU_DUNG;
-
-            //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
-            //m_cbo_nhan_vien_thu.SelectedIndex = 0;
-        }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGUOI_THU, e_col_Number.NGUOI_THU);
@@ -180,7 +155,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_2_cbo_nv_thu();
+            CCommon.load_data_2_cbo_nhan_vien(CAppContext_201.getCurrentUserID(),m_cbo_nhan_vien_thu);
             load_data_2_grid();
         }
         private void cap_nhat_ban_giao() {
@@ -208,13 +183,41 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_cmd_search.Click += m_cmd_search_Click;
             m_cmd_insert.Click += m_cmd_insert_Click;
             this.KeyDown += f360_ban_giao_tien_KeyDown;
+            m_fg.DoubleClick += m_fg_DoubleClick;
+        }
+
+        void m_fg_DoubleClick(object sender, EventArgs e) {
+            try {
+                US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
+
+                //if (!check_ban_giao_is_da_thu_or_admin(v_us)) {
+                //    BaseMessages.MsgBox_Infor("Phiếu này đã bàn giao, không được quyền sửa!");
+                //    return;
+                //}
+
+                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
+
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
+                load_data_2_grid();
+            }
+            catch (Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f360_ban_giao_tien_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                load_data_2_grid();
+            try {
+                if (e.KeyCode == Keys.Enter) {
+                    load_data_2_grid();
+                }
+            }
+            catch (Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 

@@ -530,7 +530,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             US_V_GD_PHIEU_THU v_us_v_pt = new US_V_GD_PHIEU_THU(ip_us.dcID);
 
             m_us_v_hoc_sinh.dcID = ip_us.dcID_HOC_SINH;
-
+            m_us_gd_phieu_thu.dcID = v_us_v_pt.dcID;
             m_txt_so_phieu.Text = ip_us.strSO_PHIEU.Trim();
             m_txt_ho_ten_hs.Text = ip_us.strHO_TEN_HS.Trim();
             m_txt_ten_nguoi_nop_tien.Text = v_us_v_pt.strTEN_NGUOI_NOP_TIEN.Trim();
@@ -566,6 +566,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_str_trang_thai_phieu = "F430";
             m_id_gd_phieu_thu = ip_us.dcID;
             m_cmd_insert.Text = "Lưu sửa phiếu";
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            m_cmd_chon_hs.Visible = false;
+            m_txt_ho_ten_hs.BackColor = Color.AliceBlue;
+            m_txt_ho_ten_hs.ReadOnly = true;
             this.ShowDialog();
         }
         #endregion
@@ -596,7 +600,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         US_GD_CHI_TIET_PHIEU_THU m_us_gd_ct_phieu_thu = new US_GD_CHI_TIET_PHIEU_THU();
         //US_V_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
-        DataEntryFormMode m_e_form_mode;
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
         string m_str_trang_thai_phieu = "";//CLICK tu f430 thi gan = "F430"
         decimal m_id_gd_phieu_thu = 0;//Dung de lay id_gd_phieu_thu khi click tu 430
@@ -690,14 +694,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 return false;
             }
 
-            if (m_cbo_nhan_vien_nhap.SelectedIndex == 0) {
-                BaseMessages.MsgBox_Infor("Bạn chưa chọn NHÂN VIÊN NHẬP!");
-                return false;
-            }
-            if (m_cbo_nhan_vien_thu.SelectedIndex == 0) {
-                BaseMessages.MsgBox_Infor("Bạn chưa chọn NHÂN VIÊN THU!");
-                return false;
-            }
+            //if (m_cbo_nhan_vien_nhap.SelectedIndex == 0) {
+            //    BaseMessages.MsgBox_Infor("Bạn chưa chọn NHÂN VIÊN NHẬP!");
+            //    return false;
+            //}
+            //if (m_cbo_nhan_vien_thu.SelectedIndex == 0) {
+            //    BaseMessages.MsgBox_Infor("Bạn chưa chọn NHÂN VIÊN THU!");
+            //    return false;
+            //}
 
             return true;
         }
@@ -741,7 +745,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private void insert_chi_tiet_phieu_thu(decimal ip_id_phieu_thu) {
             try {
                 m_us_gd_ct_phieu_thu.BeginTransaction();
-                for (int v_i_cur_row = 0; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
+                for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
                     US_V_F340_LOP_MON_CUA_HS v_us_lm_hs = new US_V_F340_LOP_MON_CUA_HS();
                     grid2us_object(v_us_lm_hs, v_i_cur_row);
                     m_us_gd_ct_phieu_thu.dcID_LOP_MON = v_us_lm_hs.dcID_LOP_MON;
@@ -793,13 +797,48 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             if (!check_tong_tien_grid_textbox()) {
                 return;
             }
+
             decimal v_dc_id_phieu_thu = 0;
-            if (!is_exist_so_phieu(ref v_dc_id_phieu_thu)) {
-                insert_phieu_thu_ct_phieu_thu();
+            switch (m_e_form_mode) {
+                case DataEntryFormMode.InsertDataState:
+                    if (!is_exist_so_phieu(ref v_dc_id_phieu_thu)) {
+                        insert_phieu_thu_ct_phieu_thu();
+                    }
+                    else {
+                        insert_chi_tiet_phieu_thu(v_dc_id_phieu_thu);
+                    }
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    form_2_us_gd_phieu_thu();
+                    m_us_gd_phieu_thu.BeginTransaction();
+                    m_us_gd_ct_phieu_thu.UseTransOfUSObject(m_us_gd_phieu_thu);
+                    m_us_gd_phieu_thu.Update();
+
+                    //Delete het chi tiet phieu thu tu id_phieu_thu
+                    US_GD_CHI_TIET_PHIEU_THU v_us_gd_ct_pt = new US_GD_CHI_TIET_PHIEU_THU();
+                    v_us_gd_ct_pt.deleteAllFromIDPhieuThu(m_us_gd_phieu_thu.dcID);
+                    //Insert lai chi tiet phieu thu
+                    for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
+                        US_V_F340_LOP_MON_CUA_HS v_us_lm_hs = new US_V_F340_LOP_MON_CUA_HS();
+                        grid2us_object(v_us_lm_hs, v_i_cur_row);
+                        m_us_gd_ct_phieu_thu.dcID_LOP_MON = v_us_lm_hs.dcID_LOP_MON;
+                        m_us_gd_ct_phieu_thu.dcID_GD_PHIEU_THU = m_us_gd_phieu_thu.dcID;
+                        m_us_gd_ct_phieu_thu.dcSO_TIEN = CIPConvert.ToDecimal(m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_TIEN].ToString().Trim());////Cho nay de chet, can sua sau
+                        m_us_gd_ct_phieu_thu.Insert();
+                    }
+
+                    m_us_gd_phieu_thu.CommitTransaction();
+                    break;
+                default:
+                    break;
             }
-            else {
-                insert_chi_tiet_phieu_thu(v_dc_id_phieu_thu);
-            }
+            //decimal v_dc_id_phieu_thu = 0;
+            //if (!is_exist_so_phieu(ref v_dc_id_phieu_thu)) {
+            //    insert_phieu_thu_ct_phieu_thu();
+            //}
+            //else {
+            //    insert_chi_tiet_phieu_thu(v_dc_id_phieu_thu);
+            //}
             BaseMessages.MsgBox_Infor("Đã cập nhật thành công");
         }
         private void insert_v_rpt_nghiep_vu_lap_phieu_thu() {
@@ -837,7 +876,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     if (m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_TIEN] != null && m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_TIEN].ToString() != "") {
                         v_dc_tong_tien = v_dc_tong_tien + CIPConvert.ToDecimal(m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_TIEN].ToString().Trim());
                     }
-
                 }
                 m_txt_so_tien.Text = string.Format("{0:#,##0}", v_dc_tong_tien);
             }

@@ -128,5 +128,11 @@ public class US_GD_CHI_TIET_PHIEU_THU : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void deleteAllFromIDPhieuThu(decimal ip_dc_id_gd_phieu_thu) {
+        CStoredProc v_csp = new CStoredProc("pr_del_all_record_ctpt_tu_pt");
+        v_csp.addDecimalInputParam("@ip_dc_id_phieu_thu",ip_dc_id_gd_phieu_thu);
+        v_csp.ExecuteCommand(this);
+    }
+}
 }
