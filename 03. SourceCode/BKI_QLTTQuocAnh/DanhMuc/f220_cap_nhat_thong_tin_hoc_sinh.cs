@@ -38,6 +38,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             this.ShowDialog();
         }
+
+        public decimal display_from_f315()
+        {
+            m_trang_thai_hien_thi = 1;
+            this.ShowDialog();
+            return m_trang_thai_hien_thi;
+        }
+
         public DialogResult select_hoc_sinh(ref US_V_HOC_SINH m_us_v_hoc_sinh)
         {
             m_us_v_hoc_sinh = m_us;
@@ -46,7 +54,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_update.Visible = false;
             m_dgl_result = System.Windows.Forms.DialogResult.Cancel;
            // m_cmd_exit.Visible = true;
-            this.ShowDialog();
+            display_from_f315();
             return m_dgl_result;
         }
         #endregion
@@ -85,6 +93,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         ITransferDataRow m_obj_trans;
         DS_V_HOC_SINH m_ds = new DS_V_HOC_SINH();
         US_V_HOC_SINH m_us = new US_V_HOC_SINH();
+        decimal m_trang_thai_hien_thi = 0; // = 0 neu hien thi form binh thuong, = 1 neu click tu form 315- nhap hoc
         #endregion
 
         #region Private Methods
@@ -223,11 +232,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                grid2us_object(m_us, m_fg.Row);
-                m_dgl_result = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                if (m_trang_thai_hien_thi == 1)
+                {
+                    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                    if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                    grid2us_object(m_us, m_fg.Row);
+                    m_dgl_result = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
             }
             catch (Exception v_e)
             {
