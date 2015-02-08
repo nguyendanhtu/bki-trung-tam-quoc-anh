@@ -136,12 +136,6 @@
     <Compile Include="BaoCao\f450_bc_so_luong_hs_hien_nay.Designer.cs">
       <DependentUpon>f450_bc_so_luong_hs_hien_nay.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.Designer.cs">
-      <DependentUpon>F460_danh_sach_hoc_sinh_theo_lop_mon.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,12 +153,6 @@
     </Compile>
     <Compile Include="BaoCao\f490_bc_thuc_thu_theo_nv.Designer.cs">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaoCao\f_diem_danh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f_diem_danh.Designer.cs">
-      <DependentUpon>f_diem_danh.cs</DependentUpon>
     </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
@@ -307,9 +295,6 @@
     <EmbeddedResource Include="BaoCao\f450_bc_so_luong_hs_hien_nay.resx">
       <DependentUpon>f450_bc_so_luong_hs_hien_nay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\F460_danh_sach_hoc_sinh_theo_lop_mon.resx">
-      <DependentUpon>F460_danh_sach_hoc_sinh_theo_lop_mon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.resx">
       <DependentUpon>f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,9 +303,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f490_bc_thuc_thu_theo_nv.resx">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f_diem_danh.resx">
-      <DependentUpon>f_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
