@@ -317,33 +317,35 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_lbl_vnd
             // 
             this.m_lbl_vnd.AutoSize = true;
-            this.m_lbl_vnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_vnd.Location = new System.Drawing.Point(354, 211);
+            this.m_lbl_vnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_vnd.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_vnd.Location = new System.Drawing.Point(366, 200);
             this.m_lbl_vnd.Name = "m_lbl_vnd";
-            this.m_lbl_vnd.Size = new System.Drawing.Size(53, 20);
+            this.m_lbl_vnd.Size = new System.Drawing.Size(62, 24);
             this.m_lbl_vnd.TabIndex = 83;
             this.m_lbl_vnd.Text = "(VNĐ)";
             // 
             // m_txt_so_tien
             // 
             this.m_txt_so_tien.BackColor = System.Drawing.SystemColors.Info;
-            this.m_txt_so_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_txt_so_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_so_tien.ForeColor = System.Drawing.Color.Maroon;
-            this.m_txt_so_tien.Location = new System.Drawing.Point(133, 208);
+            this.m_txt_so_tien.Location = new System.Drawing.Point(133, 197);
             this.m_txt_so_tien.Name = "m_txt_so_tien";
-            this.m_txt_so_tien.Size = new System.Drawing.Size(219, 26);
+            this.m_txt_so_tien.Size = new System.Drawing.Size(219, 29);
             this.m_txt_so_tien.TabIndex = 11;
             this.m_txt_so_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_lbl_so_tien
             // 
             this.m_lbl_so_tien.AutoSize = true;
-            this.m_lbl_so_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_so_tien.Location = new System.Drawing.Point(12, 211);
+            this.m_lbl_so_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_so_tien.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_so_tien.Location = new System.Drawing.Point(12, 200);
             this.m_lbl_so_tien.Name = "m_lbl_so_tien";
-            this.m_lbl_so_tien.Size = new System.Drawing.Size(88, 20);
+            this.m_lbl_so_tien.Size = new System.Drawing.Size(85, 24);
             this.m_lbl_so_tien.TabIndex = 10;
-            this.m_lbl_so_tien.Text = "SỐ TIỀN(*)";
+            this.m_lbl_so_tien.Text = "SỐ TIỀN";
             // 
             // m_cmd_chon_hs
             // 
@@ -361,6 +363,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_cbo_nhan_vien_thu
             // 
+            this.m_cbo_nhan_vien_thu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhan_vien_thu.FormattingEnabled = true;
             this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(591, 9);
             this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
@@ -369,10 +372,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_cbo_nhan_vien_nhap
             // 
+            this.m_cbo_nhan_vien_nhap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhan_vien_nhap.FormattingEnabled = true;
             this.m_cbo_nhan_vien_nhap.Location = new System.Drawing.Point(591, 45);
             this.m_cbo_nhan_vien_nhap.Name = "m_cbo_nhan_vien_nhap";
-            this.m_cbo_nhan_vien_nhap.Size = new System.Drawing.Size(127, 21);
+            this.m_cbo_nhan_vien_nhap.Size = new System.Drawing.Size(190, 21);
             this.m_cbo_nhan_vien_nhap.TabIndex = 14;
             // 
             // m_lbl_ngay_thu
@@ -390,7 +394,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_dat_ngay_nhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_ngay_nhap.Location = new System.Drawing.Point(591, 79);
             this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
-            this.m_dat_ngay_nhap.Size = new System.Drawing.Size(84, 20);
+            this.m_dat_ngay_nhap.Size = new System.Drawing.Size(127, 20);
             this.m_dat_ngay_nhap.TabIndex = 16;
             // 
             // m_dat_ngay_thu
@@ -399,7 +403,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_dat_ngay_thu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_ngay_thu.Location = new System.Drawing.Point(133, 36);
             this.m_dat_ngay_thu.Name = "m_dat_ngay_thu";
-            this.m_dat_ngay_thu.Size = new System.Drawing.Size(103, 20);
+            this.m_dat_ngay_thu.Size = new System.Drawing.Size(137, 20);
             this.m_dat_ngay_thu.TabIndex = 3;
             // 
             // m_txt_noi_dung
@@ -455,8 +459,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             // m_txt_ho_ten_hs
             // 
+            this.m_txt_ho_ten_hs.BackColor = System.Drawing.SystemColors.Info;
             this.m_txt_ho_ten_hs.Location = new System.Drawing.Point(133, 65);
             this.m_txt_ho_ten_hs.Name = "m_txt_ho_ten_hs";
+            this.m_txt_ho_ten_hs.ReadOnly = true;
             this.m_txt_ho_ten_hs.Size = new System.Drawing.Size(219, 20);
             this.m_txt_ho_ten_hs.TabIndex = 5;
             // 
@@ -491,7 +497,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // 
             this.m_txt_so_phieu.Location = new System.Drawing.Point(133, 6);
             this.m_txt_so_phieu.Name = "m_txt_so_phieu";
-            this.m_txt_so_phieu.Size = new System.Drawing.Size(103, 20);
+            this.m_txt_so_phieu.Size = new System.Drawing.Size(137, 20);
             this.m_txt_so_phieu.TabIndex = 1;
             // 
             // f340_lap_phieu_thu
