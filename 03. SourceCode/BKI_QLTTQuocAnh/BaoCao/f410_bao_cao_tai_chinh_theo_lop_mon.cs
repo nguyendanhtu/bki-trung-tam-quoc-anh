@@ -215,14 +215,21 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
             this.KeyDown += f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown;
             m_fg.DoubleClick += m_fg_DoubleClick;
-           
+
         }
 
         void f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -238,8 +245,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
                 F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh v_frm = new F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh();
                 v_frm.display(m_dat_tu_ngay.Value.Date
-                                ,m_dat_den_ngay.Value.Date
-                                ,v_us.dcID
+                                , m_dat_den_ngay.Value.Date
+                                , v_us.dcID
                                 );
             }
             catch (Exception v_e)
