@@ -332,5 +332,11 @@ namespace BKI_QLTTQuocAnh.US {
         }
         #endregion
 
+
+        public void FillThongTinHS(DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU op_ds, decimal ip_dc_id_lop_mon) {
+            CStoredProc v_csp = new CStoredProc("pr_gen_thong_tin_hoc_sinh_theo_lop");
+            v_csp.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_csp.fillDataSetByCommand(this, op_ds);
+        }
     }
 }
