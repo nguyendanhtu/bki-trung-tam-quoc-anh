@@ -70,44 +70,58 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.KeyPreview = true;
 
         }
-        private void load_data_2_cbo_lop_mon()
-        {
-            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
 
-            //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
-            //v_dr[DM_LOP_MON.ID] = -1;
-            //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+        //private void load_data_2_cbo_lop_mon()
+        //{
+        //    DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+        //    US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+        //    v_us.FillDataset(v_ds);
 
-            //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
-            m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
-            m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
-        }
-        private void load_data_2_cbo_nguoi_su_dung()
-        {
-            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
-            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
-            v_us.FillDataset(v_ds);
+        //    //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+        //    //v_dr[DM_LOP_MON.ID] = -1;
+        //    //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
 
-            //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
-            //v_dr[DM_LOP_MON.ID] = -1;
-            //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+        //    //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+        //    m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
+        //    m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
+        //    m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
+        //}
 
-            //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+        //private void load_data_2_cbo_nguoi_su_dung()
+        //{
+        //    DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
+        //    US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+        //    v_us.FillDataset(v_ds);
 
-            m_cbo_nguoi_diem_danh.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
-            m_cbo_nguoi_diem_danh.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
-            m_cbo_nguoi_diem_danh.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
-        }
+        //    //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+        //    //v_dr[DM_LOP_MON.ID] = -1;
+        //    //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+
+        //    //v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+        //    m_cbo_nguoi_diem_danh.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
+        //    m_cbo_nguoi_diem_danh.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
+        //    m_cbo_nguoi_diem_danh.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
+        //}
+
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            load_data_2_cbo_lop_mon();
-            load_data_2_cbo_nguoi_su_dung();
+            //load_data_2_cbo_lop_mon();
+            //load_data_2_cbo_nguoi_su_dung();
+            CCommon.load_data_2_cbo_lop_mon(
+                -1
+                , m_cbo_lop_mon);
+            CCommon.load_data_2_cbo_nhan_vien(
+                CAppContext_201.getCurrentUserID()
+                , m_cbo_nguoi_diem_danh);
             WinFormControls.load_data_to_cbo_tu_dien(WinFormControls.eLOAI_TU_DIEN.DM_CA_HOC, WinFormControls.eTAT_CA.NO, m_cbo_ca_hoc);
-            load_data_2_grid();
+            if ((CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue) != -1) && (CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue) != -1))
+            {
+                load_data_2_grid();
+            }
+            else
+                return;
         }
 
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -234,6 +248,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
             m_fg.Redraw = true;
         }
+
         private void update_di_hoc()
         {
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
@@ -260,6 +275,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         }
 
         #endregion
+
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
