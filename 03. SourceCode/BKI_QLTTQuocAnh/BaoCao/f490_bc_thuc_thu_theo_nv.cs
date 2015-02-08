@@ -100,7 +100,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-       
+
         private void create_tree_2grid()
         {
             m_fg.Redraw = false;
@@ -211,7 +211,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	f490_bc_thuc_thu_theo_nv_DE v_fDE = new f490_bc_thuc_thu_theo_nv_DE();			
             //	v_fDE.display(m_us);
         }
-        
+
         #endregion
 
         //
@@ -233,9 +233,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f490_bc_thuc_thu_theo_nv_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
