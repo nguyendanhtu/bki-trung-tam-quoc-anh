@@ -193,6 +193,7 @@ namespace BKI_QLTTQuocAnh.US
             v_obj.ExecuteCommand(this);
             op_dc_id_gd_hoc = CIPConvert.ToDecimal(v_id_gd_hoc.Value);
         }
+
         public void check_hoc_sinh_lm(decimal ip_dc_id_hoc_sinh, decimal ip_dc_id_lop_mon, ref string op_ket_qua_yn)
         {
             CStoredProc v_obj_spr = new CStoredProc("f315_check_hs_trong_lm");

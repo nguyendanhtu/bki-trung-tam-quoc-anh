@@ -33,7 +33,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         #region Data Structure
         private enum e_col_Number
         {
-            
+
             MA_DOI_TUONG = 1
                 ,
             HO_TEN = 4
@@ -42,17 +42,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 ,
             HO = 2
                 ,
-            ID_HOC_SINH = 7
+            ID_HOC_SINH = 7,
 
         }
         #endregion
 
         #region Members
+        DataEntryFormMode m_e_form_mode;
         ITransferDataRow m_obj_trans;
         DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
         US_V_DM_HOC_SINH m_us = new US_V_DM_HOC_SINH();
         DS_GD_DIEM_DANH m_ds_diem_danh = new DS_GD_DIEM_DANH();
-        US_GD_DIEM_DANH m_us_diem_danh = new US_GD_DIEM_DANH(); 
+        US_GD_DIEM_DANH m_us_diem_danh = new US_GD_DIEM_DANH();
         #endregion
 
         #region Private Methods
@@ -60,7 +61,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            
+
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -144,40 +145,126 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_us_dm_lop_mon.strMO_TA = m_txt_mo_ta.Text;
             m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC = CIPConvert.ToDecimal(m_txt_don_gia.Text);*/
         }
-        private void insert_v_dm_hoc_sinh()
+
+        private void diem_danh_lop_mon()
         {
-            DS_GD_DIEM_DANH v_ds_diem_danh = new DS_GD_DIEM_DANH();
-            US_GD_DIEM_DANH v_us_diem_danh = new US_GD_DIEM_DANH();
             for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
             {
-                if (m_fg.GetCellCheck(i, 5) == CheckEnum.Checked)
+                DS_GD_DIEM_DANH v_ds_diem_danh = new DS_GD_DIEM_DANH();
+                US_GD_DIEM_DANH v_us_diem_danh = new US_GD_DIEM_DANH();
+
+                US_V_DM_HOC_SINH v_us_dm_hs = new US_V_DM_HOC_SINH();
+                decimal op_dc_id_gd_diem_danh = 0;
+
+                if ((m_fg.GetCellCheck(i, 5) == CheckEnum.Checked) && (v_us_diem_danh.check_diem_danh_hs(
+                                                                            CIPConvert.ToDecimal(m_fg.Rows[i][(int)e_col_Number.ID_HOC_SINH])
+                                                                            , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                                                                            , CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue)
+                                                                            , m_dat_tai_ngay.Value.Date
+                                                                            , ref op_dc_id_gd_diem_danh)))
+                {
+                    continue;
+                }
+                else if ((m_fg.GetCellCheck(i, 5) == CheckEnum.Checked) && (!v_us_diem_danh.check_diem_danh_hs(
+                                                                            CIPConvert.ToDecimal(m_fg.Rows[i][(int)e_col_Number.ID_HOC_SINH])
+                                                                            , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                                                                            , CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue)
+                                                                            , m_dat_tai_ngay.Value.Date
+                                                                            , ref op_dc_id_gd_diem_danh)))
                 {
                     v_us_diem_danh.dcID_HOC_SINH = CIPConvert.ToDecimal(m_fg.Rows[i][(int)e_col_Number.ID_HOC_SINH]);
                     v_us_diem_danh.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
                     v_us_diem_danh.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue);
                     v_us_diem_danh.dcID_NGUOI_DIEM_DANH = CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue);
-                    v_us_diem_danh.datNGAY_HOC = m_dat_tu_ngay.Value.Date;
+                    v_us_diem_danh.datNGAY_HOC = m_dat_tai_ngay.Value.Date;
                     v_us_diem_danh.dcID_CA_HOC = CIPConvert.ToDecimal(m_cbo_ca_hoc.SelectedValue);
                     v_us_diem_danh.Insert();
+                }
+                else if ((m_fg.GetCellCheck(i, 5) == CheckEnum.Unchecked) && (v_us_diem_danh.check_diem_danh_hs(
+                                                                            CIPConvert.ToDecimal(m_fg.Rows[i][(int)e_col_Number.ID_HOC_SINH])
+                                                                            , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                                                                            , CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue)
+                                                                            , m_dat_tai_ngay.Value.Date
+                                                                            , ref op_dc_id_gd_diem_danh)))
+                {
+                    v_us_diem_danh.dcID = op_dc_id_gd_diem_danh;
+                    v_us_diem_danh.Delete();
+                }
+                else
+                {
+                    continue;
                 }
             }
             BaseMessages.MsgBox_Infor("Bạn đã điểm danh thành công!!!");
         }
 
+        //private void insert_gd_diem_danh()
+        //{
+        //    for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
+        //    {
+        //        if (m_fg.GetCellCheck(i, 5) == CheckEnum.Checked)
+        //        {
+        //            DS_GD_DIEM_DANH v_ds_diem_danh = new DS_GD_DIEM_DANH();
+        //            US_GD_DIEM_DANH v_us_diem_danh = new US_GD_DIEM_DANH();
+        //            v_us_diem_danh.dcID_HOC_SINH = CIPConvert.ToDecimal(m_fg.Rows[i][(int)e_col_Number.ID_HOC_SINH]);
+        //            v_us_diem_danh.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
+        //            v_us_diem_danh.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue);
+        //            v_us_diem_danh.dcID_NGUOI_DIEM_DANH = CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue);
+        //            v_us_diem_danh.datNGAY_HOC = m_dat_tai_ngay.Value.Date;
+        //            v_us_diem_danh.dcID_CA_HOC = CIPConvert.ToDecimal(m_cbo_ca_hoc.SelectedValue);
+        //            v_us_diem_danh.Insert();
+        //        }
+        //    }
+        //    BaseMessages.MsgBox_Infor("Bạn đã điểm danh thành công!!!");
+        //}
+
         private void load_data_2_grid()
         {
             DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
             m_ds.EnforceConstraints = false;
-                m_us.FillDataset_danh_sach_hoc_sinh_theo_lop_mon(m_ds,CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+            m_us.FillDataset_danh_sach_hoc_sinh_theo_lop_mon(m_ds
+                , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                , CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue)
+                , m_dat_tai_ngay.Value.Date
+                );
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+
+            update_di_hoc();
+
             m_fg.Redraw = true;
         }
+        private void update_di_hoc()
+        {
+            for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
+            {
+                US_V_DM_HOC_SINH v_us_dm_hs = new US_V_DM_HOC_SINH();
+                grid2us_object(v_us_dm_hs, v_i_cur_row);
+
+                decimal op_dc_id_gd_diem_danh = 0;
+
+                if (!v_us_dm_hs.check_diem_danh_hs(
+                    CIPConvert.ToDecimal(m_fg.Rows[v_i_cur_row][(int)e_col_Number.ID_HOC_SINH])
+                    , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
+                    , CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue)
+                    , m_dat_tai_ngay.Value.Date
+                    , ref op_dc_id_gd_diem_danh))
+                {
+                    m_fg.SetCellCheck(v_i_cur_row, 5, CheckEnum.None);
+                }
+                else
+                {
+                    m_fg.SetCellCheck(v_i_cur_row, 5, CheckEnum.Checked);
+                }
+            }
+        }
+
         #endregion
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_diem_danh.Click += new EventHandler(m_cmd_diem_danh_Click);
+            m_cmd_search.Click += m_cmd_search_Click;
             this.KeyDown += f320_diem_danh_KeyDown;
         }
 
@@ -194,13 +281,13 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 load_data_2_grid();
-
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
         private void f230_danh_muc_hs_theo_lop_Load(object sender, System.EventArgs e)
         {
             try
@@ -226,18 +313,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
         }
 
-        private void m_cmd_insert_Click(object sender, EventArgs e)
+        private void m_cmd_diem_danh_Click(object sender, EventArgs e)
         {
             try
             {
-                insert_v_dm_hoc_sinh();
+                //insert_v_dm_hoc_sinh();
+                diem_danh_lop_mon();
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
 
         private void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
         {
