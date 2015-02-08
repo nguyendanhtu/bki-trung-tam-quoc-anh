@@ -45,14 +45,21 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f_diem_danh_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Escape)
+            try
             {
-                this.Close();
+                if (e.KeyChar == (char)Keys.Escape)
+                {
+                    this.Close();
+                }
+                else if (e.KeyChar == (char)Keys.Enter)
+                {
+
+                }
             }
-            else if (e.KeyChar == (char)Keys.Enter)
+            catch (Exception v_e)
             {
-                
-            }
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void f_diem_danh_Load(object sender, EventArgs e)
