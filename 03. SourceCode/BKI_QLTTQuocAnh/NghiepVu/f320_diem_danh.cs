@@ -116,7 +116,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 CAppContext_201.getCurrentUserID()
                 , m_cbo_nguoi_diem_danh);
             WinFormControls.load_data_to_cbo_tu_dien(WinFormControls.eLOAI_TU_DIEN.DM_CA_HOC, WinFormControls.eTAT_CA.NO, m_cbo_ca_hoc);
-            if ((CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue) != -1) && (CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue) != -1))
+            if (/*(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue) != -1)&&*/  (CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue) != -1))
             {
                 load_data_2_grid();
             }
