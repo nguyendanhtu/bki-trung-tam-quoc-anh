@@ -16,179 +16,231 @@ using System.Data;
 
 
 
-namespace BKI_QLTTQuocAnh.US{
-
-public class US_GD_DIEM_DANH : US_Object
+namespace BKI_QLTTQuocAnh.US
 {
-	private const string c_TableName = "GD_DIEM_DANH";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
+    public class US_GD_DIEM_DANH : US_Object
+    {
+        private const string c_TableName = "GD_DIEM_DANH";
+        #region "Public Properties"
+        public decimal dcID
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID"] = value;
+            }
+        }
 
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+        public bool IsIDNull()
+        {
+            return pm_objDR.IsNull("ID");
+        }
 
-	public decimal dcID_HOC_SINH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_HOC_SINH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_HOC_SINH"] = value;
-		}
-	}
+        public void SetIDNull()
+        {
+            pm_objDR["ID"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_HOC_SINHNull()	{
-		return pm_objDR.IsNull("ID_HOC_SINH");
-	}
+        public decimal dcID_HOC_SINH
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_HOC_SINH", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_HOC_SINH"] = value;
+            }
+        }
 
-	public void SetID_HOC_SINHNull() {
-		pm_objDR["ID_HOC_SINH"] = System.Convert.DBNull;
-	}
+        public bool IsID_HOC_SINHNull()
+        {
+            return pm_objDR.IsNull("ID_HOC_SINH");
+        }
 
-	public decimal dcID_NGUOI_NHAP 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_NHAP", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGUOI_NHAP"] = value;
-		}
-	}
+        public void SetID_HOC_SINHNull()
+        {
+            pm_objDR["ID_HOC_SINH"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_NGUOI_NHAPNull()	{
-		return pm_objDR.IsNull("ID_NGUOI_NHAP");
-	}
+        public decimal dcID_NGUOI_NHAP
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_NHAP", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGUOI_NHAP"] = value;
+            }
+        }
 
-	public void SetID_NGUOI_NHAPNull() {
-		pm_objDR["ID_NGUOI_NHAP"] = System.Convert.DBNull;
-	}
+        public bool IsID_NGUOI_NHAPNull()
+        {
+            return pm_objDR.IsNull("ID_NGUOI_NHAP");
+        }
 
-	public decimal dcID_NGUOI_DIEM_DANH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_DIEM_DANH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NGUOI_DIEM_DANH"] = value;
-		}
-	}
+        public void SetID_NGUOI_NHAPNull()
+        {
+            pm_objDR["ID_NGUOI_NHAP"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_NGUOI_DIEM_DANHNull()	{
-		return pm_objDR.IsNull("ID_NGUOI_DIEM_DANH");
-	}
+        public decimal dcID_NGUOI_DIEM_DANH
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NGUOI_DIEM_DANH", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NGUOI_DIEM_DANH"] = value;
+            }
+        }
 
-	public void SetID_NGUOI_DIEM_DANHNull() {
-		pm_objDR["ID_NGUOI_DIEM_DANH"] = System.Convert.DBNull;
-	}
+        public bool IsID_NGUOI_DIEM_DANHNull()
+        {
+            return pm_objDR.IsNull("ID_NGUOI_DIEM_DANH");
+        }
 
-	public decimal dcID_LOP_MON 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_LOP_MON"] = value;
-		}
-	}
+        public void SetID_NGUOI_DIEM_DANHNull()
+        {
+            pm_objDR["ID_NGUOI_DIEM_DANH"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_LOP_MONNull()	{
-		return pm_objDR.IsNull("ID_LOP_MON");
-	}
+        public decimal dcID_LOP_MON
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_LOP_MON"] = value;
+            }
+        }
 
-	public void SetID_LOP_MONNull() {
-		pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
-	}
+        public bool IsID_LOP_MONNull()
+        {
+            return pm_objDR.IsNull("ID_LOP_MON");
+        }
 
-	public DateTime datNGAY_HOC
-	{
-		get   
-		{
-			return CNull.RowNVLDate(pm_objDR, "NGAY_HOC", IPConstants.c_DefaultDate);
-		}
-		set   
-		{
-			pm_objDR["NGAY_HOC"] = value;
-		}
-	}
+        public void SetID_LOP_MONNull()
+        {
+            pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
+        }
 
-	public bool IsNGAY_HOCNull()
-	{
-		return pm_objDR.IsNull("NGAY_HOC");
-	}
+        public DateTime datNGAY_HOC
+        {
+            get
+            {
+                return CNull.RowNVLDate(pm_objDR, "NGAY_HOC", IPConstants.c_DefaultDate);
+            }
+            set
+            {
+                pm_objDR["NGAY_HOC"] = value;
+            }
+        }
 
-	public void SetNGAY_HOCNull()
-	{
-		pm_objDR["NGAY_HOC"] = System.Convert.DBNull;
-	}
+        public bool IsNGAY_HOCNull()
+        {
+            return pm_objDR.IsNull("NGAY_HOC");
+        }
 
-	public decimal dcID_CA_HOC 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_CA_HOC", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_CA_HOC"] = value;
-		}
-	}
+        public void SetNGAY_HOCNull()
+        {
+            pm_objDR["NGAY_HOC"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_CA_HOCNull()	{
-		return pm_objDR.IsNull("ID_CA_HOC");
-	}
+        public decimal dcID_CA_HOC
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_CA_HOC", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_CA_HOC"] = value;
+            }
+        }
 
-	public void SetID_CA_HOCNull() {
-		pm_objDR["ID_CA_HOC"] = System.Convert.DBNull;
-	}
+        public bool IsID_CA_HOCNull()
+        {
+            return pm_objDR.IsNull("ID_CA_HOC");
+        }
 
-#endregion
-#region "Init Functions"
-	public US_GD_DIEM_DANH() 
-	{
-		pm_objDS = new DS_GD_DIEM_DANH();
-		pm_strTableName = c_TableName;
-		pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
-	}
+        public void SetID_CA_HOCNull()
+        {
+            pm_objDR["ID_CA_HOC"] = System.Convert.DBNull;
+        }
 
-	public US_GD_DIEM_DANH(DataRow i_objDR): this()
-	{
-		this.DataRow2Me(i_objDR);
-	}
+        #endregion
+        #region "Init Functions"
+        public US_GD_DIEM_DANH()
+        {
+            pm_objDS = new DS_GD_DIEM_DANH();
+            pm_strTableName = c_TableName;
+            pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
+        }
 
-	public US_GD_DIEM_DANH(decimal i_dbID) 
-	{
-		pm_objDS = new DS_GD_DIEM_DANH();
-		pm_strTableName = c_TableName;
-		IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
-		v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
-		SqlCommand v_cmdSQL;
-		v_cmdSQL = v_objMkCmd.getSelectCmd();
-		this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
-		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
-	}
-#endregion
-	}
+        public US_GD_DIEM_DANH(DataRow i_objDR)
+            : this()
+        {
+            this.DataRow2Me(i_objDR);
+        }
+
+        public US_GD_DIEM_DANH(decimal i_dbID)
+        {
+            pm_objDS = new DS_GD_DIEM_DANH();
+            pm_strTableName = c_TableName;
+            IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
+            v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
+            SqlCommand v_cmdSQL;
+            v_cmdSQL = v_objMkCmd.getSelectCmd();
+            this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
+            pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
+        }
+        #endregion
+
+        #region Addtitonal
+        public void Find_ID_GD_DIEM_DANH(decimal ip_dc_id_lop_mon, DateTime ip_dat_tai_ngay, ref decimal op_dc_id_gd_diem_danh)
+        {
+            CStoredProc v_obj = new CStoredProc("pr_get_id_diem_danh_by_id_lop_mon_va_ngay_diem_danh");
+
+            v_obj.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_obj.addDatetimeInputParam("@ip_dat_tai_ngay", ip_dat_tai_ngay);
+            SqlParameter v_id_gd_diem_danh = v_obj.addDecimalOutputParam("@op_dc_id_gd_diem_danh", 0);
+            v_obj.ExecuteCommand(this);
+            op_dc_id_gd_diem_danh = CIPConvert.ToDecimal(v_id_gd_diem_danh.Value);
+        }
+        public bool check_diem_danh_hs(
+            decimal ip_dc_id_hoc_sinh
+            , decimal ip_dc_id_lop_mon
+            , decimal ip_dc_id_nguoi_diem_danh
+            , DateTime ip_dat_tai_ngay
+            , ref decimal op_dc_id_gd_diem_danh)
+        {
+            DS_GD_DIEM_DANH op_ds_diem_danh = new DS_GD_DIEM_DANH();
+            CStoredProc v_obj_spr = new CStoredProc("pr_kiem_tra_hoc_sinh_diem_danh");
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_hoc_sinh", ip_dc_id_hoc_sinh);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_nguoi_diem_danh", ip_dc_id_nguoi_diem_danh);
+            v_obj_spr.addDatetimeInputParam("@ip_dat_tai_ngay", ip_dat_tai_ngay);
+            SqlParameter v_id_gd_diem_danh = v_obj_spr.addDecimalOutputParam("@op_dc_id_gd_diem_danh", 0);
+
+            v_obj_spr.ExecuteCommand(this);
+
+            op_dc_id_gd_diem_danh = CIPConvert.ToDecimal(v_id_gd_diem_danh.Value);
+            if (op_dc_id_gd_diem_danh == -1)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+        #endregion
+    }
 }
