@@ -286,10 +286,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         void f320_diem_danh_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

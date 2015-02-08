@@ -214,10 +214,17 @@ namespace BKI_QLTTQuocAnh
 
         void f221_cap_nhat_thong_tin_hoc_sinh_de_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            try
             {
-                this.Close();
+                if (e.KeyCode == Keys.Escape)
+                {
+                    this.Close();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_exit_Click(object sender, EventArgs e)

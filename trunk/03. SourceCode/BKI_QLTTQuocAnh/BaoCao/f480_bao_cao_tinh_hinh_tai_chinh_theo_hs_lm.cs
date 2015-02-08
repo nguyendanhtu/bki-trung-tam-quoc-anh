@@ -293,10 +293,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
