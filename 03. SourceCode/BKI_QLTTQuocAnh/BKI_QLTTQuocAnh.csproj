@@ -173,12 +173,6 @@
     <Compile Include="DanhMuc\f230_danh_muc_hs_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f231_danh_muc_hoc_sinh_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f231_danh_muc_hoc_sinh_de.Designer.cs">
-      <DependentUpon>f231_danh_muc_hoc_sinh_de.cs</DependentUpon>
-    </Compile>
     <Compile Include="f221_cap_nhat_thong_tin_hoc_sinh_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,9 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f230_danh_muc_hs_theo_lop.resx">
       <DependentUpon>f230_danh_muc_hs_theo_lop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f231_danh_muc_hoc_sinh_de.resx">
-      <DependentUpon>f231_danh_muc_hoc_sinh_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f221_cap_nhat_thong_tin_hoc_sinh_de.resx">
       <DependentUpon>f221_cap_nhat_thong_tin_hoc_sinh_de.cs</DependentUpon>
