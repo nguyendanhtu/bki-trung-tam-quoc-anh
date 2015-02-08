@@ -468,17 +468,22 @@ namespace BKI_QLTTQuocAnh
             m_ds = new DS_V_DM_HOC_SINH();
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
+            string m_str_trang_thai_hoc = null;
             if (m_trang_thai_hien_thi == 0)
             {
+                m_str_trang_thai_hoc = "";
                 m_us.FillDataset(m_ds
                     , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
-                    , m_txt_search.Text.Trim());
+                    , m_txt_search.Text.Trim()
+                    , m_str_trang_thai_hoc);
             }
             else
             {
+                m_str_trang_thai_hoc = "Y";
                 m_us.FillDataset(m_ds
                     , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
-                    , m_txt_search.Text.Trim());
+                    , m_txt_search.Text.Trim()
+                    , m_str_trang_thai_hoc);
             }
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
