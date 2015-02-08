@@ -593,10 +593,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
         }
 
 		private void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load(object sender, System.EventArgs e) {

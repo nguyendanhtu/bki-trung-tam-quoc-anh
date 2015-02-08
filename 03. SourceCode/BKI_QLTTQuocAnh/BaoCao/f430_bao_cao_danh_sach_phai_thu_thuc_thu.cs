@@ -24,8 +24,10 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.NghiepVu;
 using C1.Win.C1FlexGrid;
 
-namespace BKI_QLTTQuocAnh {
-    public class f430_bao_cao_danh_sach_phai_thu_thuc_thu : System.Windows.Forms.Form {
+namespace BKI_QLTTQuocAnh
+{
+    public class f430_bao_cao_danh_sach_phai_thu_thuc_thu : System.Windows.Forms.Form
+    {
         #region Design_Form
         internal System.Windows.Forms.ImageList ImageList;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
@@ -52,7 +54,8 @@ namespace BKI_QLTTQuocAnh {
         private System.ComponentModel.IContainer components;
         #endregion
 
-        public f430_bao_cao_danh_sach_phai_thu_thuc_thu() {
+        public f430_bao_cao_danh_sach_phai_thu_thuc_thu()
+        {
             //
             // Required for Windows Form Designer support
             //
@@ -67,9 +70,12 @@ namespace BKI_QLTTQuocAnh {
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose(bool disposing) {
-            if (disposing) {
-                if (components != null) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
                     components.Dispose();
                 }
             }
@@ -81,7 +87,8 @@ namespace BKI_QLTTQuocAnh {
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f430_bao_cao_danh_sach_phai_thu_thuc_thu));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -436,10 +443,12 @@ namespace BKI_QLTTQuocAnh {
         #endregion
 
         #region Public Interface
-        public void display() {
+        public void display()
+        {
             this.ShowDialog();
         }
-        public void display_from_f470(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay) {
+        public void display_from_f470(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
+        {
             m_us_bc_tinh_hinh_tc = ip_us;
             m_dat_tu_ngay.Value = ip_dat_tu_ngay;
             m_dat_den_ngay.Value = ip_dat_den_ngay;
@@ -448,7 +457,8 @@ namespace BKI_QLTTQuocAnh {
 
             this.ShowDialog();
         }
-        public void display_phieu_phai_thu() {
+        public void display_phieu_phai_thu()
+        {
             m_str_option_hien_thi = "PHAI_THU";
             m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu phải thu theo nhân viên";
@@ -459,7 +469,8 @@ namespace BKI_QLTTQuocAnh {
 
             this.ShowDialog();
         }
-        public void display_phieu_thuc_thu() {
+        public void display_phieu_thuc_thu()
+        {
             m_str_option_hien_thi = "THUC_THU";
             m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu thực thu theo nhân viên";
@@ -473,7 +484,8 @@ namespace BKI_QLTTQuocAnh {
         #endregion
 
         #region Data Structure
-        private enum e_col_Number {
+        private enum e_col_Number
+        {
             NGUOI_THU = 7
 ,
             SO_PHIEU = 2
@@ -511,7 +523,8 @@ namespace BKI_QLTTQuocAnh {
         #endregion
 
         #region Private Methods
-        private void format_controls() {
+        private void format_controls()
+        {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);//Xuat excel
@@ -534,19 +547,22 @@ namespace BKI_QLTTQuocAnh {
             set_define_events();
             this.KeyPreview = true;
         }
-        private void set_initial_form_load() {
+        private void set_initial_form_load()
+        {
             m_obj_trans = get_trans_object(m_fg);
             CCommon.load_data_2_cbo_nhan_vien(
                 CAppContext_201.getCurrentUserID()
                 , m_cbo_nhan_vien_thu);
             load_data_2_grid();
         }
-        private void wrap_text_cell() {
+        private void wrap_text_cell()
+        {
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
+        {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGUOI_THU, e_col_Number.NGUOI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
@@ -564,9 +580,10 @@ namespace BKI_QLTTQuocAnh {
             return v_obj_trans;
         }
 
-        
 
-        private void create_tree_2grid() {
+
+        private void create_tree_2grid()
+        {
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
@@ -594,10 +611,12 @@ namespace BKI_QLTTQuocAnh {
             m_fg.Redraw = true;
         }
 
-        private void load_data_2_grid() {
+        private void load_data_2_grid()
+        {
             m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
 
-            switch (m_str_option_hien_thi) {
+            switch (m_str_option_hien_thi)
+            {
                 case "THUC_THU":
                     m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
                     m_dat_den_ngay.Value = DateTime.Now.Date;
@@ -642,7 +661,7 @@ namespace BKI_QLTTQuocAnh {
                              , m_dat_tu_ngay.Value.Date
                              , m_dat_den_ngay.Value.Date
                              , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-                             ,-1
+                             , -1
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 default:
@@ -657,7 +676,8 @@ namespace BKI_QLTTQuocAnh {
         }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
-            , int i_grid_row) {
+            , int i_grid_row)
+        {
             DataRow v_dr;
             v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
@@ -666,29 +686,35 @@ namespace BKI_QLTTQuocAnh {
 
 
         private void us_object2grid(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
-            , int i_grid_row) {
+            , int i_grid_row)
+        {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-        private bool check_ban_giao_is_da_thu_or_admin(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us_rpt) {
-            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID())) {
+        private bool check_ban_giao_is_da_thu_or_admin(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us_rpt)
+        {
+            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
+            {
                 return true;
             }
             US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
-            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO) {
+            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO)
+            {
                 return false;
             }
             return true;
         }
 
-        private void insert_v_rpt_bao_cao_danh_sach_phieu_thu() {
+        private void insert_v_rpt_bao_cao_danh_sach_phieu_thu()
+        {
             //	f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE v_fDE = new  f430_bao_cao_danh_sach_phai_thu_thuc_thu_DE();								
             //	v_fDE.display();
             load_data_2_grid();
         }
 
-        private void update_v_rpt_bao_cao_danh_sach_phieu_thu() {
+        private void update_v_rpt_bao_cao_danh_sach_phieu_thu()
+        {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
@@ -697,19 +723,22 @@ namespace BKI_QLTTQuocAnh {
             load_data_2_grid();
         }
 
-        private void delete_v_rpt_bao_cao_danh_sach_phieu_thu() {
+        private void delete_v_rpt_bao_cao_danh_sach_phieu_thu()
+        {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             grid2us_object(v_us, m_fg.Row);
-            try {
+            try
+            {
                 v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 v_us.Rollback();
                 CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
                     new CDBClientDBExceptionInterpret());
@@ -717,7 +746,8 @@ namespace BKI_QLTTQuocAnh {
             }
         }
 
-        private void view_v_rpt_bao_cao_danh_sach_phieu_thu() {
+        private void view_v_rpt_bao_cao_danh_sach_phieu_thu()
+        {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
@@ -733,7 +763,8 @@ namespace BKI_QLTTQuocAnh {
         //		EVENT HANLDERS
         //
         //
-        private void set_define_events() {
+        private void set_define_events()
+        {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
@@ -743,20 +774,33 @@ namespace BKI_QLTTQuocAnh {
             this.KeyDown += f430_bao_cao_danh_sach_phai_thu_thuc_thu_KeyDown;
         }
 
-        void f430_bao_cao_danh_sach_phai_thu_thuc_thu_KeyDown(object sender, KeyEventArgs e) {
-            if (e.KeyCode == Keys.Enter) {
-                load_data_2_grid();
+        void f430_bao_cao_danh_sach_phai_thu_thuc_thu_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
         }
 
-        void m_fg_DoubleClick(object sender, EventArgs e) {
-            try {
+        void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(v_us, m_fg.Row);
 
-                if (!check_ban_giao_is_da_thu_or_admin(v_us)) {
+                if (!check_ban_giao_is_da_thu_or_admin(v_us))
+                {
                     BaseMessages.MsgBox_Infor("Phiếu này đã bàn giao, không được quyền sửa!");
                     return;
                 }
@@ -767,63 +811,82 @@ namespace BKI_QLTTQuocAnh {
                 v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
                 load_data_2_grid();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Load(object sender, System.EventArgs e) {
-            try {
+        private void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Load(object sender, System.EventArgs e)
+        {
+            try
+            {
                 set_initial_form_load();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
         }
 
-        private void m_cmd_exit_Click(object sender, EventArgs e) {
-            try {
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 this.Close();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_insert_Click(object sender, EventArgs e) {
-            try {
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 insert_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_update_Click(object sender, EventArgs e) {
-            try {
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 update_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_delete_Click(object sender, EventArgs e) {
-            try {
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 delete_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_search_Click(object sender, EventArgs e) {
-            try {
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 load_data_2_grid();
 
             }
-            catch (Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }

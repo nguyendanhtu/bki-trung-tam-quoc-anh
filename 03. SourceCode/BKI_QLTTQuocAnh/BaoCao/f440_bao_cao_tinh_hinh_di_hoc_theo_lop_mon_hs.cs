@@ -272,10 +272,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)

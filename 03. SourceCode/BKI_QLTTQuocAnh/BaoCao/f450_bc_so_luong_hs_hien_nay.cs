@@ -205,10 +205,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         void f450_bc_so_luong_hs_hien_nay_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                load_data_2_grid();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)
@@ -252,6 +259,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 CSystemLog_301.ExceptionHandle(v_e);
             } 
         }
+
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try
