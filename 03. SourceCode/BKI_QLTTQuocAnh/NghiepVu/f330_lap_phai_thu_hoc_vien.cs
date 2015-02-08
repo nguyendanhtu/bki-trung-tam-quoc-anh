@@ -238,6 +238,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_txt_don_gia_TextChanged(object sender, EventArgs e) {
             try {
+                //m_txt_don_gia.Text = string.Format("{0:#,##0}", is_null_text_box(m_txt_don_gia));
                 get_thanh_tien();
 
             }
