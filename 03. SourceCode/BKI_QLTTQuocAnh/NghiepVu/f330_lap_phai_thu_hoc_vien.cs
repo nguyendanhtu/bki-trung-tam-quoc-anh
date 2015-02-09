@@ -79,6 +79,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
 
+            m_fg.AllowEditing = true;
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
