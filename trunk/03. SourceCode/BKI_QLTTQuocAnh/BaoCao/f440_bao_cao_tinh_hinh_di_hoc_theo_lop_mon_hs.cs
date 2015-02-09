@@ -126,6 +126,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             m_fg.Redraw = true;
+            CGridUtils.MakeSoTT(0, m_fg);
             load_cot_dong_tung_ngay_hoc(m_ds);
         }
 

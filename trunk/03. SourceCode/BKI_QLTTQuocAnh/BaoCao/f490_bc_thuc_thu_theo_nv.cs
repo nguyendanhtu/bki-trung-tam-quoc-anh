@@ -140,6 +140,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                                , CIPConvert.ToDecimal(m_cbo_nhan_vien.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
             create_tree_2grid();
             wrap_text_cell();

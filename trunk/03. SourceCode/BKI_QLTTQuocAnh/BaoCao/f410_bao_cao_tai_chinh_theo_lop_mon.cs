@@ -128,7 +128,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             wrap_text_cell();
-
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON i_us

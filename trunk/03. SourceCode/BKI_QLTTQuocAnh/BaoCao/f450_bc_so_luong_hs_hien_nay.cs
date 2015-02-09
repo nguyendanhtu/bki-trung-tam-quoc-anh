@@ -113,6 +113,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             wrap_text_cell();
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_450_BAO_CAO_SO_LUONG_LUONG_HOC_VIEN_HIEN_NAY i_us
