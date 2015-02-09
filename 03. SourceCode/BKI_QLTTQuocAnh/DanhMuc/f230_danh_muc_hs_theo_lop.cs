@@ -396,6 +396,7 @@ namespace BKI_QLTTQuocAnh
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
+            m_cmd_delete.Visible = false;
             this.KeyPreview = true;
         }
 
@@ -495,7 +496,7 @@ namespace BKI_QLTTQuocAnh
                 , "Tổng");
 
             wrap_text_cell();
-
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
 

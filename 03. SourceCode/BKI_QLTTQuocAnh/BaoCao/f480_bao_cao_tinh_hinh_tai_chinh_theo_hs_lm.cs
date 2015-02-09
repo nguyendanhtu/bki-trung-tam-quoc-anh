@@ -90,7 +90,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSearch_Handlers(m_fg);
 
             m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
-            m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+            ////////m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
             m_fg.Cols[(int)e_col_Number.HO_TEN].Visible = false;
             m_fg.Tree.Style = TreeStyleFlags.CompleteLeaf;
 
@@ -203,6 +203,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Tree.Show(1);
 
             wrap_text_cell();
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us

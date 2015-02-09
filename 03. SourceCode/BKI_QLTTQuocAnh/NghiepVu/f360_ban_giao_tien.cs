@@ -150,7 +150,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             m_fg.Redraw = true;
             create_tree_2grid();
-
+            CGridUtils.MakeSoTT(0, m_fg);
             wrap_text_cell();
         }
         private void set_initial_form_load() {
