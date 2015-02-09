@@ -486,11 +486,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
 			m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
 
-            //m_fg.Subtotal(AggregateEnum.Sum
-            //  , 0
-            //    , -1
-            //    , (int)e_col_Number.TIEN_CON_PHAI_THU
-            //   , "Tổng");
+            m_fg.Subtotal(AggregateEnum.Sum
+              , 0
+                , -1
+                , (int)e_col_Number.TIEN_CON_PHAI_THU
+               , "Tổng");
 
             wrap_text_cell();
             CGridUtils.MakeSoTT(0, m_fg);

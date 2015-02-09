@@ -618,8 +618,8 @@ namespace BKI_QLTTQuocAnh
             switch (m_str_option_hien_thi)
             {
                 case "THUC_THU":
-                    m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    m_dat_den_ngay.Value = DateTime.Now.Date;
+                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+                    //m_dat_den_ngay.Value = DateTime.Now.Date;
                     //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
                     m_us.FillDataset(
                              m_ds
@@ -631,8 +631,8 @@ namespace BKI_QLTTQuocAnh
                              , m_txt_tim_kien.Text.Trim());
                     break;
                 case "PHAI_THU":
-                    m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    m_dat_den_ngay.Value = DateTime.Now.Date;
+                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+                    //m_dat_den_ngay.Value = DateTime.Now.Date;
                     //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
                     m_us.FillDataset(
                              m_ds
@@ -653,8 +653,8 @@ namespace BKI_QLTTQuocAnh
                                     , m_txt_tim_kien.Text.Trim());
                     break;
                 case "BAO_CAO":
-                    m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    m_dat_den_ngay.Value = DateTime.Now.Date;
+                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+                    //m_dat_den_ngay.Value = DateTime.Now.Date;
                     m_us.FillDataset(
                              m_ds
                              , -1
