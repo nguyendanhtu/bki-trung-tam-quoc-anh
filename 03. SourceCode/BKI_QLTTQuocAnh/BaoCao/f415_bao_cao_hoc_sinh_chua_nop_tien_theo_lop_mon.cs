@@ -493,7 +493,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //   , "Tổng");
 
             wrap_text_cell();
-
+            CGridUtils.MakeSoTT(0, m_fg);
 			m_fg.Redraw = true;
 		}
         private void load_data_2_cbo_lop_mon()
