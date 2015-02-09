@@ -113,7 +113,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                 US_V_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_V_HT_NGUOI_SU_DUNG(CAppContext_201.getCurrentUserID());
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.NGUOI_THU] = v_us_ht_nsd.strTEN;
-                m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU] = "PPT" + m_dat_tai_ngay.Value.Date.Day + m_dat_tai_ngay.Value.Date.Month + "_" + m_fg.Rows[v_i_cur_row][(int)e_col_Number.MA_HOC_SINH];
+                m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU] = "PPT" + m_cbo_lop_mon.SelectedValue.ToString() +"_" + m_fg.Rows[v_i_cur_row][(int)e_col_Number.MA_HOC_SINH];
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.TIEN_PHAI_THU] = m_txt_thanh_tien.Text;
             }
         }
@@ -203,7 +203,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 v_us_gd_chi_tiet_phieu_thu.Insert();
             }
             v_us_gd_phieu_thu.CommitTransaction();
-            BaseMessages.MsgBox_Infor("Đã tạo phiếu phải thu tự động cho lớp " + m_cbo_lop_mon.SelectedValue.ToString());
+            BaseMessages.MsgBox_Infor("Đã tạo phiếu phải thu tự động cho lớp " + m_cbo_lop_mon.Text);
         }
         #endregion
 
