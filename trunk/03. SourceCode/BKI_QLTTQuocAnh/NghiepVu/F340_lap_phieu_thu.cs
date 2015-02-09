@@ -666,6 +666,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             }
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
         private void set_initial_form_load() {

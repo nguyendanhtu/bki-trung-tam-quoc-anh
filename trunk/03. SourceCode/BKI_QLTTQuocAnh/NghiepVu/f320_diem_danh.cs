@@ -245,7 +245,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             update_di_hoc();
-
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
 

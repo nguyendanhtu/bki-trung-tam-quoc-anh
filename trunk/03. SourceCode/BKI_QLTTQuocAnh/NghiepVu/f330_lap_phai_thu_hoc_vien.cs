@@ -106,6 +106,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             v_ds_ds_pt.Clear();
             v_us_ds_pt.FillThongTinHS(v_ds_ds_pt,CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
             CGridUtils.Dataset2C1Grid(v_ds_ds_pt, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
             //Fill cac cot con lai
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.NGAY_THU] = m_dat_tai_ngay.Value.Date;
