@@ -542,5 +542,18 @@ namespace BKI_QLTTQuocAnh.US
             v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
             v_obj_spr.fillDataSetByCommand(this, op_ds);
         }
+
+        public void FillDataset_2_lbl_tong_so(DS_V_F316_DM_HOC_SINH_LOP_MON op_ds_tong_so_hoc_sinh,
+            decimal ip_dc_id_lop_mon, 
+            ref decimal op_dc_tong_so_hoc_sinh)
+        {
+            CStoredProc v_obj_spr = new CStoredProc("pr_tinh_tong_so_hoc_sinh_theo_lop_mon");
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            SqlParameter v_tong_so_hoc_sinh = v_obj_spr.addDecimalOutputParam("@op_dc_tong_so_hoc_sinh", op_dc_tong_so_hoc_sinh);
+            
+            v_obj_spr.fillDataSetByCommand(this, op_ds_tong_so_hoc_sinh);
+
+            op_dc_tong_so_hoc_sinh = CIPConvert.ToDecimal(v_tong_so_hoc_sinh.Value);
+        }
     }
 }
