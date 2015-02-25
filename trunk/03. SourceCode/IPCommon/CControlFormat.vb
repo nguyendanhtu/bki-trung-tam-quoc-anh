@@ -143,7 +143,7 @@ Public Class CControlFormat
             Next
         End If
 
-        
+
 
 
     End Sub

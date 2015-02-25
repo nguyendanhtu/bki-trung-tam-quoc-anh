@@ -69,6 +69,25 @@ namespace Form_menu
             //m_cmd_nhap_so_du_dau.Enabled = false;
             // m_cmd_ma_vach.Enabled = false;
         }
+
+        private void format_control_in_main_menu(
+            string ip_str_control_name
+            , IP.Core.IPCommon.IControlerControl ip_obj_controler
+            , DevComponents.DotNetBar.RibbonControl ip_control ) {
+
+            //    if (typeof(ip_control)== DevComponents.DotNetBar.RibbonBar) {
+
+            //    }
+
+            //foreach (DevComponents.DotNetBar.RibbonControl v_obj_ribbon_control  in ip_control.Controls){
+            //    format_control_in_main_menu(
+            //        v_obj_ribbon_control.Name
+            //        , ip_obj_controler
+            //        , v_obj_ribbon_control);
+            //}
+        }
+
+
         public void closeTabPage(EventArgs e)
         {
             m_tab_add.setCloseTabInEventCloseForm(xtraTabControl1, e);
@@ -102,6 +121,8 @@ namespace Form_menu
         void m_cmd_lap_thuc_thu_Click(object sender, EventArgs e) {
             try {
                 f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                
+
                 v_frm.Text = "F340 - Lập phiếu thực thu";
                 m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl(),false);
                 v_frm.set_phieu_thuc_thu();

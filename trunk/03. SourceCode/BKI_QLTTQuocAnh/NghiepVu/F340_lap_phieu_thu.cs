@@ -671,7 +671,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
-            m_dat_ngay_thu.Value = DateTime.Now.AddDays(-DateTime.Now.Date.Day + 1);
+            //m_dat_ngay_thu.Value = DateTime.Now.AddDays(-DateTime.Now.Date.Day + 1);
             m_txt_so_phieu.Focus();
             if (m_str_trang_thai_phieu != "F430") {
                 load_data_2_cbo();
