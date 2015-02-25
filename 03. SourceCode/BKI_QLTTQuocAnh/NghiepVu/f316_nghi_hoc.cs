@@ -63,6 +63,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_cbo_lop_mon.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_cbo_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_cmd_nghi_hoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tong_so.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tong_so_hoc_sinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
         }
 
         private void set_initial_form_load()
@@ -71,6 +74,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
         }
 
+        
         private void load_data_2_cbo_chon_lop_mon()
         {
             DS_DM_LOP_MON v_ds_dm_lop_mon = new DS_DM_LOP_MON();
@@ -90,6 +94,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
 
             m_cbo_lop_mon.SelectedIndex = 0;
+        }
+
+        private void load_data_2_lbl_tong_so_hoc_sinh(decimal ip_dc_id_lop_mon)
+        {
+            DS_V_F316_DM_HOC_SINH_LOP_MON v_ds_hoc_sinh_lop_mon = new DS_V_F316_DM_HOC_SINH_LOP_MON();
+            US_V_F316_DM_HOC_SINH_LOP_MON v_us_hoc_sinh_lop_mon = new US_V_F316_DM_HOC_SINH_LOP_MON();
+
+            decimal op_dc_tong_so_hoc_sinh = 0;
+            v_us_hoc_sinh_lop_mon.FillDataset_2_lbl_tong_so(v_ds_hoc_sinh_lop_mon, ip_dc_id_lop_mon, ref op_dc_tong_so_hoc_sinh);
+
+            m_lbl_tong_so_hoc_sinh.Text = op_dc_tong_so_hoc_sinh.ToString();
         }
 
         private void load_data_2_cbo_hoc_sinh(decimal ip_dc_id_lop_mon)
@@ -171,6 +186,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             try
             {
                 decimal ip_dc_id_lop_mon = CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue);
+                
+                if (m_cbo_lop_mon.SelectedIndex != 0)
+                {
+                    load_data_2_lbl_tong_so_hoc_sinh(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+                }
+
                 load_data_2_cbo_hoc_sinh(ip_dc_id_lop_mon);
                 m_cbo_hs.Focus();
             }
@@ -195,7 +216,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             }
 
         }
-
 
     }
 }
