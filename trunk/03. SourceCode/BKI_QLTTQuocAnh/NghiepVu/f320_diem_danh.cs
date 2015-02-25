@@ -112,11 +112,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             CCommon.load_data_2_cbo_lop_mon(
                 -1
                 , m_cbo_lop_mon);
+            
             CCommon.load_data_2_cbo_nhan_vien(
                 CAppContext_201.getCurrentUserID()
                 , m_cbo_nguoi_diem_danh);
             WinFormControls.load_data_to_cbo_tu_dien(WinFormControls.eLOAI_TU_DIEN.DM_CA_HOC, WinFormControls.eTAT_CA.NO, m_cbo_ca_hoc);
-            if (/*(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue) != -1)&&*/  (CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue) != -1))
+            if ((CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue) != -1) &&  (CIPConvert.ToDecimal(m_cbo_nguoi_diem_danh.SelectedValue) != -1))
             {
                 load_data_2_grid();
             }
@@ -281,7 +282,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_diem_danh.Click += new EventHandler(m_cmd_diem_danh_Click);
             m_cmd_search.Click += m_cmd_search_Click;
+            m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
+            m_cbo_ca_hoc.SelectedIndexChanged += m_cbo_ca_hoc_SelectedIndexChanged;
             this.KeyDown += f320_diem_danh_KeyDown;
+        }
+
+        void m_cbo_ca_hoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+                m_cbo_nguoi_diem_danh.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void f320_diem_danh_KeyDown(object sender, KeyEventArgs e)
@@ -353,8 +369,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                load_data_2_grid();
-
+                //load_data_2_grid();
+                m_cbo_ca_hoc.Focus();
             }
             catch (Exception v_e)
             {

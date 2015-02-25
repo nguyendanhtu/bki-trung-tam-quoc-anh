@@ -97,7 +97,7 @@
             this.label1.Location = new System.Drawing.Point(692, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 29);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 7;
             this.label1.Text = "HS";
             // 
             // m_lbl_tong_so_hoc_sinh
@@ -107,7 +107,7 @@
             this.m_lbl_tong_so_hoc_sinh.Location = new System.Drawing.Point(645, 143);
             this.m_lbl_tong_so_hoc_sinh.Name = "m_lbl_tong_so_hoc_sinh";
             this.m_lbl_tong_so_hoc_sinh.Size = new System.Drawing.Size(25, 29);
-            this.m_lbl_tong_so_hoc_sinh.TabIndex = 7;
+            this.m_lbl_tong_so_hoc_sinh.TabIndex = 6;
             this.m_lbl_tong_so_hoc_sinh.Text = "  ";
             // 
             // m_cbo_hs
@@ -118,7 +118,7 @@
             this.m_cbo_hs.Location = new System.Drawing.Point(191, 206);
             this.m_cbo_hs.Name = "m_cbo_hs";
             this.m_cbo_hs.Size = new System.Drawing.Size(358, 37);
-            this.m_cbo_hs.TabIndex = 6;
+            this.m_cbo_hs.TabIndex = 9;
             // 
             // m_lbl_chon_hoc_sinh
             // 
@@ -127,7 +127,7 @@
             this.m_lbl_chon_hoc_sinh.Location = new System.Drawing.Point(22, 214);
             this.m_lbl_chon_hoc_sinh.Name = "m_lbl_chon_hoc_sinh";
             this.m_lbl_chon_hoc_sinh.Size = new System.Drawing.Size(109, 29);
-            this.m_lbl_chon_hoc_sinh.TabIndex = 5;
+            this.m_lbl_chon_hoc_sinh.TabIndex = 8;
             this.m_lbl_chon_hoc_sinh.Text = "Chọn HS";
             // 
             // m_cbo_lop_mon
@@ -147,7 +147,7 @@
             this.m_lbl_tong_so.Location = new System.Drawing.Point(499, 143);
             this.m_lbl_tong_so.Name = "m_lbl_tong_so";
             this.m_lbl_tong_so.Size = new System.Drawing.Size(114, 29);
-            this.m_lbl_tong_so.TabIndex = 3;
+            this.m_lbl_tong_so.TabIndex = 5;
             this.m_lbl_tong_so.Text = "Tổng số :";
             // 
             // m_lbl_lop_mon
