@@ -545,16 +545,19 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 m_txt_so_tien.Text = ip_us.dcTIEN_PHAI_THU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_PHAI_THU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU PHẢI THU";
+                m_str_loai_form = "PHAI_THU";
             }
             else if (ip_dc_id_loai_phieu_thu == ID_LOAI_PHIEU_THU.ID_PHIEU_GIAM_TRU) {
                 m_txt_so_tien.Text = ip_us.dcTIEN_GIAM_TRU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_GIAM_TRU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU GIẢM TRỪ";
+                m_str_loai_form = "PHIEU_GIAM_TRU";
             }
             else if (ip_dc_id_loai_phieu_thu == ID_LOAI_PHIEU_THU.ID_PHIEU_THUC_THU) {
                 m_txt_so_tien.Text = ip_us.dcTIEN_THUC_THU.ToString("#,###");
                 //m_txt_so_tien_bang_chu.Text = CTienNo2Text.So_chu((double)ip_us.dcTIEN_THUC_THU);
                 m_lbl_header.Text = "CHI TIẾT PHIẾU THỰC THU";
+                m_str_loai_form = "THUC_THU";
             }
             //lap ham xu ly tien bang so qua bang chu
             m_cbo_nhan_vien_thu.SelectedValue = ip_us.dcID_NGUOI_THU;
@@ -733,7 +736,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             if (m_str_loai_form == "PHAI_THU") {
                 m_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
             }
-            else {
+            else if (m_str_loai_form == "THUC_THU")
+            {
                 m_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
             }
         }

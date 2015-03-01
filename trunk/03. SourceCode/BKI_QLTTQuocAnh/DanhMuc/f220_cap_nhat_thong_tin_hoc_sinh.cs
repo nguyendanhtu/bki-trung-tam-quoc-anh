@@ -42,6 +42,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         public decimal display_from_f315()
         {
             m_trang_thai_hien_thi = 1;
+            this.Text = "F220 - Chọn học sinh";
+            m_lbl_header.Text = "CHỌN HỌC SINH NHẬP HỌC";
             this.ShowDialog();
             return m_trang_thai_hien_thi;
         }
@@ -131,6 +133,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_HOC_SINH.NewRow());
             return v_obj_trans;
         }
+
+        private void wrap_text_cell()
+        {
+            m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
+            m_fg.AllowResizing = AllowResizingEnum.Both;
+            m_fg.AutoSizeRows();
+        }
+
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HOC_SINH();
@@ -139,6 +149,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_fg);
+            wrap_text_cell();
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_HOC_SINH i_us

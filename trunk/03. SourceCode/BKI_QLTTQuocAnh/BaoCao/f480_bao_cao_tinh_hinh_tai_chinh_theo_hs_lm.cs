@@ -90,7 +90,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSearch_Handlers(m_fg);
 
             m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
-            ////////m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
+            m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
             m_fg.Cols[(int)e_col_Number.HO_TEN].Visible = false;
             m_fg.Tree.Style = TreeStyleFlags.CompleteLeaf;
 

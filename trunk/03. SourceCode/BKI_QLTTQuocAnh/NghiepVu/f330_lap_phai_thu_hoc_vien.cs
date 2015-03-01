@@ -58,6 +58,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         ITransferDataRow m_obj_trans;
+        decimal m_row_selected = -1;
         #endregion
 
         #region Private Methods
@@ -207,6 +208,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             v_us_gd_phieu_thu.CommitTransaction();
             BaseMessages.MsgBox_Infor("Đã tạo phiếu phải thu tự động cho lớp " + m_cbo_lop_mon.Text);
         }
+
         #endregion
 
         private void set_define_events() {
@@ -217,6 +219,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_txt_don_gia.TextChanged += m_txt_don_gia_TextChanged;
             m_txt_so_buoi.TextChanged += m_txt_so_buoi_TextChanged;
             m_cmd_insert.Click += m_cmd_insert_Click;
+            m_cmd_xoa_hang.Click += m_cmd_xoa_hang_Click;
+        }
+
+        void m_cmd_xoa_hang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                m_fg.RemoveItem(m_fg.Row);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_insert_Click(object sender, EventArgs e) {
