@@ -152,6 +152,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 v_us_gd_hoc.Update();
                 BaseMessages.MsgBox_Infor("Xong!!!");
                 load_data_2_cbo_hoc_sinh(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+                load_data_2_lbl_tong_so_hoc_sinh(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
             }
         }
 
