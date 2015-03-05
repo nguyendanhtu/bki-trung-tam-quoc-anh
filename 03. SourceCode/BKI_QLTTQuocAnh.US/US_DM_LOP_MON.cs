@@ -21,6 +21,7 @@ namespace BKI_QLTTQuocAnh.US{
 public class US_DM_LOP_MON : US_Object
 {
 	private const string c_TableName = "DM_LOP_MON";
+
     #region "Public Properties"
     public decimal dcID
     {
@@ -152,6 +153,28 @@ public class US_DM_LOP_MON : US_Object
     public void SetID_MONNull()
     {
         pm_objDR["ID_MON"] = System.Convert.DBNull;
+    }
+
+    public decimal dcTRANG_THAI_LOP_MON
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "TRANG_THAI_LOP_MON", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["TRANG_THAI_LOP_MON"] = value;
+        }
+    }
+
+    public bool IsTRANG_THAI_LOP_MONNull()
+    {
+        return pm_objDR.IsNull("TRANG_THAI_LOP_MON");
+    }
+
+    public void SetTRANG_THAI_LOP_MONNull()
+    {
+        pm_objDR["TRANG_THAI_LOP_MON"] = System.Convert.DBNull;
     }
 
     #endregion

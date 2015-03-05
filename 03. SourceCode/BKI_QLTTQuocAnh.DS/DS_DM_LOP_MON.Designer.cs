@@ -291,6 +291,8 @@ namespace BKI_QLTTQuocAnh.DS {
             
             private global::System.Data.DataColumn columnID_MON;
             
+            private global::System.Data.DataColumn columnTRANG_THAI_LOP_MON;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DM_LOP_MONDataTable() {
@@ -374,6 +376,14 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TRANG_THAI_LOP_MONColumn {
+                get {
+                    return this.columnTRANG_THAI_LOP_MON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow AddDM_LOP_MONRow(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, decimal ID_LOP, decimal ID_MON) {
+            public DM_LOP_MONRow AddDM_LOP_MONRow(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, decimal ID_LOP, decimal ID_MON, decimal TRANG_THAI_LOP_MON) {
                 DM_LOP_MONRow rowDM_LOP_MONRow = ((DM_LOP_MONRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -417,7 +427,8 @@ namespace BKI_QLTTQuocAnh.DS {
                         MO_TA,
                         DON_GIA_BUOI_HOC,
                         ID_LOP,
-                        ID_MON};
+                        ID_MON,
+                        TRANG_THAI_LOP_MON};
                 rowDM_LOP_MONRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDM_LOP_MONRow);
                 return rowDM_LOP_MONRow;
@@ -453,6 +464,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnDON_GIA_BUOI_HOC = base.Columns["DON_GIA_BUOI_HOC"];
                 this.columnID_LOP = base.Columns["ID_LOP"];
                 this.columnID_MON = base.Columns["ID_MON"];
+                this.columnTRANG_THAI_LOP_MON = base.Columns["TRANG_THAI_LOP_MON"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +482,8 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnID_LOP);
                 this.columnID_MON = new global::System.Data.DataColumn("ID_MON", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_MON);
+                this.columnTRANG_THAI_LOP_MON = new global::System.Data.DataColumn("TRANG_THAI_LOP_MON", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTRANG_THAI_LOP_MON);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -481,7 +495,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnMA_LOP_MON.AllowDBNull = false;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnMO_TA.MaxLength = 250;
-                this.columnDON_GIA_BUOI_HOC.AllowDBNull = false;
+                this.columnTRANG_THAI_LOP_MON.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -664,7 +678,12 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal DON_GIA_BUOI_HOC {
                 get {
-                    return ((decimal)(this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn]));
+                    try {
+                        return ((decimal)(this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DON_GIA_BUOI_HOC\' in table \'DM_LOP_MON\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn] = value;
@@ -705,6 +724,17 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TRANG_THAI_LOP_MON {
+                get {
+                    return ((decimal)(this[this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn]));
+                }
+                set {
+                    this[this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMO_TANull() {
                 return this.IsNull(this.tableDM_LOP_MON.MO_TAColumn);
             }
@@ -713,6 +743,18 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMO_TANull() {
                 this[this.tableDM_LOP_MON.MO_TAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDON_GIA_BUOI_HOCNull() {
+                return this.IsNull(this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDON_GIA_BUOI_HOCNull() {
+                this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -905,49 +947,56 @@ namespace BKI_QLTTQuocAnh.DS.DS_DM_LOP_MONTableAdapters {
             tableMapping.ColumnMappings.Add("DON_GIA_BUOI_HOC", "DON_GIA_BUOI_HOC");
             tableMapping.ColumnMappings.Add("ID_LOP", "ID_LOP");
             tableMapping.ColumnMappings.Add("ID_MON", "ID_MON");
+            tableMapping.ColumnMappings.Add("TRANG_THAI_LOP_MON", "TRANG_THAI_LOP_MON");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_LOP_MON] WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_LOP_MON] WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ((@IsNull_DON_GIA_BUOI_HOC = 1 AND [DON_GIA_BUOI_HOC] IS NULL) OR ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC)) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)) AND ([TRANG_THAI_LOP_MON] = @Original_TRANG_THAI_LOP_MON))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MO_TA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_LOP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DM_LOP_MON] ([MA_LOP_MON], [MO_TA], [DON_GIA_BUOI_HOC], [ID_LOP], [ID_MON]) VALUES (@MA_LOP_MON, @MO_TA, @DON_GIA_BUOI_HOC, @ID_LOP, @ID_MON);
-SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DM_LOP_MON] ([MA_LOP_MON], [MO_TA], [DON_GIA_BUOI_HOC], [ID_LOP], [ID_MON], [TRANG_THAI_LOP_MON]) VALUES (@MA_LOP_MON, @MO_TA, @DON_GIA_BUOI_HOC, @ID_LOP, @ID_MON, @TRANG_THAI_LOP_MON);
+SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON FROM DM_LOP_MON WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_LOP_MON] SET [MA_LOP_MON] = @MA_LOP_MON, [MO_TA] = @MO_TA, [DON_GIA_BUOI_HOC] = @DON_GIA_BUOI_HOC, [ID_LOP] = @ID_LOP, [ID_MON] = @ID_MON WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)));
-SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_LOP_MON] SET [MA_LOP_MON] = @MA_LOP_MON, [MO_TA] = @MO_TA, [DON_GIA_BUOI_HOC] = @DON_GIA_BUOI_HOC, [ID_LOP] = @ID_LOP, [ID_MON] = @ID_MON, [TRANG_THAI_LOP_MON] = @TRANG_THAI_LOP_MON WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ((@IsNull_DON_GIA_BUOI_HOC = 1 AND [DON_GIA_BUOI_HOC] IS NULL) OR ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC)) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)) AND ([TRANG_THAI_LOP_MON] = @Original_TRANG_THAI_LOP_MON));
+SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON FROM DM_LOP_MON WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MO_TA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_LOP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -955,7 +1004,7 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhConnectionString2;
+            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -964,8 +1013,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM dbo.DM_LOP_MO" +
-                "N";
+            this._commandCollection[0].CommandText = "SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MO" +
+                "N FROM dbo.DM_LOP_MON";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1026,39 +1075,47 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, decimal Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
-            if ((Original_MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("Original_MA_LOP_MON");
+        public virtual int Delete(decimal @Original_ID, string @Original_MA_LOP_MON, string @Original_MO_TA, global::System.Nullable<decimal> @Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @Original_ID_LOP, global::System.Nullable<decimal> @Original_ID_MON, decimal @Original_TRANG_THAI_LOP_MON) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(@Original_ID));
+            if ((@Original_MA_LOP_MON == null)) {
+                throw new global::System.ArgumentNullException("@Original_MA_LOP_MON");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_MA_LOP_MON));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(@Original_MA_LOP_MON));
             }
-            if ((Original_MO_TA == null)) {
+            if ((@Original_MO_TA == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_MO_TA));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(@Original_MO_TA));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_DON_GIA_BUOI_HOC));
-            if ((Original_ID_LOP.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_ID_LOP.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ID_MON.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_ID_MON.Value));
+            if ((@Original_DON_GIA_BUOI_HOC.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(@Original_DON_GIA_BUOI_HOC.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
+            if ((@Original_ID_LOP.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(@Original_ID_LOP.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((@Original_ID_MON.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(@Original_ID_MON.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(@Original_TRANG_THAI_LOP_MON));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1079,32 +1136,38 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON) {
-            if ((MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("MA_LOP_MON");
+        public virtual int Insert(string @MA_LOP_MON, string @MO_TA, global::System.Nullable<decimal> @DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @ID_LOP, global::System.Nullable<decimal> @ID_MON, decimal @TRANG_THAI_LOP_MON) {
+            if ((@MA_LOP_MON == null)) {
+                throw new global::System.ArgumentNullException("@MA_LOP_MON");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MA_LOP_MON));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(@MA_LOP_MON));
             }
-            if ((MO_TA == null)) {
+            if ((@MO_TA == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MO_TA));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(@MO_TA));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(DON_GIA_BUOI_HOC));
-            if ((ID_LOP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(ID_LOP.Value));
+            if ((@DON_GIA_BUOI_HOC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(@DON_GIA_BUOI_HOC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((@ID_LOP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(@ID_LOP.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((ID_MON.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(ID_MON.Value));
+            if ((@ID_MON.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(@ID_MON.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(@TRANG_THAI_LOP_MON));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1125,65 +1188,79 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON, decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, decimal Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON, decimal ID) {
-            if ((MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("MA_LOP_MON");
+        public virtual int Update(string @MA_LOP_MON, string @MO_TA, global::System.Nullable<decimal> @DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @ID_LOP, global::System.Nullable<decimal> @ID_MON, decimal @TRANG_THAI_LOP_MON, decimal @Original_ID, string @Original_MA_LOP_MON, string @Original_MO_TA, global::System.Nullable<decimal> @Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @Original_ID_LOP, global::System.Nullable<decimal> @Original_ID_MON, decimal @Original_TRANG_THAI_LOP_MON, decimal @ID) {
+            if ((@MA_LOP_MON == null)) {
+                throw new global::System.ArgumentNullException("@MA_LOP_MON");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MA_LOP_MON));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(@MA_LOP_MON));
             }
-            if ((MO_TA == null)) {
+            if ((@MO_TA == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(MO_TA));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(@MO_TA));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(DON_GIA_BUOI_HOC));
-            if ((ID_LOP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(ID_LOP.Value));
+            if ((@DON_GIA_BUOI_HOC.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(@DON_GIA_BUOI_HOC.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((@ID_LOP.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(@ID_LOP.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((ID_MON.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(ID_MON.Value));
+            if ((@ID_MON.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(@ID_MON.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_ID));
-            if ((Original_MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("Original_MA_LOP_MON");
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(@TRANG_THAI_LOP_MON));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(@Original_ID));
+            if ((@Original_MA_LOP_MON == null)) {
+                throw new global::System.ArgumentNullException("@Original_MA_LOP_MON");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_MA_LOP_MON));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(@Original_MA_LOP_MON));
             }
-            if ((Original_MO_TA == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((@Original_MO_TA == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_MO_TA));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(@Original_MO_TA));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_DON_GIA_BUOI_HOC));
-            if ((Original_ID_LOP.HasValue == true)) {
+            if ((@Original_DON_GIA_BUOI_HOC.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_ID_LOP.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(@Original_DON_GIA_BUOI_HOC.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_ID_MON.HasValue == true)) {
+            if ((@Original_ID_LOP.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_ID_MON.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(@Original_ID_LOP.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(ID));
+            if ((@Original_ID_MON.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(@Original_ID_MON.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(@Original_TRANG_THAI_LOP_MON));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(@ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1204,8 +1281,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON FROM DM_LOP_MON W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON, decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, decimal Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON) {
-            return this.Update(MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, Original_ID, Original_MA_LOP_MON, Original_MO_TA, Original_DON_GIA_BUOI_HOC, Original_ID_LOP, Original_ID_MON, Original_ID);
+        public virtual int Update(string @MA_LOP_MON, string @MO_TA, global::System.Nullable<decimal> @DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @ID_LOP, global::System.Nullable<decimal> @ID_MON, decimal @TRANG_THAI_LOP_MON, decimal @Original_ID, string @Original_MA_LOP_MON, string @Original_MO_TA, global::System.Nullable<decimal> @Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> @Original_ID_LOP, global::System.Nullable<decimal> @Original_ID_MON, decimal @Original_TRANG_THAI_LOP_MON) {
+            return this.Update(@MA_LOP_MON, @MO_TA, @DON_GIA_BUOI_HOC, @ID_LOP, @ID_MON, @TRANG_THAI_LOP_MON, @Original_ID, @Original_MA_LOP_MON, @Original_MO_TA, @Original_DON_GIA_BUOI_HOC, @Original_ID_LOP, @Original_ID_MON, @Original_TRANG_THAI_LOP_MON, @Original_ID);
         }
     }
     
