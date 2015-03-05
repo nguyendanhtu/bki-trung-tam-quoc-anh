@@ -406,7 +406,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
 		#region Public Interface
 		public void display(){
-            load_data_2_cbo_lop_mon();
+            CCommon.load_data_2_cbo_lop_mon(
+                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                , m_cbo_lop);
 			this.ShowDialog();
 		}
 		#endregion
@@ -455,8 +457,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
-			
-            load_data_2_cbo_lop_mon();
+
+            CCommon.load_data_2_cbo_lop_mon(
+                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                , m_cbo_lop);
             load_data_2_grid();
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
@@ -496,25 +500,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.MakeSoTT(0, m_fg);
 			m_fg.Redraw = true;
 		}
-        private void load_data_2_cbo_lop_mon()
-        {
-            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
-            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
-            v_dr[DM_LOP_MON.ID] = -1;
-            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
-            v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
-            v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+        //private void load_data_2_cbo_lop_mon()
+        //{
+        //    DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+        //    US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+        //    v_us.FillDataset(v_ds);
+        //    DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+        //    v_dr[DM_LOP_MON.ID] = -1;
+        //    v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+        //    v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
+        //    v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
 
-            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+        //    v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
 
-            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
-            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+        //    m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+        //    m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+        //    m_cbo_lop.ValueMember = DM_LOP_MON.ID;
 
-            m_cbo_lop.SelectedIndex = 0;
-        }
+        //    m_cbo_lop.SelectedIndex = 0;
+        //}
         private void grid2us_object(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
 			, int i_grid_row) {
 			DataRow v_dr;

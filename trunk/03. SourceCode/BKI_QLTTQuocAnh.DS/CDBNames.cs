@@ -524,6 +524,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
         public const string ID_LOP = "ID_LOP";
         public const string ID_MON = "ID_MON";
+        public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
     }
 
     public class V_GD_HOC

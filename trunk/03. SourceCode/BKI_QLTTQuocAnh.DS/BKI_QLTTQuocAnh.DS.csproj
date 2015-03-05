@@ -57,6 +57,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_HOC_SINH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_LOP_MON.cs">
+      <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_DM_LOP_MON.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

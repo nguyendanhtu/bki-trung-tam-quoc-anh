@@ -504,7 +504,7 @@ namespace BKI_QLTTQuocAnh
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
+            v_us.FillDataset(v_ds, "where TRANG_THAI_LOP_MON = 88");
 
             //DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
             //v_dr[DM_LOP_MON.ID] = -1;

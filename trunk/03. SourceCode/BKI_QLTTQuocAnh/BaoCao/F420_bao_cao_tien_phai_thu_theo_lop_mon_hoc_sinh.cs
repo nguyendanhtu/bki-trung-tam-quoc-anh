@@ -33,7 +33,9 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         public void display(DateTime ip_dat_dau_thang, DateTime ip_dat_cuoi_thang, decimal ip_dc_id_lop_mon)
         {
-            load_data_2_cbo_lop_mon();
+            CCommon.load_data_2_cbo_lop_mon(
+                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                , m_cbo_lop);
 
             m_dat_tu_ngay.Value = ip_dat_dau_thang.Date;
             m_dat_den_ngay.Value = ip_dat_cuoi_thang.Date;
@@ -101,11 +103,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_obj_trans = get_trans_object(m_fg);
             if (m_flag_trang_thai_click == 1)
             {
+                
                 load_data_2_grid();
             }
             else
             {
-                load_data_2_cbo_lop_mon();
+                CCommon.load_data_2_cbo_lop_mon(
+                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                , m_cbo_lop);
                 load_data_2_grid();
             }
         }
@@ -115,25 +120,25 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-        private void load_data_2_cbo_lop_mon()
-        {
-            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
-            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
-            v_dr[DM_LOP_MON.ID] = -1;
-            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
-            v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
-            v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+        //private void load_data_2_cbo_lop_mon()
+        //{
+        //    DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+        //    US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+        //    v_us.FillDataset(v_ds);
+        //    DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+        //    v_dr[DM_LOP_MON.ID] = -1;
+        //    v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+        //    v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
+        //    v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
 
-            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+        //    v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
 
-            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
-            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+        //    m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+        //    m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+        //    m_cbo_lop.ValueMember = DM_LOP_MON.ID;
 
-            m_cbo_lop.SelectedIndex = 0;
-        }
+        //    m_cbo_lop.SelectedIndex = 0;
+        //}
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();

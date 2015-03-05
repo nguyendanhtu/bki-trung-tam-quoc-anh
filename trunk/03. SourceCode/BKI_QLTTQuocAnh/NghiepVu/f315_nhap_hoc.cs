@@ -192,7 +192,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             DS_DM_LOP_MON v_ds_dm_lop_mon = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON();
-            v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon);
+            v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where TRANG_THAI_LOP_MON = 88");
 
             //DataRow v_dr = v_ds_dm_lop_mon.DM_LOP_MON.NewRow();
             //v_dr[DM_LOP_MON.ID] = -1;
