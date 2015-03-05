@@ -24,6 +24,8 @@ namespace BKI_QLTTQuocAnh
         #region Public Interfaces
         public void display_for_insert()
         {
+            US_V_HOC_SINH v_us_hs = new US_V_HOC_SINH();
+            m_txt_ma_hoc_sinh.Text = v_us_hs.suggest_id_hs_moi();
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
@@ -40,6 +42,7 @@ namespace BKI_QLTTQuocAnh
             // m_dgl_result = System.Windows.Forms.DialogResult.Cancel;
             //// m_cmd_exit.Visible = true;
             //this.ShowDialog();
+            
             return m_us_v_hoc_sinh;
         }
         public void display_for_update(US_V_HOC_SINH ip_us_test)
