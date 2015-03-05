@@ -327,5 +327,14 @@ public class US_V_HOC_SINH : US_Object
         v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
         v_obj_spr.fillDataSetByCommand(this, op_ds);
     }
-	}
+
+    public string suggest_id_hs_moi()
+    {
+        CStoredProc v_obj_spr = new CStoredProc("pr_suggest_ma_hs");
+        SqlParameter v_sql = v_obj_spr.addDecimalOutputParam("@op_dc_ma_hs_suggest", -1);
+
+        v_obj_spr.ExecuteCommand(this);
+        return v_sql.Value.ToString();
+    }
+}
 }
