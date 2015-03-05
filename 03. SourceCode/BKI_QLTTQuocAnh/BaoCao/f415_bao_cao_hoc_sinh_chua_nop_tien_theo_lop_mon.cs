@@ -29,17 +29,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
 
 
-	public class f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon : System.Windows.Forms.Form
-	{
+    public class f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon : System.Windows.Forms.Form
+    {
 
         #region Design on Form
         internal System.Windows.Forms.ImageList ImageList;
-		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
-		internal SIS.Controls.Button.SiSButton m_cmd_delete;
-		internal SIS.Controls.Button.SiSButton m_cmd_update;
-		internal SIS.Controls.Button.SiSButton m_cmd_insert;
-		internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal SIS.Controls.Button.SiSButton m_cmd_delete;
+        internal SIS.Controls.Button.SiSButton m_cmd_update;
+        internal SIS.Controls.Button.SiSButton m_cmd_insert;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         internal ImageList imageList1;
         private Panel panel1;
@@ -53,44 +53,44 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private DateTimePicker m_dat_den_ngay;
         private Label m_lbl_tim_kiem;
         private Label m_lbl_lop_mon;
-		private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components;
         #endregion
 
-		public f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon()
-		{
-			//
-			// Required for Windows Form Designer support
-			//
-			InitializeComponent();
+        public f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon()
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
 
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-			format_controls();
-		}
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+            format_controls();
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if(components != null)
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -401,79 +401,82 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Public Interface
-		public void display(){
-            CCommon.load_data_2_cbo_lop_mon(
-                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
-                , m_cbo_lop);
-			this.ShowDialog();
-		}
-		#endregion
+        #region Public Interface
+        public void display()
+        {
+            load_data_2_cbo_lop_mon();
+            this.ShowDialog();
+        }
+        #endregion
 
-		#region Data Structure
-		private enum e_col_Number{
-			TIEN_CON_PHAI_THU = 4
-,MA_LOP_MON = 1
-,HO_TEN = 3
-,MA_DOI_TUONG = 2
+        #region Data Structure
+        private enum e_col_Number
+        {
+            TIEN_CON_PHAI_THU = 4
+,
+            MA_LOP_MON = 1
+                ,
+            HO_TEN = 3
+                , MA_DOI_TUONG = 2
 
-		}			
-		#endregion
+        }
+        #endregion
 
-		#region Members
-		ITransferDataRow m_obj_trans;		
-		DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON m_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
-		US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON m_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
-		#endregion
+        #region Members
+        ITransferDataRow m_obj_trans;
+        DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON m_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+        US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON m_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+        #endregion
 
-		#region Private Methods
-		private void format_controls(){
-			CControlFormat.setFormStyle(this, new CAppContext_201());
+        #region Private Methods
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			CControlFormat.setC1FlexFormat(m_fg);
-			CGridUtils.AddSave_Excel_Handlers(m_fg);
+            CControlFormat.setC1FlexFormat(m_fg);
+            CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
 
             m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
             //m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
             //m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
 
-			set_define_events();
-			this.KeyPreview = true;
+            set_define_events();
+            this.KeyPreview = true;
             m_cmd_insert.Visible = false;
             m_cmd_delete.Visible = false;
             m_cmd_update.Visible = false;
             m_cmd_exit.Visible = false;
             m_cmd_xuat_excel.Visible = false;
-		}
+        }
         private void wrap_text_cell()
         {
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-		private void set_initial_form_load(){						
-			m_obj_trans = get_trans_object(m_fg);
-
-            CCommon.load_data_2_cbo_lop_mon(
-                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
-                , m_cbo_lop);
+        private void set_initial_form_load()
+        {
+            m_obj_trans = get_trans_object(m_fg);
+            load_data_2_cbo_lop_mon();
             load_data_2_grid();
-		}	
-		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
-			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.TIEN_CON_PHAI_THU, e_col_Number.TIEN_CON_PHAI_THU);
-			v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);
-			v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.HO_TEN, e_col_Number.HO_TEN);
-			v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
-									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.NewRow());
-			return v_obj_trans;			
-		}
-		private void load_data_2_grid(){
+        }
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
+        {
+            Hashtable v_htb = new Hashtable();
+            v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.TIEN_CON_PHAI_THU, e_col_Number.TIEN_CON_PHAI_THU);
+            v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);
+            v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.HO_TEN, e_col_Number.HO_TEN);
+            v_htb.Add(V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
+
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON.NewRow());
+            return v_obj_trans;
+        }
+        private void load_data_2_grid()
+        {
             DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
             US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
             v_ds.EnforceConstraints = false;
@@ -486,8 +489,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , m_dat_den_ngay.Value.Date
                 , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
                 , -1
-                ,m_txt_tim_kiem.Text.Trim());
-			m_fg.Redraw = false;
+                , m_txt_tim_kiem.Text.Trim());
+            m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
 
             m_fg.Subtotal(AggregateEnum.Sum
@@ -498,94 +501,103 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             wrap_text_cell();
             CGridUtils.MakeSoTT(0, m_fg);
-			m_fg.Redraw = true;
-		}
-        //private void load_data_2_cbo_lop_mon()
-        //{
-        //    DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-        //    US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-        //    v_us.FillDataset(v_ds);
-        //    DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
-        //    v_dr[DM_LOP_MON.ID] = -1;
-        //    v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
-        //    v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
-        //    v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+            m_fg.Redraw = true;
+        }
+        private void load_data_2_cbo_lop_mon()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds, "where TRANG_THAI_LOP_MON = 88");
+            DataRow v_dr = v_ds.DM_LOP_MON.NewRow();
+            v_dr[DM_LOP_MON.ID] = -1;
+            v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+            v_dr[DM_LOP_MON.MO_TA] = "--Tất cả--";
+            v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+            v_dr[DM_LOP_MON.TRANG_THAI_LOP_MON] = "-1";
 
-        //    v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+            v_ds.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
 
-        //    m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
-        //    m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
-        //    m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
 
-        //    m_cbo_lop.SelectedIndex = 0;
-        //}
+            m_cbo_lop.SelectedIndex = 0;
+        }
         private void grid2us_object(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
-			, int i_grid_row) {
-			DataRow v_dr;
-			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
-			i_us.DataRow2Me(v_dr);
-		}
-
-	
-		private void us_object2grid(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
-			, int i_grid_row) {
-			DataRow v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			i_us.Me2DataRow(v_dr);
-			m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
-		}
+            , int i_grid_row)
+        {
+            DataRow v_dr;
+            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
+            i_us.DataRow2Me(v_dr);
+        }
 
 
-		private void insert_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon(){			
-		//	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new  f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();								
-		//	v_fDE.display();
-			load_data_2_grid();
-		}
+        private void us_object2grid(US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON i_us
+            , int i_grid_row)
+        {
+            DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            i_us.Me2DataRow(v_dr);
+            m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
+        }
 
-		private void update_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-		//	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();
-		//	v_fDE.display(m_us);
-			load_data_2_grid();
-		}
-				
-		private void delete_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon(){
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
-			grid2us_object(v_us, m_fg.Row);
-			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
-				m_fg.Rows.Remove(m_fg.Row);				
-			}
-			catch (Exception v_e) {
-				v_us.Rollback();
-				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-					new CDBClientDBExceptionInterpret());
-				v_objErrHandler.showErrorMessage();
-			}
-		}
 
-		private void view_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
-		//	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();			
-		//	v_fDE.display(m_us);
-		}
-		
-		#endregion
+        private void insert_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon()
+        {
+            //	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new  f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();								
+            //	v_fDE.display();
+            load_data_2_grid();
+        }
 
-//
-		//
-		//		EVENT HANLDERS
-		//
-		//
+        private void update_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();
+            //	v_fDE.display(m_us);
+            load_data_2_grid();
+        }
+
+        private void delete_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+            US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+            grid2us_object(v_us, m_fg.Row);
+            try
+            {
+                v_us.BeginTransaction();
+                v_us.Delete();
+                v_us.CommitTransaction();
+                m_fg.Rows.Remove(m_fg.Row);
+            }
+            catch (Exception v_e)
+            {
+                v_us.Rollback();
+                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                    new CDBClientDBExceptionInterpret());
+                v_objErrHandler.showErrorMessage();
+            }
+        }
+
+        private void view_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE v_fDE = new f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_DE();			
+            //	v_fDE.display(m_us);
+        }
+
+        #endregion
+
+        //
+        //
+        //		EVENT HANLDERS
+        //
+        //
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
@@ -609,63 +621,81 @@ namespace BKI_QLTTQuocAnh.BaoCao
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-            
+
         }
 
-		private void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		
-		}
+        private void f415_bao_cao_hoc_sinh_chua_nop_tien_theo_lop_mon_Load(object sender, System.EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        }
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insert_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
-			try{
-				view_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                view_v_rpt_415_bc_hs_chua_nop_tien_theo_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
         private void m_cmd_search_Click(object sender, EventArgs e)
         {
@@ -679,6 +709,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
             }
         }
 
-	}
+    }
 }
 
