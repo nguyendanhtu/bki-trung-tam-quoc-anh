@@ -82,5 +82,30 @@ namespace BKI_QLTTQuocAnh
             }
             op_cbo_lop_mon.SelectedIndex = 0;
         }
+
+        public static void load_data_2_cbo_loai_phieu_thu(
+            decimal ip_dc_id_loai_tu_dien
+            , System.Windows.Forms.ComboBox op_cbo_tu_dien)
+        {
+            DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
+            US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
+            v_us.FillDataset(v_ds, "where id_loai_tu_dien = " + ip_dc_id_loai_tu_dien);
+
+            DataRow v_dr = v_ds.CM_DM_TU_DIEN.NewRow();
+            v_dr[CM_DM_TU_DIEN.ID] = -1;
+            v_dr[CM_DM_TU_DIEN.MA_TU_DIEN] = "TAT_CA";
+            v_dr[CM_DM_TU_DIEN.ID_LOAI_TU_DIEN] = -1;
+            v_dr[CM_DM_TU_DIEN.TEN_NGAN] = "--Tất cả--";
+            v_dr[CM_DM_TU_DIEN.TEN] = "--Tất cả--";
+            v_dr[CM_DM_TU_DIEN.GHI_CHU] = "";
+
+            v_ds.CM_DM_TU_DIEN.Rows.InsertAt(v_dr, 0);
+
+            op_cbo_tu_dien.DataSource = v_ds.CM_DM_TU_DIEN;
+            op_cbo_tu_dien.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
+            op_cbo_tu_dien.ValueMember = CM_DM_TU_DIEN.ID;
+
+            op_cbo_tu_dien.SelectedIndex = 0;
+        }
     }
 }

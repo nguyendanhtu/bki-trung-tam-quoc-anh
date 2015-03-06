@@ -52,7 +52,10 @@ namespace BKI_QLTTQuocAnh.US {
         public const decimal ID_PHIEU_GIAM_TRU = 54;
     }
 
-
+    public static class CONST_LOAI_TU_DIEN
+    {
+        public const decimal LOAI_PHIEU_THU = 5;
+    }
     //public class TU_DIEN {
     //    public const string Q1 = "1";
     //    public const string Q2 = "2";
