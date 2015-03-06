@@ -51,6 +51,8 @@ namespace BKI_QLTTQuocAnh
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label m_lbl_goi_y;
+        private Label label1;
+        private ComboBox m_cbo_loai_phieu;
         private System.ComponentModel.IContainer components;
         #endregion
 
@@ -94,6 +96,7 @@ namespace BKI_QLTTQuocAnh
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_lbl_goi_y = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_search = new System.Windows.Forms.Label();
             this.m_txt_tim_kien = new System.Windows.Forms.TextBox();
@@ -112,7 +115,8 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_lbl_goi_y = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_cbo_loai_phieu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -149,14 +153,16 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 133);
+            this.m_fg.Location = new System.Drawing.Point(0, 193);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(842, 325);
+            this.m_fg.Size = new System.Drawing.Size(842, 265);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_cbo_loai_phieu);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.m_lbl_goi_y);
             this.panel2.Controls.Add(this.m_cmd_search);
             this.panel2.Controls.Add(this.m_lbl_search);
@@ -171,8 +177,18 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(842, 133);
+            this.panel2.Size = new System.Drawing.Size(842, 193);
             this.panel2.TabIndex = 0;
+            // 
+            // m_lbl_goi_y
+            // 
+            this.m_lbl_goi_y.AutoSize = true;
+            this.m_lbl_goi_y.Location = new System.Drawing.Point(641, 171);
+            this.m_lbl_goi_y.Name = "m_lbl_goi_y";
+            this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
+            this.m_lbl_goi_y.TabIndex = 10;
+            this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
+            this.m_lbl_goi_y.Visible = false;
             // 
             // m_cmd_search
             // 
@@ -182,7 +198,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(328, 101);
+            this.m_cmd_search.Location = new System.Drawing.Point(328, 127);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 9;
@@ -191,7 +207,7 @@ namespace BKI_QLTTQuocAnh
             // m_lbl_search
             // 
             this.m_lbl_search.AutoSize = true;
-            this.m_lbl_search.Location = new System.Drawing.Point(14, 109);
+            this.m_lbl_search.Location = new System.Drawing.Point(14, 135);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(67, 13);
             this.m_lbl_search.TabIndex = 7;
@@ -199,7 +215,7 @@ namespace BKI_QLTTQuocAnh
             // 
             // m_txt_tim_kien
             // 
-            this.m_txt_tim_kien.Location = new System.Drawing.Point(94, 106);
+            this.m_txt_tim_kien.Location = new System.Drawing.Point(94, 132);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(222, 20);
             this.m_txt_tim_kien.TabIndex = 8;
@@ -413,15 +429,23 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_lbl_goi_y
+            // label1
             // 
-            this.m_lbl_goi_y.AutoSize = true;
-            this.m_lbl_goi_y.Location = new System.Drawing.Point(571, 117);
-            this.m_lbl_goi_y.Name = "m_lbl_goi_y";
-            this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
-            this.m_lbl_goi_y.TabIndex = 10;
-            this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
-            this.m_lbl_goi_y.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Loại phiếu thu";
+            // 
+            // m_cbo_loai_phieu
+            // 
+            this.m_cbo_loai_phieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_loai_phieu.FormattingEnabled = true;
+            this.m_cbo_loai_phieu.Location = new System.Drawing.Point(94, 102);
+            this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
+            this.m_cbo_loai_phieu.Size = new System.Drawing.Size(222, 21);
+            this.m_cbo_loai_phieu.TabIndex = 12;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
             // 
@@ -486,33 +510,34 @@ namespace BKI_QLTTQuocAnh
         #region Data Structure
         private enum e_col_Number
         {
-            NGUOI_THU = 7
+            NGUOI_THU = 8
 ,
-            SO_PHIEU = 2
+            LOAI_PHIEU = 2
                 ,
-            HO_TEN_PH = 6
+            SO_PHIEU = 3
                 ,
-            TIEN_THUC_THU = 10
+            HO_TEN_PH = 7
+                ,
+            TIEN_THUC_THU = 11
                 ,
             NGAY_THU = 1
                 ,
-            MA_HOC_SINH = 4
+            MA_HOC_SINH = 5
                 ,
-            NOI_DUNG = 3
+            NOI_DUNG = 4
                 ,
-            TIEN_CON_PHAI_THU = 11
+            TIEN_CON_PHAI_THU = 12
                 ,
-            TIEN_GIAM_TRU = 9
+            TIEN_GIAM_TRU = 10
                 ,
-            TIEN_PHAI_THU = 8
-                , HO_TEN_HS = 5
+            TIEN_PHAI_THU = 9
+                , HO_TEN_HS = 6
 
         }
         #endregion
 
         #region Members
         ITransferDataRow m_obj_trans;
-        DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH m_us_bc_tinh_hinh_tc = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
         string m_str_option_hien_thi = "BAO_CAO";/* BAO_CAO
@@ -553,6 +578,9 @@ namespace BKI_QLTTQuocAnh
             CCommon.load_data_2_cbo_nhan_vien(
                 CAppContext_201.getCurrentUserID()
                 , m_cbo_nhan_vien_thu);
+            CCommon.load_data_2_cbo_loai_phieu_thu(
+                CONST_LOAI_TU_DIEN.LOAI_PHIEU_THU,
+                m_cbo_loai_phieu);
             load_data_2_grid();
         }
         private void wrap_text_cell()
@@ -563,8 +591,10 @@ namespace BKI_QLTTQuocAnh
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
+            DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGUOI_THU, e_col_Number.NGUOI_THU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOAI_PHIEU_THU, e_col_Number.LOAI_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_PH, e_col_Number.HO_TEN_PH);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_THUC_THU, e_col_Number.TIEN_THUC_THU);
@@ -576,17 +606,12 @@ namespace BKI_QLTTQuocAnh
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU, e_col_Number.TIEN_PHAI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_HS, e_col_Number.HO_TEN_HS);
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, v_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NewRow());
             return v_obj_trans;
         }
 
-
-
         private void create_tree_2grid()
         {
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
                 , -1
@@ -613,63 +638,62 @@ namespace BKI_QLTTQuocAnh
 
         private void load_data_2_grid()
         {
-            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-
-            switch (m_str_option_hien_thi)
-            {
-                case "THUC_THU":
-                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    //m_dat_den_ngay.Value = DateTime.Now.Date;
-                    //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
-                    m_us.FillDataset(
-                             m_ds
-                             , -1
-                             , m_dat_tu_ngay.Value.Date
-                             , m_dat_den_ngay.Value.Date
-                             , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-                             , CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU
-                             , m_txt_tim_kien.Text.Trim());
-                    break;
-                case "PHAI_THU":
-                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    //m_dat_den_ngay.Value = DateTime.Now.Date;
-                    //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
-                    m_us.FillDataset(
-                             m_ds
-                             , -1
-                             , m_dat_tu_ngay.Value.Date
-                             , m_dat_den_ngay.Value.Date
-                             , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-                             , CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU
-                             , m_txt_tim_kien.Text.Trim());
-                    break;
-                case "F470":
-                    m_us.FillDataset(m_ds
-                                    , m_us_bc_tinh_hinh_tc.dcID
-                                    , m_dat_tu_ngay.Value.Date
-                                    , m_dat_den_ngay.Value.Date
-                                    , -1
-                                    , -1
-                                    , m_txt_tim_kien.Text.Trim());
-                    break;
-                case "BAO_CAO":
-                    //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-                    //m_dat_den_ngay.Value = DateTime.Now.Date;
-                    m_us.FillDataset(
-                             m_ds
-                             , -1
-                             , m_dat_tu_ngay.Value.Date
-                             , m_dat_den_ngay.Value.Date
-                             , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-                             , -1
-                             , m_txt_tim_kien.Text.Trim());
-                    break;
-                default:
-                    break;
-            }
-
-            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-
+            DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            v_ds.Clear();
+            v_ds.EnforceConstraints = false;
+            //switch (m_str_option_hien_thi)
+            //{
+            //    case "THUC_THU":
+            //        //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            //        //m_dat_den_ngay.Value = DateTime.Now.Date;
+            //        //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
+            //        m_us.FillDataset(
+            //                 v_ds
+            //                 , -1
+            //                 , m_dat_tu_ngay.Value.Date
+            //                 , m_dat_den_ngay.Value.Date
+            //                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+            //                 , CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU
+            //                 , m_txt_tim_kien.Text.Trim());
+            //        break;
+            //    case "PHAI_THU":
+            //        //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            //        //m_dat_den_ngay.Value = DateTime.Now.Date;
+            //        //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
+            //        m_us.FillDataset(
+            //                 v_ds
+            //                 , -1
+            //                 , m_dat_tu_ngay.Value.Date
+            //                 , m_dat_den_ngay.Value.Date
+            //                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+            //                 , CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU
+            //                 , m_txt_tim_kien.Text.Trim());
+            //        break;
+            //    case "F470":
+            //        m_us.FillDataset(v_ds
+            //                        , m_us_bc_tinh_hinh_tc.dcID
+            //                        , m_dat_tu_ngay.Value.Date
+            //                        , m_dat_den_ngay.Value.Date
+            //                        , -1
+            //                        , -1
+            //                        , m_txt_tim_kien.Text.Trim());
+            //        break;
+            //    case "BAO_CAO":
+            //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            //m_dat_den_ngay.Value = DateTime.Now.Date;
+            m_us.FillDataset(
+                     v_ds
+                     , -1
+                     , m_dat_tu_ngay.Value.Date
+                     , m_dat_den_ngay.Value.Date
+                     , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                     , CIPConvert.ToDecimal(m_cbo_loai_phieu.SelectedValue)
+                     , m_txt_tim_kien.Text.Trim());
+            //        break;
+            //    default:
+            //        break;
+            //}
+            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
             create_tree_2grid();
             wrap_text_cell();

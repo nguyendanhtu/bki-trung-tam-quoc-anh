@@ -40,7 +40,6 @@ namespace Form_menu
             }
             catch (Exception v_e)
             {
-
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
