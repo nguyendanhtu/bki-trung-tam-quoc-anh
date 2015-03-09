@@ -25,6 +25,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
             format_controls();
+            m_dat_tu_ngay.Value = DateTime.Now;
+            m_dat_den_ngay.Value = DateTime.Now.Date.AddDays(DateTime.Now.Date.Day + 1);
         }
         #region Public Interface
         public void display()
@@ -34,7 +36,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         public void display(DateTime ip_dat_dau_thang, DateTime ip_dat_cuoi_thang, decimal ip_dc_id_lop_mon)
         {
             CCommon.load_data_2_cbo_lop_mon(
-                CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                ip_dc_id_lop_mon
                 , m_cbo_lop);
 
             m_dat_tu_ngay.Value = ip_dat_dau_thang.Date;

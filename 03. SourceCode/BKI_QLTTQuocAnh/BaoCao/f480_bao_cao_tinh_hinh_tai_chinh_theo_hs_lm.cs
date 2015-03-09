@@ -25,12 +25,27 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
             format_controls();
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            m_dat_den_ngay.Value = DateTime.Now.Date;
+            set_initial_form_load();
             //load_data_2_cbo_lop_mon();
         }
 
         #region Public Interface
         public void display()
         {
+            this.ShowDialog();
+        }
+        public void display_chi_tiet_lm_hs(DateTime ip_dat_tu_ngay
+                                            , DateTime ip_dat_den_ngay
+                                            , decimal ip_dc_id_hoc_sinh
+                                            , string ip_str_ten_hoc_sinh)
+        {
+            m_txt_search.Text = ip_str_ten_hoc_sinh;
+            m_dat_tu_ngay.Value = ip_dat_tu_ngay;
+            m_dat_den_ngay.Value = ip_dat_den_ngay;
+
+            load_data_2_grid(ip_dc_id_hoc_sinh);
             this.ShowDialog();
         }
         //public void display(decimal ip_dc_id_hoc_sinh, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
@@ -76,7 +91,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
         ITransferDataRow m_obj_trans;
         DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON m_ds = new DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
         US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON m_us = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
-   
         #endregion
 
         #region Private Methods
@@ -105,9 +119,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-            m_dat_den_ngay.Value = DateTime.Now.Date;
-            load_data_2_grid();
+            load_data_2_grid(-1);
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -134,14 +146,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
-        private void load_data_2_grid()
+        private void load_data_2_grid(decimal ip_dc_id_hoc_sinh)
         {
             m_ds = new DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON();
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
             m_us.FillDataset(m_ds, m_dat_tu_ngay.Value.Date
                                         , m_dat_den_ngay.Value.Date
-                                        , m_txt_search.Text.Trim());
+                                        , m_txt_search.Text.Trim()
+                                        , ip_dc_id_hoc_sinh);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
@@ -229,7 +242,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             //	frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE v_fDE = new  frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE();								
             //	v_fDE.display();
-            load_data_2_grid();
+            load_data_2_grid(-1);
         }
 
         private void update_v_rpt_bao_cao_tinh_hinh_tai_chinh_hoc_sinh_lop_mon()
@@ -239,7 +252,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             grid2us_object(m_us, m_fg.Row);
             //	frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE v_fDE = new frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE();
             //	v_fDE.display(m_us);
-            load_data_2_grid();
+            load_data_2_grid(-1);
         }
 
         private void delete_v_rpt_bao_cao_tinh_hinh_tai_chinh_hoc_sinh_lop_mon()
@@ -298,7 +311,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    load_data_2_grid();
+                    load_data_2_grid(-1);
                 }
             }
             catch (Exception v_e)
@@ -311,7 +324,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                load_data_2_grid();
+                load_data_2_grid(-1);
             }
             catch (Exception v_e)
             {
@@ -323,7 +336,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                set_initial_form_load();
+                //set_initial_form_load();
             }
             catch (Exception v_e)
             {

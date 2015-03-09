@@ -71,15 +71,14 @@ namespace BKI_QLTTQuocAnh
                 
 
                 v_ds_dm_lop_mon.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
-
-                op_cbo_lop_mon.DataSource = v_ds_dm_lop_mon.DM_LOP_MON;
-                op_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
-                op_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
             }
             else
             {
-                v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where ID = " + ip_dc_id_lop_mon + "and TRANG_THAI_LOP_MON = 88");
+                v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where ID = " + ip_dc_id_lop_mon + " and TRANG_THAI_LOP_MON = 88");
             }
+            op_cbo_lop_mon.DataSource = v_ds_dm_lop_mon.DM_LOP_MON;
+            op_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
+            op_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
             op_cbo_lop_mon.SelectedIndex = 0;
         }
 
