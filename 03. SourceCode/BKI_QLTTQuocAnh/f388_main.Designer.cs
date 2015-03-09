@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f388_main));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_doi_mat_khau = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_thoat = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_nguoi_sd = new DevExpress.XtraBars.BarButtonItem();
@@ -72,15 +73,17 @@
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
             // 
+            this.ribbon.ApplicationIcon = global::BKI_QLTTQuocAnh.Properties.Resources.logo_web;
+            this.ribbon.AutoSizeItems = true;
             this.ribbon.ExpandCollapseItem.Id = 0;
+            this.ribbon.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.m_cmd_doi_mat_khau,
@@ -116,8 +119,21 @@
             this.ribbonPage2,
             this.ribbonPage3,
             this.ribbonPage4});
+            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(845, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.Toolbar.ShowCustomizeItem = false;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl1.Location = new System.Drawing.Point(0, 144);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(22, 274);
+            this.panelControl1.TabIndex = 3;
             // 
             // m_cmd_doi_mat_khau
             // 
@@ -464,14 +480,6 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 144);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(22, 274);
-            this.panelControl1.TabIndex = 3;
-            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,8 +496,8 @@
             this.Text = "PHẦN MỀM QUẢN LÝ TÀI CHÍNH TRUNG TÂM QUỐC ANH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).EndInit();
             this.ResumeLayout(false);
 
         }
