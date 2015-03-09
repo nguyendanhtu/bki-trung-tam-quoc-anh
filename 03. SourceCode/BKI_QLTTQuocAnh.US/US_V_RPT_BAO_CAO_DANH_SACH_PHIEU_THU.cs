@@ -435,5 +435,12 @@ namespace BKI_QLTTQuocAnh.US {
             v_csp.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
             v_csp.fillDataSetByCommand(this, op_ds);
         }
+
+        public void DeletePhieuThuVaChiTiet(decimal ip_dc_id_phieu_thu)
+        {
+            CStoredProc v_csp = new CStoredProc("pr_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU_Delete");
+            v_csp.addDecimalInputParam("@ip_dc_id_phieu_thu", ip_dc_id_phieu_thu);
+            v_csp.ExecuteCommand(this);
+        }
     }
 }

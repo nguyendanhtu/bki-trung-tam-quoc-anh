@@ -279,7 +279,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private void m_cmd_ds_phieu_phai_thu_Click(object sender, EventArgs e) {
             try {
                 f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
-                v_frm.display_phieu_phai_thu();
+                v_frm.display_ds_phieu_phai_thu();
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
