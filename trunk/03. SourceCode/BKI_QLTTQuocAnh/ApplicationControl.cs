@@ -51,7 +51,7 @@ namespace BKI_QLTTQuocAnh
                 {
                     CAppContext_201.InitializeContext(v_obj_login_info);
                     CAppContext_201.LoadDecentralizationByUserLogin();
-                    f399_MainMenu v_frm_main = new f399_MainMenu();
+                    f388_main v_frm_main = new f388_main();
                     v_frm_main.display(ref v_exitmode);
                     v_frm_main.Dispose();
                     //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();

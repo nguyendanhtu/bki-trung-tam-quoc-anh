@@ -69,22 +69,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\DevExpress.Data.v13.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\DevExpress.Utils.v13.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\DevExpress.XtraBars.v13.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLL\DevExpress.XtraEditors.v13.1.dll</HintPath>
-    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -274,6 +267,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="f388_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f388_main.Designer.cs">
+      <DependentUpon>f388_main.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.resx">
       <DependentUpon>f410_bao_cao_tai_chinh_theo_lop_mon.cs</DependentUpon>
@@ -375,6 +374,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="f388_main.resx">
+      <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -431,7 +433,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Close-2.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -444,6 +446,87 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Security-Secrecy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-User-Group1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ampeross-Qetto-2-Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Man.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Users-Enter-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904361_23923.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904406_289616.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_438788.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904625_416404.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904783_54524.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_44824.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905213_379332.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905405_243979.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designbolts-Monsters-University-Monsters-Character-Young-Mikes1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905592_196740.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Household-Room1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904832_45433.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904874_448241.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905865_103845.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_25350.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425904521_4387881.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906136_315167.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906224_17014.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425906098_24333.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
