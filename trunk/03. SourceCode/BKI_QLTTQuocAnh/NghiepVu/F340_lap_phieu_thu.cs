@@ -834,6 +834,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     else {
                         insert_chi_tiet_phieu_thu(v_dc_id_phieu_thu);
                     }
+                    BaseMessages.MsgBox_Infor("Đã cập nhật thành công");
                     break;
                 case DataEntryFormMode.UpdateDataState:
                     form_2_us_gd_phieu_thu();
@@ -855,6 +856,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     }
 
                     m_us_gd_phieu_thu.CommitTransaction();
+                    BaseMessages.MsgBox_Infor("Đã cập nhật thành công");
                     break;
                 default:
                     break;
@@ -866,7 +868,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             //else {
             //    insert_chi_tiet_phieu_thu(v_dc_id_phieu_thu);
             //}
-            BaseMessages.MsgBox_Infor("Đã cập nhật thành công");
+            
         }
         private void insert_v_rpt_nghiep_vu_lap_phieu_thu() {
             save_data();
