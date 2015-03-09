@@ -523,12 +523,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         #region Public Interface
         public void set_phieu_thuc_thu() {
+            this.Text = "F340 - Lập phiếu thực thu lẻ";
             m_str_loai_form = "THUC_THU";
             m_lbl_header.Text = "LẬP PHIẾU THỰC THU";
             m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền thực thu theo lớp";
             m_cmd_ds_phieu.Text = "Danh sách phiếu thực thu";
         }
         public void set_phieu_phai_thu() {
+            this.Text = "F340 - Lập phiếu phải thu lẻ";
             m_str_loai_form = "PHAI_THU";
             m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
             m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền phải thu theo lớp";
@@ -536,6 +538,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         public void set_phieu_giam_tru()
         {
+            this.Text = "F340 - Lập phiếu giảm trừ";
             m_str_loai_form = "GIAM_TRU";
             m_lbl_header.Text = "LẬP PHIẾU GIẢM TRỪ";
             m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền giảm trừ theo lớp";
@@ -748,6 +751,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             else if (m_str_loai_form == "THUC_THU")
             {
                 m_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
+            }
+            else if (m_str_loai_form == "GIAM_TRU")
+            {
+                m_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
             }
         }
         private bool check_tong_tien_grid_textbox() {

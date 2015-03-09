@@ -55,6 +55,7 @@
             this.m_cmd_thuc_thu_nv = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_ds_phieu = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_bc_diem_danh = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_lap_giam_tru = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -105,9 +106,10 @@
             this.m_cmd_hs_chua_nop_tien,
             this.m_cmd_thuc_thu_nv,
             this.m_cmd_ds_phieu,
-            this.m_cmd_bc_diem_danh});
+            this.m_cmd_bc_diem_danh,
+            this.m_cmd_lap_giam_tru});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 32;
+            this.ribbon.MaxItemId = 33;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -333,6 +335,15 @@
             this.m_cmd_bc_diem_danh.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // m_cmd_lap_giam_tru
+            // 
+            this.m_cmd_lap_giam_tru.Caption = "Lập giảm trừ";
+            this.m_cmd_lap_giam_tru.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425912499_173055;
+            this.m_cmd_lap_giam_tru.Id = 32;
+            this.m_cmd_lap_giam_tru.Name = "m_cmd_lap_giam_tru";
+            this.m_cmd_lap_giam_tru.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -398,6 +409,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_le);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_tu_dong);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_thuc_thu);
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_giam_tru);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ban_giao_tien);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Tài chính";
@@ -526,5 +538,6 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_bc_diem_danh;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager MdiManager;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_lap_giam_tru;
     }
 }

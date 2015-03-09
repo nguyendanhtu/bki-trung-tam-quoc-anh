@@ -83,6 +83,7 @@ namespace BKI_QLTTQuocAnh
             m_cmd_lap_phai_thu_le.ItemClick += m_cmd_lap_phai_thu_le_ItemClick;
             m_cmd_lap_phai_thu_tu_dong.ItemClick += m_cmd_lap_phai_thu_tu_dong_ItemClick;
             m_cmd_lap_thuc_thu.ItemClick += m_cmd_lap_thuc_thu_ItemClick;
+            m_cmd_lap_giam_tru.ItemClick += m_cmd_lap_giam_tru_ItemClick;
             //Hệ thống
             m_cmd_thoat.ItemClick += m_cmd_thoat_ItemClick;
             m_cmd_phan_quyen_nhom.ItemClick += m_cmd_phan_quyen_nhom_ItemClick;
@@ -102,6 +103,23 @@ namespace BKI_QLTTQuocAnh
             m_cmd_bc_diem_danh.ItemClick += m_cmd_bc_diem_danh_ItemClick;
             m_cmd_thuc_thu_nv.ItemClick += m_cmd_thuc_thu_nv_ItemClick;
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
+        }
+
+        void m_cmd_lap_giam_tru_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                v_frm.set_phieu_giam_tru();
+                if (IsExistFormText(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_lap_thuc_thu_ItemClick(object sender, ItemClickEventArgs e)
