@@ -526,11 +526,20 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_str_loai_form = "THUC_THU";
             m_lbl_header.Text = "LẬP PHIẾU THỰC THU";
             m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền thực thu theo lớp";
+            m_cmd_ds_phieu.Text = "Danh sách phiếu thực thu";
         }
         public void set_phieu_phai_thu() {
             m_str_loai_form = "PHAI_THU";
             m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
             m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền phải thu theo lớp";
+            m_cmd_ds_phieu.Text = "Danh sách phiếu phải thu";
+        }
+        public void set_phieu_giam_tru()
+        {
+            m_str_loai_form = "GIAM_TRU";
+            m_lbl_header.Text = "LẬP PHIẾU GIẢM TRỪ";
+            m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Số tiền giảm trừ theo lớp";
+            m_cmd_ds_phieu.Text = "Danh sách phiếu giảm trừ";
         }
         public void display(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us, decimal ip_dc_id_loai_phieu_thu, decimal ip_dc_id_nguoi_nhap) {
             US_V_GD_PHIEU_THU v_us_v_pt = new US_V_GD_PHIEU_THU(ip_us.dcID);
@@ -909,10 +918,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
                 switch (m_str_loai_form) {
                     case "PHAI_THU":
-                        v_frm.display_phieu_phai_thu();
+                        v_frm.display_ds_phieu_phai_thu();
                         break;
                     case "THUC_THU":
-                        v_frm.display_phieu_thuc_thu();
+                        v_frm.display_ds_phieu_thuc_thu();
                         break;
                     default:
                         break;
