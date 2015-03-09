@@ -72,8 +72,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
-            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-            m_dat_den_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day).AddMonths(1).Date;
+            m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Day + 1);
+            m_dat_den_ngay.Value = DateTime.Now.AddMonths(1).Date.AddDays(-DateTime.Now.Date.Day);
             load_data_2_cbo_lop_mon();
             load_data_2_grid();
         }

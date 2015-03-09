@@ -256,8 +256,13 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(v_us, m_fg.Row);
 
-                f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
-                v_frm.display_from_f470(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+                f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm v_frm = new f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm();
+                v_frm.display_chi_tiet_lm_hs(m_dat_tu_ngay.Value.Date
+                                            , m_dat_den_ngay.Value.Date
+                                            , v_us.dcID
+                                            , v_us.strHO_TEN);
+                //f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                //v_frm.display_from_f470(v_us, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
             }
             catch (Exception v_e)
             {
