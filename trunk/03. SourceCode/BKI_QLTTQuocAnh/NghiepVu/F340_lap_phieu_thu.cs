@@ -619,7 +619,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         //US_V_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
-        string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
+        public string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
         string m_str_trang_thai_phieu = "";//CLICK tu f430 thi gan = "F430"
         decimal m_id_gd_phieu_thu = 0;//Dung de lay id_gd_phieu_thu khi click tu 430
         #endregion
