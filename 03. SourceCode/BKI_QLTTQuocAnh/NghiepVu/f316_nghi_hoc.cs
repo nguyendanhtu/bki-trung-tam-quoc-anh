@@ -149,7 +149,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 v_us.Find_ID_GD_HOC(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue), CIPConvert.ToDecimal(m_cbo_hs.SelectedValue), ref op_dc_id_gd_hoc);
                 US_GD_HOC v_us_gd_hoc = new US_GD_HOC(op_dc_id_gd_hoc);
                 v_us_gd_hoc.strTRANG_THAI_YN = "N";
-                v_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tu_ngay.Value.Date;
+                v_us_gd_hoc.datNGAY_KET_THUC = m_dat_tu_ngay.Value.Date;
                 v_us_gd_hoc.Update();
                 BaseMessages.MsgBox_Infor("Xong!!!");
                 load_data_2_cbo_hoc_sinh(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
