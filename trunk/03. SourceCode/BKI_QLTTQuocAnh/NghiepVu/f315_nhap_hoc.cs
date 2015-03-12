@@ -146,11 +146,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void form_2_us_object()
         {
+            string v_str = "01/01/3000";
+            DateTime v_dat = CIPConvert.ToDatetime(v_str);
+
             m_us_gd_hoc.dcID_HOC_SINH = m_us_v_hoc_sinh.dcID;
             m_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue);
             m_us_gd_hoc.strTRANG_THAI_YN = "Y";
             m_us_gd_hoc.datNGAY_BAT_DAU = m_dat_tai_ngay.Value.Date;
-
+            m_us_gd_hoc.datNGAY_KET_THUC = v_dat;
         }
 
         private void save_data()//Hien tai moi chi su dung insert TuyenNT xu ly update sau
