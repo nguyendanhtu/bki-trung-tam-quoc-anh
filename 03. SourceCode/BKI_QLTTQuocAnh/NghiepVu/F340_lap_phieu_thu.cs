@@ -932,6 +932,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     case "THUC_THU":
                         v_frm.display_ds_phieu_thuc_thu();
                         break;
+                    case "GIAM_TRU":
+                        v_frm.display_ds_phieu_giam_tru();
+                        break;
                     default:
                         break;
                 }

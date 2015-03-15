@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_RPT_F460_TINH_HINH_BO_LOP" targetNamespace="http://tempuri.org/DS_V_RPT_F460_TINH_HINH_BO_LOP.xsd" xmlns:mstns="http://tempuri.org/DS_V_RPT_F460_TINH_HINH_BO_LOP.xsd" xmlns="http://tempuri.org/DS_V_RPT_F460_TINH_HINH_BO_LOP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyTTQuocAnhConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyTTQuocAnhConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.QuanLyTTQuocAnhConnectionString3" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_RPT_F460_TINH_HINH_BO_LOPTableAdapter" GeneratorDataComponentClassName="V_RPT_F460_TINH_HINH_BO_LOPTableAdapter" Name="V_RPT_F460_TINH_HINH_BO_LOP" UserDataComponentName="V_RPT_F460_TINH_HINH_BO_LOPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString3 (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.V_RPT_F460_TINH_HINH_BO_LOP" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, ID_LOP_MON, MO_TA, ID_HOC_SINH, MA_HOC_SINH, HO_TEN FROM dbo.V_RPT_F460_TINH_HINH_BO_LOP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="ID_LOP_MON" DataSetColumn="ID_LOP_MON" />
+              <Mapping SourceColumn="MO_TA" DataSetColumn="MO_TA" />
+              <Mapping SourceColumn="ID_HOC_SINH" DataSetColumn="ID_HOC_SINH" />
+              <Mapping SourceColumn="MA_HOC_SINH" DataSetColumn="MA_HOC_SINH" />
+              <Mapping SourceColumn="HO_TEN" DataSetColumn="HO_TEN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_RPT_F460_TINH_HINH_BO_LOP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_RPT_F460_TINH_HINH_BO_LOP" msprop:Generator_UserDSName="DS_V_RPT_F460_TINH_HINH_BO_LOP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_RPT_F460_TINH_HINH_BO_LOP" msprop:Generator_TableClassName="V_RPT_F460_TINH_HINH_BO_LOPDataTable" msprop:Generator_TableVarName="tableV_RPT_F460_TINH_HINH_BO_LOP" msprop:Generator_TablePropName="V_RPT_F460_TINH_HINH_BO_LOP" msprop:Generator_RowDeletingName="V_RPT_F460_TINH_HINH_BO_LOPRowDeleting" msprop:Generator_RowChangingName="V_RPT_F460_TINH_HINH_BO_LOPRowChanging" msprop:Generator_RowEvHandlerName="V_RPT_F460_TINH_HINH_BO_LOPRowChangeEventHandler" msprop:Generator_RowDeletedName="V_RPT_F460_TINH_HINH_BO_LOPRowDeleted" msprop:Generator_UserTableName="V_RPT_F460_TINH_HINH_BO_LOP" msprop:Generator_RowChangedName="V_RPT_F460_TINH_HINH_BO_LOPRowChanged" msprop:Generator_RowEvArgName="V_RPT_F460_TINH_HINH_BO_LOPRowChangeEvent" msprop:Generator_RowClassName="V_RPT_F460_TINH_HINH_BO_LOPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" />
+              <xs:element name="MO_TA" msprop:Generator_ColumnVarNameInTable="columnMO_TA" msprop:Generator_ColumnPropNameInRow="MO_TA" msprop:Generator_ColumnPropNameInTable="MO_TAColumn" msprop:Generator_UserColumnName="MO_TA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_HOC_SINH" msprop:Generator_ColumnVarNameInTable="columnID_HOC_SINH" msprop:Generator_ColumnPropNameInRow="ID_HOC_SINH" msprop:Generator_ColumnPropNameInTable="ID_HOC_SINHColumn" msprop:Generator_UserColumnName="ID_HOC_SINH" type="xs:decimal" />
+              <xs:element name="MA_HOC_SINH" msprop:Generator_ColumnVarNameInTable="columnMA_HOC_SINH" msprop:Generator_ColumnPropNameInRow="MA_HOC_SINH" msprop:Generator_ColumnPropNameInTable="MA_HOC_SINHColumn" msprop:Generator_UserColumnName="MA_HOC_SINH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HO_TEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_RPT_F460_TINH_HINH_BO_LOP" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -537,7 +537,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
             m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
-            m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
+            m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
             m_dat_den_ngay.Value = DateTime.Now.Date;
 

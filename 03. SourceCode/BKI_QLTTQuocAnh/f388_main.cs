@@ -13,7 +13,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.NghiepVu;
-
+using IP.Core.IPSystemAdmin;
 namespace BKI_QLTTQuocAnh
 {
     public partial class f388_main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -40,7 +40,26 @@ namespace BKI_QLTTQuocAnh
         #region Private Methods
         private void format_control()
         {
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
+            {
+                ribbonPageGroup4.Visible = false;
+                ribbonPageGroup5.Visible = false;
+                m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
+                m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
+                m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
+                m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
 
+                ribbonPage2.Visible = false;
+            }
+            else
+            {
+                m_cmd_ban_giao_tien.Visibility = BarItemVisibility.Never;
+                m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
+                m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
+                m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
+                ribbonPageGroup2.Visible = false;
+            }
             set_define_events();
         }
         private bool IsExistFormName(Form ip_frm)
@@ -104,6 +123,23 @@ namespace BKI_QLTTQuocAnh
             m_cmd_bc_diem_danh.ItemClick += m_cmd_bc_diem_danh_ItemClick;
             m_cmd_thuc_thu_nv.ItemClick += m_cmd_thuc_thu_nv_ItemClick;
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
+            m_cmd_bien_dong_hs.ItemClick += m_cmd_bien_dong_hs_ItemClick;
+        }
+
+        void m_cmd_bien_dong_hs_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f460_bc_tinh_hinh_bo_hoc v_frm = new f460_bc_tinh_hinh_bo_hoc();
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_ban_giao_tien_ItemClick(object sender, ItemClickEventArgs e)
@@ -419,7 +455,11 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
+                f308_DOI_MAT_KHAU_NGUOI_SD v_frm = new f308_DOI_MAT_KHAU_NGUOI_SD();
+                if (IsExistFormName(v_frm)) return;
 
+                v_frm.MdiParent = this;
+                v_frm.Show();
             }
             catch (Exception v_e)
             {
