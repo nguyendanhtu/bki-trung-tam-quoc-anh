@@ -133,6 +133,12 @@
     <Compile Include="BaoCao\f450_bc_so_luong_hs_hien_nay.Designer.cs">
       <DependentUpon>f450_bc_so_luong_hs_hien_nay.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\f460_bc_tinh_hinh_bo_hoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f460_bc_tinh_hinh_bo_hoc.Designer.cs">
+      <DependentUpon>f460_bc_tinh_hinh_bo_hoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
     <Compile Include="BaoCao\f490_bc_thuc_thu_theo_nv.Designer.cs">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\fr_test.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
@@ -191,6 +200,12 @@
     </Compile>
     <Compile Include="HeThong\f306_HT_USER_GROUP_DE.Designer.cs">
       <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.designer.cs">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\f990_ht_form.cs">
       <SubType>Form</SubType>
@@ -292,6 +307,9 @@
     <EmbeddedResource Include="BaoCao\f450_bc_so_luong_hs_hien_nay.resx">
       <DependentUpon>f450_bc_so_luong_hs_hien_nay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f460_bc_tinh_hinh_bo_hoc.resx">
+      <DependentUpon>f460_bc_tinh_hinh_bo_hoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.resx">
       <DependentUpon>f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f490_bc_thuc_thu_theo_nv.resx">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\fr_test.resx">
+      <DependentUpon>fr_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
@@ -324,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP_DE.resx">
       <DependentUpon>f306_HT_USER_GROUP_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f308_DOI_MAT_KHAU_NGUOI_SD.resx">
+      <DependentUpon>f308_DOI_MAT_KHAU_NGUOI_SD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f990_ht_form.resx">
       <DependentUpon>f990_ht_form.cs</DependentUpon>
@@ -533,6 +557,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425905897_253501.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

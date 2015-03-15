@@ -84,6 +84,7 @@
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_DI_HOC.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH.cs" />
     <Compile Include="US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.cs" />
+    <Compile Include="US_V_RPT_F460_TINH_HINH_BO_LOP.cs" />
     <Compile Include="US_V_RPT_NGHIEP_VU_LAP_PHIEU_THU.cs" />
   </ItemGroup>
   <ItemGroup>

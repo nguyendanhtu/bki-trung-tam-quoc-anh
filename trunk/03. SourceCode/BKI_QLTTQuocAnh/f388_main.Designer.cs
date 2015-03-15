@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f388_main));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_doi_mat_khau = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_thoat = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_nguoi_sd = new DevExpress.XtraBars.BarButtonItem();
@@ -57,6 +56,7 @@
             this.m_cmd_ds_phieu = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_bc_diem_danh = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_lap_giam_tru = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_bien_dong_hs = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,6 +72,7 @@
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -110,9 +111,10 @@
             this.m_cmd_thuc_thu_nv,
             this.m_cmd_ds_phieu,
             this.m_cmd_bc_diem_danh,
-            this.m_cmd_lap_giam_tru});
+            this.m_cmd_lap_giam_tru,
+            this.m_cmd_bien_dong_hs});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 33;
+            this.ribbon.MaxItemId = 34;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -126,14 +128,6 @@
             this.ribbon.Size = new System.Drawing.Size(845, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 144);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(22, 274);
-            this.panelControl1.TabIndex = 3;
             // 
             // m_cmd_doi_mat_khau
             // 
@@ -360,6 +354,15 @@
             this.m_cmd_lap_giam_tru.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // m_cmd_bien_dong_hs
+            // 
+            this.m_cmd_bien_dong_hs.Caption = "Biến động HS";
+            this.m_cmd_bien_dong_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905897_253501;
+            this.m_cmd_bien_dong_hs.Id = 33;
+            this.m_cmd_bien_dong_hs.Name = "m_cmd_bien_dong_hs";
+            this.m_cmd_bien_dong_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -422,6 +425,8 @@
             // 
             // ribbonPageGroup6
             // 
+            this.ribbonPageGroup6.AllowMinimize = false;
+            this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_le);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_tu_dong);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_thuc_thu);
@@ -444,6 +449,7 @@
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
+            this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Theo học sinh";
             // 
@@ -475,6 +481,14 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(845, 31);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl1.Location = new System.Drawing.Point(0, 144);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(22, 274);
+            this.panelControl1.TabIndex = 3;
             // 
             // MdiManager
             // 
@@ -547,5 +561,6 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager MdiManager;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarButtonItem m_cmd_lap_giam_tru;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_bien_dong_hs;
     }
 }
