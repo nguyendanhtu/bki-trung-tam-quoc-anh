@@ -157,9 +157,6 @@
     <Compile Include="BaoCao\f490_bc_thuc_thu_theo_nv.Designer.cs">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCao\fr_test.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
       <SubType>Form</SubType>
@@ -318,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f490_bc_thuc_thu_theo_nv.resx">
       <DependentUpon>f490_bc_thuc_thu_theo_nv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\fr_test.resx">
-      <DependentUpon>fr_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>

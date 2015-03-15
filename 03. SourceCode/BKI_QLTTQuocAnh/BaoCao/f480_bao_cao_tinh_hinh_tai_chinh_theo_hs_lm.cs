@@ -153,8 +153,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_ds.EnforceConstraints = false;
             m_us.FillDataset(m_ds, m_dat_tu_ngay.Value.Date
                                         , m_dat_den_ngay.Value.Date
-                                        , m_txt_search.Text.Trim()
-                                        , ip_dc_id_hoc_sinh);
+                                        , ip_dc_id_hoc_sinh
+                                        , m_txt_search.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++)
