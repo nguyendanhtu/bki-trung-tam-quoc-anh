@@ -175,7 +175,7 @@
             // 
             // m_cmd_dm_lop_mon
             // 
-            this.m_cmd_dm_lop_mon.Caption = "Lớp môn";
+            this.m_cmd_dm_lop_mon.Caption = "Cập nhật lớp môn";
             this.m_cmd_dm_lop_mon.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Icons8_Ios7_Household_Room;
             this.m_cmd_dm_lop_mon.Id = 6;
             this.m_cmd_dm_lop_mon.Name = "m_cmd_dm_lop_mon";
@@ -391,10 +391,10 @@
             this.ribbonPageGroup3});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "DANH MỤC";
+            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.m_cmd_dm_lop_mon);
             this.ribbonPageGroup3.ItemLinks.Add(this.m_cmd_dm_hs);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -419,8 +419,9 @@
             // 
             this.ribbonPageGroup5.AllowTextClipping = false;
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_diem_danh);
+            this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_dm_lop_mon);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Tình hình điểm danh";
+            this.ribbonPageGroup5.Text = "Lớp môn";
             // 
             // ribbonPageGroup6
             // 
