@@ -555,6 +555,9 @@
   <ItemGroup>
     <None Include="Resources\1425905897_253501.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo luyen thi V4.0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

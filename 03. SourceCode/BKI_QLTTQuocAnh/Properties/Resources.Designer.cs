@@ -363,6 +363,16 @@ namespace BKI_QLTTQuocAnh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_luyen_thi_V4_0 {
+            get {
+                object obj = ResourceManager.GetObject("Logo luyen thi V4.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_web {
             get {
                 object obj = ResourceManager.GetObject("logo-web", resourceCulture);

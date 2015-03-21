@@ -46,6 +46,40 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_dat_den_ngay.Value = ip_dat_den_ngay;
 
             load_data_2_grid(ip_dc_id_hoc_sinh);
+            m_fg.Subtotal(AggregateEnum.Clear
+                 , 0
+                 , -1
+                 , (int)e_col_Number.TONG_PHAI_THU
+                 , "Tổng");
+            m_fg.Subtotal(AggregateEnum.Clear
+             , 1
+             , -1
+             , (int)e_col_Number.TONG_PHAI_THU
+             , "Tổng");
+            m_fg.Subtotal(AggregateEnum.Sum
+              , 1
+              , (int)e_col_Number.HO_TEN
+              , (int)e_col_Number.TONG_PHAI_THU
+              , "{0}");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 1
+                , (int)e_col_Number.HO_TEN
+                , (int)e_col_Number.TONG_GIAM_TRU
+                , "{0}");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 1
+                , (int)e_col_Number.HO_TEN
+                , (int)e_col_Number.TONG_THUC_THU
+                , "{0}");
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                , 1
+                , (int)e_col_Number.HO_TEN
+                , (int)e_col_Number.TONG_CON_NO
+                , "{0}");
+            m_cmd_search.Visible = false;
             this.ShowDialog();
         }
         //public void display(decimal ip_dc_id_hoc_sinh, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
@@ -143,7 +177,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void wrap_text_cell()
         {
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
-            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AllowResizing = AllowResizingEnum.Both;
             m_fg.AutoSizeRows();
         }
         private void load_data_2_grid(decimal ip_dc_id_hoc_sinh)
@@ -161,7 +195,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             {
                 m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN]
                     = m_fg[v_i_cur_row, (int)e_col_Number.MA_DOI_TUONG]
-                    +"-"
+                    + "-"
                     + m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN];
             }
 
@@ -169,7 +203,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , 0
                 , -1
                 , (int)e_col_Number.TONG_PHAI_THU
-                ,"Tổng");
+                , "Tổng");
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
@@ -196,7 +230,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
               , "{0}");
 
             m_fg.Subtotal(AggregateEnum.Sum
-                ,1
+                , 1
                 , (int)e_col_Number.HO_TEN
                 , (int)e_col_Number.TONG_GIAM_TRU
                 , "{0}");
@@ -216,7 +250,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Tree.Show(1);
 
             wrap_text_cell();
-            CGridUtils.MakeSoTT(0, m_fg);
+            CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
@@ -286,7 +320,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE v_fDE = new frm_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON_DE();			
             //	v_fDE.display(m_us);
         }
-        
+
         #endregion
 
         //
@@ -317,7 +351,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            } 
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
@@ -343,7 +377,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        
+
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try

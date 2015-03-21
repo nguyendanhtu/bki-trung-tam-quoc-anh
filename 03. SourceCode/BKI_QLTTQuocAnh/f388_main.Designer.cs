@@ -69,11 +69,11 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -81,7 +81,7 @@
             // 
             // ribbon
             // 
-            this.ribbon.ApplicationIcon = global::BKI_QLTTQuocAnh.Properties.Resources.logo_web;
+            this.ribbon.ApplicationIcon = global::BKI_QLTTQuocAnh.Properties.Resources.Logo_luyen_thi_V4_0;
             this.ribbon.AutoSizeItems = true;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -438,16 +438,15 @@
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup11,
             this.ribbonPageGroup7,
             this.ribbonPageGroup8,
-            this.ribbonPageGroup9,
             this.ribbonPageGroup10});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "BÁO CÁO";
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -455,19 +454,12 @@
             // 
             // ribbonPageGroup8
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_tai_chinh_lm);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_tai_chinh_lm_hs);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_hien_nay);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_chua_nop_tien);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bc_diem_danh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "NV";
             // 
             // ribbonPageGroup10
             // 
@@ -493,6 +485,14 @@
             // MdiManager
             // 
             this.MdiManager.MdiParent = this;
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
+            this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_lm);
+            this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.ribbonPageGroup11.Text = "Báo cáo tổng";
             // 
             // f388_main
             // 
@@ -555,12 +555,12 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_ds_phieu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem m_cmd_bc_diem_danh;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager MdiManager;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarButtonItem m_cmd_lap_giam_tru;
         private DevExpress.XtraBars.BarButtonItem m_cmd_bien_dong_hs;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
     }
 }
