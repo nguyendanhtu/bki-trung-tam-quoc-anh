@@ -23,6 +23,7 @@ namespace BKI_QLTTQuocAnh
             InitializeComponent();
             format_control();
             MdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            ribbon.SelectedPage = ribbonPage3;
         }
         public void display(ref IP.Core.IPCommon.IPConstants.HowUserWantTo_Exit_MainForm v_exitmode)
         {
@@ -49,7 +50,9 @@ namespace BKI_QLTTQuocAnh
                 m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
                 m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
                 m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
-
+                m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
+                m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
+                m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
                 ribbonPage2.Visible = false;
             }
             else
