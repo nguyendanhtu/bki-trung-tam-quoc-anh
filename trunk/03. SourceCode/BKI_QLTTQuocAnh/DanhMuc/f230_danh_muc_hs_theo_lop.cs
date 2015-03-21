@@ -496,7 +496,7 @@ namespace BKI_QLTTQuocAnh
                 , "Tổng");
 
             wrap_text_cell();
-            CGridUtils.MakeSoTT(0, m_fg);
+            CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, false);
             m_fg.Redraw = true;
         }
 
