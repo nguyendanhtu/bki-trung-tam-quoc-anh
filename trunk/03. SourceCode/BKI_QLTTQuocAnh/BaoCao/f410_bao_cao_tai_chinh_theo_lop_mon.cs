@@ -66,6 +66,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
+
+            m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
             set_define_events();
             this.KeyPreview = true;
         }
@@ -80,7 +82,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void wrap_text_cell()
         {
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
-            m_fg.AllowResizing = AllowResizingEnum.Rows;
+            m_fg.AllowResizing = AllowResizingEnum.Both;
             m_fg.AutoSizeRows();
         }
         private void load_data_2_cbo_lop_mon()
@@ -129,7 +131,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             wrap_text_cell();
-            CGridUtils.MakeSoTT(0, m_fg);
+            
 
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
@@ -151,6 +153,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , -1
                 , (int)e_col_Number.TIEN_CON_PHAI_THU
                 , "Tổng");
+
+            CGridUtils.MakeSoTTofRowNotIsNode(0,m_fg, false);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON i_us

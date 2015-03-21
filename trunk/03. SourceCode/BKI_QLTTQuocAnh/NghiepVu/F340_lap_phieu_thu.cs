@@ -245,7 +245,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.m_cmd_ds_phieu.ImageList = this.ImageList;
             this.m_cmd_ds_phieu.Location = new System.Drawing.Point(236, 4);
             this.m_cmd_ds_phieu.Name = "m_cmd_ds_phieu";
-            this.m_cmd_ds_phieu.Size = new System.Drawing.Size(132, 28);
+            this.m_cmd_ds_phieu.Size = new System.Drawing.Size(203, 28);
             this.m_cmd_ds_phieu.TabIndex = 2;
             this.m_cmd_ds_phieu.Text = "Danh sách phiếu";
             // 
