@@ -168,9 +168,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 101);
+            this.m_fg.Location = new System.Drawing.Point(0, 51);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(525, 241);
+            this.m_fg.Size = new System.Drawing.Size(525, 291);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 22;
             // 
@@ -183,7 +183,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 101);
+            this.panel1.Size = new System.Drawing.Size(525, 51);
             this.panel1.TabIndex = 23;
             // 
             // m_lbl_header
@@ -211,6 +211,7 @@
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 9;
             this.m_cmd_search.Text = "Lọc dữ liệu";
+            this.m_cmd_search.Visible = false;
             // 
             // m_cbo_lop
             // 
@@ -219,6 +220,7 @@
             this.m_cbo_lop.Name = "m_cbo_lop";
             this.m_cbo_lop.Size = new System.Drawing.Size(141, 21);
             this.m_cbo_lop.TabIndex = 8;
+            this.m_cbo_lop.Visible = false;
             // 
             // m_lbl_lop_mon
             // 
@@ -228,6 +230,7 @@
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(48, 13);
             this.m_lbl_lop_mon.TabIndex = 7;
             this.m_lbl_lop_mon.Text = "Lớp môn";
+            this.m_lbl_lop_mon.Visible = false;
             // 
             // f450_bc_so_luong_hs_hien_nay
             // 
