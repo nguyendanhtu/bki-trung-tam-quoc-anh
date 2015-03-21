@@ -25,8 +25,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             InitializeComponent();
             format_controls();
-            m_dat_tu_ngay.Value = DateTime.Now;
-            m_dat_den_ngay.Value = DateTime.Now.Date.AddDays(DateTime.Now.Date.Day + 1);
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            m_dat_den_ngay.Value = DateTime.Now.Date;
         }
         #region Public Interface
         public void display()
