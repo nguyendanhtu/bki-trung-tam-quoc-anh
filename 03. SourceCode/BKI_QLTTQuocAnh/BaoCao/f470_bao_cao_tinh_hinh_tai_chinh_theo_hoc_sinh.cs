@@ -149,7 +149,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
              , "Tổng cộng");
 
             wrap_text_cell();
-            CGridUtils.MakeSoTT(0, m_fg);
+            CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, false);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH i_us
