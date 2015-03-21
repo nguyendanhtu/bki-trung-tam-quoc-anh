@@ -480,6 +480,8 @@ namespace BKI_QLTTQuocAnh
         #region Public Interface
         public void display()
         {
+            m_cmd_update.Visible = true;
+            m_cmd_delete.Visible = true;
             this.ShowDialog();
         }
         public void display_from_f470(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
@@ -666,46 +668,6 @@ namespace BKI_QLTTQuocAnh
             DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             v_ds.Clear();
             v_ds.EnforceConstraints = false;
-            //switch (m_str_option_hien_thi)
-            //{
-            //    case "THUC_THU":
-            //        //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-            //        //m_dat_den_ngay.Value = DateTime.Now.Date;
-            //        //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
-            //        m_us.FillDataset(
-            //                 v_ds
-            //                 , -1
-            //                 , m_dat_tu_ngay.Value.Date
-            //                 , m_dat_den_ngay.Value.Date
-            //                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-            //                 , CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU
-            //                 , m_txt_tim_kien.Text.Trim());
-            //        break;
-            //    case "PHAI_THU":
-            //        //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-            //        //m_dat_den_ngay.Value = DateTime.Now.Date;
-            //        //m_cbo_nhan_vien_thu.SelectedValue = CAppContext_201.getCurrentUserID();
-            //        m_us.FillDataset(
-            //                 v_ds
-            //                 , -1
-            //                 , m_dat_tu_ngay.Value.Date
-            //                 , m_dat_den_ngay.Value.Date
-            //                 , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-            //                 , CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU
-            //                 , m_txt_tim_kien.Text.Trim());
-            //        break;
-            //    case "F470":
-            //        m_us.FillDataset(v_ds
-            //                        , m_us_bc_tinh_hinh_tc.dcID
-            //                        , m_dat_tu_ngay.Value.Date
-            //                        , m_dat_den_ngay.Value.Date
-            //                        , -1
-            //                        , -1
-            //                        , m_txt_tim_kien.Text.Trim());
-            //        break;
-            //    case "BAO_CAO":
-            //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
-            //m_dat_den_ngay.Value = DateTime.Now.Date;
             m_us.FillDataset(
                      v_ds
                      , m_us_bc_tinh_hinh_tc.dcID
@@ -714,10 +676,7 @@ namespace BKI_QLTTQuocAnh
                      , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
                      , CIPConvert.ToDecimal(m_cbo_loai_phieu.SelectedValue)
                      , m_txt_tim_kien.Text.Trim());
-            //        break;
-            //    default:
-            //        break;
-            //}
+
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
             create_tree_2grid();
