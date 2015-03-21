@@ -130,10 +130,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 357);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(643, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(643, 52);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_delete
@@ -145,11 +145,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(268, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(313, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(121, 44);
             this.m_cmd_delete.TabIndex = 24;
-            this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Text = "&Xoá lớp môn";
             // 
             // m_cmd_update
             // 
@@ -160,11 +160,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(180, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(202, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(111, 44);
             this.m_cmd_update.TabIndex = 23;
-            this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Text = "&Sửa lớp môn";
             // 
             // m_cmd_insert
             // 
@@ -177,9 +177,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_insert.ImageList = this.ImageList;
             this.m_cmd_insert.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.Size = new System.Drawing.Size(110, 44);
             this.m_cmd_insert.TabIndex = 12;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Text = "&Thêm lớp môn";
             this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click_1);
             // 
             // m_cmd_xuat_excel
@@ -193,7 +193,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_xuat_excel.ImageList = this.ImageList;
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 44);
             this.m_cmd_xuat_excel.TabIndex = 21;
             this.m_cmd_xuat_excel.Text = "Xuất excel";
             // 
@@ -208,7 +208,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(551, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 44);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -218,7 +218,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 52);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(643, 321);
+            this.m_fg.Size = new System.Drawing.Size(643, 305);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
