@@ -114,6 +114,13 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             wrap_text_cell();
+
+            m_fg.Subtotal(AggregateEnum.Sum
+                        , 0
+                        , -1
+                        , (int)e_col_Number.TONG_SO_HS
+                        , "Tổng số HS");
+
             CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
