@@ -250,7 +250,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Tree.Show(1);
 
             wrap_text_cell();
-            CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
+            //CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
