@@ -55,6 +55,13 @@ namespace BKI_QLTTQuocAnh.US {
     public static class CONST_LOAI_TU_DIEN
     {
         public const decimal LOAI_PHIEU_THU = 5;
+        public const decimal TRANG_THAI_LOP_MON = 12;
+    }
+
+    public static class CONST_TRANG_THAI_LOP_MON
+    {
+        public const decimal DANG_HOAT_DONG = 88;
+        public const decimal KHONG_HOAT_DONG = 89;
     }
     //public class TU_DIEN {
     //    public const string Q1 = "1";

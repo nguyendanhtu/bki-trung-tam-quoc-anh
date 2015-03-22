@@ -41,9 +41,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         private Label m_lbl_header;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
-        private ComboBox comboBox1;
+        private ComboBox m_cbo_trang_thai_lop;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
-        private Label label1;
+        private Label m_lbl_trang_thai_lop;
         private System.ComponentModel.IContainer components;
 
         public f210_dm_lop_mon()
@@ -92,10 +92,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_lbl_header = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.m_lbl_trang_thai_lop = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_cbo_trang_thai_lop = new System.Windows.Forms.ComboBox();
+            this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -230,9 +230,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.m_lbl_trang_thai_lop);
             this.panel1.Controls.Add(this.m_cmd_search);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.m_cbo_trang_thai_lop);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -240,25 +240,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.panel1.Size = new System.Drawing.Size(643, 98);
             this.panel1.TabIndex = 21;
             // 
-            // m_lbl_header
+            // m_lbl_trang_thai_lop
             // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(643, 39);
-            this.m_lbl_header.TabIndex = 2;
-            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 21);
-            this.comboBox1.TabIndex = 3;
+            this.m_lbl_trang_thai_lop.AutoSize = true;
+            this.m_lbl_trang_thai_lop.Location = new System.Drawing.Point(12, 57);
+            this.m_lbl_trang_thai_lop.Name = "m_lbl_trang_thai_lop";
+            this.m_lbl_trang_thai_lop.Size = new System.Drawing.Size(72, 13);
+            this.m_lbl_trang_thai_lop.TabIndex = 11;
+            this.m_lbl_trang_thai_lop.Text = "Trạng thái lớp";
             // 
             // m_cmd_search
             // 
@@ -274,14 +263,25 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_search.TabIndex = 10;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
-            // label1
+            // m_cbo_trang_thai_lop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Trạng thái lớp";
+            this.m_cbo_trang_thai_lop.FormattingEnabled = true;
+            this.m_cbo_trang_thai_lop.Location = new System.Drawing.Point(98, 54);
+            this.m_cbo_trang_thai_lop.Name = "m_cbo_trang_thai_lop";
+            this.m_cbo_trang_thai_lop.Size = new System.Drawing.Size(151, 21);
+            this.m_cbo_trang_thai_lop.TabIndex = 3;
+            // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(643, 39);
+            this.m_lbl_header.TabIndex = 2;
+            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // f210_dm_lop_mon
             // 
@@ -340,7 +340,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         }
         private void set_initial_form_load()
         {
+            CCommon.load_data_2_cbo_trang_thai_lop_mon(CONST_LOAI_TU_DIEN.TRANG_THAI_LOP_MON, m_cbo_trang_thai_lop);
             m_obj_trans = get_trans_object(m_fg);
+            m_cbo_trang_thai_lop.SelectedIndexChanged += m_cbo_trang_thai_lop_SelectedIndexChanged;
             load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -353,10 +355,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.DM_LOP_MON.NewRow());
             return v_obj_trans;
         }
+
         private void load_data_2_grid()
         {
             m_ds = new DS_DM_LOP_MON();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds, "Where TRANG_THAI_LOP_MON =" + CIPConvert.ToDecimal(m_cbo_trang_thai_lop.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_fg);
@@ -449,8 +452,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
+            
             this.KeyDown += f210_dm_lop_mon_KeyDown;
         }
+
+        
 
         void f210_dm_lop_mon_KeyDown(object sender, KeyEventArgs e)
         {
@@ -545,6 +551,17 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         }
 
+        private void m_cbo_trang_thai_lop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }
 

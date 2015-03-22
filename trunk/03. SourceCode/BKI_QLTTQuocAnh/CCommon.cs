@@ -82,6 +82,27 @@ namespace BKI_QLTTQuocAnh
             op_cbo_lop_mon.SelectedIndex = 0;
         }
 
+        public static void load_data_2_cbo_trang_thai_lop_mon(
+            decimal ip_dc_id_trang_thai_lop_mon
+            , System.Windows.Forms.ComboBox op_cbo_trang_thai_lop_mon
+            )
+        {
+            DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
+            US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
+            v_us.FillDataset(v_ds, "where id_loai_tu_dien = " + ip_dc_id_trang_thai_lop_mon);
+
+
+            //DS_V_RPT_210_DM_LOP_MON v_ds_v_rpt_210_dm_lop_mon = new DS_V_RPT_210_DM_LOP_MON();
+            //US_V_RPT_210_DM_LOP_MON v_us_v_rpt_210_dm_lop_mon = new US_V_RPT_210_DM_LOP_MON();
+
+            //v_us_v_rpt_210_dm_lop_mon.FillDataset(v_ds_v_rpt_210_dm_lop_mon, "Where TRANG_THAI_LOP_MON = " + ip_dc_id_trang_thai_lop_mon.ToString());
+            op_cbo_trang_thai_lop_mon.DataSource = v_ds.CM_DM_TU_DIEN;
+            op_cbo_trang_thai_lop_mon.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
+            op_cbo_trang_thai_lop_mon.ValueMember = CM_DM_TU_DIEN.ID;
+            op_cbo_trang_thai_lop_mon.SelectedIndex = 0;
+           
+        }
+
         public static void load_data_2_cbo_loai_phieu_thu(
             decimal ip_dc_id_loai_tu_dien
             , System.Windows.Forms.ComboBox op_cbo_tu_dien)

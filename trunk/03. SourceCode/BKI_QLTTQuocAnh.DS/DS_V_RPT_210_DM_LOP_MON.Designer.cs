@@ -20,17 +20,17 @@ namespace BKI_QLTTQuocAnh.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_DM_LOP_MON")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_V_RPT_210_DM_LOP_MON")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DS_DM_LOP_MON : global::System.Data.DataSet {
+    public partial class DS_V_RPT_210_DM_LOP_MON : global::System.Data.DataSet {
         
-        private DM_LOP_MONDataTable tableDM_LOP_MON;
+        private V_RPT_210_DM_LOP_MONDataTable tableV_RPT_210_DM_LOP_MON;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DS_DM_LOP_MON() {
+        public DS_V_RPT_210_DM_LOP_MON() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BKI_QLTTQuocAnh.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DS_DM_LOP_MON(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DS_V_RPT_210_DM_LOP_MON(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BKI_QLTTQuocAnh.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DM_LOP_MON"] != null)) {
-                    base.Tables.Add(new DM_LOP_MONDataTable(ds.Tables["DM_LOP_MON"]));
+                if ((ds.Tables["V_RPT_210_DM_LOP_MON"] != null)) {
+                    base.Tables.Add(new V_RPT_210_DM_LOP_MONDataTable(ds.Tables["V_RPT_210_DM_LOP_MON"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DM_LOP_MONDataTable DM_LOP_MON {
+        public V_RPT_210_DM_LOP_MONDataTable V_RPT_210_DM_LOP_MON {
             get {
-                return this.tableDM_LOP_MON;
+                return this.tableV_RPT_210_DM_LOP_MON;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DS_DM_LOP_MON cln = ((DS_DM_LOP_MON)(base.Clone()));
+            DS_V_RPT_210_DM_LOP_MON cln = ((DS_V_RPT_210_DM_LOP_MON)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DM_LOP_MON"] != null)) {
-                    base.Tables.Add(new DM_LOP_MONDataTable(ds.Tables["DM_LOP_MON"]));
+                if ((ds.Tables["V_RPT_210_DM_LOP_MON"] != null)) {
+                    base.Tables.Add(new V_RPT_210_DM_LOP_MONDataTable(ds.Tables["V_RPT_210_DM_LOP_MON"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDM_LOP_MON = ((DM_LOP_MONDataTable)(base.Tables["DM_LOP_MON"]));
+            this.tableV_RPT_210_DM_LOP_MON = ((V_RPT_210_DM_LOP_MONDataTable)(base.Tables["V_RPT_210_DM_LOP_MON"]));
             if ((initTable == true)) {
-                if ((this.tableDM_LOP_MON != null)) {
-                    this.tableDM_LOP_MON.InitVars();
+                if ((this.tableV_RPT_210_DM_LOP_MON != null)) {
+                    this.tableV_RPT_210_DM_LOP_MON.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_DM_LOP_MON";
+            this.DataSetName = "DS_V_RPT_210_DM_LOP_MON";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_DM_LOP_MON.xsd";
+            this.Namespace = "http://tempuri.org/DS_V_RPT_210_DM_LOP_MON.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDM_LOP_MON = new DM_LOP_MONDataTable();
-            base.Tables.Add(this.tableDM_LOP_MON);
+            this.tableV_RPT_210_DM_LOP_MON = new V_RPT_210_DM_LOP_MONDataTable();
+            base.Tables.Add(this.tableV_RPT_210_DM_LOP_MON);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDM_LOP_MON() {
+        private bool ShouldSerializeV_RPT_210_DM_LOP_MON() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BKI_QLTTQuocAnh.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DS_DM_LOP_MON ds = new DS_DM_LOP_MON();
+            DS_V_RPT_210_DM_LOP_MON ds = new DS_V_RPT_210_DM_LOP_MON();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,31 @@ namespace BKI_QLTTQuocAnh.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DM_LOP_MONRowChangeEventHandler(object sender, DM_LOP_MONRowChangeEvent e);
+        public delegate void V_RPT_210_DM_LOP_MONRowChangeEventHandler(object sender, V_RPT_210_DM_LOP_MONRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DM_LOP_MONDataTable : global::System.Data.TypedTableBase<DM_LOP_MONRow> {
+        public partial class V_RPT_210_DM_LOP_MONDataTable : global::System.Data.TypedTableBase<V_RPT_210_DM_LOP_MONRow> {
             
             private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnMA_LOP_MON;
             
-            private global::System.Data.DataColumn columnMO_TA;
+            private global::System.Data.DataColumn columnTEN_LOP_MON;
             
             private global::System.Data.DataColumn columnDON_GIA_BUOI_HOC;
             
-            private global::System.Data.DataColumn columnID_LOP;
-            
-            private global::System.Data.DataColumn columnID_MON;
-            
             private global::System.Data.DataColumn columnTRANG_THAI_LOP_MON;
+            
+            private global::System.Data.DataColumn columnTEN;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONDataTable() {
-                this.TableName = "DM_LOP_MON";
+            public V_RPT_210_DM_LOP_MONDataTable() {
+                this.TableName = "V_RPT_210_DM_LOP_MON";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +302,7 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DM_LOP_MONDataTable(global::System.Data.DataTable table) {
+            internal V_RPT_210_DM_LOP_MONDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,7 +319,7 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DM_LOP_MONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected V_RPT_210_DM_LOP_MONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -344,9 +342,9 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MO_TAColumn {
+            public global::System.Data.DataColumn TEN_LOP_MONColumn {
                 get {
-                    return this.columnMO_TA;
+                    return this.columnTEN_LOP_MON;
                 }
             }
             
@@ -360,25 +358,17 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_LOPColumn {
-                get {
-                    return this.columnID_LOP;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_MONColumn {
-                get {
-                    return this.columnID_MON;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn TRANG_THAI_LOP_MONColumn {
                 get {
                     return this.columnTRANG_THAI_LOP_MON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TENColumn {
+                get {
+                    return this.columnTEN;
                 }
             }
             
@@ -393,58 +383,57 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow this[int index] {
+            public V_RPT_210_DM_LOP_MONRow this[int index] {
                 get {
-                    return ((DM_LOP_MONRow)(this.Rows[index]));
+                    return ((V_RPT_210_DM_LOP_MONRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DM_LOP_MONRowChangeEventHandler DM_LOP_MONRowChanging;
+            public event V_RPT_210_DM_LOP_MONRowChangeEventHandler V_RPT_210_DM_LOP_MONRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DM_LOP_MONRowChangeEventHandler DM_LOP_MONRowChanged;
+            public event V_RPT_210_DM_LOP_MONRowChangeEventHandler V_RPT_210_DM_LOP_MONRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DM_LOP_MONRowChangeEventHandler DM_LOP_MONRowDeleting;
+            public event V_RPT_210_DM_LOP_MONRowChangeEventHandler V_RPT_210_DM_LOP_MONRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DM_LOP_MONRowChangeEventHandler DM_LOP_MONRowDeleted;
+            public event V_RPT_210_DM_LOP_MONRowChangeEventHandler V_RPT_210_DM_LOP_MONRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDM_LOP_MONRow(DM_LOP_MONRow row) {
+            public void AddV_RPT_210_DM_LOP_MONRow(V_RPT_210_DM_LOP_MONRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow AddDM_LOP_MONRow(string MA_LOP_MON, string MO_TA, decimal DON_GIA_BUOI_HOC, decimal ID_LOP, decimal ID_MON, decimal TRANG_THAI_LOP_MON) {
-                DM_LOP_MONRow rowDM_LOP_MONRow = ((DM_LOP_MONRow)(this.NewRow()));
+            public V_RPT_210_DM_LOP_MONRow AddV_RPT_210_DM_LOP_MONRow(decimal ID, string MA_LOP_MON, string TEN_LOP_MON, decimal DON_GIA_BUOI_HOC, decimal TRANG_THAI_LOP_MON, string TEN) {
+                V_RPT_210_DM_LOP_MONRow rowV_RPT_210_DM_LOP_MONRow = ((V_RPT_210_DM_LOP_MONRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         MA_LOP_MON,
-                        MO_TA,
+                        TEN_LOP_MON,
                         DON_GIA_BUOI_HOC,
-                        ID_LOP,
-                        ID_MON,
-                        TRANG_THAI_LOP_MON};
-                rowDM_LOP_MONRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDM_LOP_MONRow);
-                return rowDM_LOP_MONRow;
+                        TRANG_THAI_LOP_MON,
+                        TEN};
+                rowV_RPT_210_DM_LOP_MONRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowV_RPT_210_DM_LOP_MONRow);
+                return rowV_RPT_210_DM_LOP_MONRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow FindByID(decimal ID) {
-                return ((DM_LOP_MONRow)(this.Rows.Find(new object[] {
+            public V_RPT_210_DM_LOP_MONRow FindByID(decimal ID) {
+                return ((V_RPT_210_DM_LOP_MONRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DM_LOP_MONDataTable cln = ((DM_LOP_MONDataTable)(base.Clone()));
+                V_RPT_210_DM_LOP_MONDataTable cln = ((V_RPT_210_DM_LOP_MONDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -452,7 +441,7 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DM_LOP_MONDataTable();
+                return new V_RPT_210_DM_LOP_MONDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -460,11 +449,10 @@ namespace BKI_QLTTQuocAnh.DS {
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
                 this.columnMA_LOP_MON = base.Columns["MA_LOP_MON"];
-                this.columnMO_TA = base.Columns["MO_TA"];
+                this.columnTEN_LOP_MON = base.Columns["TEN_LOP_MON"];
                 this.columnDON_GIA_BUOI_HOC = base.Columns["DON_GIA_BUOI_HOC"];
-                this.columnID_LOP = base.Columns["ID_LOP"];
-                this.columnID_MON = base.Columns["ID_MON"];
                 this.columnTRANG_THAI_LOP_MON = base.Columns["TRANG_THAI_LOP_MON"];
+                this.columnTEN = base.Columns["TEN"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -474,53 +462,49 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnID);
                 this.columnMA_LOP_MON = new global::System.Data.DataColumn("MA_LOP_MON", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_LOP_MON);
-                this.columnMO_TA = new global::System.Data.DataColumn("MO_TA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMO_TA);
+                this.columnTEN_LOP_MON = new global::System.Data.DataColumn("TEN_LOP_MON", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_LOP_MON);
                 this.columnDON_GIA_BUOI_HOC = new global::System.Data.DataColumn("DON_GIA_BUOI_HOC", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDON_GIA_BUOI_HOC);
-                this.columnID_LOP = new global::System.Data.DataColumn("ID_LOP", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_LOP);
-                this.columnID_MON = new global::System.Data.DataColumn("ID_MON", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_MON);
                 this.columnTRANG_THAI_LOP_MON = new global::System.Data.DataColumn("TRANG_THAI_LOP_MON", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTRANG_THAI_LOP_MON);
+                this.columnTEN = new global::System.Data.DataColumn("TEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnMA_LOP_MON.AllowDBNull = false;
                 this.columnMA_LOP_MON.MaxLength = 15;
-                this.columnMO_TA.MaxLength = 250;
+                this.columnTEN_LOP_MON.MaxLength = 250;
+                this.columnTEN.AllowDBNull = false;
+                this.columnTEN.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow NewDM_LOP_MONRow() {
-                return ((DM_LOP_MONRow)(this.NewRow()));
+            public V_RPT_210_DM_LOP_MONRow NewV_RPT_210_DM_LOP_MONRow() {
+                return ((V_RPT_210_DM_LOP_MONRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DM_LOP_MONRow(builder);
+                return new V_RPT_210_DM_LOP_MONRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DM_LOP_MONRow);
+                return typeof(V_RPT_210_DM_LOP_MONRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DM_LOP_MONRowChanged != null)) {
-                    this.DM_LOP_MONRowChanged(this, new DM_LOP_MONRowChangeEvent(((DM_LOP_MONRow)(e.Row)), e.Action));
+                if ((this.V_RPT_210_DM_LOP_MONRowChanged != null)) {
+                    this.V_RPT_210_DM_LOP_MONRowChanged(this, new V_RPT_210_DM_LOP_MONRowChangeEvent(((V_RPT_210_DM_LOP_MONRow)(e.Row)), e.Action));
                 }
             }
             
@@ -528,8 +512,8 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DM_LOP_MONRowChanging != null)) {
-                    this.DM_LOP_MONRowChanging(this, new DM_LOP_MONRowChangeEvent(((DM_LOP_MONRow)(e.Row)), e.Action));
+                if ((this.V_RPT_210_DM_LOP_MONRowChanging != null)) {
+                    this.V_RPT_210_DM_LOP_MONRowChanging(this, new V_RPT_210_DM_LOP_MONRowChangeEvent(((V_RPT_210_DM_LOP_MONRow)(e.Row)), e.Action));
                 }
             }
             
@@ -537,8 +521,8 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DM_LOP_MONRowDeleted != null)) {
-                    this.DM_LOP_MONRowDeleted(this, new DM_LOP_MONRowChangeEvent(((DM_LOP_MONRow)(e.Row)), e.Action));
+                if ((this.V_RPT_210_DM_LOP_MONRowDeleted != null)) {
+                    this.V_RPT_210_DM_LOP_MONRowDeleted(this, new V_RPT_210_DM_LOP_MONRowChangeEvent(((V_RPT_210_DM_LOP_MONRow)(e.Row)), e.Action));
                 }
             }
             
@@ -546,14 +530,14 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DM_LOP_MONRowDeleting != null)) {
-                    this.DM_LOP_MONRowDeleting(this, new DM_LOP_MONRowChangeEvent(((DM_LOP_MONRow)(e.Row)), e.Action));
+                if ((this.V_RPT_210_DM_LOP_MONRowDeleting != null)) {
+                    this.V_RPT_210_DM_LOP_MONRowDeleting(this, new V_RPT_210_DM_LOP_MONRowChangeEvent(((V_RPT_210_DM_LOP_MONRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDM_LOP_MONRow(DM_LOP_MONRow row) {
+            public void RemoveV_RPT_210_DM_LOP_MONRow(V_RPT_210_DM_LOP_MONRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -562,7 +546,7 @@ namespace BKI_QLTTQuocAnh.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS_DM_LOP_MON ds = new DS_DM_LOP_MON();
+                DS_V_RPT_210_DM_LOP_MON ds = new DS_V_RPT_210_DM_LOP_MON();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -580,7 +564,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DM_LOP_MONDataTable";
+                attribute2.FixedValue = "V_RPT_210_DM_LOP_MONDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -624,25 +608,25 @@ namespace BKI_QLTTQuocAnh.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DM_LOP_MONRow : global::System.Data.DataRow {
+        public partial class V_RPT_210_DM_LOP_MONRow : global::System.Data.DataRow {
             
-            private DM_LOP_MONDataTable tableDM_LOP_MON;
+            private V_RPT_210_DM_LOP_MONDataTable tableV_RPT_210_DM_LOP_MON;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DM_LOP_MONRow(global::System.Data.DataRowBuilder rb) : 
+            internal V_RPT_210_DM_LOP_MONRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDM_LOP_MON = ((DM_LOP_MONDataTable)(this.Table));
+                this.tableV_RPT_210_DM_LOP_MON = ((V_RPT_210_DM_LOP_MONDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal ID {
                 get {
-                    return ((decimal)(this[this.tableDM_LOP_MON.IDColumn]));
+                    return ((decimal)(this[this.tableV_RPT_210_DM_LOP_MON.IDColumn]));
                 }
                 set {
-                    this[this.tableDM_LOP_MON.IDColumn] = value;
+                    this[this.tableV_RPT_210_DM_LOP_MON.IDColumn] = value;
                 }
             }
             
@@ -650,26 +634,26 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string MA_LOP_MON {
                 get {
-                    return ((string)(this[this.tableDM_LOP_MON.MA_LOP_MONColumn]));
+                    return ((string)(this[this.tableV_RPT_210_DM_LOP_MON.MA_LOP_MONColumn]));
                 }
                 set {
-                    this[this.tableDM_LOP_MON.MA_LOP_MONColumn] = value;
+                    this[this.tableV_RPT_210_DM_LOP_MON.MA_LOP_MONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MO_TA {
+            public string TEN_LOP_MON {
                 get {
                     try {
-                        return ((string)(this[this.tableDM_LOP_MON.MO_TAColumn]));
+                        return ((string)(this[this.tableV_RPT_210_DM_LOP_MON.TEN_LOP_MONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MO_TA\' in table \'DM_LOP_MON\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TEN_LOP_MON\' in table \'V_RPT_210_DM_LOP_MON\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDM_LOP_MON.MO_TAColumn] = value;
+                    this[this.tableV_RPT_210_DM_LOP_MON.TEN_LOP_MONColumn] = value;
                 }
             }
             
@@ -678,46 +662,15 @@ namespace BKI_QLTTQuocAnh.DS {
             public decimal DON_GIA_BUOI_HOC {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn]));
+                        return ((decimal)(this[this.tableV_RPT_210_DM_LOP_MON.DON_GIA_BUOI_HOCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DON_GIA_BUOI_HOC\' in table \'DM_LOP_MON\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DON_GIA_BUOI_HOC\' in table \'V_RPT_210_DM_LOP_MON\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID_LOP {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDM_LOP_MON.ID_LOPColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_LOP\' in table \'DM_LOP_MON\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_LOP_MON.ID_LOPColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID_MON {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableDM_LOP_MON.ID_MONColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_MON\' in table \'DM_LOP_MON\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_LOP_MON.ID_MONColumn] = value;
+                    this[this.tableV_RPT_210_DM_LOP_MON.DON_GIA_BUOI_HOCColumn] = value;
                 }
             }
             
@@ -726,75 +679,63 @@ namespace BKI_QLTTQuocAnh.DS {
             public decimal TRANG_THAI_LOP_MON {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn]));
+                        return ((decimal)(this[this.tableV_RPT_210_DM_LOP_MON.TRANG_THAI_LOP_MONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TRANG_THAI_LOP_MON\' in table \'DM_LOP_MON\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TRANG_THAI_LOP_MON\' in table \'V_RPT_210_DM_LOP_MON\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn] = value;
+                    this[this.tableV_RPT_210_DM_LOP_MON.TRANG_THAI_LOP_MONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMO_TANull() {
-                return this.IsNull(this.tableDM_LOP_MON.MO_TAColumn);
+            public string TEN {
+                get {
+                    return ((string)(this[this.tableV_RPT_210_DM_LOP_MON.TENColumn]));
+                }
+                set {
+                    this[this.tableV_RPT_210_DM_LOP_MON.TENColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMO_TANull() {
-                this[this.tableDM_LOP_MON.MO_TAColumn] = global::System.Convert.DBNull;
+            public bool IsTEN_LOP_MONNull() {
+                return this.IsNull(this.tableV_RPT_210_DM_LOP_MON.TEN_LOP_MONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTEN_LOP_MONNull() {
+                this[this.tableV_RPT_210_DM_LOP_MON.TEN_LOP_MONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDON_GIA_BUOI_HOCNull() {
-                return this.IsNull(this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn);
+                return this.IsNull(this.tableV_RPT_210_DM_LOP_MON.DON_GIA_BUOI_HOCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDON_GIA_BUOI_HOCNull() {
-                this[this.tableDM_LOP_MON.DON_GIA_BUOI_HOCColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsID_LOPNull() {
-                return this.IsNull(this.tableDM_LOP_MON.ID_LOPColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetID_LOPNull() {
-                this[this.tableDM_LOP_MON.ID_LOPColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsID_MONNull() {
-                return this.IsNull(this.tableDM_LOP_MON.ID_MONColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetID_MONNull() {
-                this[this.tableDM_LOP_MON.ID_MONColumn] = global::System.Convert.DBNull;
+                this[this.tableV_RPT_210_DM_LOP_MON.DON_GIA_BUOI_HOCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTRANG_THAI_LOP_MONNull() {
-                return this.IsNull(this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn);
+                return this.IsNull(this.tableV_RPT_210_DM_LOP_MON.TRANG_THAI_LOP_MONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTRANG_THAI_LOP_MONNull() {
-                this[this.tableDM_LOP_MON.TRANG_THAI_LOP_MONColumn] = global::System.Convert.DBNull;
+                this[this.tableV_RPT_210_DM_LOP_MON.TRANG_THAI_LOP_MONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -802,22 +743,22 @@ namespace BKI_QLTTQuocAnh.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DM_LOP_MONRowChangeEvent : global::System.EventArgs {
+        public class V_RPT_210_DM_LOP_MONRowChangeEvent : global::System.EventArgs {
             
-            private DM_LOP_MONRow eventRow;
+            private V_RPT_210_DM_LOP_MONRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRowChangeEvent(DM_LOP_MONRow row, global::System.Data.DataRowAction action) {
+            public V_RPT_210_DM_LOP_MONRowChangeEvent(V_RPT_210_DM_LOP_MONRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DM_LOP_MONRow Row {
+            public V_RPT_210_DM_LOP_MONRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -833,7 +774,7 @@ namespace BKI_QLTTQuocAnh.DS {
         }
     }
 }
-namespace BKI_QLTTQuocAnh.DS.DS_DM_LOP_MONTableAdapters {
+namespace BKI_QLTTQuocAnh.DS.DS_V_RPT_210_DM_LOP_MONTableAdapters {
     
     
     /// <summary>
@@ -845,7 +786,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_DM_LOP_MONTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DM_LOP_MONTableAdapter : global::System.ComponentModel.Component {
+    public partial class V_RPT_210_DM_LOP_MONTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -859,7 +800,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_DM_LOP_MONTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DM_LOP_MONTableAdapter() {
+        public V_RPT_210_DM_LOP_MONTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -956,73 +897,21 @@ namespace BKI_QLTTQuocAnh.DS.DS_DM_LOP_MONTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DM_LOP_MON";
+            tableMapping.DataSetTable = "V_RPT_210_DM_LOP_MON";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("MA_LOP_MON", "MA_LOP_MON");
-            tableMapping.ColumnMappings.Add("MO_TA", "MO_TA");
+            tableMapping.ColumnMappings.Add("TEN_LOP_MON", "TEN_LOP_MON");
             tableMapping.ColumnMappings.Add("DON_GIA_BUOI_HOC", "DON_GIA_BUOI_HOC");
-            tableMapping.ColumnMappings.Add("ID_LOP", "ID_LOP");
-            tableMapping.ColumnMappings.Add("ID_MON", "ID_MON");
             tableMapping.ColumnMappings.Add("TRANG_THAI_LOP_MON", "TRANG_THAI_LOP_MON");
+            tableMapping.ColumnMappings.Add("TEN", "TEN");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_LOP_MON] WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ((@IsNull_DON_GIA_BUOI_HOC = 1 AND [DON_GIA_BUOI_HOC] IS NULL) OR ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC)) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)) AND ((@IsNull_TRANG_THAI_LOP_MON = 1 AND [TRANG_THAI_LOP_MON] IS NULL) OR ([TRANG_THAI_LOP_MON] = @Original_TRANG_THAI_LOP_MON)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MO_TA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_LOP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DM_LOP_MON] ([MA_LOP_MON], [MO_TA], [DON_GIA_BUOI_HOC], [ID_LOP], [ID_MON], [TRANG_THAI_LOP_MON]) VALUES (@MA_LOP_MON, @MO_TA, @DON_GIA_BUOI_HOC, @ID_LOP, @ID_MON, @TRANG_THAI_LOP_MON);
-SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON FROM DM_LOP_MON WHERE (ID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_LOP_MON] SET [MA_LOP_MON] = @MA_LOP_MON, [MO_TA] = @MO_TA, [DON_GIA_BUOI_HOC] = @DON_GIA_BUOI_HOC, [ID_LOP] = @ID_LOP, [ID_MON] = @ID_MON, [TRANG_THAI_LOP_MON] = @TRANG_THAI_LOP_MON WHERE (([ID] = @Original_ID) AND ([MA_LOP_MON] = @Original_MA_LOP_MON) AND ((@IsNull_MO_TA = 1 AND [MO_TA] IS NULL) OR ([MO_TA] = @Original_MO_TA)) AND ((@IsNull_DON_GIA_BUOI_HOC = 1 AND [DON_GIA_BUOI_HOC] IS NULL) OR ([DON_GIA_BUOI_HOC] = @Original_DON_GIA_BUOI_HOC)) AND ((@IsNull_ID_LOP = 1 AND [ID_LOP] IS NULL) OR ([ID_LOP] = @Original_ID_LOP)) AND ((@IsNull_ID_MON = 1 AND [ID_MON] IS NULL) OR ([ID_MON] = @Original_ID_MON)) AND ((@IsNull_TRANG_THAI_LOP_MON = 1 AND [TRANG_THAI_LOP_MON] IS NULL) OR ([TRANG_THAI_LOP_MON] = @Original_TRANG_THAI_LOP_MON)));
-SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON FROM DM_LOP_MON WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MA_LOP_MON", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MA_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MO_TA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MO_TA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MO_TA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DON_GIA_BUOI_HOC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 21, 3, "DON_GIA_BUOI_HOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_LOP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_LOP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_LOP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ID_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANG_THAI_LOP_MON", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "TRANG_THAI_LOP_MON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnhConnectionString3;
+            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.QuanLyTTQuocAnh_FinalConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1031,8 +920,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MO" +
-                "N FROM dbo.DM_LOP_MON";
+            this._commandCollection[0].CommandText = "SELECT ID, MA_LOP_MON, TEN_LOP_MON, DON_GIA_BUOI_HOC, TRANG_THAI_LOP_MON, TEN FRO" +
+                "M dbo.V_RPT_210_DM_LOP_MON";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1040,7 +929,7 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS_DM_LOP_MON.DM_LOP_MONDataTable dataTable) {
+        public virtual int Fill(DS_V_RPT_210_DM_LOP_MON.V_RPT_210_DM_LOP_MONDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1053,278 +942,11 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS_DM_LOP_MON.DM_LOP_MONDataTable GetData() {
+        public virtual DS_V_RPT_210_DM_LOP_MON.V_RPT_210_DM_LOP_MONDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS_DM_LOP_MON.DM_LOP_MONDataTable dataTable = new DS_DM_LOP_MON.DM_LOP_MONDataTable();
+            DS_V_RPT_210_DM_LOP_MON.V_RPT_210_DM_LOP_MONDataTable dataTable = new DS_V_RPT_210_DM_LOP_MON.V_RPT_210_DM_LOP_MONDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_DM_LOP_MON.DM_LOP_MONDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_DM_LOP_MON dataSet) {
-            return this.Adapter.Update(dataSet, "DM_LOP_MON");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, global::System.Nullable<decimal> Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON, global::System.Nullable<decimal> Original_TRANG_THAI_LOP_MON) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
-            if ((Original_MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("Original_MA_LOP_MON");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_MA_LOP_MON));
-            }
-            if ((Original_MO_TA == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_MO_TA));
-            }
-            if ((Original_DON_GIA_BUOI_HOC.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_DON_GIA_BUOI_HOC.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ID_LOP.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_ID_LOP.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ID_MON.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_ID_MON.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TRANG_THAI_LOP_MON.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_TRANG_THAI_LOP_MON.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MA_LOP_MON, string MO_TA, global::System.Nullable<decimal> DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON, global::System.Nullable<decimal> TRANG_THAI_LOP_MON) {
-            if ((MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("MA_LOP_MON");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MA_LOP_MON));
-            }
-            if ((MO_TA == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MO_TA));
-            }
-            if ((DON_GIA_BUOI_HOC.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(DON_GIA_BUOI_HOC.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((ID_LOP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(ID_LOP.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ID_MON.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(ID_MON.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((TRANG_THAI_LOP_MON.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(TRANG_THAI_LOP_MON.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MA_LOP_MON, string MO_TA, global::System.Nullable<decimal> DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON, global::System.Nullable<decimal> TRANG_THAI_LOP_MON, decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, global::System.Nullable<decimal> Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON, global::System.Nullable<decimal> Original_TRANG_THAI_LOP_MON, decimal ID) {
-            if ((MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("MA_LOP_MON");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(MA_LOP_MON));
-            }
-            if ((MO_TA == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(MO_TA));
-            }
-            if ((DON_GIA_BUOI_HOC.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(DON_GIA_BUOI_HOC.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((ID_LOP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(ID_LOP.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ID_MON.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(ID_MON.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((TRANG_THAI_LOP_MON.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(TRANG_THAI_LOP_MON.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_ID));
-            if ((Original_MA_LOP_MON == null)) {
-                throw new global::System.ArgumentNullException("Original_MA_LOP_MON");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_MA_LOP_MON));
-            }
-            if ((Original_MO_TA == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_MO_TA));
-            }
-            if ((Original_DON_GIA_BUOI_HOC.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_DON_GIA_BUOI_HOC.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ID_LOP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_ID_LOP.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ID_MON.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_ID_MON.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TRANG_THAI_LOP_MON.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((decimal)(Original_TRANG_THAI_LOP_MON.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MA_LOP_MON, string MO_TA, global::System.Nullable<decimal> DON_GIA_BUOI_HOC, global::System.Nullable<decimal> ID_LOP, global::System.Nullable<decimal> ID_MON, global::System.Nullable<decimal> TRANG_THAI_LOP_MON, decimal Original_ID, string Original_MA_LOP_MON, string Original_MO_TA, global::System.Nullable<decimal> Original_DON_GIA_BUOI_HOC, global::System.Nullable<decimal> Original_ID_LOP, global::System.Nullable<decimal> Original_ID_MON, global::System.Nullable<decimal> Original_TRANG_THAI_LOP_MON) {
-            return this.Update(MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON, Original_ID, Original_MA_LOP_MON, Original_MO_TA, Original_DON_GIA_BUOI_HOC, Original_ID_LOP, Original_ID_MON, Original_TRANG_THAI_LOP_MON, Original_ID);
         }
     }
     
@@ -1340,8 +962,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         
         private UpdateOrderOption _updateOrder;
         
-        private DM_LOP_MONTableAdapter _dM_LOP_MONTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1354,20 +974,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public DM_LOP_MONTableAdapter DM_LOP_MONTableAdapter {
-            get {
-                return this._dM_LOP_MONTableAdapter;
-            }
-            set {
-                this._dM_LOP_MONTableAdapter = value;
             }
         }
         
@@ -1390,10 +996,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dM_LOP_MONTableAdapter != null) 
-                            && (this._dM_LOP_MONTableAdapter.Connection != null))) {
-                    return this._dM_LOP_MONTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1407,9 +1009,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dM_LOP_MONTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1419,17 +1018,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DS_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DS_V_RPT_210_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dM_LOP_MONTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DM_LOP_MON.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dM_LOP_MONTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1438,16 +1028,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DS_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DS_V_RPT_210_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dM_LOP_MONTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DM_LOP_MON.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dM_LOP_MONTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1456,16 +1038,8 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DS_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DS_V_RPT_210_DM_LOP_MON dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dM_LOP_MONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DM_LOP_MON.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dM_LOP_MONTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1498,17 +1072,12 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DS_DM_LOP_MON dataSet) {
+        public virtual int UpdateAll(DS_V_RPT_210_DM_LOP_MON dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._dM_LOP_MONTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dM_LOP_MONTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1542,15 +1111,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dM_LOP_MONTableAdapter != null)) {
-                    revertConnections.Add(this._dM_LOP_MONTableAdapter, this._dM_LOP_MONTableAdapter.Connection);
-                    this._dM_LOP_MONTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dM_LOP_MONTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dM_LOP_MONTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dM_LOP_MONTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dM_LOP_MONTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1608,10 +1168,6 @@ SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_M
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._dM_LOP_MONTableAdapter != null)) {
-                    this._dM_LOP_MONTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dM_LOP_MONTableAdapter]));
-                    this._dM_LOP_MONTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
