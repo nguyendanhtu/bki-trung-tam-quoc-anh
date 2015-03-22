@@ -440,8 +440,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
 
-            m_fg.Tree.Column = (int)e_col_Number.MA_LOP_MON;
-            //m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
+            m_fg.Tree.Column = (int)e_col_Number.MA_DOI_TUONG;
+            m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
             //m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
 
             set_define_events();
@@ -460,6 +460,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         }
         private void set_initial_form_load()
         {
+            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-DateTime.Now.Day + 1);
+            m_dat_den_ngay.Value = DateTime.Now.Date;
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_cbo_lop_mon();
             load_data_2_grid();
@@ -498,7 +500,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 , -1
                 , (int)e_col_Number.TIEN_CON_PHAI_THU
                , "Tổng");
-
+            m_fg.Subtotal(AggregateEnum.Sum
+             , 1
+               , (int) e_col_Number.MA_LOP_MON
+               , (int)e_col_Number.TIEN_CON_PHAI_THU
+              , "{0}");
             wrap_text_cell();
             CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
