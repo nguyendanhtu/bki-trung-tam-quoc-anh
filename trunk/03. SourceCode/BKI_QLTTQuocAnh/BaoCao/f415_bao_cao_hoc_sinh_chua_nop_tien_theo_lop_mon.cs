@@ -506,7 +506,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                , (int)e_col_Number.TIEN_CON_PHAI_THU
               , "{0}");
             wrap_text_cell();
-            CGridUtils.MakeSoTT(0, m_fg);
+            CGridUtils.MakeSoTTofRowNotIsNode(0, m_fg, true);
             m_fg.Redraw = true;
         }
         private void load_data_2_cbo_lop_mon()

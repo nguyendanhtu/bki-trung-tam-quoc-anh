@@ -50,9 +50,9 @@ namespace BKI_QLTTQuocAnh
                 m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
                 m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
                 m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
-                m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
-                m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
-                m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
+                //m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
+                //m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
+                //m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
                 ribbonPage2.Visible = false;
                 m_cmd_ds_phieu.Visibility = BarItemVisibility.Never ;
             }
