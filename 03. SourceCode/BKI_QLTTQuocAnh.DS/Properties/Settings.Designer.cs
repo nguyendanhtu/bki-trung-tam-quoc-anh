@@ -185,5 +185,16 @@ namespace BKI_QLTTQuocAnh.DS.Properties {
                 return ((string)(this["QuanLyTTQuocAnhConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HAPPYMAN\\SQLEXPRESS;Initial Catalog=QuanLyTTQuocAnh_Final;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=sa")]
+        public string QuanLyTTQuocAnh_FinalConnectionString {
+            get {
+                return ((string)(this["QuanLyTTQuocAnh_FinalConnectionString"]));
+            }
+        }
     }
 }

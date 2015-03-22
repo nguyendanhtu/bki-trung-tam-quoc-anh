@@ -289,7 +289,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_Load;
             this.KeyDown += F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_KeyDown;
             m_cmd_search.Click += m_cmd_search_Click;
+            
         }
+
+       
 
         void F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
         {

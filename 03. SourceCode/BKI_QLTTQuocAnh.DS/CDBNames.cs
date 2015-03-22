@@ -591,4 +591,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SDT_CO_DINH = "SDT_CO_DINH";
     }
 
+    public class V_RPT_210_DM_LOP_MON
+    {
+        public const string ID = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
+        public const string TEN = "TEN";
+    }
+
 }

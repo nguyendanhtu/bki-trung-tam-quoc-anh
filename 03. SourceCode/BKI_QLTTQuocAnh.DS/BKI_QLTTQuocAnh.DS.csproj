@@ -35,7 +35,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -165,6 +167,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_PHIEU_THU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_RPT_210_DM_LOP_MON.cs">
+      <DependentUpon>DS_V_RPT_210_DM_LOP_MON.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_V_RPT_210_DM_LOP_MON.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_210_DM_LOP_MON.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -498,6 +509,17 @@
     </None>
     <None Include="DS_V_PHIEU_THU.xss">
       <DependentUpon>DS_V_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_210_DM_LOP_MON.xsc">
+      <DependentUpon>DS_V_RPT_210_DM_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_210_DM_LOP_MON.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_210_DM_LOP_MON.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_210_DM_LOP_MON.xss">
+      <DependentUpon>DS_V_RPT_210_DM_LOP_MON.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON.xsc">
       <DependentUpon>DS_V_RPT_410_BAO_CAO_TAI_CHINH_THEO_LOP_MON.xsd</DependentUpon>
