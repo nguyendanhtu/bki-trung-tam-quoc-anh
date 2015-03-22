@@ -120,11 +120,11 @@ namespace BKI_QLTTQuocAnh
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -380,35 +380,36 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(842, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
-            // m_cmd_exit
+            // m_cmd_delete
             // 
-            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_exit.ImageIndex = 12;
-            this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(750, 4);
-            this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 4;
-            this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_delete.ImageIndex = 4;
+            this.m_cmd_delete.ImageList = this.ImageList;
+            this.m_cmd_delete.Location = new System.Drawing.Point(180, 4);
+            this.m_cmd_delete.Name = "m_cmd_delete";
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.TabIndex = 9;
+            this.m_cmd_delete.Text = "&Xoá";
             // 
-            // m_cmd_xuat_excel
+            // m_cmd_update
             // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.ImageList;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 5;
-            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_update.ImageIndex = 3;
+            this.m_cmd_update.ImageList = this.ImageList;
+            this.m_cmd_update.Location = new System.Drawing.Point(92, 4);
+            this.m_cmd_update.Name = "m_cmd_update";
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.TabIndex = 8;
+            this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click_1);
             // 
             // m_cmd_insert
             // 
@@ -425,38 +426,35 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.TabIndex = 6;
             this.m_cmd_insert.Text = "&Thêm";
             // 
-            // m_cmd_update
+            // m_cmd_xuat_excel
             // 
-            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_update.ImageIndex = 3;
-            this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(92, 4);
-            this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 8;
-            this.m_cmd_update.Text = "&Sửa";
-            this.m_cmd_update.Visible = false;
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click_1);
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 5;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
-            // m_cmd_delete
+            // m_cmd_exit
             // 
-            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_delete.ImageIndex = 4;
-            this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(180, 4);
-            this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 9;
-            this.m_cmd_delete.Text = "&Xoá";
-            this.m_cmd_delete.Visible = false;
+            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_exit.ImageIndex = 12;
+            this.m_cmd_exit.ImageList = this.ImageList;
+            this.m_cmd_exit.Location = new System.Drawing.Point(750, 4);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.TabIndex = 4;
+            this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
             // 
@@ -499,9 +497,9 @@ namespace BKI_QLTTQuocAnh
             m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu phải thu theo nhân viên";
             m_lbl_goi_y.Visible = true;
-            m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
             m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
@@ -517,9 +515,9 @@ namespace BKI_QLTTQuocAnh
             m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu thực thu theo nhân viên";
             m_lbl_goi_y.Visible = true;
-            m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
             m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
@@ -535,9 +533,9 @@ namespace BKI_QLTTQuocAnh
             m_lbl_header.Text = "DANH SÁCH PHIẾU GIẢM TRỪ THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu giảm trừ theo nhân viên";
             m_lbl_goi_y.Visible = true;
-            m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
-            m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
 
             m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
