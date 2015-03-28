@@ -155,7 +155,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(121, 44);
             this.m_cmd_delete.TabIndex = 24;
-            this.m_cmd_delete.Text = "&Xoá lớp môn";
+            this.m_cmd_delete.Text = "&Nghỉ hoạt dộng";
             // 
             // m_cmd_update
             // 
@@ -324,6 +324,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         ITransferDataRow m_obj_trans;
         DS_DM_LOP_MON m_ds = new DS_DM_LOP_MON();
         US_DM_LOP_MON m_us = new US_DM_LOP_MON();
+        decimal m_op_dc_id_lop_mon;
         #endregion
 
         #region Private Methods
@@ -403,8 +404,22 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             f211_dm_lop_mon_de v_fDE = new f211_dm_lop_mon_de();
             v_fDE.display_4_update(m_us);
             load_data_2_grid();
-            load_data_2_grid();
+            //load_data_2_grid();
         }
+
+        private void update_dm_lop_mon_2_un_used()
+        {
+            //f211_dm_lop_mon_de v_fDE = new f211_dm_lop_mon_de();
+            //v_fDE.display_4_update(m_us);
+            if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn cho lớp môn này nghỉ hoạt không?"))
+            {
+                US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON(m_op_dc_id_lop_mon);
+                v_us_dm_lop_mon.dcTRANG_THAI_LOP_MON = 89;
+                v_us_dm_lop_mon.Update();
+                BaseMessages.MsgBox_Infor("Xong!!!");
+                load_data_2_grid();
+            }
+         }
 
         private void delete_dm_lop_mon()
         {
@@ -452,12 +467,27 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
-            
+            m_fg.Click += m_fg_Click;
             this.KeyDown += f210_dm_lop_mon_KeyDown;
         }
 
-        
+        private void m_fg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON();
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us_dm_lop_mon, m_fg.Row);
 
+                m_op_dc_id_lop_mon = v_us_dm_lop_mon.dcID;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+ 
         void f210_dm_lop_mon_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -526,13 +556,16 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             try
             {
-                delete_dm_lop_mon();
+                //delete_dm_lop_mon();
+                update_dm_lop_mon_2_un_used();
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        
 
         private void m_cmd_view_Click(object sender, EventArgs e)
         {
