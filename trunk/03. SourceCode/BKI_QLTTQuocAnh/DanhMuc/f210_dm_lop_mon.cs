@@ -44,6 +44,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         private ComboBox m_cbo_trang_thai_lop;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private Label m_lbl_trang_thai_lop;
+        internal SIS.Controls.Button.SiSButton m_cmd_cho_lop_mon_hoat_dong;
         private System.ComponentModel.IContainer components;
 
         public f210_dm_lop_mon()
@@ -85,6 +86,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f210_dm_lop_mon));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_cho_lop_mon_hoat_dong = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -130,6 +132,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_cho_lop_mon_hoat_dong);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
@@ -141,6 +144,22 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(643, 52);
             this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_cho_lop_mon_hoat_dong
+            // 
+            this.m_cmd_cho_lop_mon_hoat_dong.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_cho_lop_mon_hoat_dong.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_cho_lop_mon_hoat_dong.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_cho_lop_mon_hoat_dong.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_cho_lop_mon_hoat_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_cho_lop_mon_hoat_dong.ImageIndex = 13;
+            this.m_cmd_cho_lop_mon_hoat_dong.ImageList = this.ImageList;
+            this.m_cmd_cho_lop_mon_hoat_dong.Location = new System.Drawing.Point(434, 4);
+            this.m_cmd_cho_lop_mon_hoat_dong.Name = "m_cmd_cho_lop_mon_hoat_dong";
+            this.m_cmd_cho_lop_mon_hoat_dong.Size = new System.Drawing.Size(121, 44);
+            this.m_cmd_cho_lop_mon_hoat_dong.TabIndex = 25;
+            this.m_cmd_cho_lop_mon_hoat_dong.Text = "&Cho lớp môn hoạt động";
+            this.m_cmd_cho_lop_mon_hoat_dong.Visible = false;
             // 
             // m_cmd_delete
             // 
@@ -186,7 +205,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_insert.Size = new System.Drawing.Size(110, 44);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm lớp môn";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click_1);
             // 
             // m_cmd_xuat_excel
             // 
@@ -411,7 +429,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             //f211_dm_lop_mon_de v_fDE = new f211_dm_lop_mon_de();
             //v_fDE.display_4_update(m_us);
-            if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn cho lớp môn này nghỉ hoạt không?"))
+            if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn lớp này nghỉ hoạt động không?"))
             {
                 US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON(m_op_dc_id_lop_mon);
                 v_us_dm_lop_mon.dcTRANG_THAI_LOP_MON = 89;
@@ -419,7 +437,19 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 BaseMessages.MsgBox_Infor("Xong!!!");
                 load_data_2_grid();
             }
-         }
+        }
+
+        private void update_dm_lop_mon_2_used()
+        {
+            if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn lớp này hoạt động không?"))
+            {
+                US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON(m_op_dc_id_lop_mon);
+                v_us_dm_lop_mon.dcTRANG_THAI_LOP_MON = 88;
+                v_us_dm_lop_mon.Update();
+                BaseMessages.MsgBox_Infor("Xong!!!");
+                load_data_2_grid();
+            }
+        }
 
         private void delete_dm_lop_mon()
         {
@@ -468,6 +498,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_view_Click);
             m_fg.Click += m_fg_Click;
+            m_cmd_cho_lop_mon_hoat_dong.Click += m_cmd_cho_lop_mon_hoat_dong_Click;
             this.KeyDown += f210_dm_lop_mon_KeyDown;
         }
 
@@ -487,7 +518,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
- 
+
         void f210_dm_lop_mon_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -500,7 +531,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            } 
+            }
         }
 
         private void f210_dm_lop_mon_Load(object sender, System.EventArgs e)
@@ -565,7 +596,18 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             }
         }
 
-        
+        void m_cmd_cho_lop_mon_hoat_dong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_dm_lop_mon_2_used();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
         private void m_cmd_view_Click(object sender, EventArgs e)
         {
@@ -579,16 +621,21 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             }
         }
 
-        private void m_cmd_insert_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void m_cbo_trang_thai_lop_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 load_data_2_grid();
+                if (CIPConvert.ToDecimal(m_cbo_trang_thai_lop.SelectedValue) == 89)
+                {
+                    m_cmd_delete.Visible = false;
+                    m_cmd_cho_lop_mon_hoat_dong.Visible = true;
+                }
+                else
+                {
+                    m_cmd_delete.Visible = true;
+                    m_cmd_cho_lop_mon_hoat_dong.Visible = false;
+                }
             }
             catch (Exception v_e)
             {
