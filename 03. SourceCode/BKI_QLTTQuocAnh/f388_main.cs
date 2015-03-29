@@ -54,7 +54,7 @@ namespace BKI_QLTTQuocAnh
                 //m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
                 //m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
                 ribbonPage2.Visible = false;
-                m_cmd_ds_phieu.Visibility = BarItemVisibility.Never ;
+                m_cmd_ds_phieu.Visibility = BarItemVisibility.Always ;
             }
             else
             {
