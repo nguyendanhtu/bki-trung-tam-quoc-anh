@@ -288,8 +288,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         void f220_cap_nhat_thong_tin_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
         {
             try
-            {
-                
+            {             
                 if ((e.KeyCode == Keys.Escape)&&(m_trang_thai_hien_thi == 1))
                 {
                     this.Close();
@@ -305,7 +304,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             } 
         }
-
 
         void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e)
         {

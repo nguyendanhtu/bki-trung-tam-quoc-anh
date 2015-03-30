@@ -59,7 +59,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSearch_Handlers(m_fg);
             m_fg.Tree.Column = (int)e_col_Number.MA_HOC_SINH;
             m_fg.Cols[(int)e_col_Number.MO_TA].Visible = false;
-           
+
             set_define_events();
             this.KeyPreview = true;
         }
@@ -68,7 +68,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
             m_dat_den_ngay.Value = DateTime.Now.Date.AddMonths(1).Date.AddDays(-DateTime.Now.Date.Day);
             m_obj_trans = get_trans_object(m_fg);
-            
+
             decimal v_dc_tong_so_hs_dang_hoc = 0;
             US_V_RPT_F460_TINH_HINH_BO_LOP v_us = new US_V_RPT_F460_TINH_HINH_BO_LOP();
             v_us.load_tong_so_hs_dang_hoc(m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, ref v_dc_tong_so_hs_dang_hoc);
@@ -96,7 +96,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             m_fg.Subtotal(AggregateEnum.Count
                 , 1
-                , (int) e_col_Number.MO_TA
+                , (int)e_col_Number.MO_TA
                 , (int)e_col_Number.HO_TEN
                 , "{0}");
             m_fg.Subtotal(AggregateEnum.Count
@@ -187,6 +187,22 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             this.Load += f460_bc_tinh_hinh_bo_hoc_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            this.KeyDown += f460_bc_tinh_hinh_bo_hoc_KeyDown;
+        }
+
+        void f460_bc_tinh_hinh_bo_hoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
