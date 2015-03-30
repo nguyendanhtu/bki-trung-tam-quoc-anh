@@ -149,7 +149,7 @@
             // 
             this.m_txt_search.Location = new System.Drawing.Point(108, 66);
             this.m_txt_search.Name = "m_txt_search";
-            this.m_txt_search.Size = new System.Drawing.Size(136, 20);
+            this.m_txt_search.Size = new System.Drawing.Size(172, 20);
             this.m_txt_search.TabIndex = 27;
             // 
             // m_pnl_out_place_dm
