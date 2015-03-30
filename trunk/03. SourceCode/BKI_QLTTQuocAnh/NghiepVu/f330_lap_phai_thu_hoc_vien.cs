@@ -220,6 +220,22 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_txt_so_buoi.TextChanged += m_txt_so_buoi_TextChanged;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xoa_hang.Click += m_cmd_xoa_hang_Click;
+            this.KeyDown += f330_lap_phai_thu_hoc_vien_KeyDown;
+        }
+
+        void f330_lap_phai_thu_hoc_vien_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    m_cmd_tu_dong.PerformClick();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
         }
 
         void m_cmd_xoa_hang_Click(object sender, EventArgs e)
