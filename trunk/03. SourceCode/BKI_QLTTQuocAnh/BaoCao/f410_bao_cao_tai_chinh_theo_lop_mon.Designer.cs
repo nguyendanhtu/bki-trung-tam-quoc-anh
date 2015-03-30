@@ -105,7 +105,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(243, 76);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.TabIndex = 7;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_cmd_xuat_excel
@@ -165,7 +165,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(858, 36);
-            this.m_pnl_out_place_dm.TabIndex = 34;
+            this.m_pnl_out_place_dm.TabIndex = 1;
             // 
             // m_cmd_exit
             // 
@@ -218,7 +218,7 @@
             this.m_cbo_lop.Location = new System.Drawing.Point(96, 79);
             this.m_cbo_lop.Name = "m_cbo_lop";
             this.m_cbo_lop.Size = new System.Drawing.Size(141, 21);
-            this.m_cbo_lop.TabIndex = 5;
+            this.m_cbo_lop.TabIndex = 6;
             // 
             // m_lbl_lop_mon
             // 
@@ -226,7 +226,7 @@
             this.m_lbl_lop_mon.Location = new System.Drawing.Point(17, 83);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(51, 13);
-            this.m_lbl_lop_mon.TabIndex = 4;
+            this.m_lbl_lop_mon.TabIndex = 5;
             this.m_lbl_lop_mon.Text = "Lớp môn:";
             // 
             // panel1
@@ -243,7 +243,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(858, 114);
-            this.panel1.TabIndex = 33;
+            this.panel1.TabIndex = 0;
             // 
             // m_lbl_den_ngay
             // 
@@ -251,7 +251,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(204, 53);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
-            this.m_lbl_den_ngay.TabIndex = 23;
+            this.m_lbl_den_ngay.TabIndex = 3;
             this.m_lbl_den_ngay.Text = "Đến cuối tháng";
             // 
             // m_dat_den_ngay
@@ -261,7 +261,7 @@
             this.m_dat_den_ngay.Location = new System.Drawing.Point(290, 51);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(87, 20);
-            this.m_dat_den_ngay.TabIndex = 3;
+            this.m_dat_den_ngay.TabIndex = 4;
             // 
             // m_fg
             // 
@@ -271,7 +271,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(858, 283);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 0;
+            this.m_fg.TabIndex = 2;
             // 
             // f410_bao_cao_tai_chinh_theo_lop_mon
             // 

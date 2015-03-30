@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f460_bc_tinh_hinh_bo_hoc));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_sl_dang_hoc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.m_txt_sl_dang_hoc = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -60,65 +60,39 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(894, 108);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 0;
             // 
-            // m_lbl_header
+            // m_txt_sl_dang_hoc
             // 
-            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(894, 45);
-            this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO TÌNH HÌNH THÔI HỌC THEO LỚP";
-            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_txt_sl_dang_hoc.BackColor = System.Drawing.Color.PeachPuff;
+            this.m_txt_sl_dang_hoc.Location = new System.Drawing.Point(168, 42);
+            this.m_txt_sl_dang_hoc.Name = "m_txt_sl_dang_hoc";
+            this.m_txt_sl_dang_hoc.ReadOnly = true;
+            this.m_txt_sl_dang_hoc.Size = new System.Drawing.Size(100, 20);
+            this.m_txt_sl_dang_hoc.TabIndex = 2;
             // 
-            // m_dat_tu_ngay
+            // label1
             // 
-            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(112, 68);
-            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
-            this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_tu_ngay.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tổng số HS đang học hiện nay";
             // 
-            // m_lbl_tu_ngay
+            // m_cmd_search
             // 
-            this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(6, 72);
-            this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
-            this.m_lbl_tu_ngay.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_tu_ngay.TabIndex = 1;
-            this.m_lbl_tu_ngay.Text = "Từ đầu tháng";
-            // 
-            // m_lbl_den_ngay
-            // 
-            this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(216, 72);
-            this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
-            this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
-            this.m_lbl_den_ngay.TabIndex = 2;
-            this.m_lbl_den_ngay.Text = "Đến cuối tháng";
-            // 
-            // m_dat_den_ngay
-            // 
-            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(302, 68);
-            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
-            this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_den_ngay.TabIndex = 3;
-            // 
-            // m_fg
-            // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 108);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(894, 274);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 21;
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.ImageList = this.ImageList;
+            this.m_cmd_search.Location = new System.Drawing.Point(418, 64);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_search.TabIndex = 7;
+            this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // ImageList
             // 
@@ -147,6 +121,64 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
+            // m_lbl_header
+            // 
+            this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
+            this.m_lbl_header.Name = "m_lbl_header";
+            this.m_lbl_header.Size = new System.Drawing.Size(894, 45);
+            this.m_lbl_header.TabIndex = 0;
+            this.m_lbl_header.Text = "BÁO CÁO TÌNH HÌNH THÔI HỌC THEO LỚP";
+            this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // m_dat_tu_ngay
+            // 
+            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(112, 68);
+            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
+            this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
+            this.m_dat_tu_ngay.TabIndex = 4;
+            // 
+            // m_lbl_tu_ngay
+            // 
+            this.m_lbl_tu_ngay.AutoSize = true;
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(6, 72);
+            this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
+            this.m_lbl_tu_ngay.Size = new System.Drawing.Size(72, 13);
+            this.m_lbl_tu_ngay.TabIndex = 3;
+            this.m_lbl_tu_ngay.Text = "Từ đầu tháng";
+            // 
+            // m_lbl_den_ngay
+            // 
+            this.m_lbl_den_ngay.AutoSize = true;
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(216, 72);
+            this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
+            this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
+            this.m_lbl_den_ngay.TabIndex = 5;
+            this.m_lbl_den_ngay.Text = "Đến cuối tháng";
+            // 
+            // m_dat_den_ngay
+            // 
+            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(302, 68);
+            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
+            this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
+            this.m_dat_den_ngay.TabIndex = 6;
+            // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 108);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(894, 274);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 1;
+            // 
             // m_pnl_out_place_dm
             // 
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -154,39 +186,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(894, 36);
-            this.m_pnl_out_place_dm.TabIndex = 22;
-            // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(418, 64);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 10;
-            this.m_cmd_search.Text = "Lọc dữ liệu";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tổng số HS đang học hiện nay";
-            // 
-            // m_txt_sl_dang_hoc
-            // 
-            this.m_txt_sl_dang_hoc.BackColor = System.Drawing.Color.PeachPuff;
-            this.m_txt_sl_dang_hoc.Location = new System.Drawing.Point(168, 42);
-            this.m_txt_sl_dang_hoc.Name = "m_txt_sl_dang_hoc";
-            this.m_txt_sl_dang_hoc.ReadOnly = true;
-            this.m_txt_sl_dang_hoc.Size = new System.Drawing.Size(100, 20);
-            this.m_txt_sl_dang_hoc.TabIndex = 12;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // f460_bc_tinh_hinh_bo_hoc
             // 
