@@ -107,7 +107,7 @@
             this.m_lbl_nhan_vien.Location = new System.Drawing.Point(13, 79);
             this.m_lbl_nhan_vien.Name = "m_lbl_nhan_vien";
             this.m_lbl_nhan_vien.Size = new System.Drawing.Size(74, 13);
-            this.m_lbl_nhan_vien.TabIndex = 4;
+            this.m_lbl_nhan_vien.TabIndex = 5;
             this.m_lbl_nhan_vien.Text = "Nhân viên thu";
             // 
             // panel1
@@ -133,7 +133,7 @@
             this.m_cbo_nhan_vien.Location = new System.Drawing.Point(92, 75);
             this.m_cbo_nhan_vien.Name = "m_cbo_nhan_vien";
             this.m_cbo_nhan_vien.Size = new System.Drawing.Size(199, 21);
-            this.m_cbo_nhan_vien.TabIndex = 5;
+            this.m_cbo_nhan_vien.TabIndex = 6;
             // 
             // m_cmd_search
             // 
@@ -146,7 +146,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(297, 71);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.TabIndex = 7;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // imageList1

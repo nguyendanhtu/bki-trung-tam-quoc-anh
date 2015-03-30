@@ -80,7 +80,7 @@
             this.m_cmd_exit.Location = new System.Drawing.Point(162, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 63);
-            this.m_cmd_exit.TabIndex = 5;
+            this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // imageList1
@@ -123,7 +123,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(158, 63);
-            this.m_cmd_insert.TabIndex = 1;
+            this.m_cmd_insert.TabIndex = 0;
             this.m_cmd_insert.Text = "&Nhập học";
             // 
             // m_cmd_update
@@ -153,7 +153,7 @@
             this.m_cmd_danh_sach.Location = new System.Drawing.Point(834, 4);
             this.m_cmd_danh_sach.Name = "m_cmd_danh_sach";
             this.m_cmd_danh_sach.Size = new System.Drawing.Size(87, 63);
-            this.m_cmd_danh_sach.TabIndex = 0;
+            this.m_cmd_danh_sach.TabIndex = 3;
             this.m_cmd_danh_sach.Text = "&Danh sách";
             // 
             // m_cmd_delete
@@ -168,7 +168,7 @@
             this.m_cmd_delete.Location = new System.Drawing.Point(921, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 63);
-            this.m_cmd_delete.TabIndex = 3;
+            this.m_cmd_delete.TabIndex = 4;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // panel2
@@ -186,7 +186,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1013, 390);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 0;
             // 
             // m_cmd_chon_hs
             // 

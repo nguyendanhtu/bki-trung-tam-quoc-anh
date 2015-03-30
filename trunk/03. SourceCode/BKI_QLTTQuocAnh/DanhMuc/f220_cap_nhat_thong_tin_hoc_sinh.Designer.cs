@@ -96,7 +96,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(738, 294);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 36;
+            this.m_fg.TabIndex = 1;
             // 
             // panel2
             // 
@@ -108,7 +108,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(738, 106);
-            this.panel2.TabIndex = 34;
+            this.panel2.TabIndex = 0;
             // 
             // m_cmd_search
             // 
@@ -121,7 +121,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(286, 61);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 30;
+            this.m_cmd_search.TabIndex = 3;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_lbl_header
@@ -132,7 +132,7 @@
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(738, 45);
-            this.m_lbl_header.TabIndex = 29;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "CẬP NHẬT THÔNG TIN HỌC SINH";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -142,7 +142,7 @@
             this.label5.Location = new System.Drawing.Point(12, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 26;
+            this.label5.TabIndex = 1;
             this.label5.Text = "Tên/Mã học sinh";
             // 
             // m_txt_search
@@ -150,7 +150,7 @@
             this.m_txt_search.Location = new System.Drawing.Point(108, 66);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(172, 20);
-            this.m_txt_search.TabIndex = 27;
+            this.m_txt_search.TabIndex = 2;
             // 
             // m_pnl_out_place_dm
             // 
@@ -163,7 +163,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(738, 36);
-            this.m_pnl_out_place_dm.TabIndex = 33;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -177,7 +177,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(470, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_update
@@ -192,7 +192,7 @@
             this.m_cmd_update.Location = new System.Drawing.Point(558, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_xuat_excel
@@ -207,7 +207,7 @@
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
@@ -222,7 +222,7 @@
             this.m_cmd_delete.Location = new System.Drawing.Point(646, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // f220_cap_nhat_thong_tin_hoc_sinh

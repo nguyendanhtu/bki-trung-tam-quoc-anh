@@ -61,7 +61,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(799, 339);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 1;
+            this.m_fg.TabIndex = 0;
             // 
             // m_cmd_search
             // 
@@ -74,7 +74,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(311, 71);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.TabIndex = 7;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // imageList1
@@ -116,7 +116,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(799, 36);
-            this.m_pnl_out_place_dm.TabIndex = 5;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -212,7 +212,7 @@
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(112, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_tu_ngay.TabIndex = 1;
+            this.m_dat_tu_ngay.TabIndex = 2;
             // 
             // m_lbl_tu_ngay
             // 
@@ -229,7 +229,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(225, 52);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(80, 13);
-            this.m_lbl_den_ngay.TabIndex = 2;
+            this.m_lbl_den_ngay.TabIndex = 3;
             this.m_lbl_den_ngay.Text = "Đến cuối tháng";
             // 
             // panel1
@@ -253,7 +253,7 @@
             this.m_txt_search.Location = new System.Drawing.Point(112, 76);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(187, 20);
-            this.m_txt_search.TabIndex = 5;
+            this.m_txt_search.TabIndex = 6;
             // 
             // label1
             // 
@@ -261,7 +261,7 @@
             this.label1.Location = new System.Drawing.Point(13, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Tên/Mã học sinh";
             // 
             // m_dat_den_ngay
@@ -271,7 +271,7 @@
             this.m_dat_den_ngay.Location = new System.Drawing.Point(311, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(94, 20);
-            this.m_dat_den_ngay.TabIndex = 3;
+            this.m_dat_den_ngay.TabIndex = 4;
             // 
             // ImageList
             // 

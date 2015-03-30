@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.m_cmd_disconnect = new System.Windows.Forms.Button();
+            this.m_txt_pwd = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_txt_user_id = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.m_cmd_connect = new System.Windows.Forms.Button();
             this.m_txt_data_source = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_txt_user_id = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.m_txt_pwd = new System.Windows.Forms.TextBox();
-            this.m_cmd_disconnect = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.m_cbo_db = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.m_txt_ten_file = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_cmd_backup = new System.Windows.Forms.Button();
             this.m_cmd_browse_backup = new System.Windows.Forms.Button();
             this.m_txt_location = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.m_cbo_db = new System.Windows.Forms.ComboBox();
-            this.m_cmd_backup = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.m_cmd_restore = new System.Windows.Forms.Button();
             this.m_cmd_browse_restore = new System.Windows.Forms.Button();
             this.m_txt_backup_path = new System.Windows.Forms.TextBox();
             this.Back = new System.Windows.Forms.Label();
-            this.m_txt_ten_file = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -74,6 +74,51 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SQL Server Authentication";
+            // 
+            // m_cmd_disconnect
+            // 
+            this.m_cmd_disconnect.Location = new System.Drawing.Point(476, 49);
+            this.m_cmd_disconnect.Name = "m_cmd_disconnect";
+            this.m_cmd_disconnect.Size = new System.Drawing.Size(75, 23);
+            this.m_cmd_disconnect.TabIndex = 7;
+            this.m_cmd_disconnect.Text = "Disconnect";
+            this.m_cmd_disconnect.UseVisualStyleBackColor = true;
+            // 
+            // m_txt_pwd
+            // 
+            this.m_txt_pwd.Location = new System.Drawing.Point(356, 51);
+            this.m_txt_pwd.Name = "m_txt_pwd";
+            this.m_txt_pwd.Size = new System.Drawing.Size(99, 20);
+            this.m_txt_pwd.TabIndex = 6;
+            this.m_txt_pwd.Text = "sa";
+            this.m_txt_pwd.UseSystemPasswordChar = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(285, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Password";
+            // 
+            // m_txt_user_id
+            // 
+            this.m_txt_user_id.Location = new System.Drawing.Point(140, 51);
+            this.m_txt_user_id.Name = "m_txt_user_id";
+            this.m_txt_user_id.Size = new System.Drawing.Size(107, 20);
+            this.m_txt_user_id.TabIndex = 4;
+            this.m_txt_user_id.Text = "sa";
+            this.m_txt_user_id.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "User ID";
             // 
             // m_cmd_connect
             // 
@@ -101,51 +146,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Data Source";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "User ID";
-            // 
-            // m_txt_user_id
-            // 
-            this.m_txt_user_id.Location = new System.Drawing.Point(140, 51);
-            this.m_txt_user_id.Name = "m_txt_user_id";
-            this.m_txt_user_id.Size = new System.Drawing.Size(107, 20);
-            this.m_txt_user_id.TabIndex = 4;
-            this.m_txt_user_id.Text = "sa";
-            this.m_txt_user_id.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Password";
-            // 
-            // m_txt_pwd
-            // 
-            this.m_txt_pwd.Location = new System.Drawing.Point(356, 51);
-            this.m_txt_pwd.Name = "m_txt_pwd";
-            this.m_txt_pwd.Size = new System.Drawing.Size(99, 20);
-            this.m_txt_pwd.TabIndex = 6;
-            this.m_txt_pwd.Text = "sa";
-            this.m_txt_pwd.UseSystemPasswordChar = true;
-            // 
-            // m_cmd_disconnect
-            // 
-            this.m_cmd_disconnect.Location = new System.Drawing.Point(476, 49);
-            this.m_cmd_disconnect.Name = "m_cmd_disconnect";
-            this.m_cmd_disconnect.Size = new System.Drawing.Size(75, 23);
-            this.m_cmd_disconnect.TabIndex = 7;
-            this.m_cmd_disconnect.Text = "Disconnect";
-            this.m_cmd_disconnect.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.m_cbo_db);
@@ -153,9 +153,17 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 114);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(587, 52);
-            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Database Selection";
+            // 
+            // m_cbo_db
+            // 
+            this.m_cbo_db.FormattingEnabled = true;
+            this.m_cbo_db.Location = new System.Drawing.Point(140, 20);
+            this.m_cbo_db.Name = "m_cbo_db";
+            this.m_cbo_db.Size = new System.Drawing.Size(236, 21);
+            this.m_cbo_db.TabIndex = 1;
             // 
             // label12
             // 
@@ -177,9 +185,34 @@
             this.groupBox4.Location = new System.Drawing.Point(12, 184);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(587, 88);
-            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Database Backup";
+            // 
+            // m_txt_ten_file
+            // 
+            this.m_txt_ten_file.Location = new System.Drawing.Point(140, 49);
+            this.m_txt_ten_file.Name = "m_txt_ten_file";
+            this.m_txt_ten_file.Size = new System.Drawing.Size(315, 20);
+            this.m_txt_ten_file.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tên file (dạng *.bak)";
+            // 
+            // m_cmd_backup
+            // 
+            this.m_cmd_backup.Location = new System.Drawing.Point(476, 47);
+            this.m_cmd_backup.Name = "m_cmd_backup";
+            this.m_cmd_backup.Size = new System.Drawing.Size(75, 23);
+            this.m_cmd_backup.TabIndex = 5;
+            this.m_cmd_backup.Text = "Backup";
+            this.m_cmd_backup.UseVisualStyleBackColor = true;
             // 
             // m_cmd_browse_backup
             // 
@@ -206,23 +239,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Location";
             // 
-            // m_cbo_db
-            // 
-            this.m_cbo_db.FormattingEnabled = true;
-            this.m_cbo_db.Location = new System.Drawing.Point(140, 20);
-            this.m_cbo_db.Name = "m_cbo_db";
-            this.m_cbo_db.Size = new System.Drawing.Size(236, 21);
-            this.m_cbo_db.TabIndex = 1;
-            // 
-            // m_cmd_backup
-            // 
-            this.m_cmd_backup.Location = new System.Drawing.Point(476, 47);
-            this.m_cmd_backup.Name = "m_cmd_backup";
-            this.m_cmd_backup.Size = new System.Drawing.Size(75, 23);
-            this.m_cmd_backup.TabIndex = 3;
-            this.m_cmd_backup.Text = "Backup";
-            this.m_cmd_backup.UseVisualStyleBackColor = true;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.m_cmd_restore);
@@ -232,7 +248,7 @@
             this.groupBox5.Location = new System.Drawing.Point(12, 278);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(587, 88);
-            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Database Restore";
             // 
@@ -269,22 +285,6 @@
             this.Back.Size = new System.Drawing.Size(69, 13);
             this.Back.TabIndex = 0;
             this.Back.Text = "Backup Path";
-            // 
-            // m_txt_ten_file
-            // 
-            this.m_txt_ten_file.Location = new System.Drawing.Point(140, 49);
-            this.m_txt_ten_file.Name = "m_txt_ten_file";
-            this.m_txt_ten_file.Size = new System.Drawing.Size(315, 20);
-            this.m_txt_ten_file.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tên file (dạng *.bak)";
             // 
             // BackupDB
             // 

@@ -47,6 +47,7 @@
             this.m_txt_so_buoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_xoa_hang = new SIS.Controls.Button.SiSButton();
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.m_cbo_nhan_vien_thu = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.m_txt_thanh_tien = new System.Windows.Forms.TextBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_cmd_xoa_hang = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -146,7 +146,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(912, 55);
-            this.m_pnl_out_place_dm.TabIndex = 3;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_ds_phieu_phai_thu
             // 
@@ -160,7 +160,7 @@
             this.m_cmd_ds_phieu_phai_thu.Location = new System.Drawing.Point(163, 4);
             this.m_cmd_ds_phieu_phai_thu.Name = "m_cmd_ds_phieu_phai_thu";
             this.m_cmd_ds_phieu_phai_thu.Size = new System.Drawing.Size(169, 47);
-            this.m_cmd_ds_phieu_phai_thu.TabIndex = 7;
+            this.m_cmd_ds_phieu_phai_thu.TabIndex = 1;
             this.m_cmd_ds_phieu_phai_thu.Text = "Danh sách phiếu phải thu";
             // 
             // m_cmd_insert
@@ -175,7 +175,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(159, 47);
-            this.m_cmd_insert.TabIndex = 6;
+            this.m_cmd_insert.TabIndex = 0;
             this.m_cmd_insert.Text = "&Lập phiếu";
             // 
             // m_cmd_update
@@ -257,7 +257,7 @@
             this.m_txt_so_buoi.Location = new System.Drawing.Point(118, 143);
             this.m_txt_so_buoi.Name = "m_txt_so_buoi";
             this.m_txt_so_buoi.Size = new System.Drawing.Size(153, 20);
-            this.m_txt_so_buoi.TabIndex = 15;
+            this.m_txt_so_buoi.TabIndex = 16;
             this.m_txt_so_buoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
@@ -266,7 +266,7 @@
             this.label3.Location = new System.Drawing.Point(9, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Số buổi";
             // 
             // panel1
@@ -299,6 +299,20 @@
             this.panel1.Size = new System.Drawing.Size(912, 222);
             this.panel1.TabIndex = 0;
             // 
+            // m_cmd_xoa_hang
+            // 
+            this.m_cmd_xoa_hang.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xoa_hang.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xoa_hang.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xoa_hang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xoa_hang.ImageIndex = 4;
+            this.m_cmd_xoa_hang.ImageList = this.ImageList;
+            this.m_cmd_xoa_hang.Location = new System.Drawing.Point(4, 190);
+            this.m_cmd_xoa_hang.Name = "m_cmd_xoa_hang";
+            this.m_cmd_xoa_hang.Size = new System.Drawing.Size(76, 30);
+            this.m_cmd_xoa_hang.TabIndex = 21;
+            this.m_cmd_xoa_hang.Text = "Xóa hàng";
+            // 
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -306,7 +320,7 @@
             this.m_cbo_lop_mon.Location = new System.Drawing.Point(118, 85);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(153, 21);
-            this.m_cbo_lop_mon.TabIndex = 11;
+            this.m_cbo_lop_mon.TabIndex = 9;
             // 
             // label5
             // 
@@ -314,7 +328,7 @@
             this.label5.Location = new System.Drawing.Point(8, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Chọn lớp môn";
             // 
             // m_cbo_nhan_vien_thu
@@ -324,7 +338,7 @@
             this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(590, 12);
             this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
             this.m_cbo_nhan_vien_thu.Size = new System.Drawing.Size(190, 21);
-            this.m_cbo_nhan_vien_thu.TabIndex = 5;
+            this.m_cbo_nhan_vien_thu.TabIndex = 3;
             // 
             // m_cbo_nhan_vien_nhap
             // 
@@ -351,7 +365,7 @@
             this.m_dat_ngay_nhap.Location = new System.Drawing.Point(590, 82);
             this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
             this.m_dat_ngay_nhap.Size = new System.Drawing.Size(142, 20);
-            this.m_dat_ngay_nhap.TabIndex = 9;
+            this.m_dat_ngay_nhap.TabIndex = 11;
             // 
             // m_dat_tai_ngay
             // 
@@ -368,7 +382,7 @@
             this.m_txt_noi_dung.Multiline = true;
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Size = new System.Drawing.Size(219, 46);
-            this.m_txt_noi_dung.TabIndex = 3;
+            this.m_txt_noi_dung.TabIndex = 5;
             this.m_txt_noi_dung.Text = "Lập phải thu";
             // 
             // m_lbl_den_ngay
@@ -377,7 +391,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(480, 83);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
-            this.m_lbl_den_ngay.TabIndex = 8;
+            this.m_lbl_den_ngay.TabIndex = 10;
             this.m_lbl_den_ngay.Text = "Ngày nhập";
             // 
             // m_lbl_noi_dung
@@ -386,7 +400,7 @@
             this.m_lbl_noi_dung.Location = new System.Drawing.Point(8, 34);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_noi_dung.TabIndex = 2;
+            this.m_lbl_noi_dung.TabIndex = 4;
             this.m_lbl_noi_dung.Text = "Nội dung";
             // 
             // m_lbl_nhan_vien_nhap
@@ -404,7 +418,7 @@
             this.m_lbl_nhan_vien_thu.Location = new System.Drawing.Point(480, 15);
             this.m_lbl_nhan_vien_thu.Name = "m_lbl_nhan_vien_thu";
             this.m_lbl_nhan_vien_thu.Size = new System.Drawing.Size(84, 13);
-            this.m_lbl_nhan_vien_thu.TabIndex = 4;
+            this.m_lbl_nhan_vien_thu.TabIndex = 2;
             this.m_lbl_nhan_vien_thu.Text = "Nhân viên thu(*)";
             // 
             // m_cmd_tu_dong
@@ -418,7 +432,7 @@
             this.m_cmd_tu_dong.Location = new System.Drawing.Point(331, 164);
             this.m_cmd_tu_dong.Name = "m_cmd_tu_dong";
             this.m_cmd_tu_dong.Size = new System.Drawing.Size(139, 28);
-            this.m_cmd_tu_dong.TabIndex = 18;
+            this.m_cmd_tu_dong.TabIndex = 20;
             this.m_cmd_tu_dong.Text = "&Tự động tạo phải thu";
             // 
             // label8
@@ -427,7 +441,7 @@
             this.label8.Location = new System.Drawing.Point(277, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
-            this.label8.TabIndex = 51;
+            this.label8.TabIndex = 19;
             this.label8.Text = "(VNĐ)";
             // 
             // label7
@@ -436,7 +450,7 @@
             this.label7.Location = new System.Drawing.Point(280, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 50;
+            this.label7.TabIndex = 14;
             this.label7.Text = "(VNĐ)";
             // 
             // label6
@@ -445,7 +459,7 @@
             this.label6.Location = new System.Drawing.Point(9, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 16;
+            this.label6.TabIndex = 17;
             this.label6.Text = "Thành tiền";
             // 
             // m_txt_thanh_tien
@@ -456,7 +470,7 @@
             this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
             this.m_txt_thanh_tien.ReadOnly = true;
             this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 20);
-            this.m_txt_thanh_tien.TabIndex = 17;
+            this.m_txt_thanh_tien.TabIndex = 18;
             this.m_txt_thanh_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_fg
@@ -468,20 +482,6 @@
             this.m_fg.Size = new System.Drawing.Size(912, 175);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
-            // 
-            // m_cmd_xoa_hang
-            // 
-            this.m_cmd_xoa_hang.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xoa_hang.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xoa_hang.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xoa_hang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xoa_hang.ImageIndex = 4;
-            this.m_cmd_xoa_hang.ImageList = this.ImageList;
-            this.m_cmd_xoa_hang.Location = new System.Drawing.Point(4, 190);
-            this.m_cmd_xoa_hang.Name = "m_cmd_xoa_hang";
-            this.m_cmd_xoa_hang.Size = new System.Drawing.Size(76, 30);
-            this.m_cmd_xoa_hang.TabIndex = 52;
-            this.m_cmd_xoa_hang.Text = "Xóa hàng";
             // 
             // f330_lap_phai_thu_hoc_vien
             // 
