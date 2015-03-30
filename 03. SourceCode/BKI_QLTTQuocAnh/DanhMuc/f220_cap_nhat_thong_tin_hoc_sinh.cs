@@ -243,9 +243,21 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_cmd_search.Click += m_cmd_search_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
             m_txt_search.TextChanged += m_txt_search_TextChanged;
+            this.KeyDown += f220_cap_nhat_thong_tin_hoc_sinh_KeyDown;
         }
 
-        void m_txt_search_TextChanged(object sender, EventArgs e) {
+      
+        
+        #endregion
+
+        //
+        //
+        //		EVENT HANLDERS
+        //
+        //
+
+        void m_txt_search_TextChanged(object sender, EventArgs e)
+        {
             load_data_2_grid();
         }
 
@@ -273,6 +285,28 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             load_data_2_grid();
         }
 
+        void f220_cap_nhat_thong_tin_hoc_sinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                
+                if ((e.KeyCode == Keys.Escape)&&(m_trang_thai_hien_thi == 1))
+                {
+                    this.Close();
+                }
+                else
+                    if (e.KeyCode == Keys.Enter)
+                    {
+                        load_data_2_grid();
+                    }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
+        }
+
+
         void f220_cap_nhat_thong_tin_hoc_sinh_Load(object sender, EventArgs e)
         {
             try
@@ -284,13 +318,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
-
-        //
-        //
-        //		EVENT HANLDERS
-        //
-        //
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
