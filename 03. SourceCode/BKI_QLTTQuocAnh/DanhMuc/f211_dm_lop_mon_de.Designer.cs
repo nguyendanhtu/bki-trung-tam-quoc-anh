@@ -65,7 +65,7 @@
             this.m_txt_don_gia.Location = new System.Drawing.Point(106, 93);
             this.m_txt_don_gia.Name = "m_txt_don_gia";
             this.m_txt_don_gia.Size = new System.Drawing.Size(196, 20);
-            this.m_txt_don_gia.TabIndex = 5;
+            this.m_txt_don_gia.TabIndex = 6;
             // 
             // m_lbl_don_gia
             // 
@@ -73,7 +73,7 @@
             this.m_lbl_don_gia.Location = new System.Drawing.Point(12, 97);
             this.m_lbl_don_gia.Name = "m_lbl_don_gia";
             this.m_lbl_don_gia.Size = new System.Drawing.Size(76, 13);
-            this.m_lbl_don_gia.TabIndex = 6;
+            this.m_lbl_don_gia.TabIndex = 5;
             this.m_lbl_don_gia.Text = "Đơn giá (VNĐ)";
             // 
             // m_txt_mo_ta
@@ -81,14 +81,14 @@
             this.m_txt_mo_ta.Location = new System.Drawing.Point(106, 67);
             this.m_txt_mo_ta.Name = "m_txt_mo_ta";
             this.m_txt_mo_ta.Size = new System.Drawing.Size(196, 20);
-            this.m_txt_mo_ta.TabIndex = 3;
+            this.m_txt_mo_ta.TabIndex = 4;
             // 
             // m_txt_ma_lop_mon
             // 
             this.m_txt_ma_lop_mon.Location = new System.Drawing.Point(106, 41);
             this.m_txt_ma_lop_mon.Name = "m_txt_ma_lop_mon";
             this.m_txt_ma_lop_mon.Size = new System.Drawing.Size(196, 20);
-            this.m_txt_ma_lop_mon.TabIndex = 1;
+            this.m_txt_ma_lop_mon.TabIndex = 2;
             // 
             // m_lbl_ma_lop_mon
             // 
@@ -96,7 +96,7 @@
             this.m_lbl_ma_lop_mon.Location = new System.Drawing.Point(12, 45);
             this.m_lbl_ma_lop_mon.Name = "m_lbl_ma_lop_mon";
             this.m_lbl_ma_lop_mon.Size = new System.Drawing.Size(62, 13);
-            this.m_lbl_ma_lop_mon.TabIndex = 2;
+            this.m_lbl_ma_lop_mon.TabIndex = 1;
             this.m_lbl_ma_lop_mon.Text = "Mã lớp môn";
             // 
             // m_lbl_mo_ta
@@ -105,7 +105,7 @@
             this.m_lbl_mo_ta.Location = new System.Drawing.Point(12, 71);
             this.m_lbl_mo_ta.Name = "m_lbl_mo_ta";
             this.m_lbl_mo_ta.Size = new System.Drawing.Size(79, 13);
-            this.m_lbl_mo_ta.TabIndex = 4;
+            this.m_lbl_mo_ta.TabIndex = 3;
             this.m_lbl_mo_ta.Text = "Mô tả (Tên gọi)";
             // 
             // m_lbl_header
@@ -127,7 +127,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 41);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 1;
             // 
             // m_cmd_luu
             // 

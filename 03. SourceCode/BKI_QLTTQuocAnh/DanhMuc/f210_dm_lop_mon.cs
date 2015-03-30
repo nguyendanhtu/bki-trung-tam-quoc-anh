@@ -87,6 +87,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f210_dm_lop_mon));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_xoa_lop_mon = new SIS.Controls.Button.SiSButton();
             this.m_cmd_cho_lop_mon_hoat_dong = new SIS.Controls.Button.SiSButton();
             this.m_cmd_nghi_hoat_dong = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -99,7 +100,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_cbo_trang_thai_lop = new System.Windows.Forms.ComboBox();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_cmd_xoa_lop_mon = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,7 +146,22 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1070, 52);
-            this.m_pnl_out_place_dm.TabIndex = 19;
+            this.m_pnl_out_place_dm.TabIndex = 2;
+            // 
+            // m_cmd_xoa_lop_mon
+            // 
+            this.m_cmd_xoa_lop_mon.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xoa_lop_mon.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xoa_lop_mon.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xoa_lop_mon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xoa_lop_mon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xoa_lop_mon.ImageIndex = 4;
+            this.m_cmd_xoa_lop_mon.ImageList = this.ImageList;
+            this.m_cmd_xoa_lop_mon.Location = new System.Drawing.Point(555, 4);
+            this.m_cmd_xoa_lop_mon.Name = "m_cmd_xoa_lop_mon";
+            this.m_cmd_xoa_lop_mon.Size = new System.Drawing.Size(117, 44);
+            this.m_cmd_xoa_lop_mon.TabIndex = 5;
+            this.m_cmd_xoa_lop_mon.Text = "Xóa lớp môn";
             // 
             // m_cmd_cho_lop_mon_hoat_dong
             // 
@@ -160,7 +175,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_cho_lop_mon_hoat_dong.Location = new System.Drawing.Point(434, 4);
             this.m_cmd_cho_lop_mon_hoat_dong.Name = "m_cmd_cho_lop_mon_hoat_dong";
             this.m_cmd_cho_lop_mon_hoat_dong.Size = new System.Drawing.Size(121, 44);
-            this.m_cmd_cho_lop_mon_hoat_dong.TabIndex = 25;
+            this.m_cmd_cho_lop_mon_hoat_dong.TabIndex = 4;
             this.m_cmd_cho_lop_mon_hoat_dong.Text = "&Cho lớp môn hoạt động";
             this.m_cmd_cho_lop_mon_hoat_dong.Visible = false;
             // 
@@ -176,7 +191,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_nghi_hoat_dong.Location = new System.Drawing.Point(313, 4);
             this.m_cmd_nghi_hoat_dong.Name = "m_cmd_nghi_hoat_dong";
             this.m_cmd_nghi_hoat_dong.Size = new System.Drawing.Size(121, 44);
-            this.m_cmd_nghi_hoat_dong.TabIndex = 24;
+            this.m_cmd_nghi_hoat_dong.TabIndex = 3;
             this.m_cmd_nghi_hoat_dong.Text = "&Nghỉ hoạt dộng";
             // 
             // m_cmd_update
@@ -191,7 +206,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_update.Location = new System.Drawing.Point(202, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(111, 44);
-            this.m_cmd_update.TabIndex = 23;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa lớp môn";
             // 
             // m_cmd_insert
@@ -206,7 +221,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_insert.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(110, 44);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm lớp môn";
             // 
             // m_cmd_xuat_excel
@@ -221,7 +236,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 44);
-            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất excel";
             // 
             // m_cmd_exit
@@ -236,7 +251,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit.Location = new System.Drawing.Point(978, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 44);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 6;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_fg
@@ -247,7 +262,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(1070, 259);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_fg.TabIndex = 1;
             // 
             // panel1
             // 
@@ -259,7 +274,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1070, 98);
-            this.panel1.TabIndex = 21;
+            this.panel1.TabIndex = 0;
             // 
             // m_lbl_trang_thai_lop
             // 
@@ -267,7 +282,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_lbl_trang_thai_lop.Location = new System.Drawing.Point(12, 57);
             this.m_lbl_trang_thai_lop.Name = "m_lbl_trang_thai_lop";
             this.m_lbl_trang_thai_lop.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_trang_thai_lop.TabIndex = 11;
+            this.m_lbl_trang_thai_lop.TabIndex = 1;
             this.m_lbl_trang_thai_lop.Text = "Trạng thái lớp";
             // 
             // m_cmd_search
@@ -281,7 +296,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_search.Location = new System.Drawing.Point(255, 49);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 10;
+            this.m_cmd_search.TabIndex = 3;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_cbo_trang_thai_lop
@@ -290,7 +305,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cbo_trang_thai_lop.Location = new System.Drawing.Point(98, 54);
             this.m_cbo_trang_thai_lop.Name = "m_cbo_trang_thai_lop";
             this.m_cbo_trang_thai_lop.Size = new System.Drawing.Size(151, 21);
-            this.m_cbo_trang_thai_lop.TabIndex = 3;
+            this.m_cbo_trang_thai_lop.TabIndex = 2;
             // 
             // m_lbl_header
             // 
@@ -300,24 +315,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(1070, 39);
-            this.m_lbl_header.TabIndex = 2;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // m_cmd_xoa_lop_mon
-            // 
-            this.m_cmd_xoa_lop_mon.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xoa_lop_mon.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xoa_lop_mon.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xoa_lop_mon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xoa_lop_mon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xoa_lop_mon.ImageIndex = 4;
-            this.m_cmd_xoa_lop_mon.ImageList = this.ImageList;
-            this.m_cmd_xoa_lop_mon.Location = new System.Drawing.Point(555, 4);
-            this.m_cmd_xoa_lop_mon.Name = "m_cmd_xoa_lop_mon";
-            this.m_cmd_xoa_lop_mon.Size = new System.Drawing.Size(117, 44);
-            this.m_cmd_xoa_lop_mon.TabIndex = 26;
-            this.m_cmd_xoa_lop_mon.Text = "Xóa lớp môn";
             // 
             // f210_dm_lop_mon
             // 
