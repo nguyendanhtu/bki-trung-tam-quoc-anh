@@ -114,6 +114,7 @@ namespace BKI_QLTTQuocAnh
             m_cmd_nhom_nguoi_su_dung.ItemClick += m_cmd_nhom_nguoi_su_dung_ItemClick;
             m_cmd_doi_mat_khau.ItemClick += m_cmd_doi_mat_khau_ItemClick;
             m_cmd_nguoi_sd.ItemClick += m_cmd_nguoi_sd_ItemClick;
+            m_cmd_backup_restore.ItemClick += m_cmd_backup_restore_ItemClick;
             //Danh muc
             m_cmd_dm_hs.ItemClick += m_cmd_dm_hs_ItemClick;
             m_cmd_dm_lop_mon.ItemClick += m_cmd_dm_lop_mon_ItemClick;
@@ -128,6 +129,22 @@ namespace BKI_QLTTQuocAnh
             m_cmd_thuc_thu_nv.ItemClick += m_cmd_thuc_thu_nv_ItemClick;
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
             m_cmd_bien_dong_hs.ItemClick += m_cmd_bien_dong_hs_ItemClick;
+        }
+
+        void m_cmd_backup_restore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                BackupDB v_frm = new BackupDB();
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_bien_dong_hs_ItemClick(object sender, ItemClickEventArgs e)
