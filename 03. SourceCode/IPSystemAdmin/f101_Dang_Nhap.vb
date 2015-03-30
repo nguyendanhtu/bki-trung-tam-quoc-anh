@@ -298,7 +298,7 @@ Public Class f101_Dang_Nhap
         Dim v_loginSucceeded As Boolean = False
 
         Select Case v_logonResult
-            Case US_HT_NGUOI_SU_DUNG.LogonResult.WrongPassword_OR_Name.WrongPassword_OR_Name
+            Case US_HT_NGUOI_SU_DUNG.LogonResult.WrongPassword_OR_Name
                 BaseMessages.MsgBox_Warning(18)
             Case US_HT_NGUOI_SU_DUNG.LogonResult.User_Is_Locked
                 BaseMessages.MsgBox_Warning(21)
@@ -370,7 +370,11 @@ Public Class f101_Dang_Nhap
         Try
             Select Case e.KeyCode
                 Case Keys.Enter
-                    SendKeys.Send("{tab}")
+                    'SendKeys.Send("{tab}")
+                    If (SubmitLogonIsOK()) Then
+                        Me.DialogResult = DialogResult.OK
+                        Me.Close()
+                    End If
                 Case Keys.Escape
                     Me.m_btnCancel_Click(sender, e)
             End Select
@@ -378,6 +382,8 @@ Public Class f101_Dang_Nhap
             CSystemLog_301.ExceptionHandle(ex)
         End Try
     End Sub
+
+
 
 
    
