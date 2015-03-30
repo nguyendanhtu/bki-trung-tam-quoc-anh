@@ -157,7 +157,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(653, 36);
-            this.m_pnl_out_place_dm.TabIndex = 19;
+            this.m_pnl_out_place_dm.TabIndex = 1;
             // 
             // m_cmd_insert
             // 
@@ -171,7 +171,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_insert.Location = new System.Drawing.Point(297, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_update
@@ -186,7 +186,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_update.Location = new System.Drawing.Point(385, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_xuat_excel
@@ -201,7 +201,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_delete
@@ -216,7 +216,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_delete.Location = new System.Drawing.Point(473, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_exit
@@ -231,7 +231,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_cmd_exit.Location = new System.Drawing.Point(561, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_fg
@@ -242,7 +242,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(653, 212);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_fg.TabIndex = 0;
             // 
             // imageList1
             // 
@@ -287,7 +287,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(653, 131);
-            this.panel1.TabIndex = 31;
+            this.panel1.TabIndex = 0;
             // 
             // m_cmd_search
             // 

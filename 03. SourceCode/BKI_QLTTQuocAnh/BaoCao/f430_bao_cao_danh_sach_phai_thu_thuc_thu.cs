@@ -195,7 +195,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cbo_loai_phieu.Location = new System.Drawing.Point(94, 102);
             this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
             this.m_cbo_loai_phieu.Size = new System.Drawing.Size(222, 21);
-            this.m_cbo_loai_phieu.TabIndex = 12;
+            this.m_cbo_loai_phieu.TabIndex = 8;
             // 
             // label1
             // 
@@ -203,7 +203,7 @@ namespace BKI_QLTTQuocAnh
             this.label1.Location = new System.Drawing.Point(14, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Loại phiếu thu";
             // 
             // m_lbl_goi_y
@@ -212,7 +212,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_goi_y.Location = new System.Drawing.Point(641, 171);
             this.m_lbl_goi_y.Name = "m_lbl_goi_y";
             this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
-            this.m_lbl_goi_y.TabIndex = 10;
+            this.m_lbl_goi_y.TabIndex = 12;
             this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
             this.m_lbl_goi_y.Visible = false;
             // 
@@ -227,7 +227,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.Location = new System.Drawing.Point(328, 127);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 9;
+            this.m_cmd_search.TabIndex = 11;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_lbl_search
@@ -236,7 +236,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_search.Location = new System.Drawing.Point(14, 135);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(67, 13);
-            this.m_lbl_search.TabIndex = 7;
+            this.m_lbl_search.TabIndex = 9;
             this.m_lbl_search.Text = "Lọc theo HS";
             // 
             // m_txt_tim_kien
@@ -244,7 +244,7 @@ namespace BKI_QLTTQuocAnh
             this.m_txt_tim_kien.Location = new System.Drawing.Point(94, 132);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(222, 20);
-            this.m_txt_tim_kien.TabIndex = 8;
+            this.m_txt_tim_kien.TabIndex = 10;
             // 
             // m_cbo_nhan_vien_thu
             // 
@@ -392,7 +392,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Location = new System.Drawing.Point(180, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 9;
+            this.m_cmd_delete.TabIndex = 2;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_update
@@ -407,7 +407,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 8;
+            this.m_cmd_update.TabIndex = 1;
             this.m_cmd_update.Text = "&Sửa";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click_1);
             // 
@@ -423,7 +423,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Location = new System.Drawing.Point(662, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 6;
+            this.m_cmd_insert.TabIndex = 3;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_xuat_excel
@@ -438,7 +438,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 5;
+            this.m_cmd_xuat_excel.TabIndex = 0;
             this.m_cmd_xuat_excel.Text = "Xuất Excel";
             // 
             // m_cmd_exit

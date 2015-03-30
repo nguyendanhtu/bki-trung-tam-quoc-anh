@@ -66,7 +66,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(324, 104);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 11;
+            this.m_cmd_search.TabIndex = 9;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // ImageList
@@ -102,7 +102,7 @@
             this.label2.Location = new System.Drawing.Point(12, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 7;
             this.label2.Text = "Lọc theo HS";
             // 
             // m_txt_tim_kien
@@ -110,7 +110,7 @@
             this.m_txt_tim_kien.Location = new System.Drawing.Point(111, 109);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(190, 20);
-            this.m_txt_tim_kien.TabIndex = 10;
+            this.m_txt_tim_kien.TabIndex = 8;
             // 
             // panel2
             // 
@@ -128,7 +128,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 140);
-            this.panel2.TabIndex = 33;
+            this.panel2.TabIndex = 0;
             // 
             // m_lbl_header
             // 
@@ -309,7 +309,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(592, 36);
-            this.m_pnl_out_place_dm.TabIndex = 31;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_fg
             // 
@@ -319,7 +319,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(592, 212);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 34;
+            this.m_fg.TabIndex = 1;
             // 
             // f440_bao_cao_tinh_hinh_di_hoc_theo_lop_mon_hs
             // 

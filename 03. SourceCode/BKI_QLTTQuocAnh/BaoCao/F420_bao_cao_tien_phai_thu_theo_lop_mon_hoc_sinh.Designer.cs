@@ -82,7 +82,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 131);
-            this.panel1.TabIndex = 30;
+            this.panel1.TabIndex = 0;
             // 
             // m_cmd_search
             // 
@@ -206,7 +206,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(766, 36);
-            this.m_pnl_out_place_dm.TabIndex = 31;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -291,7 +291,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(766, 281);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 0;
+            this.m_fg.TabIndex = 1;
             // 
             // F420_bao_cao_tien_phai_thu_theo_lop_mon_hoc_sinh
             // 
