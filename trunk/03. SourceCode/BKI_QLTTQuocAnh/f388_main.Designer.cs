@@ -73,6 +73,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.m_cmd_backup_restore = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -111,9 +112,10 @@
             this.m_cmd_ds_phieu,
             this.m_cmd_bc_diem_danh,
             this.m_cmd_lap_giam_tru,
-            this.m_cmd_bien_dong_hs});
+            this.m_cmd_bien_dong_hs,
+            this.m_cmd_backup_restore});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 34;
+            this.ribbon.MaxItemId = 35;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -372,6 +374,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.m_cmd_backup_restore);
             this.ribbonPageGroup1.ItemLinks.Add(this.m_cmd_doi_mat_khau);
             this.ribbonPageGroup1.ItemLinks.Add(this.m_cmd_thoat);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -488,6 +491,15 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
+            // m_cmd_backup_restore
+            // 
+            this.m_cmd_backup_restore.Caption = "Backup-Restore";
+            this.m_cmd_backup_restore.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_backup_restore.Glyph")));
+            this.m_cmd_backup_restore.Id = 34;
+            this.m_cmd_backup_restore.Name = "m_cmd_backup_restore";
+            this.m_cmd_backup_restore.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,5 +567,6 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_lap_giam_tru;
         private DevExpress.XtraBars.BarButtonItem m_cmd_bien_dong_hs;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_backup_restore;
     }
 }

@@ -639,6 +639,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
             m_lbl_ten_hs.Text = ip_us.strHO_TEN_HS.Trim();
 
+            suggest_ma_phieu();
+
             this.ShowDialog();
         }
         #endregion
@@ -677,6 +679,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         #endregion
 
         #region Private Methods
+        private void suggest_ma_phieu()
+        {
+
+        }
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());

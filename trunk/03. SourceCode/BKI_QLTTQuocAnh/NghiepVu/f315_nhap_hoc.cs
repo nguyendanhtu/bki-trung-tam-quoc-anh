@@ -135,7 +135,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             //Neu co roi thi hien form thong bao ra la co roi   
             string v_op_kq_yn = "";
             US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
-            v_us_gd_hoc.check_hoc_sinh_lm(m_us_dm_hoc_sinh.dcID, CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue), ref v_op_kq_yn);
+            v_us_gd_hoc.check_hoc_sinh_lm(m_us_v_hoc_sinh.dcID, CIPConvert.ToDecimal(m_cbo_nhap_vao_lop_mon.SelectedValue), ref v_op_kq_yn);
 
             if (v_op_kq_yn == "Y")
             {
@@ -158,11 +158,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void save_data()//Hien tai moi chi su dung insert TuyenNT xu ly update sau
         {
-            if (check_data_is_ok() == false) return;
+            if (!check_data_is_ok())
+            {
+                BaseMessages.MsgBox_Error("Học sinh này đã có trong lớp rồi!");
+                return;
+            }
             if (!check_validate_data())
             {
                 return;
             }
+
             form_2_us_object();
             switch (m_e_form_mode)
             {
