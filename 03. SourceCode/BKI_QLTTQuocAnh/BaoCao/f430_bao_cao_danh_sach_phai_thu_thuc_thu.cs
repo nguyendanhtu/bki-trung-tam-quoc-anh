@@ -478,12 +478,14 @@ namespace BKI_QLTTQuocAnh
         #region Public Interface
         public void display()
         {
+            m_trang_thai_hien_thi = 0;
             m_cmd_update.Visible = true;
             m_cmd_delete.Visible = true;
             this.ShowDialog();
         }
         public void display_from_f470(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH ip_us, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
         {
+            m_trang_thai_hien_thi = 1;
             m_us_bc_tinh_hinh_tc = ip_us;
             m_dat_tu_ngay.Value = ip_dat_tu_ngay;
             m_dat_den_ngay.Value = ip_dat_den_ngay;
@@ -494,6 +496,7 @@ namespace BKI_QLTTQuocAnh
         }
         public void display_ds_phieu_phai_thu()
         {
+            m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu phải thu theo nhân viên";
             m_lbl_goi_y.Visible = true;
@@ -512,6 +515,7 @@ namespace BKI_QLTTQuocAnh
         }
         public void display_ds_phieu_thuc_thu()
         {
+            m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu thực thu theo nhân viên";
             m_lbl_goi_y.Visible = true;
@@ -530,6 +534,7 @@ namespace BKI_QLTTQuocAnh
         }
         public void display_ds_phieu_giam_tru()
         {
+            m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU GIẢM TRỪ THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu giảm trừ theo nhân viên";
             m_lbl_goi_y.Visible = true;
@@ -578,6 +583,7 @@ namespace BKI_QLTTQuocAnh
         ITransferDataRow m_obj_trans;
         US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU m_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
         US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH m_us_bc_tinh_hinh_tc = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
+        decimal m_trang_thai_hien_thi = 0; //0 neu bam tren menu va 1 neu la form detail
         #endregion
 
         #region Private Methods
@@ -802,10 +808,15 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                if (e.KeyCode == Keys.Enter)
+                if ((e.KeyCode == Keys.Escape) && (m_trang_thai_hien_thi == 1))
                 {
-                    load_data_2_grid();
+                    this.Close();
                 }
+                else
+                    if (e.KeyCode == Keys.Enter)
+                    {
+                        load_data_2_grid();
+                    }
             }
             catch (Exception v_e)
             {

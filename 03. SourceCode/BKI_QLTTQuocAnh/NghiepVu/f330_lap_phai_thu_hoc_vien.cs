@@ -229,7 +229,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    m_cmd_tu_dong.PerformClick();
+                    if (check_validate_data())
+                    {
+                        m_cmd_tu_dong.PerformClick();
+                    }
+                    
                 }
             }
             catch (Exception v_e)
