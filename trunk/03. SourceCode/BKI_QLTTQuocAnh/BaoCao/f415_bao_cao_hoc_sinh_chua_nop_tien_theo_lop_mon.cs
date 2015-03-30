@@ -481,6 +481,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_ds = new DS_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
             US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON v_us = new US_V_RPT_415_BC_HS_CHUA_NOP_TIEN_THEO_LOP_MON();
+            v_ds.Clear();
             v_ds.EnforceConstraints = false;
             if (m_cbo_lop.DataSource == null)
             {

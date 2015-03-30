@@ -378,6 +378,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         private void load_data_2_grid()
         {
             m_ds = new DS_DM_LOP_MON();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDataset(m_ds, "Where TRANG_THAI_LOP_MON =" + CIPConvert.ToDecimal(m_cbo_trang_thai_lop.SelectedValue));
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);

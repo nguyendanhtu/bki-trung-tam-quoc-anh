@@ -236,6 +236,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void load_data_2_grid()
         {
             DS_V_DM_HOC_SINH m_ds = new DS_V_DM_HOC_SINH();
+            m_ds.Clear();
             m_ds.EnforceConstraints = false;
             m_us.FillDataset_danh_sach_hoc_sinh_theo_lop_mon(m_ds
                 , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
