@@ -194,9 +194,16 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private void delete_v_hoc_sinh()
         {
+
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+
+            //if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+            bool v_lua_chon_xoa = BaseMessages.MsgBox_Confirm("Nếu xóa học sinh này, tất cả dữ liệu của học sinh này về lớp học, phiếu thu, điểm danh,... sẽ bị xóa. Bạn chắc chắn chứ?");
+            if (v_lua_chon_xoa == false)
+            {
+                return;
+            }
             US_V_HOC_SINH v_us = new US_V_HOC_SINH();
             grid2us_object(v_us, m_fg.Row);
             try
@@ -205,14 +212,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
+                BaseMessages.MsgBox_Infor("Đã xóa thành công");
             }
             catch (Exception v_e)
             {
                 v_us.Rollback();
-                //CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-                //    new CDBClientDBExceptionInterpret());
-                //v_objErrHandler.showErrorMessage();
-                BaseMessages.MsgBox_Infor("Không xóa được học sinh này do học sinh này đang học một lớp môn nào đó!");
+                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                    new CDBClientDBExceptionInterpret());
+                v_objErrHandler.showErrorMessage();
+                //BaseMessages.MsgBox_Infor("Không xóa được học sinh này do học sinh này đang học một lớp môn nào đó!");
             }
         }
 
@@ -328,7 +336,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             }
             catch (Exception v_e)
             {
-                //CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
