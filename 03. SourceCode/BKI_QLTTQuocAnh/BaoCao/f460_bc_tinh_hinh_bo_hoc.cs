@@ -88,6 +88,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void load_data_2_grid()
         {
             m_ds = new DS_V_RPT_F460_TINH_HINH_BO_LOP();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDatasetByProc(m_ds, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);

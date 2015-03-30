@@ -161,6 +161,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
         private void load_data_2_grid()
         {
             m_ds = new DS_V_RPT_420_BC_TAI_CHINH_THEO_LOP_MON_HS();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDataset(m_ds
                              ,m_dat_tu_ngay.Value.Date
                              ,m_dat_den_ngay.Value.Date

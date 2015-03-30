@@ -145,6 +145,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             m_ds = new DS_V_HOC_SINH();
             m_ds.Clear();
+            m_ds.EnforceConstraints = false;
             m_us.FillDataset_danh_sach_hoc_sinh(m_ds, m_txt_search.Text.Trim());
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
