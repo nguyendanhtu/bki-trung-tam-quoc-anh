@@ -129,6 +129,23 @@ namespace BKI_QLTTQuocAnh
             m_cmd_thuc_thu_nv.ItemClick += m_cmd_thuc_thu_nv_ItemClick;
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
             m_cmd_bien_dong_hs.ItemClick += m_cmd_bien_dong_hs_ItemClick;
+            m_cmd_ds_hs_theo_lm.ItemClick += m_cmd_ds_hs_theo_lm_ItemClick;
+        }
+
+        void m_cmd_ds_hs_theo_lm_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_backup_restore_ItemClick(object sender, ItemClickEventArgs e)
