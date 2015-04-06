@@ -68,12 +68,13 @@
             this.groupBox1.Controls.Add(this.m_cmd_connect);
             this.groupBox1.Controls.Add(this.m_txt_data_source);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 411);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(587, 83);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SQL Server Authentication";
+            this.groupBox1.Visible = false;
             // 
             // m_cmd_disconnect
             // 
@@ -150,15 +151,17 @@
             // 
             this.groupBox3.Controls.Add(this.m_cbo_db);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(12, 114);
+            this.groupBox3.Location = new System.Drawing.Point(12, 325);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(587, 52);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Database Selection";
+            this.groupBox3.Visible = false;
             // 
             // m_cbo_db
             // 
+            this.m_cbo_db.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_db.FormattingEnabled = true;
             this.m_cbo_db.Location = new System.Drawing.Point(140, 20);
             this.m_cbo_db.Name = "m_cbo_db";
@@ -182,17 +185,18 @@
             this.groupBox4.Controls.Add(this.m_cmd_browse_backup);
             this.groupBox4.Controls.Add(this.m_txt_location);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(12, 184);
+            this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(587, 88);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Database Backup";
+            this.groupBox4.Text = "Lưu trữ dữ liệu";
             // 
             // m_txt_ten_file
             // 
             this.m_txt_ten_file.Location = new System.Drawing.Point(140, 49);
             this.m_txt_ten_file.Name = "m_txt_ten_file";
+            this.m_txt_ten_file.ReadOnly = true;
             this.m_txt_ten_file.Size = new System.Drawing.Size(315, 20);
             this.m_txt_ten_file.TabIndex = 4;
             // 
@@ -211,7 +215,7 @@
             this.m_cmd_backup.Name = "m_cmd_backup";
             this.m_cmd_backup.Size = new System.Drawing.Size(75, 23);
             this.m_cmd_backup.TabIndex = 5;
-            this.m_cmd_backup.Text = "Backup";
+            this.m_cmd_backup.Text = "Lưu trữ";
             this.m_cmd_backup.UseVisualStyleBackColor = true;
             // 
             // m_cmd_browse_backup
@@ -235,9 +239,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(22, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Location";
+            this.label10.Text = "Địa chỉ";
             // 
             // groupBox5
             // 
@@ -245,12 +249,12 @@
             this.groupBox5.Controls.Add(this.m_cmd_browse_restore);
             this.groupBox5.Controls.Add(this.m_txt_backup_path);
             this.groupBox5.Controls.Add(this.Back);
-            this.groupBox5.Location = new System.Drawing.Point(12, 278);
+            this.groupBox5.Location = new System.Drawing.Point(12, 106);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(587, 88);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Database Restore";
+            this.groupBox5.Text = "Hồi phục dữ liệu";
             // 
             // m_cmd_restore
             // 
@@ -258,7 +262,7 @@
             this.m_cmd_restore.Name = "m_cmd_restore";
             this.m_cmd_restore.Size = new System.Drawing.Size(75, 23);
             this.m_cmd_restore.TabIndex = 3;
-            this.m_cmd_restore.Text = "Restore";
+            this.m_cmd_restore.Text = "Hồi phục";
             this.m_cmd_restore.UseVisualStyleBackColor = true;
             // 
             // m_cmd_browse_restore
@@ -290,13 +294,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 403);
+            this.ClientSize = new System.Drawing.Size(911, 517);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "BackupDB";
-            this.Text = "SQL Server Backup and Restore";
+            this.Text = "Lưu trữ dữ liệu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
