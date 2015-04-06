@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_QLTTQuocAnh.US {
+
+    public class CONST_ID_LOAI_DOI_TUONG {
+        public const decimal ID_HOC_SINH = 18;
+        public const decimal ID_GIAO_VIEN = 19;
+    }
     public class CONST_ID_USER_GROUP {
         public const decimal ADMIN = 1;
     }

@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_EXCEL_IMPORT_HOC_VIEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EXCEL_IMPORT_HOC_VIEN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_GD_CHI_TIET_PHIEU_THU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +294,17 @@
     </None>
     <None Include="DS_DM_LOP_MON.xss">
       <DependentUpon>DS_DM_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EXCEL_IMPORT_HOC_VIEN.xsc">
+      <DependentUpon>DS_EXCEL_IMPORT_HOC_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EXCEL_IMPORT_HOC_VIEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EXCEL_IMPORT_HOC_VIEN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EXCEL_IMPORT_HOC_VIEN.xss">
+      <DependentUpon>DS_EXCEL_IMPORT_HOC_VIEN.xsd</DependentUpon>
     </None>
     <None Include="DS_GD_CHI_TIET_PHIEU_THU.xsc">
       <DependentUpon>DS_GD_CHI_TIET_PHIEU_THU.xsd</DependentUpon>

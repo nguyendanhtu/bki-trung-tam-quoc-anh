@@ -108,6 +108,7 @@ namespace BKI_QLTTQuocAnh
             m_cmd_lap_thuc_thu.ItemClick += m_cmd_lap_thuc_thu_ItemClick;
             m_cmd_lap_giam_tru.ItemClick += m_cmd_lap_giam_tru_ItemClick;
             m_cmd_ban_giao_tien.ItemClick += m_cmd_ban_giao_tien_ItemClick;
+            m_cmd_import_excel.ItemClick += m_cmd_import_excel_ItemClick;
             //Hệ thống
             m_cmd_thoat.ItemClick += m_cmd_thoat_ItemClick;
             m_cmd_phan_quyen_nhom.ItemClick += m_cmd_phan_quyen_nhom_ItemClick;
@@ -130,6 +131,19 @@ namespace BKI_QLTTQuocAnh
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
             m_cmd_bien_dong_hs.ItemClick += m_cmd_bien_dong_hs_ItemClick;
             m_cmd_ds_hs_theo_lm.ItemClick += m_cmd_ds_hs_theo_lm_ItemClick;
+        }
+
+        void m_cmd_import_excel_ItemClick(object sender, ItemClickEventArgs e) {
+            try {
+                f300_import_ds_hoc_vien v_frm = new f300_import_ds_hoc_vien();
+                if(IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_ds_hs_theo_lm_ItemClick(object sender, ItemClickEventArgs e)
