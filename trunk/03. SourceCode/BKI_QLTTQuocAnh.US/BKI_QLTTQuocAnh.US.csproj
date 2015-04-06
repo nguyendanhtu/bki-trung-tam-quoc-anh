@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="US_DM_HOC_SINH.cs" />
     <Compile Include="US_DM_LOP_MON.cs" />
+    <Compile Include="US_EXCEL_IMPORT_HOC_VIEN.cs" />
     <Compile Include="US_GD_CHI_TIET_PHIEU_THU.cs" />
     <Compile Include="US_GD_DIEM_DANH.cs" />
     <Compile Include="US_GD_HOC.cs" />

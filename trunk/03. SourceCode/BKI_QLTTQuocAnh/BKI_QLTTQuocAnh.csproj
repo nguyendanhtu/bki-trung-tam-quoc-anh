@@ -262,6 +262,9 @@
     <Compile Include="NghiepVu\BackupDB.Designer.cs">
       <DependentUpon>BackupDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f300_import_ds_hoc_vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\f315_nhap_hoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\BackupDB.resx">
       <DependentUpon>BackupDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f300_import_ds_hoc_vien.resx">
+      <DependentUpon>f300_import_ds_hoc_vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f315_nhap_hoc.resx">
       <DependentUpon>f315_nhap_hoc.cs</DependentUpon>
@@ -582,6 +588,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo luyen thi V4.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Benjigarner-Softdimension-Excel.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

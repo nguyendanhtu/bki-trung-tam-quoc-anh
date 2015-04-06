@@ -4,6 +4,17 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class EXCEL_IMPORT_HOC_VIEN {
+        public const string STT = "STT";
+        public const string MA_HOC_VIEN = "MA_HOC_VIEN";
+        public const string HO_DEM = "HO_DEM";
+        public const string TEN = "TEN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string EMAIL = "EMAIL";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SĐT = "SĐT";
+    }
+
     public class V_RPT_F460_TINH_HINH_BO_LOP
     {
         public const string ID = "ID";
