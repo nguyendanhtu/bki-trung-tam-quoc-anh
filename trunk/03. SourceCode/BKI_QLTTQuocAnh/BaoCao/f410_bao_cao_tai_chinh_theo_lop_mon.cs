@@ -16,6 +16,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPExcelReport;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
@@ -68,6 +69,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             CGridUtils.AddSearch_Handlers(m_fg);
 
             m_fg.Cols[(int)e_col_Number.MA_LOP_MON].Visible = false;
+            m_fg.Tree.Column = (int)e_col_Number.MO_TA;
             set_define_events();
             this.KeyPreview = true;
         }
@@ -226,6 +228,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	frm_410_DE v_fDE = new frm_410_DE();			
             //	v_fDE.display(m_us);
         }
+
+        private void xuat_excel() {
+            var v_start_row = 8;
+            var v_start_col = 2;
+            var v_obj_excel_rpt = new CExcelReport("f410_bao_cao_tai_chinh_theo_lop_mon.xlsx", v_start_row, v_start_col);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", string.Format("{0}/{1}/{2}", m_dat_tu_ngay.Value.Date.Day, m_dat_tu_ngay.Value.Month, m_dat_tu_ngay.Value.Year));
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>", string.Format("{0}/{1}/{2}", m_dat_den_ngay.Value.Day, m_dat_den_ngay.Value.Month, m_dat_den_ngay.Value.Year));
+            v_obj_excel_rpt.FindAndReplace(false);
+            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, false);
+        }
         #endregion
 
         //
@@ -243,7 +255,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += f410_bao_cao_tai_chinh_theo_lop_mon_Load;
             this.KeyDown += f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            m_cmd_xuat_excel.Click += m_cmd_xuat_excel_Click;
+        }
 
+        void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+                xuat_excel();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f410_bao_cao_tai_chinh_theo_lop_mon_KeyDown(object sender, KeyEventArgs e)
