@@ -127,5 +127,19 @@ namespace BKI_QLTTQuocAnh
 
             op_cbo_tu_dien.SelectedIndex = 0;
         }
+
+        public static void load_data_2_cbo_trang_thai_hoc_sinh(
+            System.Windows.Forms.ComboBox op_cbo_trang_thai_hoc_sinh
+            ) {
+            DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
+            US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
+            v_us.FillDataset(v_ds, "where id_loai_tu_dien = " + CONST_LOAI_TU_DIEN.TRANG_THAI_HOC_SINH);
+
+            op_cbo_trang_thai_hoc_sinh.DataSource = v_ds.CM_DM_TU_DIEN;
+            op_cbo_trang_thai_hoc_sinh.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
+            op_cbo_trang_thai_hoc_sinh.ValueMember = CM_DM_TU_DIEN.ID;
+            op_cbo_trang_thai_hoc_sinh.SelectedIndex = 0;
+
+        }
     }
 }

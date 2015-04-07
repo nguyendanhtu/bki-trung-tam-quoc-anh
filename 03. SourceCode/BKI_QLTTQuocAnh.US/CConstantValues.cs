@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_QLTTQuocAnh.US {
-
+    public class CONST_ID_TRANG_THAI_HOC_SINH {
+        public const decimal DA_NGHI = 84;
+            public const decimal DANG_HOC = 83;
+    }
     public class CONST_ID_LOAI_DOI_TUONG {
         public const decimal ID_HOC_SINH = 18;
         public const decimal ID_GIAO_VIEN = 19;
@@ -61,6 +64,7 @@ namespace BKI_QLTTQuocAnh.US {
     {
         public const decimal LOAI_PHIEU_THU = 5;
         public const decimal TRANG_THAI_LOP_MON = 12;
+        public const decimal TRANG_THAI_HOC_SINH = 10;
     }
 
     public static class CONST_TRANG_THAI_LOP_MON

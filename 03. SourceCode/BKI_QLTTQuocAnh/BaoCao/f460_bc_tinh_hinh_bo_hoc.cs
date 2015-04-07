@@ -16,6 +16,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPExcelReport;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
@@ -176,6 +177,17 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	v_fDE.display(m_us);
         }
 
+        private void xuat_excel() {
+            var v_start_row = 8;
+            var v_start_col = 2;
+            var v_obj_excel_rpt = new CExcelReport("f460_tinh_hinh_thoi_hoc.xlsx", v_start_row, v_start_col);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", string.Format("{0}/{1}/{2}", m_dat_tu_ngay.Value.Date.Day, m_dat_tu_ngay.Value.Month, m_dat_tu_ngay.Value.Year));
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>", string.Format("{0}/{1}/{2}", m_dat_den_ngay.Value.Day, m_dat_den_ngay.Value.Month, m_dat_den_ngay.Value.Year));
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tong_so>", m_txt_sl_dang_hoc.Text);
+            v_obj_excel_rpt.FindAndReplace(false);
+            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, false);
+        }
+
         #endregion
 
         //
@@ -188,6 +200,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += f460_bc_tinh_hinh_bo_hoc_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             this.KeyDown += f460_bc_tinh_hinh_bo_hoc_KeyDown;
+            m_cmd_xuat_excel.Click += m_cmd_xuat_excel_Click;
+        }
+
+        void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+                xuat_excel();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f460_bc_tinh_hinh_bo_hoc_KeyDown(object sender, KeyEventArgs e)

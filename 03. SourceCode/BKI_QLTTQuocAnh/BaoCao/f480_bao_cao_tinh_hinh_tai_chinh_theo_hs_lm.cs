@@ -16,6 +16,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPExcelReport;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
@@ -141,7 +142,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_fg.Cols[(int)e_col_Number.MA_DOI_TUONG].Visible = false;
             m_fg.Cols[(int)e_col_Number.HO_TEN].Visible = false;
             m_fg.Tree.Style = TreeStyleFlags.CompleteLeaf;
-
+            
             m_cmd_exit.Visible = false;
             m_cmd_insert.Visible = false;
             m_cmd_update.Visible = false;
@@ -251,6 +252,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             wrap_text_cell();
             //CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
+            m_fg.Rows.Frozen = 1;
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
@@ -321,6 +323,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //	v_fDE.display(m_us);
         }
 
+        private void xuat_excel() {
+            var v_start_row = 8;
+            var v_start_col = 2;
+            var v_obj_excel_rpt = new CExcelReport("f480_bao_cao_tai_chinh_hs_theo_lop_mon.xlsx", v_start_row, v_start_col);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", string.Format("{0}/{1}/{2}", m_dat_tu_ngay.Value.Date.Day, m_dat_tu_ngay.Value.Month, m_dat_tu_ngay.Value.Year));
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>", string.Format("{0}/{1}/{2}", m_dat_den_ngay.Value.Day, m_dat_den_ngay.Value.Month, m_dat_den_ngay.Value.Year));
+            v_obj_excel_rpt.FindAndReplace(false);
+            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, false);
+        }
+
         #endregion
 
         //
@@ -337,6 +349,16 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             this.KeyDown += f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_KeyDown;
+            m_cmd_xuat_excel.Click += m_cmd_xuat_excel_Click;
+        }
+
+        void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+                xuat_excel();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void f480_bao_cao_tinh_hinh_tai_chinh_theo_hs_lm_KeyDown(object sender, KeyEventArgs e)
