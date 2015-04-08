@@ -199,7 +199,6 @@ namespace BKI_QLTTQuocAnh.BaoCao
                     + "-"
                     + m_fg[v_i_cur_row, (int)e_col_Number.HO_TEN];
             }
-
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
                 , -1
@@ -253,8 +252,23 @@ namespace BKI_QLTTQuocAnh.BaoCao
             wrap_text_cell();
             //CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
             m_fg.Rows.Frozen = 1;
+
+            format_grid_to_print();
+
             m_fg.Redraw = true;
         }
+
+        //private void format_grid_to_print() {
+        //    int v_tong_so_row = m_fg.Rows.Count - 1;
+        //    for(int v_i_row = m_fg.Rows.Fixed; v_i_row < v_tong_so_row; v_i_row++) {
+        //        if(m_fg.Rows[v_i_row].IsNode == true) {
+        //            m_fg.Rows.Insert(v_i_row);
+        //            v_i_row = v_i_row + 1;
+        //            v_tong_so_row++;
+        //            //m_fg.Rows.Insert(v_i_row);
+        //        }
+        //    }
+        //}
         private void grid2us_object(US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON i_us
             , int i_grid_row)
         {
