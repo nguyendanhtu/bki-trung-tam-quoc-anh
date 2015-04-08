@@ -119,7 +119,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                         , 0
                         , -1
                         , (int)e_col_Number.TONG_SO_HS
-                        , "Tổng số HS");
+                        , "");
 
             CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
