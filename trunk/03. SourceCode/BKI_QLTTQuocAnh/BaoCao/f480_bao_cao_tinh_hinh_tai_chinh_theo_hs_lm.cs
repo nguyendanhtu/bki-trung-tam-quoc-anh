@@ -253,7 +253,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             //CGridUtils.MakeSoTTByLevelofRow(0, m_fg, 1, false);
             m_fg.Rows.Frozen = 1;
 
-            format_grid_to_print();
+            //format_grid_to_print();
 
             m_fg.Redraw = true;
         }
