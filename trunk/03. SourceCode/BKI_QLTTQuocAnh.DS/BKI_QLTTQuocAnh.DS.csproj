@@ -128,6 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_LOG_GD_PHIEU_THU.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_MAX_SO_PHIEU_THEO_THANG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MAX_SO_PHIEU_THEO_THANG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_HOC_SINH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -426,6 +431,17 @@
     </None>
     <None Include="DS_LOG_GD_PHIEU_THU.xss">
       <DependentUpon>DS_LOG_GD_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MAX_SO_PHIEU_THEO_THANG.xsc">
+      <DependentUpon>DS_MAX_SO_PHIEU_THEO_THANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MAX_SO_PHIEU_THEO_THANG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MAX_SO_PHIEU_THEO_THANG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MAX_SO_PHIEU_THEO_THANG.xss">
+      <DependentUpon>DS_MAX_SO_PHIEU_THEO_THANG.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_HOC_SINH.xsc">
       <DependentUpon>DS_V_DM_HOC_SINH.xsd</DependentUpon>

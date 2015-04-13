@@ -4,6 +4,15 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class MAX_SO_PHIEU_THEO_THANG {
+        public const string ID = "ID";
+        public const string THANG = "THANG";
+        public const string ID_LOAI_PHIEU = "ID_LOAI_PHIEU";
+        public const string TIEN_TO_PHIEU = "TIEN_TO_PHIEU";
+        public const string MAX_SO_PHIEU = "MAX_SO_PHIEU";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
     public class EXCEL_IMPORT_HOC_VIEN {
         public const string STT = "STT";
         public const string MA_HOC_VIEN = "MA_HOC_VIEN";
