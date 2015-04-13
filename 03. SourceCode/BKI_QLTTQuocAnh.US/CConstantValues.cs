@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_QLTTQuocAnh.US {
+    public class CONST_TIEN_TO_SO_PHIEU {
+        public const string PHAI_THU = "PT-";
+        public const string THUC_THU = "TT-";
+        public const string GIAM_TRU = "GT-";
+    }
     public class CONST_ID_TRANG_THAI_HOC_SINH {
         public const decimal DA_NGHI = 84;
             public const decimal DANG_HOC = 83;
