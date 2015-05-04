@@ -765,6 +765,7 @@ namespace BKI_QLTTQuocAnh
                 v_us.DeletePhieuThuVaChiTiet(v_us.dcID);
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
+                BaseMessages.MsgBox_Infor("Đã xóa thành công");
             }
             catch (Exception v_e)
             {

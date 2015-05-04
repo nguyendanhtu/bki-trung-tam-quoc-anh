@@ -58,6 +58,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_cmd_backup.Enabled = true;
             m_cmd_restore.Enabled = true;
             m_cbo_db.Enabled = true;
+            m_txt_ten_file.Text = m_cbo_db.Text + "_v" + DateTime.Now.Date.Year + "." + DateTime.Now.Month + "." + DateTime.Now.Day + ".bak";
         }
         private void disconect_db() {
             m_txt_data_source.Enabled = true;
