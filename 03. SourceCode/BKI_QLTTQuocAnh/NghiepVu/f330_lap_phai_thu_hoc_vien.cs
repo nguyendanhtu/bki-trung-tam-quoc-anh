@@ -193,7 +193,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 v_us_gd_phieu_thu.datNGAY_THU = m_dat_tai_ngay.Value.Date;
                 v_us_gd_phieu_thu.datNGAY_NHAP = m_dat_ngay_nhap.Value.Date;
                 v_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
-                v_us_gd_phieu_thu.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO;
+                v_us_gd_phieu_thu.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.DA_THU;
 
                 
                 v_us_gd_phieu_thu.Insert();
