@@ -241,6 +241,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_RPT_CHI_TIET_PHIEU_THU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_RPT_CHI_TIET_PHIEU_THU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_RPT_F460_TINH_HINH_BO_LOP.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -662,6 +667,17 @@
     </None>
     <None Include="DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xss">
       <DependentUpon>DS_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH_HOC_SINH_LOP_MON.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_CHI_TIET_PHIEU_THU.xsc">
+      <DependentUpon>DS_V_RPT_CHI_TIET_PHIEU_THU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_RPT_CHI_TIET_PHIEU_THU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_RPT_CHI_TIET_PHIEU_THU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_RPT_CHI_TIET_PHIEU_THU.xss">
+      <DependentUpon>DS_V_RPT_CHI_TIET_PHIEU_THU.xsd</DependentUpon>
     </None>
     <None Include="DS_V_RPT_F460_TINH_HINH_BO_LOP.xsc">
       <DependentUpon>DS_V_RPT_F460_TINH_HINH_BO_LOP.xsd</DependentUpon>
