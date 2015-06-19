@@ -103,6 +103,34 @@ namespace BKI_QLTTQuocAnh
            
         }
 
+        public static void load_data_2_cbo_trang_thai_hoc_sinh(
+            decimal ip_dc_id_trang_thai_hoc_sinh
+            , System.Windows.Forms.ComboBox op_cbo_trang_thai_hoc_sinh
+            )
+        {
+            DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
+            US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
+            v_us.FillDataset(v_ds, "where id_loai_tu_dien = " + ip_dc_id_trang_thai_hoc_sinh);
+
+            //DataRow v_dr = v_ds.CM_DM_TU_DIEN.NewRow();
+            //v_dr[CM_DM_TU_DIEN.ID] = -1;
+            //v_dr[CM_DM_TU_DIEN.MA_TU_DIEN] = "All";
+            //v_dr[CM_DM_TU_DIEN.ID_LOAI_TU_DIEN] = 10;
+            //v_dr[CM_DM_TU_DIEN.TEN_NGAN] = "--Tất cả---";
+            //v_dr[CM_DM_TU_DIEN.TEN] = "--Tất cả---";
+            //v_ds.CM_DM_TU_DIEN.Rows.InsertAt(v_dr, 0);
+
+            //DS_V_RPT_210_DM_LOP_MON v_ds_v_rpt_210_dm_lop_mon = new DS_V_RPT_210_DM_LOP_MON();
+            //US_V_RPT_210_DM_LOP_MON v_us_v_rpt_210_dm_lop_mon = new US_V_RPT_210_DM_LOP_MON();
+
+            //v_us_v_rpt_210_dm_lop_mon.FillDataset(v_ds_v_rpt_210_dm_lop_mon, "Where TRANG_THAI_LOP_MON = " + ip_dc_id_trang_thai_lop_mon.ToString());
+            op_cbo_trang_thai_hoc_sinh.DataSource = v_ds.CM_DM_TU_DIEN;
+            op_cbo_trang_thai_hoc_sinh.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
+            op_cbo_trang_thai_hoc_sinh.ValueMember = CM_DM_TU_DIEN.ID;
+            op_cbo_trang_thai_hoc_sinh.SelectedIndex = 0;
+
+        }
+
         public static void load_data_2_cbo_loai_phieu_thu(
             decimal ip_dc_id_loai_tu_dien
             , System.Windows.Forms.ComboBox op_cbo_tu_dien)
